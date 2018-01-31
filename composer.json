@@ -17,6 +17,7 @@
     "drupal/config_installer": "^1.0",
     "drupal/console": "^1",
     "drupal/core": "^8",
+    "drupal/pantheon_advanced_page_cache": "^1.0@alpha",
     "drupal/simple_block": "^1.0@beta",
     "drush/drush": "~8",
     "rvtraveller/qs-composer-installer": "^1.1",

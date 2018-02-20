@@ -7,9 +7,14 @@
     {
       "type": "composer",
       "url": "https://packages.drupal.org/8"
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/badcamp/camp_distro.git"
     }
   ],
     "require": {
+    "badcamp/camp": "8.4.x-dev",
     "composer/installers": "^1.0.20",
     "cweagans/composer-patches": "^1.0",
     "drupal-composer/drupal-scaffold": "^2.0.1",
@@ -89,19 +94,20 @@
       "source": "https://raw.githubusercontent.com/pantheon-systems/drops-8/{version}/{path}",
       "includes": [
         "sites/default/default.services.pantheon.preproduction.yml",
-        "sites/default/settings.pantheon.php"
+        "sites/default/settings.pantheon.php",
+        ".htaccess"
       ],
       "excludes": [
         ".csslintrc",
         ".editorconfig",
         ".eslintignore",
         ".eslintrc.json",
-        ".htaccess",
         "web.config"
       ]
     }
   },
   "config": {
+    "bin-dir": "bin/",
     "optimize-autoloader": true,
     "preferred-install": "dist",
     "sort-packages": true,

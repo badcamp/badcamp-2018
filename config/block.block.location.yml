@@ -1,0 +1,28 @@
+uuid: 71a2577e-dd60-44d3-a584-293e92abc921
+langcode: en
+status: true
+dependencies:
+  config:
+    - simple_block.simple_block.location
+  module:
+    - simple_block
+    - system
+  theme:
+    - badcamp_2018
+id: location
+theme: badcamp_2018
+region: content
+weight: 0
+provider: null
+plugin: 'simple_block:location'
+settings:
+  id: 'simple_block:location'
+  label: Location
+  provider: simple_block
+  label_display: visible
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

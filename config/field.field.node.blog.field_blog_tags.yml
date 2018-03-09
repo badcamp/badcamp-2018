@@ -1,0 +1,31 @@
+uuid: 5d2a51dd-b33c-4e24-8e9d-8c8aa851dc68
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_blog_tags
+    - node.type.blog
+    - taxonomy.vocabulary.blog_tags
+_core:
+  default_config_hash: Iz7X3s17hc_1hpWg0dOrX9YnqBSiS4Q-5gx7S2qfKE4
+id: node.blog.field_blog_tags
+field_name: field_blog_tags
+entity_type: node
+bundle: blog
+label: Tags
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      blog_tags: blog_tags
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

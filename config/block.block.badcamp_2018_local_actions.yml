@@ -1,0 +1,20 @@
+uuid: 1513e66c-0580-4251-8167-79595f973ccb
+langcode: en
+status: true
+dependencies:
+  theme:
+    - badcamp_2018
+_core:
+  default_config_hash: eNkwZR9JIfs8WFothIRgLLkp5W1rFk-F-dfqfkjntFI
+id: badcamp_2018_local_actions
+theme: badcamp_2018
+region: content
+weight: -2
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }

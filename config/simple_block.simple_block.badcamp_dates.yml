@@ -1,0 +1,11 @@
+uuid: e4a95636-6937-4425-8d81-4baf887607cc
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.full_html
+id: badcamp_dates
+title: 'Badcamp Dates'
+content:
+  value: "<p class=\"text-center\">Join Us October 24-27 FOR</p>\r\n\r\n<p class=\"text-center\"><img src=\"/themes/custom/badcamp_2018/images/marquee.png\" title=\"BADCamp 2018\" /></p>\r\n\r\n<p class=\"text-center\">At University of Berkeley</p>\r\n"
+  format: full_html

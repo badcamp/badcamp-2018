@@ -1,0 +1,36 @@
+#block-mailchimpsubscriptionform2018badcampsignup{
+  background-color: $navy-two;
+  padding: 75px 0 0px 0;
+  form {
+    p {
+      font-size: 36px;
+      margin-bottom: 50px;
+      text-align: left;
+    }
+    input[type="email"],
+    input[type="text"]{
+      margin-bottom: 50px;
+      height: 85px;
+    }
+    .button{
+
+    }
+
+    #edit-actions{
+      position: absolute;
+      right: 0px;
+      bottom: -54px;
+    }
+
+    position: relative;
+    padding-bottom: 25px;
+  }
+
+  h2{
+    line-height: 1.5;
+  }
+
+  .grid-x{
+    position: relative;
+  }
+}

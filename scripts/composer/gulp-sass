@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# Exit immediately on errors, and echo commands as they are executed.
+set -ex
+
+cd web/themes/custom/badcamp_2018/
+npm install -g gulp
+npm install
+gulp sass

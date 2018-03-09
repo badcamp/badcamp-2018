@@ -1,0 +1,12 @@
+uuid: 4109a605-d681-4634-9395-a534ea5f5a83
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: m-o2XODLi6XXMAw6MWgJVNNI1ypiHVdZa_fPCsn66EM
+id: node.sponsor_logo
+label: 'Sponsor Logo'
+targetEntityType: node
+cache: true

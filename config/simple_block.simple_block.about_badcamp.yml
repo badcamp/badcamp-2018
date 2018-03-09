@@ -1,0 +1,11 @@
+uuid: fa1f4916-3a9b-40a3-a94f-6136af11754e
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.full_html
+id: about_badcamp
+title: 'About Badcamp'
+content:
+  value: "<p class=\"text-center\">BADCamp is a Drupal conference for the people. It's an annual celebration of open-source software in Berkeley, California. Join us this October 24-27 for four days of talks, trainings, summits, sprints and socials with some of the brightest minds from all over the world, <strong>all for FREE!</strong></p>\r\n"
+  format: full_html

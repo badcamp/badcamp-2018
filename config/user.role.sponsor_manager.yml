@@ -1,0 +1,11 @@
+uuid: 4b179127-7a23-4b7f-825c-2ab67f40d51d
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: LgLLKhxoavhh_BnOK6xoTUc5EkW1MMRmrHfpkiBmmn8
+id: sponsor_manager
+label: 'Sponsor Manager'
+weight: 3
+is_admin: null
+permissions: {  }

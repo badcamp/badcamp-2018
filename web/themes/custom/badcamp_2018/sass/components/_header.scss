@@ -1,0 +1,8 @@
+header{
+  @include background-img('../images/badcamp2018-bridge.jpg', cover, top center);
+  min-height: 900px;
+}
+
+.page-header{
+  position: relative;
+}

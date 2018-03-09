@@ -1,0 +1,28 @@
+uuid: 05a15a0b-8464-4e90-9d14-3685882d327b
+langcode: en
+status: true
+dependencies:
+  config:
+    - simple_block.simple_block.join_conversation
+  module:
+    - simple_block
+    - system
+  theme:
+    - badcamp_2018
+id: joinconversation
+theme: badcamp_2018
+region: content
+weight: 0
+provider: null
+plugin: 'simple_block:join_conversation'
+settings:
+  id: 'simple_block:join_conversation'
+  label: 'Join Conversation'
+  provider: simple_block
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

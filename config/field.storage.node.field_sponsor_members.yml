@@ -1,0 +1,22 @@
+uuid: e038699c-7665-4491-8c88-eaa53d9642a3
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - user
+_core:
+  default_config_hash: gqSg1BtQPpXjcZPoxBK3XF1fxd2itujnwjiDdvZODDs
+id: node.field_sponsor_members
+field_name: field_sponsor_members
+entity_type: node
+type: entity_reference
+settings:
+  target_type: user
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

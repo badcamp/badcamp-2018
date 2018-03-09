@@ -1,0 +1,11 @@
+uuid: 05ca2e93-73d1-4c0b-a9a8-6080cbd22c37
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.basic_html
+id: join_conversation
+title: 'Join Conversation'
+content:
+  value: "<p>Join the conversation at #BADCAMP18!</p>\r\n"
+  format: basic_html

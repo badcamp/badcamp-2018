@@ -1,0 +1,27 @@
+uuid: 2d1c7166-ce71-46c5-b601-2bcb3527aab6
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - badcamp_2018
+_core:
+  default_config_hash: Tr1xwS8gklVkfvPjdQDi3xzLQRHfQKAgngJ_pFAarXg
+id: badcamp_2018_content
+theme: badcamp_2018
+region: content
+weight: -1
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: true
+    context_mapping: {  }

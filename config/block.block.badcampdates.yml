@@ -1,0 +1,22 @@
+uuid: fd6dbfcc-23b3-4524-9e57-c23ac3c0e8f8
+langcode: en
+status: true
+dependencies:
+  config:
+    - simple_block.simple_block.badcamp_dates
+  module:
+    - simple_block
+  theme:
+    - badcamp_2018
+id: badcampdates
+theme: badcamp_2018
+region: header
+weight: 0
+provider: null
+plugin: 'simple_block:badcamp_dates'
+settings:
+  id: 'simple_block:badcamp_dates'
+  label: 'Badcamp Dates'
+  provider: simple_block
+  label_display: '0'
+visibility: {  }

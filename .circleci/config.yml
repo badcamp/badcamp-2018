@@ -81,11 +81,34 @@ jobs:
                 name: run unit tests
                 command: composer -n unit-test
 
+    build_sass:
+        docker:
+          - image: circleci/node:latest
+        steps:
+          - checkout
+          - run:
+              name: Install Gulp
+              command: npm install -g gulp
+          - run:
+              name: Install NPM Packages
+              command: npm install
+              path: web/themes/custom/badcamp_2018/
+          - run:
+              name: Compile CSS and JS files
+              command: gulp
+              path: web/themes/custom/badcamp_2018/
+          - persist_to_workspace:
+              root: web/themes/custom/badcamp_2018
+              paths:
+                  - css
+                  - js
+
     build_deploy_and_test:
         <<: *defaults
         steps:
             - checkout
-
+            - attach_workspace:
+                at: web/themes/custom/badcamp_2018/
             - restore_cache:
                 keys:
                     - composer-cache

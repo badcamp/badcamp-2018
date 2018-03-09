@@ -6,7 +6,7 @@ set -ex
 cd web/themes/custom/badcamp_2018/
 
 sudo apt-get update
-sudo apt-get install -y node-legacy
+sudo apt-get install -y nodejs-legacy
 sudo ln -s $NODEJS /usr/bin/node
 sudo apt-get install -y npm
 

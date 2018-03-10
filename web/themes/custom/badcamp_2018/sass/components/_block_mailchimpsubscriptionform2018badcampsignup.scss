@@ -6,11 +6,21 @@
       font-size: 36px;
       margin-bottom: 50px;
       text-align: left;
+      @include breakpoint(small){
+        font-size: 22px;
+        margin-bottom: 25px;
+        text-align: center;
+      }
     }
     input[type="email"],
     input[type="text"]{
       margin-bottom: 50px;
       height: 85px;
+
+      @include breakpoint(small){
+        margin-bottom: 25px;
+        height: 65px;
+      }
     }
     .button{
 
@@ -28,6 +38,9 @@
 
   h2{
     line-height: 1.5;
+    @include breakpoint(small){
+      text-align: center;
+    }
   }
 
   .grid-x{

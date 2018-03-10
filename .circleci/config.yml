@@ -83,7 +83,7 @@ jobs:
 
     build_sass:
         docker:
-          - image: circleci/node:latest
+          - image: circleci/node:6-stretch
         steps:
           - checkout
           - run:

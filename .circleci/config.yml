@@ -162,7 +162,9 @@ workflows:
       - build
       # Need to run Gulp To Build CSS and JS
       - build_sass
-          requires: [build]
+          requires:
+            - build
       # Build deploy and test on target platform
       - build_deploy_and_test
-          requires: [build_sass]
+          requires: 
+            - build_sass

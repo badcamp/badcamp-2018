@@ -1,0 +1,11 @@
+uuid: a1b599a1-cef5-4954-9c8c-38ab1c3f3a3d
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.full_html
+id: built_by
+title: 'Build By Community'
+content:
+  value: "<p>Built by the community with <a href=\"http://www.drupal.org\">Drupal</a> and hosted on&nbsp;<a href=\"http://www.pantheon.io\">Pantheon</a>.</p>\r\n"
+  format: full_html

@@ -1,0 +1,21 @@
+#block-badcampdates{
+  > div {
+    .contextual{
+      font-weight: $global-weight-normal;
+    }
+    font-size: 1.5rem;
+    font-weight: $global-weight-bold;
+    text-shadow: 0 0 1px rgba(0, 0, 0, .7);
+    margin: 1em 0;
+
+    @include breakpoint(medium){
+      font-size: 3.25rem;
+      margin: 2em 0;
+    }
+
+    p {
+      line-height: 1;
+      margin-bottom: 0px;
+    }
+  }
+}

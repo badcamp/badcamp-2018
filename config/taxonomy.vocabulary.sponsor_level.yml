@@ -1,0 +1,11 @@
+uuid: 5b8c0860-0b57-4d44-99e7-0917312cc6fc
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: Q5SqBPY4PObm4hXu6fw9oKApjsXcIuHUilf3E-5LK_s
+name: 'Sponsor Level'
+vid: sponsor_level
+description: 'The levels of sponsorship that are offered.'
+hierarchy: 0
+weight: 0

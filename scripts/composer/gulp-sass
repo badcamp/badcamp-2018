@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# Exit immediately on errors, and echo commands as they are executed.
+set -ex
+
+#cd web/themes/custom/badcamp_2018/
+
+#sudo apt-get update
+#sudo apt-get install -y nodejs-legacy
+#sudo ln -s $NODEJS /usr/bin/node
+#sudo apt-get install -y npm
+
+#npm install -g gulp
+#npm install
+#gulp sass

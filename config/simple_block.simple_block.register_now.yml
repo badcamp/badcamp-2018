@@ -1,0 +1,11 @@
+uuid: 5618a375-4ad0-44fd-a49a-bc5970e56691
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.full_html
+id: register_now
+title: 'Register Now'
+content:
+  value: "<p class=\"text-center sign-up-button\"><a class=\"button\" href=\"/user/register\">Sign Up Now</a></p>\r\n"
+  format: full_html

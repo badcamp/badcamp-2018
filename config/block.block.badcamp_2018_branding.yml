@@ -1,0 +1,25 @@
+uuid: 12dbb17d-90f8-4fbe-8a94-ea0ebbf4fa45
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - badcamp_2018
+_core:
+  default_config_hash: p4sLn1SKTz03L12PxF2S3nRV87R-YJS7GKTDe95Yj5g
+id: badcamp_2018_branding
+theme: badcamp_2018
+region: header_left
+weight: -6
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  provider: system
+  label_display: '0'
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: true
+visibility: {  }

@@ -1,0 +1,112 @@
+uuid: 0ec252d4-e95b-439e-b1c7-1c7dc10152ed
+langcode: en
+status: true
+dependencies:
+  module:
+    - social_media_links
+  theme:
+    - badcamp_2018
+id: socialmedialinks
+theme: badcamp_2018
+region: footer_right
+weight: -7
+provider: null
+plugin: social_media_links_block
+settings:
+  id: social_media_links_block
+  label: 'Social Media Links'
+  provider: social_media_links
+  label_display: '0'
+  platforms:
+    behance:
+      value: ''
+      description: ''
+      weight: '-10'
+    bitbucket:
+      value: ''
+      description: ''
+      weight: '-9'
+    contact:
+      value: ''
+      description: ''
+      weight: '-8'
+    drupal:
+      value: ''
+      description: ''
+      weight: '-7'
+    email:
+      value: info@badcamp.net
+      description: ''
+      weight: '-6'
+    facebook:
+      value: BayAreaDrupalCamp
+      description: ''
+      weight: '-5'
+    flickr:
+      value: ''
+      description: ''
+      weight: '-4'
+    github:
+      value: ''
+      description: ''
+      weight: '-3'
+    googleplus:
+      value: ''
+      description: ''
+      weight: '-2'
+    instagram:
+      value: ''
+      description: ''
+      weight: '-1'
+    linkedin:
+      value: ''
+      description: ''
+      weight: '0'
+    pinterest:
+      value: ''
+      description: ''
+      weight: '1'
+    rss:
+      value: ''
+      description: ''
+      weight: '2'
+    slideshare:
+      value: ''
+      description: ''
+      weight: '3'
+    tumblr:
+      value: ''
+      description: ''
+      weight: '4'
+    twitter:
+      value: badcamp
+      description: ''
+      weight: '5'
+    vimeo:
+      value: ''
+      description: ''
+      weight: '6'
+    vkontakte:
+      value: ''
+      description: ''
+      weight: '7'
+    youtube:
+      value: ''
+      description: ''
+      weight: '8'
+    youtube_channel:
+      value: UCIJw4y2Iyv6ESwjY5rmOl7w
+      description: ''
+      weight: '9'
+  appearance:
+    orientation: h
+    show_name: 0
+  link_attributes:
+    target: '<none>'
+    rel: '<none>'
+  iconset:
+    style: 'fontawesome:2x'
+    installed_iconsets:
+      fontawesome:
+        examples: ''
+visibility: {  }

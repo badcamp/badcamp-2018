@@ -1,0 +1,9 @@
+uuid: 33efc871-eb90-4b07-93d4-0ab4d29f2d9d
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 5koJrdAmEDYWmffC5u-F-aw7YliwEjd5s5KJ-sN4EDQ
+name: sponsor_logo
+label: 'Sponsor Logo'
+effects: {  }

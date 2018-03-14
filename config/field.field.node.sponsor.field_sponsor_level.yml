@@ -1,0 +1,31 @@
+uuid: 8f9ad395-c926-433f-848d-42988eca7713
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sponsor_level
+    - node.type.sponsor
+    - taxonomy.vocabulary.sponsor_level
+_core:
+  default_config_hash: cOuy4RvfqkJRy3mjcFFhL7ZT9kp3uYpsX1Ac20Kfwtk
+id: node.sponsor.field_sponsor_level
+field_name: field_sponsor_level
+entity_type: node
+bundle: sponsor
+label: Level
+description: 'The level that this sponsor contributed.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      sponsor_level: sponsor_level
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

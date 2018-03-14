@@ -1,0 +1,26 @@
+uuid: 0d9f8d1f-93cb-4958-93f6-2848cefbabd3
+langcode: en
+status: true
+dependencies:
+  module:
+    - mailchimp_signup
+    - system
+  theme:
+    - badcamp_2018
+id: mailchimpsubscriptionform2018badcampsignup
+theme: badcamp_2018
+region: footer
+weight: -5
+provider: null
+plugin: 'mailchimp_signup_subscribe_block:2018_badcamp_signup'
+settings:
+  id: 'mailchimp_signup_subscribe_block:2018_badcamp_signup'
+  label: 'Get Updates'
+  provider: mailchimp_signup
+  label_display: visible
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

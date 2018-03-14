@@ -1,0 +1,11 @@
+uuid: 853b5e62-4a33-4d76-895d-0e00cf19548a
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 4_WkFWQbMmq0F4UIm9Ft2ou0_Ad_R3HhnWu8UJyRVdY
+name: 'Blog Tags'
+vid: blog_tags
+description: ''
+hierarchy: 0
+weight: 0

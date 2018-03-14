@@ -1,0 +1,28 @@
+uuid: b379d122-623b-4bef-b45a-9724ba363954
+langcode: en
+status: true
+dependencies:
+  config:
+    - simple_block.simple_block.about_badcamp
+  module:
+    - simple_block
+    - system
+  theme:
+    - badcamp_2018
+id: aboutbadcamp
+theme: badcamp_2018
+region: content
+weight: 0
+provider: null
+plugin: 'simple_block:about_badcamp'
+settings:
+  id: 'simple_block:about_badcamp'
+  label: 'About Badcamp'
+  provider: simple_block
+  label_display: visible
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

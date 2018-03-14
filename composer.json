@@ -7,32 +7,44 @@
     {
       "type": "composer",
       "url": "https://packages.drupal.org/8"
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/badcamp/camp_distro.git"
     }
   ],
     "require": {
+    "badcamp/camp": "8.4.x-dev",
     "composer/installers": "^1.0.20",
     "cweagans/composer-patches": "^1.0",
     "drupal-composer/drupal-scaffold": "^2.0.1",
     "drupal/config_direct_save": "^1.0",
     "drupal/config_installer": "^1.0",
+    "drupal/config_readonly": "^1.0@beta",
     "drupal/console": "^1",
     "drupal/core": "^8",
+    "drupal/key": "^1.7",
+    "drupal/mailchimp": "^1.6",
     "drupal/pantheon_advanced_page_cache": "^1.0@alpha",
+    "drupal/sendgrid_integration": "^1.1",
     "drupal/simple_block": "^1.0@beta",
+    "drupal/social_media_links": "^2.6",
+    "drupal/webform": "^5.0@RC",
     "drush/drush": "~8",
     "rvtraveller/qs-composer-installer": "^1.1",
     "webflo/drupal-core-strict": "^8"
   },
   "require-dev": {
-    "mikey179/vfsstream": "^1.2",
     "behat/behat": "3.*",
     "behat/mink": "^1.7",
     "behat/mink-extension": "^2.2",
     "behat/mink-goutte-driver": "^1.2",
-    "jcalderonzumba/gastonjs": "^1.0.2",
-    "jcalderonzumba/mink-phantomjs-driver": "^0.3.1",
+    "drupal/devel": "^1.2",
     "drupal/drupal-extension": "^3.1",
     "drush-ops/behat-drush-endpoint": "^0.0.4",
+    "jcalderonzumba/gastonjs": "^1.0.2",
+    "jcalderonzumba/mink-phantomjs-driver": "^0.3.1",
+    "mikey179/vfsstream": "^1.2",
     "pantheon-systems/quicksilver-pushback": "~1",
     "phpunit/phpunit": "^4.8",
     "symfony/css-selector": "^2.8"
@@ -50,7 +62,8 @@
   "scripts": {
     "build-assets": [
       "@prepare-for-pantheon",
-      "composer install --optimize-autoloader"
+      "composer install --optimize-autoloader",
+      "./scripts/composer/gulp-sass"
     ],
     "lint": "find web/modules/custom web/themes/custom -name '*.php' -exec php -l {} \\;",
     "code-sniff": "echo 'No code sniff step defined.'",
@@ -89,19 +102,20 @@
       "source": "https://raw.githubusercontent.com/pantheon-systems/drops-8/{version}/{path}",
       "includes": [
         "sites/default/default.services.pantheon.preproduction.yml",
-        "sites/default/settings.pantheon.php"
+        "sites/default/settings.pantheon.php",
+        ".htaccess"
       ],
       "excludes": [
         ".csslintrc",
         ".editorconfig",
         ".eslintignore",
         ".eslintrc.json",
-        ".htaccess",
         "web.config"
       ]
     }
   },
   "config": {
+    "bin-dir": "bin/",
     "optimize-autoloader": true,
     "preferred-install": "dist",
     "sort-packages": true,

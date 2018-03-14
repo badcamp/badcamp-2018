@@ -1,0 +1,19 @@
+uuid: b6a4014e-5668-4a0e-83ab-8e8e3c6ad596
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+_core:
+  default_config_hash: nN_-TEFbif1w9KfxvPGjom15rbOiXR9JEqqkrQcVnBA
+name: 'Blog Post'
+type: blog
+description: 'Creates a new post of news or announcements for the Camp.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true

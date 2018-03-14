@@ -1,0 +1,14 @@
+uuid: 54ea098b-8d8d-4d1c-8c0b-23ad4afaed43
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.sponsor_manager
+  module:
+    - user
+id: user_add_role_action.sponsor_manager
+label: 'Add the Sponsor Manager role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: sponsor_manager

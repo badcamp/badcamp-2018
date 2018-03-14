@@ -1,0 +1,22 @@
+uuid: 59d19a7f-c887-4614-9130-e8aade3a4280
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - badcamp_2018
+_core:
+  default_config_hash: o6nS7X9AbSRJbHBf3lqmdIObCDHhhiwEPXMbzJAc2hE
+id: badcamp_2018_help
+theme: badcamp_2018
+region: content
+weight: -3
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility: {  }

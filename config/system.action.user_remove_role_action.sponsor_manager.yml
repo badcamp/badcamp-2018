@@ -1,0 +1,14 @@
+uuid: 1c0c0ea6-d760-4fe1-ada4-89d9af835e61
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.sponsor_manager
+  module:
+    - user
+id: user_remove_role_action.sponsor_manager
+label: 'Remove the Sponsor Manager role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: sponsor_manager

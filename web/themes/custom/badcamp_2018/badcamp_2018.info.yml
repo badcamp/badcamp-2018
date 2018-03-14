@@ -1,0 +1,19 @@
+name: BADCamp 2018
+type: theme
+description: '2018 BADCamp Theme'
+core: 8.x
+libraries:
+  - badcamp_2018/global-css
+  - badcamp_2018/global-js
+regions:
+  header_left: 'Header left'
+  header_right: 'Header right'
+  header: 'Header'
+  highlighted: 'Highlighted'
+  content_full: 'Content Full Width'
+  info: 'Info'
+  help: 'Help'
+  content: 'Content'
+  footer: 'Footer'
+  footer_left: 'Footer Left'
+  footer_right: 'Footer Right'

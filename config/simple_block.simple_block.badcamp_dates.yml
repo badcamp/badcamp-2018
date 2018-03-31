@@ -7,5 +7,5 @@ dependencies:
 id: badcamp_dates
 title: 'Badcamp Dates'
 content:
-  value: "<p class=\"text-center\">Join Us October 24-27 FOR</p>\r\n\r\n<p class=\"text-center\"><img src=\"/themes/custom/badcamp_2018/images/marquee.png\" title=\"BADCamp 2018\" /></p>\r\n\r\n<p class=\"text-center\">At University of Berkeley</p>\r\n"
+  value: "<p class=\"text-center\">Join Us October 24-27 For</p>\r\n\r\n<p class=\"text-center\"><img src=\"/themes/custom/badcamp_2018/images/marquee.png\" title=\"BADCamp 2018\" /></p>\r\n\r\n<p class=\"text-center\">At University of California, Berkeley</p>\r\n"
   format: full_html

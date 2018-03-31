@@ -3,14 +3,25 @@
   padding: 75px 0 0px 0;
   form {
     p {
-      font-size: 36px;
-      margin-bottom: 50px;
-      text-align: left;
+      font-size: 22px;
+      margin-bottom: 25px;
+      text-align: center;
+
+      @include breakpoint(medium up){
+        font-size: 36px;
+        margin-bottom: 50px;
+        text-align: left;
+      }
     }
     input[type="email"],
     input[type="text"]{
-      margin-bottom: 50px;
-      height: 85px;
+      margin-bottom: 25px;
+      height: 65px;
+
+      @include breakpoint(medium up){
+        margin-bottom: 50px;
+        height: 85px;
+      }
     }
     .button{
 
@@ -28,6 +39,10 @@
 
   h2{
     line-height: 1.5;
+    text-align: center;
+    @include breakpoint(medium up){
+      text-align: left;
+    }
   }
 
   .grid-x{

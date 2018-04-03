@@ -31,6 +31,7 @@
     "drupal/core": "8.5.1",
     "drupal/key": "^1.7",
     "drupal/mailchimp": "^1.6",
+    "drupal/menu_link_attributes": "^1.0",
     "drupal/pantheon_advanced_page_cache": "^1.0@alpha",
     "drupal/sendgrid_integration": "^1.1",
     "drupal/simple_block": "^1.0@beta",
@@ -60,6 +61,7 @@
       "drupal/drupal": "*"
   },
   "minimum-stability": "dev",
+  "prefer-stable": true,
   "autoload": {
     "classmap": [
       "scripts/composer/ScriptHandler.php"

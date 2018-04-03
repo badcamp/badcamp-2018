@@ -1,0 +1,26 @@
+uuid: 8975914a-40cd-416a-881d-440cb6de1120
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - node
+    - taxonomy
+third_party_settings:
+  field_permissions:
+    permission_type: custom
+_core:
+  default_config_hash: Cj8nrpOWNTbzojeC1Yn5Wg3yXvCFAhN7qeCT8gVDaQA
+id: node.field_venue
+field_name: field_venue
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

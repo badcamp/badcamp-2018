@@ -1,0 +1,25 @@
+uuid: 71be70f9-d641-40ea-9378-ae0eb1607237
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_venue_directions_url
+    - taxonomy.vocabulary.venues
+  module:
+    - link
+_core:
+  default_config_hash: MprrIaijMuIVSWcyxEFjwWAcg8qayPWPBvzIuDWTljI
+id: taxonomy_term.venues.field_venue_directions_url
+field_name: field_venue_directions_url
+entity_type: taxonomy_term
+bundle: venues
+label: 'Directions URL'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 0
+field_type: link

@@ -11,7 +11,7 @@ _core:
 id: badcamp_2018_help
 theme: badcamp_2018
 region: content
-weight: -3
+weight: -5
 provider: null
 plugin: help_block
 settings:

@@ -1,0 +1,33 @@
+uuid: 6c0fb300-c1bc-4cdd-aa56-ddda7472fa22
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: '-VG8ZN3255-fbQFPVl_77DKOZ-IxorbpYsd9S7eVvV4'
+id: add_to_schedule
+label: 'Add to Schedule'
+bundles: {  }
+entity_type: node
+global: false
+weight: 0
+flag_short: 'Add to Schedule'
+flag_long: ''
+flag_message: ''
+unflag_short: 'Remove from Schedule'
+unflag_long: ''
+unflag_message: ''
+unflag_denied_text: ''
+flag_type: 'entity:node'
+link_type: ajax_link
+flagTypeConfig:
+  show_in_links:
+    full: full
+    schedule: schedule
+  show_as_field: true
+  show_on_form: false
+  show_contextual_link: false
+  extra_permissions:
+    owner: '0'
+linkTypeConfig: {  }

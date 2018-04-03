@@ -164,3 +164,11 @@ function badcamp_2018_form_mailchimp_signup_subscribe_block_2018_badcamp_signup_
   $form['container']['actions'] = $form['actions']['submit'];
   unset($form['actions']);
 }
+
+/**
+ * Implements template_preprocess_node__node_type__node_display().
+ */
+function badcamp_2018_preprocess_node__sponsor__full(&$vars){
+  $vars['sponsor_url'] = $vars['content']['field_sponsor_url'][0]['#url']->getUri();
+  $vars['logo'] = $vars['content']['field_sponsor_logo'];
+}

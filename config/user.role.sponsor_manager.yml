@@ -1,11 +1,22 @@
-uuid: 4b179127-7a23-4b7f-825c-2ab67f40d51d
+uuid: aeaf3927-f031-4c87-bb0a-70c745dd14e8
 langcode: en
 status: true
 dependencies: {  }
 _core:
-  default_config_hash: LgLLKhxoavhh_BnOK6xoTUc5EkW1MMRmrHfpkiBmmn8
+  default_config_hash: Mpf41HC-mggRNHfFBAA5VGrsi2-o8JHdqHPAjYFK090
 id: sponsor_manager
 label: 'Sponsor Manager'
-weight: 3
+weight: -8
 is_admin: null
-permissions: {  }
+permissions:
+  - 'access toolbar'
+  - 'create sponsor content'
+  - 'delete any sponsor content'
+  - 'delete own sponsor content'
+  - 'delete sponsor revisions'
+  - 'delete terms in sponsor_level'
+  - 'edit any sponsor content'
+  - 'edit own sponsor content'
+  - 'edit terms in sponsor_level'
+  - 'revert sponsor revisions'
+  - 'view sponsor revisions'

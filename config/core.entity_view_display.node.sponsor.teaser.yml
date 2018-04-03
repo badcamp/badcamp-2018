@@ -1,4 +1,4 @@
-uuid: 345fdb0e-31be-46cc-a8ec-4f926093f364
+uuid: c941d484-a8d9-48fd-972b-2e75e99ba6a6
 langcode: en
 status: false
 dependencies:
@@ -19,6 +19,9 @@ targetEntityType: node
 bundle: sponsor
 mode: teaser
 content:
+  events:
+    weight: null
+    region: content
   links:
     weight: 100
     region: content

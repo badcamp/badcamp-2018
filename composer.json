@@ -24,7 +24,9 @@
     "drupal-composer/drupal-scaffold": "^2.0.1",
     "drupal/config_direct_save": "^1.0",
     "drupal/config_installer": "^1.0",
+    "drupal/config_provider": "2.0-alpha1",
     "drupal/config_readonly": "^1.0@beta",
+    "drupal/config_sync": "2.0-alpha4",
     "drupal/console": "^1",
     "drupal/core": "8.5.1",
     "drupal/key": "^1.7",
@@ -36,7 +38,8 @@
     "drupal/webform": "^5.0@RC",
     "drush/drush": "~8",
     "rvtraveller/qs-composer-installer": "^1.1",
-    "webflo/drupal-core-strict": "^8"
+    "webflo/drupal-core-strict": "^8",
+    "wikimedia/composer-merge-plugin": "^1.3@dev"
   },
   "require-dev": {
     "behat/behat": "3.*",
@@ -86,6 +89,7 @@
     ]
   },
   "extra": {
+    "enable-patching": true,
     "installer-paths": {
       "web/core": ["type:drupal-core"],
       "web/modules/contrib/{$name}": ["type:drupal-module"],

@@ -1,0 +1,25 @@
+uuid: b71ca6d4-2874-4070-86ab-8e7c0a27ab06
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_stick_to_top_of_date
+    - node.type.summit
+_core:
+  default_config_hash: bgKDM4byIURSaHSAhsLygZuhrZ-FQkxyzGZVAFQ8I1Y
+id: node.summit.field_stick_to_top_of_date
+field_name: field_stick_to_top_of_date
+entity_type: node
+bundle: summit
+label: 'Stick to Top of Schedule Date'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

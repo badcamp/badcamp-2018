@@ -50,10 +50,14 @@
     <header class="grid-x">
         <div class="header-inner grid-container">
             <div class="grid-x grid-padding-x align-middle">
-                <div class="cell small-12 large-5">{{ page.header_left }}</div>
-                <div class="cell small-12 large-7 navigation-wrap" data-toggler="opened" id="responsive-navigation">{{ page.header_right }}</div>
-                {# @todo: Restore the right side of the header when we reimplement the design. #}
-                {#<div class="column small-6">{{ page.header_right }}</div>#}
+                <div class="cell small-8 large-4">{{ page.header_left }}</div>
+                <div class="cell hide-for-large small-4 responsive-menu-button-wrap text-right" data-responsive-toggle="responsive-navigation" data-hide-for="large">
+                    <span data-toggle="responsive-navigation">Menu</span>
+                    <button class="menu-icon" type="button" data-toggle="responsive-navigation"></button>
+                </div>
+                <div class="cell small-12 large-8 navigation-wrap" data-toggler="opened" id="responsive-navigation">
+                    {{ page.header_right }}
+                </div>
                 <div class="page-header cell small-12">{{ page.header }}</div>
             </div>
         </div>

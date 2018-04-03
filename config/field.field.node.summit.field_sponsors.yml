@@ -1,0 +1,31 @@
+uuid: 578fe8e6-9a00-4c80-8a68-785bcc040157
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sponsors
+    - node.type.sponsor
+    - node.type.summit
+_core:
+  default_config_hash: IJZaLjhyZZpKqzZB_UV1_56r8NfAIIuQcrDWh14HrDk
+id: node.summit.field_sponsors
+field_name: field_sponsors
+entity_type: node
+bundle: summit
+label: Sponsor(s)
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      sponsor: sponsor
+    sort:
+      field: title
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

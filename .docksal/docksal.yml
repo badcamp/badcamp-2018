@@ -50,3 +50,16 @@ services:
     labels:
       - io.docksal.virtual-host=webmail.${VIRTUAL_HOST}
     user: root
+
+  phpmyadmin:
+    hostname: pma
+    image: phpmyadmin/phpmyadmin
+    expose:
+      - "80"
+    environment:
+      - PMA_ARBITRARY=1
+      - PMA_HOST=db
+      - PMA_USER=root
+      - PMA_PASSWORD=${MYSQL_ROOT_PASSWORD:-root}
+    labels:
+      - io.docksal.virtual-host=pma.${VIRTUAL_HOST}

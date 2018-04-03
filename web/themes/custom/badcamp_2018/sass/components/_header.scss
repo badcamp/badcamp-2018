@@ -4,7 +4,15 @@ header{
   @include breakpoint(small){
     min-height: 0px;
     @include background-img('../images/badcamp2018-bridge.jpg', conta, top center);
+  }
 
+  a{
+    color: $white;
+    &:hover,
+    &:active,
+    &.active{
+      color: $white;
+    }
   }
 }
 

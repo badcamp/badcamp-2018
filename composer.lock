@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "e091a95f1e6ef519e0635ba29bc3b3c5",
+    "content-hash": "da284339560e971cbcfdcdf61a50de9b",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -128,12 +128,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/badcamp/camp_distro.git",
-                "reference": "e15b02b914de7cd362dab65e592184a9f320164c"
+                "reference": "3fc86e4c5f33d2b1686323c64580f7bfe38ef81e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/badcamp/camp_distro/zipball/e15b02b914de7cd362dab65e592184a9f320164c",
-                "reference": "e15b02b914de7cd362dab65e592184a9f320164c",
+                "url": "https://api.github.com/repos/badcamp/camp_distro/zipball/3fc86e4c5f33d2b1686323c64580f7bfe38ef81e",
+                "reference": "3fc86e4c5f33d2b1686323c64580f7bfe38ef81e",
                 "shasum": ""
             },
             "require": {
@@ -282,7 +282,7 @@
                 "source": "https://github.com/badcamp/camp_distro/tree/8.4.x",
                 "issues": "https://github.com/badcamp/camp_distro/issues"
             },
-            "time": "2018-03-31T18:06:24+00:00"
+            "time": "2018-04-02T09:01:58+00:00"
         },
         {
             "name": "composer/installers",
@@ -1691,11 +1691,17 @@
         },
         {
             "name": "drupal/config_provider",
-            "version": "dev-2.x",
+            "version": "2.0.0-alpha1",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/config_provider",
-                "reference": "d7fbf376b942c6dc05f9e0b6863e14497abb0147"
+                "reference": "8.x-2.0-alpha1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/config_provider-8.x-2.0-alpha1.zip",
+                "reference": "8.x-2.0-alpha1",
+                "shasum": "5b69c1ac071b6773f5af7a43801f74aa8e832aa7"
             },
             "require": {
                 "drupal/core": "*"
@@ -1706,8 +1712,8 @@
                     "dev-2.x": "2.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-2.x-dev",
-                    "datestamp": "1522217585",
+                    "version": "8.x-2.0-alpha1",
+                    "datestamp": "1522220584",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Project has not opted into security advisory coverage!"
@@ -1736,8 +1742,7 @@
             "homepage": "https://www.drupal.org/project/config_provider",
             "support": {
                 "source": "http://cgit.drupalcode.org/config_provider"
-            },
-            "time": "2018-03-28T06:10:31+00:00"
+            }
         },
         {
             "name": "drupal/config_readonly",
@@ -1875,11 +1880,17 @@
         },
         {
             "name": "drupal/config_sync",
-            "version": "dev-2.x",
+            "version": "2.0.0-alpha4",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/config_sync",
-                "reference": "07875218c2437812c39e80d23f0789f252dc71c6"
+                "reference": "8.x-2.0-alpha4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/config_sync-8.x-2.0-alpha4.zip",
+                "reference": "8.x-2.0-alpha4",
+                "shasum": "0549084c9e151fdd3801074a55c91867bb2f603f"
             },
             "require": {
                 "drupal/config_distro": "*",
@@ -1896,8 +1907,8 @@
                     "dev-2.x": "2.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-2.0-alpha2+1-dev",
-                    "datestamp": "1522218784",
+                    "version": "8.x-2.0-alpha4",
+                    "datestamp": "1522596484",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Project has not opted into security advisory coverage!"
@@ -1942,8 +1953,7 @@
                 "source": "https://cgit.drupalcode.org/config_sync",
                 "issues": "https://drupal.org/project/issues/config_sync",
                 "irc": "irc://irc.freenode.org/drupal-contribute"
-            },
-            "time": "2018-03-28T06:31:15+00:00"
+            }
         },
         {
             "name": "drupal/config_update",
@@ -2923,7 +2933,7 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/flag",
-                "reference": "0b3501e5d0399c1dd5bd8a5478aed2bb2c7c381f"
+                "reference": "7aaa57d01e893646a9e076ce60a93327e2fab04d"
             },
             "require": {
                 "drupal/core": "~8.0"
@@ -2988,7 +2998,7 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/flag"
             },
-            "time": "2018-03-21T01:42:54+00:00"
+            "time": "2018-04-01T17:28:29+00:00"
         },
         {
             "name": "drupal/honeypot",
@@ -3234,6 +3244,9 @@
                         "status": "not-covered",
                         "message": "Dev releases are not covered by Drupal security advisories."
                     }
+                },
+                "patches_applied": {
+                    "SetOptions on null causing error (Issue #2947616)": "https://www.drupal.org/files/issues/2018-03-09/toolbar_alter_error-2947616-11.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -5255,24 +5268,24 @@
         },
         {
             "name": "nikic/php-parser",
-            "version": "3.x-dev",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nikic/PHP-Parser.git",
-                "reference": "bb87e28e7d7b8d9a7fda231d37457c9210faf6ce"
+                "reference": "61210015763e292fd4b581609cf92b575b5a9ecf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/bb87e28e7d7b8d9a7fda231d37457c9210faf6ce",
-                "reference": "bb87e28e7d7b8d9a7fda231d37457c9210faf6ce",
+                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/61210015763e292fd4b581609cf92b575b5a9ecf",
+                "reference": "61210015763e292fd4b581609cf92b575b5a9ecf",
                 "shasum": ""
             },
             "require": {
                 "ext-tokenizer": "*",
-                "php": ">=5.5"
+                "php": ">=7.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "~4.0|~5.0"
+                "phpunit/phpunit": "^6.5 || ^7.0"
             },
             "bin": [
                 "bin/php-parse"
@@ -5280,7 +5293,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.0-dev"
+                    "dev-master": "4.0-dev"
                 }
             },
             "autoload": {
@@ -5302,20 +5315,20 @@
                 "parser",
                 "php"
             ],
-            "time": "2018-02-28T20:30:58+00:00"
+            "time": "2018-03-30T19:45:52+00:00"
         },
         {
             "name": "npm-asset/fullcalendar",
-            "version": "3.8.2",
+            "version": "3.9.0",
             "dist": {
                 "type": "tar",
-                "url": "https://registry.npmjs.org/fullcalendar/-/fullcalendar-3.8.2.tgz",
+                "url": "https://registry.npmjs.org/fullcalendar/-/fullcalendar-3.9.0.tgz",
                 "reference": null,
                 "shasum": null
             },
             "require": {
                 "npm-asset/jquery": ">=2,<4.0",
-                "npm-asset/moment": ">=2.9.0,<3.0.0"
+                "npm-asset/moment": ">=2.20.1,<3.0.0"
             },
             "type": "npm-asset",
             "license": [
@@ -5324,15 +5337,15 @@
         },
         {
             "name": "npm-asset/fullcalendar-scheduler",
-            "version": "1.9.3",
+            "version": "1.9.4",
             "dist": {
                 "type": "tar",
-                "url": "https://registry.npmjs.org/fullcalendar-scheduler/-/fullcalendar-scheduler-1.9.3.tgz",
+                "url": "https://registry.npmjs.org/fullcalendar-scheduler/-/fullcalendar-scheduler-1.9.4.tgz",
                 "reference": null,
                 "shasum": null
             },
             "require": {
-                "npm-asset/fullcalendar": "~3.8.1",
+                "npm-asset/fullcalendar": "~3.9.0",
                 "npm-asset/jquery": ">=2,<4.0",
                 "npm-asset/moment": ">=2.20.1,<3.0.0"
             },
@@ -5666,18 +5679,18 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/bobthecow/psysh.git",
-                "reference": "3d6731434f4582856c2d527693fca4455c96a734"
+                "reference": "799843d5377bfdb9029149b882e7dd24858910e9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/3d6731434f4582856c2d527693fca4455c96a734",
-                "reference": "3d6731434f4582856c2d527693fca4455c96a734",
+                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/799843d5377bfdb9029149b882e7dd24858910e9",
+                "reference": "799843d5377bfdb9029149b882e7dd24858910e9",
                 "shasum": ""
             },
             "require": {
                 "dnoegel/php-xdg-base-dir": "0.1",
                 "jakub-onderka/php-console-highlighter": "0.3.*",
-                "nikic/php-parser": "~2.0|~3.0",
+                "nikic/php-parser": "~2.0|~3.0|~4.0",
                 "php": ">=5.4.0",
                 "symfony/console": "^2.4.2|~3.0|~4.0",
                 "symfony/var-dumper": "~2.7|~3.0|~4.0"
@@ -5730,7 +5743,7 @@
                 "interactive",
                 "shell"
             ],
-            "time": "2018-02-11T17:50:02+00:00"
+            "time": "2018-04-02T06:21:50+00:00"
         },
         {
             "name": "rvtraveller/qs-composer-installer",
@@ -5872,24 +5885,24 @@
         },
         {
             "name": "stecman/symfony-console-completion",
-            "version": "0.7.0",
+            "version": "0.8.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/stecman/symfony-console-completion.git",
-                "reference": "5461d43e53092b3d3b9dbd9d999f2054730f4bbb"
+                "reference": "cd738867503477e91dbe84173dfabd431c883431"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/stecman/symfony-console-completion/zipball/5461d43e53092b3d3b9dbd9d999f2054730f4bbb",
-                "reference": "5461d43e53092b3d3b9dbd9d999f2054730f4bbb",
+                "url": "https://api.github.com/repos/stecman/symfony-console-completion/zipball/cd738867503477e91dbe84173dfabd431c883431",
+                "reference": "cd738867503477e91dbe84173dfabd431c883431",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.2",
-                "symfony/console": "~2.3 || ~3.0"
+                "symfony/console": "~2.3 || ~3.0 || ~4.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "~4.4"
+                "phpunit/phpunit": "~4.8.36 || ~5.7 || ~6.4"
             },
             "type": "library",
             "extra": {
@@ -5913,7 +5926,7 @@
                 }
             ],
             "description": "Automatic BASH completion for Symfony Console Component based applications.",
-            "time": "2016-02-24T05:08:54+00:00"
+            "time": "2018-02-10T04:28:01+00:00"
         },
         {
             "name": "stripe/stripe-php",
@@ -10247,7 +10260,8 @@
         "drupal/config_readonly": 10,
         "drupal/pantheon_advanced_page_cache": 15,
         "drupal/simple_block": 10,
-        "drupal/webform": 5
+        "drupal/webform": 5,
+        "wikimedia/composer-merge-plugin": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

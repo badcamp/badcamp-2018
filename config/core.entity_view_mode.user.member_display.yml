@@ -1,0 +1,12 @@
+uuid: 1d491c26-4a23-4c95-b794-632f882adfc8
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+_core:
+  default_config_hash: a39Kadx9CcCuEELX7OP9C6dkIDJbn4SixtBFgV6oaWE
+id: user.member_display
+label: 'Member Display'
+targetEntityType: user
+cache: true

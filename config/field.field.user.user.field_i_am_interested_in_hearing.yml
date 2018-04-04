@@ -1,0 +1,26 @@
+uuid: 1c02aa92-c0ba-41b8-bb28-ebfa47849887
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_i_am_interested_in_hearing
+  module:
+    - user
+_core:
+  default_config_hash: '-fdpCPvJhr7kV7980l_Icn1BWb0wDczzj21200WHfjM'
+id: user.user.field_i_am_interested_in_hearing
+field_name: field_i_am_interested_in_hearing
+entity_type: user
+bundle: user
+label: 'I am interested in hearing from sponsors'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

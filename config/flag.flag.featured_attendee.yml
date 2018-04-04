@@ -1,0 +1,33 @@
+uuid: 7a619a5f-bb0a-4992-8029-96190a6412bc
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+_core:
+  default_config_hash: fwl_N3BpAA5JCQw-hkw2--Q8dWlej8v3fxKX-ZSf0vY
+id: featured_attendee
+label: 'Featured Attendee'
+bundles: {  }
+entity_type: user
+global: true
+weight: 0
+flag_short: 'Mark as Featured Attendee'
+flag_long: ''
+flag_message: ''
+unflag_short: 'Unmark as Featured Attendee'
+unflag_long: ''
+unflag_message: ''
+unflag_denied_text: ''
+flag_type: 'entity:user'
+link_type: ajax_link
+flagTypeConfig:
+  show_in_links:
+    full: full
+  show_as_field: true
+  show_on_form: false
+  show_contextual_link: false
+  extra_permissions:
+    owner: '0'
+  show_on_profile: true
+linkTypeConfig: {  }

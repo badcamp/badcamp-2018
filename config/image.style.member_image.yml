@@ -1,0 +1,16 @@
+uuid: 499c1c66-2f82-421f-b002-875f674fc1f4
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: ULSyu6E-wtxQd6uQGHbx5yEati0LSmK2iod7vA_7C5Q
+name: member_image
+label: 'Member Image'
+effects:
+  b73b3b8c-4979-4373-b667-128963fb3d36:
+    uuid: b73b3b8c-4979-4373-b667-128963fb3d36
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 240
+      height: 320

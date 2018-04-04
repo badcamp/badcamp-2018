@@ -5,11 +5,18 @@
   }
 
   .site-logo {
-    margin-right: 21px;
+    margin-right: 8px;
+    @include breakpoint(medium) {
+      margin-right: 21px;
+    }
   }
 
   .site-name {
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 700;
+
+    @include breakpoint(medium) {
+      font-size: 24px;
+    }
   }
 }

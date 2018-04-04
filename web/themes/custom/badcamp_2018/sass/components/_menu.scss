@@ -9,6 +9,10 @@
         letter-spacing: normal;
         text-align: center;
 
+        > a {
+          border: 3px solid transparent;
+        }
+
         &:hover,
         &.active {
           color: white;

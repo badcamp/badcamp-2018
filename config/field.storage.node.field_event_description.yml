@@ -1,0 +1,21 @@
+uuid: 2d850921-8c40-483e-93e9-d653fb03d7ff
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+_core:
+  default_config_hash: SG5dEdGaE4t-6et4-NWq081IR0Wn7Ehkjz41z-r7KXs
+id: node.field_event_description
+field_name: field_event_description
+entity_type: node
+type: text_with_summary
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

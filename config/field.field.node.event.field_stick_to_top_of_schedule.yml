@@ -1,0 +1,25 @@
+uuid: dae4b61a-7e9a-429c-8bd1-f3ae1f268d73
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_stick_to_top_of_schedule
+    - node.type.event
+_core:
+  default_config_hash: gQM6_tWIG3_YzsrHhfH2WzY9xJ1GSVpEhCzVoPGtmOw
+id: node.event.field_stick_to_top_of_schedule
+field_name: field_stick_to_top_of_schedule
+entity_type: node
+bundle: event
+label: 'Stick to Top of Schedule'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

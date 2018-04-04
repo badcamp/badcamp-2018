@@ -1,0 +1,23 @@
+uuid: 4a5f0d19-121e-481c-886d-b8c39f40d463
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_event_more_info
+    - node.type.event
+  module:
+    - text
+_core:
+  default_config_hash: _4FmxLKIgR9gjYXwEf-foFWoGgMudA5XU8-M6m4pJ3g
+id: node.event.field_event_more_info
+field_name: field_event_more_info
+entity_type: node
+bundle: event
+label: 'More Information / RSVP Information'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

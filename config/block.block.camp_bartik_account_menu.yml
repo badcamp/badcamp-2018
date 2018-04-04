@@ -1,0 +1,26 @@
+uuid: 6b2b1b97-f7ce-4fd8-9e74-376e62d62ffb
+langcode: en
+status: false
+dependencies:
+  config:
+    - system.menu.account
+  module:
+    - system
+  theme:
+    - camp_bartik
+_core:
+  default_config_hash: D66-t1ijdBLb82RziFNn586tUOtCQvpxs3fWlOaQfdo
+id: camp_bartik_account_menu
+theme: camp_bartik
+region: ''
+weight: 0
+provider: null
+plugin: 'system_menu_block:account'
+settings:
+  id: 'system_menu_block:account'
+  label: 'User account menu'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 1
+visibility: {  }

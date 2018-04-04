@@ -1,0 +1,20 @@
+uuid: 2ee2780e-317f-4020-906c-423481041784
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: fKJtnrf5Z0QiVvxKTlA3mJm9QEfCwxM6kDTG5K9p7nQ
+id: start_date_only_full_day_full_month_day_number
+label: 'Start Date Only: Full Day, Full Month, Day Number'
+date_settings:
+  default_pattern: 'l, F jS'
+  separator: ' - '
+  same_month_start_pattern: ''
+  same_month_end_pattern: ''
+  same_year_start_pattern: ''
+  same_year_end_pattern: ''
+datetime_settings:
+  default_pattern: 'l, F jS'
+  separator: ' - '
+  same_day_start_pattern: ''
+  same_day_end_pattern: ''

@@ -31,6 +31,9 @@ content:
     third_party_settings: {  }
     type: text_default
     region: content
+  flag_add_to_schedule:
+    weight: 10
+    region: content
   links:
     weight: 100
     region: content

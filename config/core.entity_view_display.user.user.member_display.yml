@@ -38,6 +38,7 @@ content:
 hidden:
   field_i_am_interested_in_drupal_: true
   field_i_am_interested_in_hearing: true
+  field_subscribe_to_badcamp_newsl: true
   field_user_bio: true
   field_user_first_name: true
   field_user_last_name: true

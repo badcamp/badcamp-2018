@@ -1,0 +1,31 @@
+uuid: 3f0853fc-25f7-406e-af8f-f7c2fae1e005
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.page.body
+    - node.type.page
+  module:
+    - text
+    - user
+_core:
+  default_config_hash: pzDf241KKEZDn-lFTFbmkgluwjJWBDSbfLcfTk9qON0
+id: node.page.default
+targetEntityType: node
+bundle: page
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  flag_add_to_schedule:
+    weight: 10
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden: {  }

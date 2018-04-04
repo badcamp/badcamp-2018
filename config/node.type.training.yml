@@ -1,0 +1,19 @@
+uuid: 23566bd5-023e-43c8-a483-3e74fa54714f
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+_core:
+  default_config_hash: MjUGO02G0nHf6OX83F40q38FsygGBIjqmf1h6RI_zlU
+name: Training
+type: training
+description: 'A <em>Training</em> is a topic which has a specific topic of focus and is usually much more hands on.'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false

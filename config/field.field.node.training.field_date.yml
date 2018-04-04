@@ -1,0 +1,23 @@
+uuid: 65ff7c2b-5ef0-498f-b58f-1f62eab1af1a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_date
+    - node.type.training
+  module:
+    - datetime_range
+_core:
+  default_config_hash: 22oM5huc-tbBdAkxK9Q7tk1ewXrPOkzczxCi2lU2v68
+id: node.training.field_date
+field_name: field_date
+entity_type: node
+bundle: training
+label: Date
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: daterange

@@ -1,0 +1,22 @@
+uuid: 45d09ce9-9b6c-4143-bcb0-c2e5dd5f9485
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+_core:
+  default_config_hash: GUlOUwfT8FRTfZYi3SrfEkpN8xYNZDgNQNCbcSuNwd0
+id: node.field_session_track
+field_name: field_session_track
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

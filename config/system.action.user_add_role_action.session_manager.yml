@@ -1,0 +1,14 @@
+uuid: 8fcfa3c5-020e-40f1-a1ce-6c5cd154511d
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.session_manager
+  module:
+    - user
+id: user_add_role_action.session_manager
+label: 'Add the Session Manager role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: session_manager

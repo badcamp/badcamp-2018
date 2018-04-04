@@ -9,8 +9,10 @@ module:
   camp_core: 0
   camp_event: 0
   camp_schedule: 0
+  camp_session: 0
   camp_sponsor: 0
   camp_summit: 0
+  camp_training: 0
   camp_user: 0
   camp_venue: 0
   ckeditor: 0
@@ -68,6 +70,7 @@ module:
   tour: 0
   update: 0
   user: 0
+  video_embed_field: 0
   views_ui: 0
   webform: 0
   menu_link_content: 1

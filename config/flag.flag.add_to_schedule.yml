@@ -9,7 +9,10 @@ _core:
 id: add_to_schedule
 label: 'Add to Schedule'
 bundles:
+  - event
+  - session
   - summit
+  - training
 entity_type: node
 global: false
 weight: 0

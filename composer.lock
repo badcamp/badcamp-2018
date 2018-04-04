@@ -128,12 +128,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/badcamp/camp_distro.git",
-                "reference": "b69a5280028a75d6c9c10ecef20d1ed3d08af12d"
+                "reference": "58c2078f557d1d7c6a260cbd31298dbf0fb7fe74"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/badcamp/camp_distro/zipball/b69a5280028a75d6c9c10ecef20d1ed3d08af12d",
-                "reference": "b69a5280028a75d6c9c10ecef20d1ed3d08af12d",
+                "url": "https://api.github.com/repos/badcamp/camp_distro/zipball/58c2078f557d1d7c6a260cbd31298dbf0fb7fe74",
+                "reference": "58c2078f557d1d7c6a260cbd31298dbf0fb7fe74",
                 "shasum": ""
             },
             "require": {
@@ -279,7 +279,7 @@
                 "source": "https://github.com/badcamp/camp_distro/tree/8.4.x",
                 "issues": "https://github.com/badcamp/camp_distro/issues"
             },
-            "time": "2018-04-03T18:38:05+00:00"
+            "time": "2018-04-04T04:57:55+00:00"
         },
         {
             "name": "composer/installers",
@@ -2719,7 +2719,7 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/date_popup"
             },
-            "time": "2017-10-05 02:02:39"
+            "time": "2017-10-05T02:02:39+00:00"
         },
         {
             "name": "drupal/daterange_compact",
@@ -2761,7 +2761,7 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/daterange_compact"
             },
-            "time": "2017-06-12 21:30:07"
+            "time": "2017-06-12T21:30:07+00:00"
         },
         {
             "name": "drupal/field_delimiter",
@@ -3269,7 +3269,7 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/login_destination"
             },
-            "time": "2018-01-01 11:13:09"
+            "time": "2018-01-01T11:13:09+00:00"
         },
         {
             "name": "drupal/mailchimp",
@@ -3856,7 +3856,7 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/r4032login"
             },
-            "time": "2017-02-08 04:20:19"
+            "time": "2017-02-08T04:20:19+00:00"
         },
         {
             "name": "drupal/restui",
@@ -3967,7 +3967,7 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/rules"
             },
-            "time": "2018-02-22 16:25:27"
+            "time": "2018-02-22T16:25:27+00:00"
         },
         {
             "name": "drupal/sendgrid_integration",

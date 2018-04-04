@@ -1,0 +1,14 @@
+uuid: 1add53fc-9a35-4e47-835e-fd6208620dac
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.session_manager
+  module:
+    - user
+id: user_remove_role_action.session_manager
+label: 'Remove the Session Manager role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: session_manager

@@ -1,0 +1,31 @@
+uuid: b48ead94-9d27-45e9-9af2-d7cd97c5037d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_trainers
+    - node.type.training
+_core:
+  default_config_hash: pqgbo_hGLkEFyzgsYkRwM9akrrp_icemRvf9iyLaz_s
+id: node.training.field_trainers
+field_name: field_trainers
+entity_type: node
+bundle: training
+label: Trainers
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:user'
+  handler_settings:
+    include_anonymous: false
+    filter:
+      type: _none
+    target_bundles: null
+    sort:
+      field: name
+      direction: ASC
+    auto_create: false
+field_type: entity_reference

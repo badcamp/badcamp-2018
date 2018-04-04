@@ -1,0 +1,31 @@
+uuid: 1eb0e7d0-4025-4796-9304-f541a423c124
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sponsors
+    - node.type.sponsor
+    - node.type.training
+_core:
+  default_config_hash: Ui9d-WI3oAa7M40BmniqR_XB7gAslKdhg78lZgMsGYk
+id: node.training.field_sponsors
+field_name: field_sponsors
+entity_type: node
+bundle: training
+label: Sponsor(s)
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      sponsor: sponsor
+    sort:
+      field: title
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

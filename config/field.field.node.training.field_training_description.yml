@@ -1,0 +1,24 @@
+uuid: 14df0315-7254-4738-93ad-498fb8c44aef
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_training_description
+    - node.type.training
+  module:
+    - text
+_core:
+  default_config_hash: GdJI7aOXRbgQjnMTH_q-elUQaWCcxC9WZASOh-KdaC8
+id: node.training.field_training_description
+field_name: field_training_description
+entity_type: node
+bundle: training
+label: Description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

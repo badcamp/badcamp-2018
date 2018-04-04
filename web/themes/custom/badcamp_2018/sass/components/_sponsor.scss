@@ -1,0 +1,35 @@
+.node--type-sponsor {
+  &.node--view-mode-sponsor-logo{
+    a{
+      display: block;
+      margin: 1rem 0;
+    }
+  }
+}
+
+#block-badcamp-2018-content {
+  .sponsor-row {
+    &.core-level {
+      .sponsor-logo {
+        background-color: $camel;
+        border-radius: 25px;
+        padding: 1em;
+      }
+    }
+  }
+
+  .media-object{
+    .sponsor-logo {
+      background-color: $camel;
+      border-radius: 25px;
+      padding: 1em;
+    }
+  }
+}
+
+.sponsor-row{
+  margin: 5em 0;
+  h2{
+    margin-bottom: .5em;
+  }
+}

@@ -1,0 +1,29 @@
+uuid: f48d988e-0541-4d6d-ba13-0edf921392ea
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - file
+    - node
+third_party_settings:
+  field_permissions:
+    permission_type: public
+_core:
+  default_config_hash: bL0dTFaxg-Lgg4M50NwcODsJSmjhNjvmMS7axVFZlY4
+id: node.field_training_files
+field_name: field_training_files
+entity_type: node
+type: file
+settings:
+  display_field: false
+  display_default: false
+  uri_scheme: public
+  target_type: file
+module: file
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

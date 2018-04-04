@@ -1,0 +1,14 @@
+uuid: a8d3a3ec-95af-470a-9899-3e5826fc481d
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.summit_manager
+  module:
+    - user
+id: user_remove_role_action.summit_manager
+label: 'Remove the Summit Manager role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: summit_manager

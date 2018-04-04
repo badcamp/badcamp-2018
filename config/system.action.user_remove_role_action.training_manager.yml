@@ -1,0 +1,14 @@
+uuid: c31a874e-7101-458d-9169-e06927f30ef6
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.training_manager
+  module:
+    - user
+id: user_remove_role_action.training_manager
+label: 'Remove the Training Manager role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: training_manager

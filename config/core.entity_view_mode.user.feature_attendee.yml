@@ -1,0 +1,12 @@
+uuid: 3ce80126-81bd-4f3c-8f95-074d335f30e2
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+_core:
+  default_config_hash: qY12YglFkXmxbNuWq6HJwM_vQ1Qz9h13s4vjKKyzdoo
+id: user.feature_attendee
+label: 'Feature Attendee'
+targetEntityType: user
+cache: true

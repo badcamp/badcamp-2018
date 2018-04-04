@@ -1,0 +1,20 @@
+uuid: f86d6c52-8573-4466-93f7-1e261be24873
+langcode: en
+status: true
+dependencies:
+  module:
+    - camp_sponsor
+  theme:
+    - badcamp_2018
+id: corelevel
+theme: badcamp_2018
+region: footer
+weight: -6
+provider: null
+plugin: 'sponsor_block:1'
+settings:
+  id: 'sponsor_block:1'
+  label: 'Core Level'
+  provider: camp_sponsor
+  label_display: '0'
+visibility: {  }

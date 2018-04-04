@@ -1,4 +1,4 @@
-uuid: b4b572d0-a1f4-463f-b804-488121dff287
+uuid: d9773877-cc88-41fd-a329-a482d865c0bb
 langcode: en
 status: true
 dependencies:
@@ -8,18 +8,24 @@ dependencies:
     - field.field.node.sponsor.field_sponsor_logo
     - field.field.node.sponsor.field_sponsor_members
     - field.field.node.sponsor.field_sponsor_url
+    - image.style.large
     - node.type.sponsor
   module:
     - image
     - text
     - user
 _core:
-  default_config_hash: Eo6f0yWmm-G9rCLhFCoQiA7us9x25JVIxaah8ODehxo
+  default_config_hash: IbbGkzzfecoXEmuGR2DuR4BHAFwU1i81r8jpdS6flKM
 id: node.sponsor.default
 targetEntityType: node
 bundle: sponsor
 mode: default
 content:
+  events:
+    weight: null
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   field_sponsor_description:
     weight: 1
     label: hidden
@@ -27,25 +33,17 @@ content:
     third_party_settings: {  }
     type: text_default
     region: content
-  field_sponsor_level:
-    weight: 2
-    label: hidden
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: content
   field_sponsor_logo:
     weight: 0
     label: hidden
     settings:
-      image_style: ''
+      image_style: large
       image_link: ''
     third_party_settings: {  }
     type: image
     region: content
   field_sponsor_members:
-    weight: 3
+    weight: 2
     label: hidden
     settings:
       view_mode: member_display
@@ -53,6 +51,12 @@ content:
     third_party_settings: {  }
     type: entity_reference_entity_view
     region: content
+  flag_add_to_schedule:
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
+  field_sponsor_level: true
   field_sponsor_url: true
   links: true

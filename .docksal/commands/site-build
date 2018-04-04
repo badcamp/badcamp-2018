@@ -12,14 +12,14 @@ SITEDIR_PATH="${DOCROOT_PATH}/sites/${SITE_DIRECTORY}"
 
 cd ${DOCROOT_PATH}
 
-echo "Importing Configuration..."
-drush config-import --yes
-
 echo "Running Update.php..."
-drush updatedb -y
+${PROJECT_ROOT}/bin/drupal update:execute -y
+
+echo "Importing Configuration..."
+${PROJECT_ROOT}/bin/drupal config:import --yes
 
 echo "Running Drush Cache-Rebuild"
-drush cr
+${PROJECT_ROOT}/bin/drupal cr
 
 echo "Running Gulp Tasks on theme"
 cd ${PROJECT_ROOT}/web/themes/custom/badcamp*
@@ -27,4 +27,4 @@ npm i -g npm@latest
 npm install -g gulp
 npm install
 gulp sass
-drush cr
+${PROJECT_ROOT}/bin/drupal cr

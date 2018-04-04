@@ -1,0 +1,19 @@
+uuid: 0eedaea6-09c4-4615-b2f6-520c0d244685
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+_core:
+  default_config_hash: yHLnaOaDwy8UJEAK8aWc3U7m2ou77wTPxcSn9jgO0ps
+name: Session
+type: session
+description: '<em>Sessions</em> are talks given by individuals.'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false

@@ -66,14 +66,18 @@ if (isset($_SERVER['PANTHEON_ENVIRONMENT']) && ($_SERVER['HTTPS'] === 'OFF') && 
 
 // Require 2017.badcamp.net Domain
 if (isset($_SERVER['PANTHEON_ENVIRONMENT']) && ($_SERVER['PANTHEON_ENVIRONMENT'] === 'live') && (php_sapi_name() != "cli")) {
-  if ($_SERVER['HTTP_HOST'] != '2017.badcamp.net' || !isset($_SERVER['HTTP_X_SSL']) || $_SERVER['HTTP_X_SSL'] != 'ON' ) {
-    //header('HTTP/1.0 301 Moved Permanently');
-    //header('Location: https://2018.badcamp.net'. $_SERVER['REQUEST_URI']);
-    //exit();
+  if ($_SERVER['HTTP_HOST'] != '2018.badcamp.net' || !isset($_SERVER['HTTP_X_SSL']) || $_SERVER['HTTP_X_SSL'] != 'ON' ) {
+    header('HTTP/1.0 301 Moved Permanently');
+    header('Location: https://2018.badcamp.net'. $_SERVER['REQUEST_URI']);
+    exit();
   }
 }
 
 // Prevent Config Changes in Production
 if (isset($_SERVER['PANTHEON_ENVIRONMENT']) && ($_SERVER['PANTHEON_ENVIRONMENT'] === 'live')) {
   $settings['config_readonly'] = FALSE;
+}
+
+if (isset($_SERVER['PANTHEON_ENVIRONMENT']) && ($_SERVER['PANTHEON_ENVIRONMENT'] != 'live' && $_SERVER['PANTHEON_ENVIRONMENT'] != 'test')) {
+  $config['system.logging']['error_level'] = ERROR_REPORTING_DISPLAY_VERBOSE;
 }

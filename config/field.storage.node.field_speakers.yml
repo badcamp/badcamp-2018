@@ -1,0 +1,26 @@
+uuid: 7f9b36f0-299b-4de7-a360-f57954a24c75
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - node
+    - user
+third_party_settings:
+  field_permissions:
+    permission_type: public
+_core:
+  default_config_hash: hxYWi1P2Vs_vyLR9cjYoEjttZ_mMrJ_FZwgy7HqGptw
+id: node.field_speakers
+field_name: field_speakers
+entity_type: node
+type: entity_reference
+settings:
+  target_type: user
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

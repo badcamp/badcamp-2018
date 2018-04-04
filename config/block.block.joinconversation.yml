@@ -12,7 +12,7 @@ dependencies:
 id: joinconversation
 theme: badcamp_2018
 region: content
-weight: 0
+weight: -1
 provider: null
 plugin: 'simple_block:join_conversation'
 settings:

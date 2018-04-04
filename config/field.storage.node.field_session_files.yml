@@ -1,0 +1,29 @@
+uuid: 01719f51-c14d-4e86-9de6-82829b65effa
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - file
+    - node
+third_party_settings:
+  field_permissions:
+    permission_type: public
+_core:
+  default_config_hash: XYD9LQGSp9npHUUEbRXus-w19PXd5zB_JjIeCBjRdfU
+id: node.field_session_files
+field_name: field_session_files
+entity_type: node
+type: file
+settings:
+  display_field: false
+  display_default: false
+  uri_scheme: public
+  target_type: file
+module: file
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

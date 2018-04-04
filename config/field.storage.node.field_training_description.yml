@@ -1,0 +1,25 @@
+uuid: 9edf8d5d-0275-41a3-b76c-42aebed13ece
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - node
+    - text
+third_party_settings:
+  field_permissions:
+    permission_type: public
+_core:
+  default_config_hash: kdPUgfYUOHOody4kJDXe1R2wJH_LNBZv_aEWVCvmoxU
+id: node.field_training_description
+field_name: field_training_description
+entity_type: node
+type: text_with_summary
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

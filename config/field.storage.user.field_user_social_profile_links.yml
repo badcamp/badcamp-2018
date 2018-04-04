@@ -1,0 +1,21 @@
+uuid: b0981e6e-8d0f-43c8-acbf-9f09d7186488
+langcode: en
+status: true
+dependencies:
+  module:
+    - social_media_links_field
+    - user
+_core:
+  default_config_hash: ofgvqQPq7DPIYRfjzPx_EJPtiJLC6pkWhKPBTyMUWmc
+id: user.field_user_social_profile_links
+field_name: field_user_social_profile_links
+entity_type: user
+type: social_media_links_field
+settings: {  }
+module: social_media_links_field
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -93,7 +93,7 @@ $dark-gray: #8a8a8a;
 $black: #0a0a0a;
 $white: #fefefe;
 $body-background: $dark-blue-grey;
-$body-font-color: $white;
+$body-font-color: $navy-two;
 $body-font-family: $quicksand;
 $body-antialiased: true;
 $global-margin: 1rem;
@@ -113,7 +113,7 @@ $print-transparent-backgrounds: true;
 
 @include add-foundation-colors;
 
-$primary-color: $white;
+$primary-color: $navy-two;
 
 // 2. Breakpoints
 // --------------
@@ -172,7 +172,7 @@ $header-styles: (
 $header-text-rendering: optimizeLegibility;
 $small-font-size: 80%;
 $header-small-font-color: $medium-gray;
-$paragraph-lineheight: 1;
+$paragraph-lineheight: 1.5;
 $paragraph-margin-bottom: 1rem;
 $paragraph-text-rendering: optimizeLegibility;
 $code-color: $black;
@@ -277,8 +277,8 @@ $badge-font-size: 0.6rem;
 // 10. Breadcrumbs
 // ---------------
 
-$breadcrumbs-margin: 0 0 $global-margin 0;
-$breadcrumbs-item-font-size: rem-calc(11);
+$breadcrumbs-margin: 1rem 0 $global-margin 0;
+$breadcrumbs-item-font-size: rem-calc(14);
 $breadcrumbs-item-color: $primary-color;
 $breadcrumbs-item-color-current: $black;
 $breadcrumbs-item-color-disabled: $medium-gray;
@@ -385,7 +385,7 @@ $drilldown-arrow-size: 6px;
 // ------------
 
 $dropdown-padding: 1rem;
-$dropdown-background: $body-background;
+$dropdown-background: transparent;
 $dropdown-border: 1px solid $medium-gray;
 $dropdown-font-size: 1rem;
 $dropdown-width: 300px;
@@ -399,17 +399,17 @@ $dropdown-sizes: (
 // 18. Dropdown Menu
 // -----------------
 
-$dropdownmenu-arrows: true;
+$dropdownmenu-arrows: false;
 $dropdownmenu-arrow-color: $anchor-color;
 $dropdownmenu-arrow-size: 6px;
 $dropdownmenu-arrow-padding: 1.5rem;
 $dropdownmenu-min-width: 200px;
-$dropdownmenu-background: $white;
+$dropdownmenu-background: transparentize($navy-two,.1);
 $dropdownmenu-submenu-background: $dropdownmenu-background;
 $dropdownmenu-padding: $global-menu-padding;
 $dropdownmenu-nested-margin: 0;
 $dropdownmenu-submenu-padding: $dropdownmenu-padding;
-$dropdownmenu-border: 1px solid $medium-gray;
+$dropdownmenu-border: 0px solid $medium-gray;
 $dropdown-menu-item-color-active: get-color(primary);
 $dropdown-menu-item-background-active: transparent;
 

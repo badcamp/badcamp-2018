@@ -1,0 +1,13 @@
+uuid: 37746f29-9f8f-4096-a235-7ce9f7497da2
+langcode: en
+status: true
+dependencies:
+  module:
+    - flag
+id: flag_action.featured_attendee.unflag
+label: 'Unmark as Featured Attendee'
+type: user
+plugin: 'flag_action:featured_attendee.unflag'
+configuration:
+  flag_id: featured_attendee
+  flag_action: unflag

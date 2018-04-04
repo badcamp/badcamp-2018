@@ -1,0 +1,45 @@
+uuid: 1139e5c1-e80c-4230-aede-7cc8268fbf82
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.schedule
+    - field.field.node.event.field_date
+    - field.field.node.event.field_event_description
+    - field.field.node.event.field_event_more_info
+    - field.field.node.event.field_event_type
+    - field.field.node.event.field_event_url_more_info
+    - field.field.node.event.field_sponsors
+    - field.field.node.event.field_stick_to_top_of_date
+    - field.field.node.event.field_stick_to_top_of_schedule
+    - field.field.node.event.field_venue
+    - node.type.event
+  module:
+    - text
+    - user
+_core:
+  default_config_hash: aRckumtkcmQWVFSrsGVL-oK45Z3BsWT_oVnzxY61U8s
+id: node.event.schedule
+targetEntityType: node
+bundle: event
+mode: schedule
+content:
+  field_event_description:
+    weight: 101
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_date: true
+  field_event_more_info: true
+  field_event_type: true
+  field_event_url_more_info: true
+  field_sponsors: true
+  field_stick_to_top_of_date: true
+  field_stick_to_top_of_schedule: true
+  field_venue: true

@@ -1,0 +1,25 @@
+uuid: 150cdd93-cb8f-4cef-b597-266d256361b4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_event_url_more_info
+    - node.type.event
+  module:
+    - link
+_core:
+  default_config_hash: _KVJXBut_72BRnFGRGKbW2rq0iNJxgjpzW2UZ1QRwAg
+id: node.event.field_event_url_more_info
+field_name: field_event_url_more_info
+entity_type: node
+bundle: event
+label: 'URL for More Information'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 0
+field_type: link

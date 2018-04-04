@@ -1,5 +1,6 @@
 #block-location{
   @include background-img('../images/berkeley.jpg', cover);
+  color: $white;
 
   > div {
     position: relative;

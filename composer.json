@@ -11,20 +11,27 @@
     {
       "type": "vcs",
       "url": "https://github.com/badcamp/camp_distro.git"
+    },
+    {
+      "type": "composer",
+      "url": "https://asset-packagist.org"
     }
   ],
-    "require": {
+  "require": {
     "badcamp/camp": "8.4.x-dev",
     "composer/installers": "^1.0.20",
     "cweagans/composer-patches": "^1.0",
     "drupal-composer/drupal-scaffold": "^2.0.1",
     "drupal/config_direct_save": "^1.0",
     "drupal/config_installer": "^1.0",
+    "drupal/config_provider": "2.0-alpha1",
     "drupal/config_readonly": "^1.0@beta",
+    "drupal/config_sync": "2.0-alpha4",
     "drupal/console": "^1",
-    "drupal/core": "^8",
+    "drupal/core": "8.5.1",
     "drupal/key": "^1.7",
     "drupal/mailchimp": "^1.6",
+    "drupal/menu_link_attributes": "^1.0",
     "drupal/pantheon_advanced_page_cache": "^1.0@alpha",
     "drupal/sendgrid_integration": "^1.1",
     "drupal/simple_block": "^1.0@beta",
@@ -32,7 +39,8 @@
     "drupal/webform": "^5.0@RC",
     "drush/drush": "~8",
     "rvtraveller/qs-composer-installer": "^1.1",
-    "webflo/drupal-core-strict": "^8"
+    "webflo/drupal-core-strict": "^8",
+    "wikimedia/composer-merge-plugin": "^1.3@dev"
   },
   "require-dev": {
     "behat/behat": "3.*",
@@ -52,7 +60,7 @@
   "conflict": {
       "drupal/drupal": "*"
   },
-  "minimum-stability": "alpha",
+  "minimum-stability": "dev",
   "prefer-stable": true,
   "autoload": {
     "classmap": [
@@ -83,6 +91,7 @@
     ]
   },
   "extra": {
+    "enable-patching": true,
     "installer-paths": {
       "web/core": ["type:drupal-core"],
       "web/modules/contrib/{$name}": ["type:drupal-module"],
@@ -120,7 +129,7 @@
     "preferred-install": "dist",
     "sort-packages": true,
     "platform": {
-      "php": "7.0"
+      "php": "7.1"
     }
   }
 }

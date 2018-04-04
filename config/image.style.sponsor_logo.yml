@@ -1,9 +1,17 @@
-uuid: 33efc871-eb90-4b07-93d4-0ab4d29f2d9d
+uuid: 2cf8dbee-a36f-4110-8374-84af0c6e9675
 langcode: en
 status: true
 dependencies: {  }
 _core:
-  default_config_hash: 5koJrdAmEDYWmffC5u-F-aw7YliwEjd5s5KJ-sN4EDQ
+  default_config_hash: HLyEzjOW8UUlL7LsWM-ndqZ3jtvhz1p7jrKs9BMUphk
 name: sponsor_logo
 label: 'Sponsor Logo'
-effects: {  }
+effects:
+  7446410c-3d28-43a2-b722-5cd0d8c4a486:
+    uuid: 7446410c-3d28-43a2-b722-5cd0d8c4a486
+    id: image_scale
+    weight: 1
+    data:
+      width: 350
+      height: 130
+      upscale: true

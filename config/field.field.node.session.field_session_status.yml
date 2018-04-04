@@ -1,0 +1,25 @@
+uuid: 1d852889-cc4d-447a-99c0-f2da704ba339
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_session_status
+    - node.type.session
+  module:
+    - options
+_core:
+  default_config_hash: 1I3WJqX6SK2WR_WeIOw0jpRzwbYfFEWOQzSkD1jxTJs
+id: node.session.field_session_status
+field_name: field_session_status
+entity_type: node
+bundle: session
+label: Status
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: proposed
+default_value_callback: ''
+settings: {  }
+field_type: list_string

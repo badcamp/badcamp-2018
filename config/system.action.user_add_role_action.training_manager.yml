@@ -1,0 +1,14 @@
+uuid: 3a64c943-f0d9-42b9-95e7-aa8ee2d3dff9
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.training_manager
+  module:
+    - user
+id: user_add_role_action.training_manager
+label: 'Add the Training Manager role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: training_manager

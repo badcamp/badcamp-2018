@@ -1,5 +1,6 @@
 #block-aboutbadcamp{
   @include background-img('../images/background-about.png', cover, center, repeat);
+  color: $white;
 
   > div{
     position: relative;

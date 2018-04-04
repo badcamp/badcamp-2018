@@ -1,0 +1,11 @@
+uuid: ac4f044f-f018-45e1-8429-115310da8812
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: Ucn5Poi2Jw5TIZW6kAiKzzv-PLq_fEiEBljQti4jWNI
+name: 'Skill Level'
+vid: skill_level
+description: ''
+hierarchy: 0
+weight: 0

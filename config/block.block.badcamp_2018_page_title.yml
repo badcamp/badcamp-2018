@@ -10,7 +10,7 @@ _core:
   default_config_hash: 9seqZgVoBr8RbATwuq1rk49zkoLyE-ORidPG7qQk6-0
 id: badcamp_2018_page_title
 theme: badcamp_2018
-region: content
+region: header
 weight: -7
 provider: null
 plugin: page_title_block

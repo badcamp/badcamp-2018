@@ -6,12 +6,13 @@ dependencies:
     - simple_block.simple_block.badcamp_dates
   module:
     - simple_block
+    - system
   theme:
     - badcamp_2018
 id: badcampdates
 theme: badcamp_2018
 region: header
-weight: 0
+weight: -8
 provider: null
 plugin: 'simple_block:badcamp_dates'
 settings:
@@ -19,4 +20,9 @@ settings:
   label: 'Badcamp Dates'
   provider: simple_block
   label_display: '0'
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

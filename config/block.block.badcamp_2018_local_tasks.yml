@@ -9,7 +9,7 @@ _core:
 id: badcamp_2018_local_tasks
 theme: badcamp_2018
 region: content
-weight: -6
+weight: -7
 provider: null
 plugin: local_tasks_block
 settings:

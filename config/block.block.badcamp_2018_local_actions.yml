@@ -9,7 +9,7 @@ _core:
 id: badcamp_2018_local_actions
 theme: badcamp_2018
 region: content
-weight: -4
+weight: -5
 provider: null
 plugin: local_actions_block
 settings:

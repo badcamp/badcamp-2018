@@ -1,4 +1,5 @@
 #block-mainnavigation{
+  float: right;
   .menu {
     &.menu-level-0 {
       > li {
@@ -8,7 +9,10 @@
         letter-spacing: normal;
         text-align: center;
 
-        border-radius: 42px;
+        > a {
+          border: 3px solid transparent;
+        }
+
         &:hover,
         &.active {
           color: white;
@@ -20,8 +24,9 @@
           }
         }
 
-        &.leaf-4 {
+        .cta-loop{
           border: 3px solid $white;
+          border-radius: 42px;
         }
 
         ul {

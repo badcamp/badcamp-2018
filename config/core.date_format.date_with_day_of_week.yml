@@ -1,0 +1,10 @@
+uuid: 8373a5dd-04c3-40f6-af50-14c18bb06e98
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 36cdRXU78pHAfrhFJHYrrAjck-R9RWwNjBwN5L9nby4
+id: date_with_day_of_week
+label: 'Date with Day of Week'
+locked: false
+pattern: 'D, F j, Y'

@@ -1,0 +1,10 @@
+uuid: 8bd2b0c4-6230-4a0b-8c38-122a8e849fef
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: npDBz1hz9iWcslhVgxPDr3l8FbvDaR_C6bhrCW-3Wxw
+id: date_only
+label: 'Date Only'
+locked: false
+pattern: 'D M, d'

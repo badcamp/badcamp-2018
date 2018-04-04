@@ -1,0 +1,10 @@
+uuid: f5ba3f03-e6cc-48c3-8308-84d4301a605f
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: X7SrDjw4kCs-oFEEz9GSjY9QGmxTtONYany6JoEstew
+id: day_of_week_short
+label: 'Day of Week Short'
+locked: false
+pattern: D

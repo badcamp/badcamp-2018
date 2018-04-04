@@ -1,0 +1,10 @@
+uuid: 688917cd-fdcc-4704-ab51-1277ceb725f6
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: JOtN3mcmDE47oiaKT6lLeUSvP0Xg46Jqk9hVCyDfCjk
+id: time_12hr
+label: 'Time: 12hr'
+locked: false
+pattern: 'g:ia'

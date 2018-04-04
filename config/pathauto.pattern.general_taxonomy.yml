@@ -1,0 +1,16 @@
+uuid: 688b97fa-46de-4f3c-8e49-25dd9c3e95bb
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+_core:
+  default_config_hash: ZjfDoeBt7FAH6HZAWlfA98r7Xf1d01hJOa4UOXFBQbY
+id: general_taxonomy
+label: 'General Taxonomy'
+type: 'canonical_entities:taxonomy_term'
+pattern: '[term:vocabulary:name]/[term:parents:join:/]/[term:name]'
+selection_criteria: {  }
+selection_logic: and
+weight: 0
+relationships: {  }

@@ -1,0 +1,24 @@
+uuid: 706c9d66-7460-4ffe-9db0-8b2bc23f134f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_summit_description
+    - node.type.summit
+  module:
+    - text
+_core:
+  default_config_hash: wlzgLV--HsNq504km4X0Q5IFW6SDDCYEmpbvTAeDqJg
+id: node.summit.field_summit_description
+field_name: field_summit_description
+entity_type: node
+bundle: summit
+label: Description
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

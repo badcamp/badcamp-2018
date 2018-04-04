@@ -7,7 +7,9 @@ module:
   breakpoint: 0
   camp_blog: 0
   camp_core: 0
+  camp_schedule: 0
   camp_sponsor: 0
+  camp_summit: 0
   camp_user: 0
   camp_venue: 0
   ckeditor: 0

@@ -1,0 +1,24 @@
+uuid: 0c3b2832-1e9f-4e19-bb63-2ecfc1755ca8
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - node
+third_party_settings:
+  field_permissions:
+    permission_type: custom
+_core:
+  default_config_hash: i8y-orh0Q3FDRpABopiG0si1pxhqHwUwCzh3h93oREQ
+id: node.field_stick_to_top_of_schedule
+field_name: field_stick_to_top_of_schedule
+entity_type: node
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

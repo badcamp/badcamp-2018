@@ -1,0 +1,12 @@
+uuid: 65a4509b-658b-42bf-8821-b36f3d6116ad
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: WQ8XR8DJOEb0URmqYLzFT3GJ5i3_IFTaR4z_lzioTDI
+id: node.schedule
+label: Schedule
+targetEntityType: node
+cache: true

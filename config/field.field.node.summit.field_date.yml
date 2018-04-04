@@ -1,0 +1,23 @@
+uuid: b930ecdb-c823-4739-9a9e-e023def50cc6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_date
+    - node.type.summit
+  module:
+    - datetime_range
+_core:
+  default_config_hash: UP-xtqlIzA6WuLkYQNUuHdTOlVX57smbzkGqQUAo0RE
+id: node.summit.field_date
+field_name: field_date
+entity_type: node
+bundle: summit
+label: Date
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: daterange

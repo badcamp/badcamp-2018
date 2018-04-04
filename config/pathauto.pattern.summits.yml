@@ -1,0 +1,24 @@
+uuid: 39d811d6-5e77-444a-ac9a-5a9a946f31f8
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: Cm08qF3A4WGj40nt28ZgWy6ohYF-xZLqRYhh-Yp93Ns
+id: summits
+label: Summits
+type: 'canonical_entities:node'
+pattern: 'summits/[node:title]'
+selection_criteria:
+  e09abeaf-40e6-4346-9537-c340e400c57f:
+    id: node_type
+    bundles:
+      summit: summit
+    negate: false
+    context_mapping:
+      node: node
+    uuid: e09abeaf-40e6-4346-9537-c340e400c57f
+selection_logic: and
+weight: -5
+relationships: {  }

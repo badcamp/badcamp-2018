@@ -1,0 +1,19 @@
+uuid: df421893-d68f-4505-a158-8a7b2cb63ef2
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+_core:
+  default_config_hash: ECmANf9OTF3EDHHg6R0k4JKiZ4JxWcON6-iW8Ig1LSY
+name: Summit
+type: summit
+description: ''
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

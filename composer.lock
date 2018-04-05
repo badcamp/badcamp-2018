@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "17e81b2be19e0f48253025c731278a1b",
+    "content-hash": "6fb724b84fd4fe8ec30547e15b210b3d",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -10177,7 +10177,6 @@
         "drupal/config_readonly": 10,
         "drupal/pantheon_advanced_page_cache": 15,
         "drupal/simple_block": 10,
-        "drupal/webform": 5,
         "wikimedia/composer-merge-plugin": 20
     },
     "prefer-stable": true,

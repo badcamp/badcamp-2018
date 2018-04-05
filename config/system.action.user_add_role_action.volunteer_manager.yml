@@ -1,0 +1,14 @@
+uuid: 3da5d649-8ca6-4797-92d0-3e2aa9e2f49a
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.volunteer_manager
+  module:
+    - user
+id: user_add_role_action.volunteer_manager
+label: 'Add the Volunteer Manager role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: volunteer_manager

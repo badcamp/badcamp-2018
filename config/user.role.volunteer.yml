@@ -1,0 +1,14 @@
+uuid: 0096d8df-1301-4713-be57-a61ac1e27c7f
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: h6w2ymG8trRg2h5brUw4VkDKt7XFymV12fSBbDdf46s
+id: volunteer
+label: Volunteer
+weight: 2
+is_admin: null
+permissions:
+  - 'access toolbar'
+  - 'flag check_in'
+  - 'unflag check_in'

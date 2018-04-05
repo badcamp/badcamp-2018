@@ -1,0 +1,14 @@
+uuid: 8f785a0f-90bc-4a5a-8ba7-a12c5437d6b4
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.volunteer_manager
+  module:
+    - user
+id: user_remove_role_action.volunteer_manager
+label: 'Remove the Volunteer Manager role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: volunteer_manager

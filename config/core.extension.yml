@@ -15,6 +15,7 @@ module:
   camp_training: 0
   camp_user: 0
   camp_venue: 0
+  camp_volunteers: 0
   ckeditor: 0
   config: 0
   config_readonly: 0
@@ -74,6 +75,7 @@ module:
   video_embed_field: 0
   views_ui: 0
   webform: 0
+  webform_ui: 0
   menu_link_content: 1
   pathauto: 1
   views: 10

@@ -1,0 +1,14 @@
+uuid: e5490ee9-1f27-4aca-aec8-d44a2e226076
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: xBa0JTMrnKlCuIM783pf4D5q21ICQl4zVofUorpKcRA
+id: volunteer_manager
+label: 'Volunteer Manager'
+weight: 3
+is_admin: null
+permissions:
+  - 'access toolbar'
+  - 'flag check_in'
+  - 'unflag check_in'

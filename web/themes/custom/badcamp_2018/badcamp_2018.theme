@@ -192,3 +192,18 @@ function badcamp_2018_preprocess_views_view_unformatted__sponsors__full_list(&$v
       break;
   }
 }
+
+/**
+ * Implements template_preprocess_page_title_alter().
+ */
+function badcamp_2018_preprocess_page_title_alter(&$vars){
+
+}
+
+/**
+ * Implements hook_theme_suggestions_page_title_alter().
+ */
+function badcamp_2018_theme_suggestions_page_title_alter(&$suggestions, $vars) {
+  $route_name = \Drupal::routeMatch()->getRouteName();
+  $suggestions[] = 'page_title__' . str_ireplace('.','__', $route_name);
+}

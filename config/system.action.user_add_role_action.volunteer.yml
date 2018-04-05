@@ -1,0 +1,14 @@
+uuid: 0644cb9a-9022-4ed1-b379-d7b9ae25f605
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.volunteer
+  module:
+    - user
+id: user_add_role_action.volunteer
+label: 'Add the Volunteer role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: volunteer

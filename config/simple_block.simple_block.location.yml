@@ -7,5 +7,5 @@ dependencies:
 id: location
 title: Location
 content:
-  value: "<p class=\"address\">2495 Bancroft Way, at Telegraph Avenue</p>\r\n\r\n<p class=\"location-name\">University of California</p>\r\n\r\n<p class=\"address-city-state\">Berkeley, CA 94720</p>\r\n\r\n<p><a class=\"button\" href=\"https://www.google.com/maps/place/ASUC+Student+Union:+Martin+Luther+King+Jr.+Building/@37.8692216,-122.2607697,18z/data=!3m1!4b1!4m5!3m4!1s0x80857c25fd15163f:0xd8ee08380d3e2d14!8m2!3d37.8692195!4d-122.2596727\">View Map</a></p>\r\n"
+  value: "<p class=\"address\">2495 Bancroft Way, at Telegraph Avenue</p>\r\n\r\n<p class=\"location-name\">University of California</p>\r\n\r\n<p class=\"address-city-state\">Berkeley, CA 94720</p>\r\n\r\n<p><a class=\"action-button\" href=\"https://www.google.com/maps/place/ASUC+Student+Union:+Martin+Luther+King+Jr.+Building/@37.8692216,-122.2607697,18z/data=!3m1!4b1!4m5!3m4!1s0x80857c25fd15163f:0xd8ee08380d3e2d14!8m2!3d37.8692195!4d-122.2596727\">View Map</a></p>\r\n"
   format: full_html

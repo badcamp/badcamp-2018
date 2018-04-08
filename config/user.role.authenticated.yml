@@ -11,3 +11,5 @@ is_admin: false
 permissions:
   - 'access content'
   - 'use text format basic_html'
+  - 'view field_date'
+  - 'view own field_date'

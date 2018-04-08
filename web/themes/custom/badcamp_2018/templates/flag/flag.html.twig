@@ -35,5 +35,5 @@
     {# Set nofollow to prevent search bots from crawling anonymous flag links #}
     {% set attributes = attributes.setAttribute('rel', 'nofollow') %}
 
-    <div class="{{classes|join(' ')}}"><a{{ attributes.addClass('button') }}>{{ title }}</a></div>
+    <div class="{{classes|join(' ')}}"><a{{ attributes.addClass('action-button') }}>{{ title }}</a></div>
 {% endspaceless %}

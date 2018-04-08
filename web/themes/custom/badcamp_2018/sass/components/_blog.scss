@@ -1,0 +1,25 @@
+.blog-header{
+  .date{
+    float: right;
+    border: 1px solid;
+    padding: 1em;
+    font-size: 1.5em;
+    background-color: $navy-two;
+    color: $white;
+    font-family: $rye;
+    border-radius: 50px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+
+    span{
+      display: block;
+      text-align: center;
+    }
+    .month-only{
+      margin-bottom: 5px;
+    }
+    .date-day-only{
+
+    }
+  }
+}

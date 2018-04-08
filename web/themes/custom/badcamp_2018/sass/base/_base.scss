@@ -4,8 +4,8 @@ h1,h2,h3,h4,h5,h6{
   text-transform: uppercase;
 }
 
-a.button,
-.button{
+a.action-button,
+.action-button{
   border-radius: 20px;
   background-color: $reddish;
   font-family: $quicksand;
@@ -16,6 +16,9 @@ a.button,
   text-transform: uppercase;
   padding: 20px 25px;
   min-width: 300px;
+  color: $white;
+
+  @extend .button;
 }
 
 input[type="tel"],

@@ -24,6 +24,7 @@ module:
   daterange_compact: 0
   datetime: 0
   datetime_range: 0
+  devel_generate: 0
   dynamic_page_cache: 0
   editor: 0
   entity_reference: 0

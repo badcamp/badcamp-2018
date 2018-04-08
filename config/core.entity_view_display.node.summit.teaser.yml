@@ -1,6 +1,6 @@
 uuid: c2faadc3-6333-4a98-b39f-312667aa9744
 langcode: en
-status: false
+status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
@@ -13,6 +13,7 @@ dependencies:
     - field.field.node.summit.field_venue
     - node.type.summit
   module:
+    - text
     - user
 _core:
   default_config_hash: 2Ew7RTOTTbyCVgV2AHSyytBtpnjj5kNsFcwdaSeMD1A
@@ -21,17 +22,24 @@ targetEntityType: node
 bundle: summit
 mode: teaser
 content:
+  field_summit_description:
+    type: text_summary_or_trimmed
+    weight: 1
+    region: content
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
   flag_add_to_schedule:
-    weight: 10
+    weight: 2
     region: content
-  links:
-    weight: 100
-    region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   field_date: true
   field_sponsors: true
   field_stick_to_top_of_date: true
   field_stick_to_top_of_schedule: true
-  field_summit_description: true
   field_summit_leaders: true
   field_venue: true
+  links: true

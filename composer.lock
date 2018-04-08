@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "6fb724b84fd4fe8ec30547e15b210b3d",
+    "content-hash": "114afebaee0e20bb6932c51fab8e8ba3",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -128,12 +128,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/badcamp/camp_distro.git",
-                "reference": "58c2078f557d1d7c6a260cbd31298dbf0fb7fe74"
+                "reference": "8b314bbcb2442ec5610ca4ca5f2c7519d08e281e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/badcamp/camp_distro/zipball/58c2078f557d1d7c6a260cbd31298dbf0fb7fe74",
-                "reference": "58c2078f557d1d7c6a260cbd31298dbf0fb7fe74",
+                "url": "https://api.github.com/repos/badcamp/camp_distro/zipball/8b314bbcb2442ec5610ca4ca5f2c7519d08e281e",
+                "reference": "8b314bbcb2442ec5610ca4ca5f2c7519d08e281e",
                 "shasum": ""
             },
             "require": {
@@ -279,7 +279,7 @@
                 "source": "https://github.com/badcamp/camp_distro/tree/8.4.x",
                 "issues": "https://github.com/badcamp/camp_distro/issues"
             },
-            "time": "2018-04-04T04:57:55+00:00"
+            "time": "2018-04-06T04:58:53+00:00"
         },
         {
             "name": "composer/installers",
@@ -1557,17 +1557,17 @@
         },
         {
             "name": "drupal/config_filter",
-            "version": "1.1.0",
+            "version": "1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/config_filter",
-                "reference": "8.x-1.1"
+                "reference": "8.x-1.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/config_filter-8.x-1.1.zip",
-                "reference": "8.x-1.1",
-                "shasum": "4fffc62f2e1214bc58e7318c780eec04c5cd1d4c"
+                "url": "https://ftp.drupal.org/files/projects/config_filter-8.x-1.2.zip",
+                "reference": "8.x-1.2",
+                "shasum": "ba3d76dc6bb1eb8644ce8997ca2890496a50ae0e"
             },
             "require": {
                 "drupal/core": "~8.0"
@@ -1581,8 +1581,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.1",
-                    "datestamp": "1511779985",
+                    "version": "8.x-1.2",
+                    "datestamp": "1522943885",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"

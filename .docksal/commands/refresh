@@ -50,11 +50,11 @@ fi
 
 if [ $ELEMENTS = 'all' ] || [ $ELEMENTS = 'db' ]; then
     DBFILE="/tmp/${PANTHEON_ENV}.${PANTHEON_SITE}.sql"
-    if [ ! -f $DBFILE ] || [ ! -z $(find ${DBFILE} -mmin +3600) ]; then
+    if [ ! -f $DBFILE ] || [ ! -z $(find ${DBFILE} -mmin +360) ]; then
      echo "${DBFILE} need updating"
 
       echo "Exporting latest database..."
-      if [ -f $DBFILE ] && [ ! -z $(find ${DBFILE} -mmin +3600) ]; then
+      if [ -f $DBFILE ] && [ ! -z $(find ${DBFILE} -mmin +360) ]; then
         rm -rf $DBFILE
       fi
 
@@ -64,6 +64,20 @@ if [ $ELEMENTS = 'all' ] || [ $ELEMENTS = 'db' ]; then
         DBDUMP=${DBCONN/mysql /mysqldump }
         eval $DBDUMP " --result-file=${DBFILE}"
       else
+        COUNT=$(terminus backup:list ${PANTHEON_SITE}.${PANTHEON_ENV} --element=db --format=list | wc -l)
+        if [ $COUNT -eq 1 ]; then
+          echo "Creating backup on Pantheon..."
+          terminus backup:create ${PANTHEON_SITE}.${PANTHEON_ENV} --element=db
+        fi
+
+        LASTBKUP=$(terminus backup:list ${PANTHEON_SITE}.${PANTHEON_ENV} --element=db --field=date | head -n 1)
+        YESTERDAY=`date --date='yesterday' "+%Y-%m-%d %H:%M:%S"`
+
+        if [ "${LASTBKUP}" \< "${YESTERDAY}" ]; then
+          echo "Old backup on Pantheon...Creating new one..."
+          terminus backup:create ${PANTHEON_SITE}.${PANTHEON_ENV} --element=db
+        fi
+
         terminus backup:get ${PANTHEON_SITE}.${PANTHEON_ENV} --element="db" --to="${DBFILE}.gz"
         gunzip ${DBFILE}.gz
       fi

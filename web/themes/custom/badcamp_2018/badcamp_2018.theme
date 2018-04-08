@@ -207,3 +207,17 @@ function badcamp_2018_theme_suggestions_page_title_alter(&$suggestions, $vars) {
   $route_name = \Drupal::routeMatch()->getRouteName();
   $suggestions[] = 'page_title__' . str_ireplace('.','__', $route_name);
 }
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function badcamp_2018_theme_suggestions_user_alter(&$suggestions, $vars){
+  $suggestions[] = 'user__' . $vars['elements']['#view_mode'];
+}
+
+/**
+ * Implements hook_preprocess_user().
+ */
+function badcamp_2018_preprocess_user(&$vars) {
+  $vars['org_url'] = (!empty($vars['content']['field_user_organization_website'][0]) ? $vars['content']['field_user_organization_website'][0]['#url']->getUri() : '');
+}

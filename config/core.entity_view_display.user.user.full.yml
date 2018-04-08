@@ -6,6 +6,7 @@ dependencies:
     - core.entity_view_mode.user.full
     - field.field.user.user.field_i_am_interested_in_drupal_
     - field.field.user.user.field_i_am_interested_in_hearing
+    - field.field.user.user.field_subscribe_to_badcamp_newsl
     - field.field.user.user.field_user_bio
     - field.field.user.user.field_user_first_name
     - field.field.user.user.field_user_last_name
@@ -30,7 +31,7 @@ third_party_settings:
         - flag_check_in
         - flag_featured_attendee
       parent_name: ''
-      weight: 0
+      weight: 8
       format_type: html_element
       format_settings:
         id: ''
@@ -51,30 +52,30 @@ bundle: user
 mode: full
 content:
   field_user_bio:
-    weight: 7
-    label: visually_hidden
+    weight: 6
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
   field_user_first_name:
-    weight: 1
-    label: visually_hidden
+    weight: 0
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
     region: content
   field_user_last_name:
-    weight: 2
-    label: visually_hidden
+    weight: 1
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
     region: content
   field_user_organization:
-    weight: 5
+    weight: 4
     label: hidden
     settings:
       link_to_entity: false
@@ -82,20 +83,20 @@ content:
     type: string
     region: content
   field_user_organization_website:
-    weight: 6
+    weight: 5
     label: hidden
     settings:
       trim_length: 80
       url_only: false
       url_plain: false
-      rel: ''
-      target: ''
+      rel: '0'
+      target: '0'
     third_party_settings: {  }
-    type: link
+    type: link_separate
     region: content
   field_user_photo:
-    weight: 3
-    label: visually_hidden
+    weight: 2
+    label: hidden
     settings:
       image_style: member_image
       image_link: ''
@@ -103,7 +104,7 @@ content:
     type: image
     region: content
   field_user_social_profile_links:
-    weight: 8
+    weight: 7
     label: hidden
     settings:
       appearance:
@@ -116,8 +117,8 @@ content:
     type: social_media_links_field_default
     region: content
   field_user_title:
-    weight: 4
-    label: visually_hidden
+    weight: 3
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }

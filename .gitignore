@@ -13,6 +13,7 @@
 /web/themes/custom/badcamp_2018/js/
 /web/profiles/contrib/
 /web/private/scripts/quicksilver
+/web/libraries/
 
 # Ignore scaffold files
 web/.csslintrc

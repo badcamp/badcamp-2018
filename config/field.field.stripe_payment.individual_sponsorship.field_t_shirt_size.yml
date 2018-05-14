@@ -1,0 +1,21 @@
+uuid: 75d960da-1556-436d-8f5c-3cb3d35cdbab
+langcode: en
+status: true
+dependencies:
+  config:
+    - badcamp_stripe_payment.stripe_payment_type.individual_sponsorship
+    - field.storage.stripe_payment.field_t_shirt_size
+  module:
+    - options
+id: stripe_payment.individual_sponsorship.field_t_shirt_size
+field_name: field_t_shirt_size
+entity_type: stripe_payment
+bundle: individual_sponsorship
+label: 'T-Shirt Size'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

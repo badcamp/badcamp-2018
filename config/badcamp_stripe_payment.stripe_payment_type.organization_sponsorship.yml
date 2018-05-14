@@ -1,0 +1,6 @@
+uuid: 1862d485-b913-46e3-a714-90f3437750a1
+langcode: en
+status: true
+dependencies: {  }
+id: organization_sponsorship
+label: 'Organization Sponsorship'

@@ -1,0 +1,25 @@
+uuid: 3a402f56-5229-4c0a-b08a-d3cca043965e
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.sponsorship_block
+    - field.storage.block_content.field_sponsorship_amount
+id: block_content.sponsorship_block.field_sponsorship_amount
+field_name: field_sponsorship_amount
+entity_type: block_content
+bundle: sponsorship_block
+label: 'Sponsorship Amount'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  min: 0
+  max: null
+  prefix: $
+  suffix: ''
+field_type: integer

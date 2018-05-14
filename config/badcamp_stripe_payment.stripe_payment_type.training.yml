@@ -1,0 +1,6 @@
+uuid: 51e2eaec-6869-485b-9810-c6a57df3c40d
+langcode: en
+status: true
+dependencies: {  }
+id: training
+label: Training

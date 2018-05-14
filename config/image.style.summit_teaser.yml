@@ -1,0 +1,14 @@
+uuid: 364355d6-092b-4d3b-b962-d7157104429c
+langcode: en
+status: true
+dependencies: {  }
+name: summit_teaser
+label: 'Summit Teaser'
+effects:
+  6c99e7a8-799c-40fb-94bc-d7dd07259c70:
+    uuid: 6c99e7a8-799c-40fb-94bc-d7dd07259c70
+    id: image_scale_and_crop
+    weight: 3
+    data:
+      width: 560
+      height: 302

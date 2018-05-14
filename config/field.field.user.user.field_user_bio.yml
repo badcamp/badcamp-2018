@@ -14,7 +14,7 @@ field_name: field_user_bio
 entity_type: user
 bundle: user
 label: Bio
-description: ''
+description: 'Tell us something about yourself. Give people insight into you and your background.'
 required: false
 translatable: false
 default_value: {  }

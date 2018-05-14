@@ -1,0 +1,59 @@
+uuid: 01ec5dc0-7ad9-45b5-997a-006f6acce5b9
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.sponsorship_block
+    - field.field.block_content.sponsorship_block.body
+    - field.field.block_content.sponsorship_block.field_payment
+    - field.field.block_content.sponsorship_block.field_sponsorship_amount
+    - field.field.block_content.sponsorship_block.field_sponsorship_title
+  module:
+    - badcamp_stripe_payment
+    - field_formatter_class
+    - text
+id: block_content.sponsorship_block.default
+targetEntityType: block_content
+bundle: sponsorship_block
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 2
+    settings: {  }
+    third_party_settings:
+      field_formatter_class:
+        class: sponsorship-benefits
+    region: content
+  field_payment:
+    weight: 3
+    label: hidden
+    settings: {  }
+    third_party_settings:
+      field_formatter_class:
+        class: sponsorship-pay
+    type: stripe_payment
+    region: content
+  field_sponsorship_amount:
+    weight: 1
+    label: hidden
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings:
+      field_formatter_class:
+        class: sponsorship-amount
+    type: number_integer
+    region: content
+  field_sponsorship_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      field_formatter_class:
+        class: sponsorship-title
+    type: string
+    region: content
+hidden: {  }

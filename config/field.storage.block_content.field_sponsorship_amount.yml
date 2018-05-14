@@ -1,22 +1,21 @@
-uuid: 3d738504-3206-4bbe-845e-0878f79fee0c
+uuid: 68649baf-964a-460d-81e9-42ae0cecadaf
 langcode: en
 status: true
 dependencies:
   module:
+    - block_content
     - field_permissions
-    - text
-    - user
 third_party_settings:
   field_permissions:
     permission_type: public
-_core:
-  default_config_hash: XjKpmw1D8xOGIXE1drSpkWHqNF0gHbt6p3WosFT857M
-id: user.field_user_bio
-field_name: field_user_bio
-entity_type: user
-type: text_long
-settings: {  }
-module: text
+id: block_content.field_sponsorship_amount
+field_name: field_sponsorship_amount
+entity_type: block_content
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
 locked: false
 cardinality: 1
 translatable: true

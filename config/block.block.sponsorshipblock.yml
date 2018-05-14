@@ -1,0 +1,31 @@
+uuid: de29972a-7800-44f5-959b-f5a4a2a02ca6
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:block_reference:b957783c-0841-45d0-983e-330f667c66a7'
+  module:
+    - block_content
+    - system
+  theme:
+    - badcamp_2018
+id: sponsorshipblock
+theme: badcamp_2018
+region: content
+weight: 0
+provider: null
+plugin: 'block_content:b957783c-0841-45d0-983e-330f667c66a7'
+settings:
+  id: 'block_content:b957783c-0841-45d0-983e-330f667c66a7'
+  label: 'Sponsorship Block'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /donate
+    negate: false
+    context_mapping: {  }

@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.summit.field_date
+    - field.field.node.summit.field_image
     - field.field.node.summit.field_sponsors
     - field.field.node.summit.field_stick_to_top_of_date
     - field.field.node.summit.field_stick_to_top_of_schedule
@@ -13,6 +14,7 @@ dependencies:
     - node.type.summit
   module:
     - datetime_range
+    - image
     - text
     - user
 _core:
@@ -31,6 +33,15 @@ content:
       timezone_override: ''
     third_party_settings: {  }
     type: daterange_default
+    region: content
+  field_image:
+    weight: 9
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
     region: content
   field_sponsors:
     weight: 2

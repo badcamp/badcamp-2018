@@ -21,6 +21,7 @@ gulp.task('imagemin', function () {
 
 gulp.task('sass', function () {
   gulp.src('./sass/**/*.scss')
+    .pipe(sassGlob())
     .pipe(sourcemaps.init())
     .pipe(sass({
       includePaths: [
@@ -33,7 +34,6 @@ gulp.task('sass', function () {
     }).on('error', sass.logError))
     .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 7', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
     .pipe(sourcemaps.write('./'))
-    .pipe(sassGlob())
     .pipe(gulp.dest('./css'));
 });
 
@@ -53,6 +53,21 @@ gulp.task('watch', ['sass', 'uglify'], function(){
   gulp.watch(['./css/styles.css', './**/*.twig', './js/*.js'], function (files){
       livereload.changed(files)
   });
+});
+
+gulp.task('drush', function() {
+  return gulp.src('/usr/local/bin/drush', {
+    read: false
+  })
+  .pipe(plugins.shell([
+    'drush cr'
+
+  ]))
+  .pipe(plugins.notify({
+    title: "Clearing Cache",
+    message: "Drupal Cache Cleared",
+    onLast: true
+  }));
 });
 
 gulp.task('default', ['sass', 'uglify']);

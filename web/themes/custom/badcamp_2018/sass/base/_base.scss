@@ -24,7 +24,8 @@ a.action-button,
 input[type="tel"],
 input[type="password"],
 input[type="text"],
-input[type="email"]{
+input[type="email"],
+input[type="url"]{
 
   &:active,
   &:focus,
@@ -36,4 +37,36 @@ input[type="email"]{
   border-top-width: 0;
   border-left-width: 0;
   border-right-width: 0;
+}
+
+fieldset {
+  border: 1px solid $navy-two;
+  padding: 1em;
+  border-radius: 30px;
+
+  legend {
+    font-family: $rye;
+    font-size: 2rem;
+    margin-left: 1em;
+  }
+
+  .fieldset-wrapper {
+
+  }
+}
+
+.password-parent,
+.confirm-parent{
+  float: left;
+  width: 45%;
+  margin-right: 5%;
+}
+
+.confirm-parent {
+  @include clearfix();
+  padding-bottom: 15px;
+}
+
+.filter-wrapper{
+  display: none
 }

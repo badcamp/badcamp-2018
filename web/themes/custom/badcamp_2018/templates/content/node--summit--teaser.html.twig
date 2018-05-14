@@ -70,25 +70,27 @@
  *   in different view modes.
  */
 #}
-<article{{ attributes.addClass('node-type--summit','display--teaser') }}>
-    <div class="grid-x grid-margin-x">
-        <div class="cell small-12 medium-12">
-            {{ title_prefix }}
-            <h4{{ title_attributes }}>
-                <a href="{{ url }}" rel="bookmark">{{ label }}</a>
-            </h4>
-            {{ title_suffix }}
-        </div>
+<article{{ attributes.addClass('node-type--summit','display--teaser', 'grid-y', 'grid-padding-y', 'grid-frame') }}>
+    <div class="cell summit-image">
+        {{ content.field_image }}
+    </div>
 
-        <div class="cell small-12 medium-8">
+    <div class="cell summit-title">
+        {{ title_prefix }}
+        <h4{{ title_attributes }}>
+            <a href="{{ url }}" rel="bookmark">{{ label }}</a>
+        </h4>
+        {{ title_suffix }}
+    </div>
 
-            <div{{ content_attributes }}>
-                {{ content | without('flag_add_to_schedule') }}
-            </div>
-        </div>
+    <div class="cell summit-contents">
 
-        <div class="cell small-12 medium-4">
-            {{ content.flag_add_to_schedule }}
+        <div{{ content_attributes }}>
+            {{ content | without('flag_add_to_schedule','field_image') }}
         </div>
+    </div>
+
+    <div class="cell summit-add-to-schedule align-center">
+        {{ content.flag_add_to_schedule }}
     </div>
 </article>

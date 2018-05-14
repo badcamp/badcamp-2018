@@ -1,0 +1,26 @@
+.registration-steps {
+  .step-number {
+    background: $navy-two;
+    width: 75px;
+    text-align: center;
+    border-radius: 50px;
+    height: 75px;
+    padding: 16px;
+    font-size: 52px;
+    color: $white;
+    font-family: $rye;
+    opacity: .5;
+    margin: .25em auto;
+
+    &.active{
+      opacity: 1;
+    }
+  }
+
+  span {
+    display: block;
+    text-align: center;
+  }
+
+  margin: 3em auto;
+}

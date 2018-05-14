@@ -1,0 +1,109 @@
+#webform-submission-donate-add-form{
+  .donation-amounts {
+    input[type="radio"],
+    label{
+
+    }
+
+    .description{
+
+    }
+
+    .fieldset-wrapper {
+      > div {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: space-between;
+
+        > div {
+          vertical-align: top;
+          width: 25%;
+          margin-right: 0px;
+
+
+
+          &.selected{
+            border: 1px solid;
+            border-radius: 25px;
+            .details .donation-amount{
+              background-color: $navy-two;
+            }
+          }
+
+          .details{
+            text-align: center;
+            .donation-label{
+              margin-bottom: .5em;
+              font-size: 1.5em;
+              font-weight: 700;
+            }
+            .donation-amount{
+              font-size: 2rem;
+              font-weight: 700;
+              margin-bottom: .5em;
+              border-radius: 45px;
+              background-color: $reddish;
+              color: $white;
+              padding: 1em;
+              display: inline-block;
+            }
+            .benefits-label{
+              font-weight: 700;
+              margin-bottom: .5em;
+            }
+            .benefits-list{
+              ul {
+                list-style-type: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.block-references {
+  margin: 1em 0;
+  .cell {
+    text-align: center;
+    margin: 1em 0;
+    .sponsorship-title {
+      font-family: $rye;
+      font-size: 1.5rem;
+      line-height: 1;
+      color: $camel;
+      margin-bottom: .75em;
+    }
+
+    .sponsorship-amount {
+      margin: .75rem 0;
+      font-size: 3rem;
+      font-weight: 300;
+      color: #fefefe;
+      background-color: #012847;
+      border-radius: 120px;
+      display: inline-block;
+      font-family: "Rye", cursive;
+      padding: 1.5em .75em;
+      width: 195px;
+    }
+    .sponsorship-benefits,
+    .stripe-checkout.description {
+      min-height: 140px;
+      ul {
+        list-style-type: none;
+        padding: 0px;
+        margin: 0px;
+        li {
+
+        }
+      }
+      margin-bottom: 1rem;
+    }
+    .sponsorship-pay {
+      margin-bottom: 3rem;
+    }
+  }
+}

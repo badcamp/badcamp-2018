@@ -1,0 +1,16 @@
+name: 'Badcamp Register'
+type: module
+description: 'Badcamp Registration Process'
+core: 8.x
+package: 'Custom'
+
+dependencies:
+  - badcamp_stripe_payment
+
+default_content:
+  block_content:
+    - fffe464a-7730-41f0-a0c3-fd278bda3931
+    - 0551ffca-5066-44b9-bda6-891300c6951a
+    - 34618894-55ad-468a-a467-e573637d7f0a
+    - 7424ecc3-88c3-4014-a668-38464e9f9101
+    - b957783c-0841-45d0-983e-330f667c66a7

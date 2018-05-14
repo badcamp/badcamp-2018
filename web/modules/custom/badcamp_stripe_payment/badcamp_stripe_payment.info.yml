@@ -1,0 +1,7 @@
+name: BADCamp Stripe Payment
+type: module
+description: Provides integration of the Stripe payment processing service by providing a charging and refund service as well as an entity that will store the payment data for each payment made.
+core: 8.x
+package: BADCamp
+dependencies:
+  - stripe_api

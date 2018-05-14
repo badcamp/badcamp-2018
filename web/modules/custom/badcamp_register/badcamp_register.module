@@ -1,0 +1,58 @@
+<?php
+
+/**
+ * Implements hook_theme().
+ */
+function badcamp_register_theme($existing, $type, $theme, $path) {
+  return [
+    'registration_page' => [
+      'variables' => [
+        'step1active' => FALSE,
+        'step2active' => FALSE,
+        'step2active_swag' => FALSE,
+        'step3active' => FALSE,
+        'content' => NULL,
+        'intro_message' => NULL,
+      ],
+      'template' => 'registration_page'
+    ]
+  ];
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function badcamp_register_form_user_register_form_alter(&$form, &$form_state, $form_id) {
+  $form['actions']['submit']['#submit'][] = 'badcamp_register_redirect_submit';
+}
+
+/**
+ * Redirect First Time Login Users to Registration Page 2
+ */
+function badcamp_register_redirect_submit(&$form, \Drupal\Core\Form\FormStateInterface &$form_state) {
+  $redirect_url = \Drupal\Core\Url::fromRoute('badcamp_register.page_2');
+  $form_state->setRedirectUrl($redirect_url);
+}
+
+/**
+ * Implements hook_stripe_payment_successful_redirect_alter().
+ */
+function badcamp_register_stripe_payment_successful_redirect_alter(&$url, $entity, $current_route) {
+  if($current_route['route'] == 'badcamp_register.page_2'){
+    if($entity->getEntityTypeId() == 'stripe_payment' && $entity->bundle() == 'individual_sponsorship' && ((int)$entity->get('amount')->getString() > 0)) {
+      $url = \Drupal\Core\Url::fromRoute('badcamp_register.page_2_swag')->toString();
+    }else{
+      $url = \Drupal\Core\Url::fromRoute('badcamp_register.page_3')->toString();
+    }
+  }
+}
+
+/**
+ * Implements hook_badcamp_swag_selector_form_complete_alter().
+ */
+function badcamp_register_badcamp_swag_selector_form_complete_alter(&$url, $payment) {
+  $current_route = \Drupal::routeMatch()->getRouteName();
+  if ($current_route == 'badcamp_register.page_2_swag') {
+    $url = 'badcamp_register.page_3';
+  }
+}

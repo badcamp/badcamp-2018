@@ -1,0 +1,43 @@
+add stripe payment entities:
+  title: 'Create new Stripe payment entities'
+
+administer stripe payment entities:
+  title: 'Administer Stripe payment entities'
+  description: 'Allow to access the administration form to configure Stripe payment entities.'
+  restrict access: true
+
+delete stripe payment entities:
+  title: 'Delete Stripe payment entities'
+
+edit stripe payment entities:
+  title: 'Edit Stripe payment entities'
+
+access stripe payment overview:
+  title: 'Access the Stripe payment overview page'
+
+view published stripe payment entities:
+  title: 'View published Stripe payment entities'
+
+view unpublished stripe payment entities:
+  title: 'View unpublished Stripe payment entities'
+
+view all stripe payment revisions:
+  title: 'View all Stripe payment revisions'
+
+revert all stripe payment revisions:
+  title: 'Revert all Stripe payment revisions'
+  description: 'Role requires permission <em>view Stripe payment revisions</em> and <em>edit rights</em> for stripe payment entities in question or <em>administer stripe payment entities</em>.'
+
+delete all stripe payment revisions:
+  title: 'Delete all revisions'
+  description: 'Role requires permission to <em>view Stripe payment revisions</em> and <em>delete rights</em> for stripe payment entities in question or <em>administer stripe payment entities</em>.'
+
+access swag page:
+  title: 'Access the swag selection page'
+
+refund all purchases:
+  title: 'Refund all purchases'
+  restrict access: true
+
+refund own purchase:
+  title: 'Refund own purchases'

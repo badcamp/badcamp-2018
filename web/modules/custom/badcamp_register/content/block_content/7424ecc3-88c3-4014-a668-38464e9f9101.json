@@ -1,0 +1,99 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/badcamp2018.docksal\/block\/6?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/block_content\/sponsorship_block"
+        }
+    },
+    "id": [
+        {
+            "value": 6
+        }
+    ],
+    "uuid": [
+        {
+            "value": "7424ecc3-88c3-4014-a668-38464e9f9101"
+        }
+    ],
+    "revision_id": [
+        {
+            "value": 7
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en",
+            "lang": "en"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "sponsorship_block"
+        }
+    ],
+    "revision_created": [
+        {
+            "value": "2018-05-07T05:24:31+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "status": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "info": [
+        {
+            "value": "$0 Indvidual Sponsorship",
+            "lang": "en"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2018-05-14T07:19:22+00:00",
+            "lang": "en",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "field_payment": [
+        {
+            "enable": false,
+            "avs": false,
+            "amount": 0,
+            "payment_type": "individual_sponsorship",
+            "description_value": "<p><strong>Benefits<\/strong><\/p>\r\n\r\n<ul>\r\n\t<li>Much love and respect<\/li>\r\n<\/ul>\r\n",
+            "button_label": "Select",
+            "show_button": true,
+            "link_button": "\/registration\/events",
+            "description_format": "basic_html",
+            "max_payments": 0,
+            "max_purchases": 0,
+            "last_refund_date": ""
+        }
+    ],
+    "field_sponsorship_amount": [
+        {
+            "value": 0
+        }
+    ],
+    "field_sponsorship_title": [
+        {
+            "value": "Juggler"
+        }
+    ]
+}

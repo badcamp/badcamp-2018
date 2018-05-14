@@ -1,0 +1,23 @@
+# Stripe payment routing definition
+
+entity.stripe_payment.canonical:
+  route_name: entity.stripe_payment.canonical
+  base_route: entity.stripe_payment.canonical
+  title: 'View'
+
+entity.stripe_payment.edit_form:
+  route_name: entity.stripe_payment.edit_form
+  base_route: entity.stripe_payment.canonical
+  title: 'Edit'
+
+entity.stripe_payment.version_history:
+  route_name: entity.stripe_payment.version_history
+  base_route: entity.stripe_payment.canonical
+  title: 'Revisions'
+
+entity.stripe_payment.delete_form:
+  route_name:  entity.stripe_payment.delete_form
+  base_route:  entity.stripe_payment.canonical
+  title: Delete
+  weight: 10
+

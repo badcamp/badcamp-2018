@@ -1,0 +1,19 @@
+
+# Stripe payment menu items definition
+entity.stripe_payment.collection:
+  title: 'Stripe payment list'
+  route_name: entity.stripe_payment.collection
+  description: 'List Stripe payment entities'
+  parent: system.admin_structure
+  weight: 100
+
+
+# Stripe payment type menu items definition
+entity.stripe_payment_type.collection:
+  title: 'Stripe payment type'
+  route_name: entity.stripe_payment_type.collection
+  description: 'List Stripe payment type (bundles)'
+  parent: system.admin_structure
+  weight: 99
+
+

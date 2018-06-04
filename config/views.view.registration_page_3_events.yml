@@ -175,7 +175,7 @@ display:
           click_sort_column: value
           type: daterange_compact
           settings:
-            format_type: medium
+            format_type: start_date_only_full_day_full_month_day_number
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -255,10 +255,10 @@ display:
           expose:
             label: ''
           plugin_id: standard
-        title:
-          id: title
-          table: node_field_data
-          field: title
+        random:
+          id: random
+          table: views
+          field: random
           relationship: none
           group_type: group
           admin_label: ''
@@ -266,9 +266,7 @@ display:
           exposed: false
           expose:
             label: ''
-          entity_type: node
-          entity_field: title
-          plugin_id: standard
+          plugin_id: random
       header: {  }
       footer: {  }
       empty: {  }
@@ -277,7 +275,7 @@ display:
       display_extenders: {  }
       title: Summits
     cache_metadata:
-      max-age: -1
+      max-age: 0
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
@@ -632,7 +630,7 @@ display:
           destination: true
           plugin_id: dropbutton
     cache_metadata:
-      max-age: -1
+      max-age: 0
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
@@ -649,7 +647,7 @@ display:
     display_options:
       display_extenders: {  }
     cache_metadata:
-      max-age: -1
+      max-age: 0
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'

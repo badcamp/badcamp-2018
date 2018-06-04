@@ -6,6 +6,7 @@ dependencies:
     - core.entity_form_mode.user.register
     - field.field.user.user.field_i_am_interested_in_drupal_
     - field.field.user.user.field_i_am_interested_in_hearing
+    - field.field.user.user.field_i_m_interested_in_voluntee
     - field.field.user.user.field_subscribe_to_badcamp_newsl
     - field.field.user.user.field_user_bio
     - field.field.user.user.field_user_first_name
@@ -117,7 +118,10 @@ third_party_settings:
     group_option_groups:
       children:
         - group_jobs_wrapper
+        - field_i_am_interested_in_drupal_
         - group_hearing_from_sponsors_wrap
+        - field_i_am_interested_in_hearing
+        - field_i_m_interested_in_voluntee
       parent_name: group_personal_information
       weight: 25
       format_type: html_element
@@ -132,44 +136,6 @@ third_party_settings:
         effect: none
         speed: fast
       label: 'Option Groups'
-      region: content
-    group_jobs_wrapper:
-      children:
-        - field_i_am_interested_in_drupal_
-      parent_name: group_option_groups
-      weight: 20
-      format_type: html_element
-      format_settings:
-        label: 'Jobs Wrapper'
-        element: div
-        show_label: false
-        label_element: h3
-        required_fields: true
-        attributes: ''
-        effect: none
-        speed: fast
-        id: ''
-        classes: 'cell small-12'
-      label: 'Jobs Wrapper'
-      region: content
-    group_hearing_from_sponsors_wrap:
-      children:
-        - field_i_am_interested_in_hearing
-      parent_name: group_option_groups
-      weight: 21
-      format_type: html_element
-      format_settings:
-        label: 'Hearing From Sponsors Wrapper'
-        element: div
-        show_label: false
-        label_element: h3
-        required_fields: true
-        attributes: ''
-        effect: none
-        speed: fast
-        id: ''
-        classes: 'cell small-12'
-      label: 'Hearing From Sponsors Wrapper'
       region: content
     group_organization_wrapper:
       children:
@@ -270,6 +236,13 @@ content:
   field_i_am_interested_in_hearing:
     type: boolean_checkbox
     weight: 23
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_i_m_interested_in_voluntee:
+    type: boolean_checkbox
+    weight: 24
     region: content
     settings:
       display_label: true

@@ -11,6 +11,6 @@ page_3:
   intro_message:
     value: '<p>Please choose which daily events you would like to attend. You may return to this page at any time and change your choices.</p> <p>Training and summit signups indicate interest and you will be emailed to confirm your signup.</p>'
     format: full_html
-  view: summits
-  display_id: summit_list
+  view: registration_page_3_events
+  display_id: list
   arguments: {  }

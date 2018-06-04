@@ -1,4 +1,4 @@
-test_secret_key: stripe_api_test_secret_key
+test_secret_key: stripe_api_secret_key
 test_public_key: stripe_api_test_public_key
 live_secret_key: stripe_api_live_secret_key
 live_public_key: stripe_api_live_public_key

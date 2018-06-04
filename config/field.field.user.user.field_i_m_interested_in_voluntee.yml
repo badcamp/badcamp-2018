@@ -1,0 +1,24 @@
+uuid: ebf48638-f73f-4366-89e9-268f83092959
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_i_m_interested_in_voluntee
+  module:
+    - user
+id: user.user.field_i_m_interested_in_voluntee
+field_name: field_i_m_interested_in_voluntee
+entity_type: user
+bundle: user
+label: 'I''m Interested In volunteering'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

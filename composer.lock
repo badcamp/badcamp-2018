@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "500781a29eec93843690722d6a2d1340",
+    "content-hash": "9b1c9756a1ba968988732d92b91ef719",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -2721,6 +2721,11 @@
                         "status": "not-covered",
                         "message": "Alpha releases are not covered by Drupal security advisories."
                     }
+                },
+                "patches_applied": {
+                    "Allow manual imports": "https://www.drupal.org/files/issues/allow_manual_imports-2640734-67.patch",
+                    "Issue: 2703607 - drush command default-content-export-module-with-references": "https://www.drupal.org/files/issues/default_content-drush_dcemr-2703607-17.patch",
+                    "Issue: 2698425 - Do not reimport existing entities": "https://www.drupal.org/files/issues/do_not_reimport-2698425-64.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -10355,7 +10360,7 @@
         "badcamp/camp": 20,
         "drupal/better_exposed_filters": 15,
         "drupal/config_readonly": 10,
-        "drupal/default_content": 15,
+        "drupal/default_content": 20,
         "drupal/inline_entity_form": 10,
         "drupal/pantheon_advanced_page_cache": 15,
         "drupal/simple_block": 10,

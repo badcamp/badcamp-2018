@@ -1,0 +1,63 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/badcamp-2018.docksal\/session-track\/design?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/taxonomy_term\/session_track"
+        }
+    },
+    "tid": [
+        {
+            "value": 21
+        }
+    ],
+    "uuid": [
+        {
+            "value": "ecfa529b-67a0-4100-bfba-968d7e1d9ff4"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en",
+            "lang": "en"
+        }
+    ],
+    "vid": [
+        {
+            "target_id": "session_track"
+        }
+    ],
+    "name": [
+        {
+            "value": "design",
+            "lang": "en"
+        }
+    ],
+    "weight": [
+        {
+            "value": 0
+        }
+    ],
+    "changed": [
+        {
+            "value": "2018-06-11T00:29:42+00:00",
+            "lang": "en",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "path": [
+        {
+            "alias": "\/session-track\/design",
+            "pid": 66,
+            "langcode": "en",
+            "lang": "en"
+        }
+    ]
+}

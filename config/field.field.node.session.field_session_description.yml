@@ -14,11 +14,11 @@ field_name: field_session_description
 entity_type: node
 bundle: session
 label: Description
-description: ''
+description: 'In as much detail as possible. What is your session about?'
 required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
-  display_summary: true
+  display_summary: false
 field_type: text_with_summary

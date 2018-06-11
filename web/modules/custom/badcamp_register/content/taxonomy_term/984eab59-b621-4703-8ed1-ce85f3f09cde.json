@@ -1,0 +1,63 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/badcamp-2018.docksal\/skill-level\/intermediate?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/taxonomy_term\/skill_level"
+        }
+    },
+    "tid": [
+        {
+            "value": 42
+        }
+    ],
+    "uuid": [
+        {
+            "value": "984eab59-b621-4703-8ed1-ce85f3f09cde"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en",
+            "lang": "en"
+        }
+    ],
+    "vid": [
+        {
+            "target_id": "skill_level"
+        }
+    ],
+    "name": [
+        {
+            "value": "Intermediate",
+            "lang": "en"
+        }
+    ],
+    "weight": [
+        {
+            "value": 1
+        }
+    ],
+    "changed": [
+        {
+            "value": "2018-06-11T05:58:06+00:00",
+            "lang": "en",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "path": [
+        {
+            "alias": "\/skill-level\/intermediate",
+            "pid": 88,
+            "langcode": "en",
+            "lang": "en"
+        }
+    ]
+}

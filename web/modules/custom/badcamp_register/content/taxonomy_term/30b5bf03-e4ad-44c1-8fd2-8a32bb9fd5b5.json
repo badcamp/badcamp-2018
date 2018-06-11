@@ -1,0 +1,63 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/badcamp-2018.docksal\/session-track\/content-strategy?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/taxonomy_term\/session_track"
+        }
+    },
+    "tid": [
+        {
+            "value": 16
+        }
+    ],
+    "uuid": [
+        {
+            "value": "30b5bf03-e4ad-44c1-8fd2-8a32bb9fd5b5"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en",
+            "lang": "en"
+        }
+    ],
+    "vid": [
+        {
+            "target_id": "session_track"
+        }
+    ],
+    "name": [
+        {
+            "value": "content strategy",
+            "lang": "en"
+        }
+    ],
+    "weight": [
+        {
+            "value": 0
+        }
+    ],
+    "changed": [
+        {
+            "value": "2018-06-11T00:29:25+00:00",
+            "lang": "en",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "path": [
+        {
+            "alias": "\/session-track\/content-strategy",
+            "pid": 61,
+            "langcode": "en",
+            "lang": "en"
+        }
+    ]
+}

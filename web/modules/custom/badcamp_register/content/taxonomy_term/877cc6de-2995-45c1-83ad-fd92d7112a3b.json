@@ -1,0 +1,63 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/badcamp-2018.docksal\/session-track\/security?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/taxonomy_term\/session_track"
+        }
+    },
+    "tid": [
+        {
+            "value": 36
+        }
+    ],
+    "uuid": [
+        {
+            "value": "877cc6de-2995-45c1-83ad-fd92d7112a3b"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en",
+            "lang": "en"
+        }
+    ],
+    "vid": [
+        {
+            "target_id": "session_track"
+        }
+    ],
+    "name": [
+        {
+            "value": "security",
+            "lang": "en"
+        }
+    ],
+    "weight": [
+        {
+            "value": 0
+        }
+    ],
+    "changed": [
+        {
+            "value": "2018-06-11T00:30:56+00:00",
+            "lang": "en",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "path": [
+        {
+            "alias": "\/session-track\/security",
+            "pid": 81,
+            "langcode": "en",
+            "lang": "en"
+        }
+    ]
+}

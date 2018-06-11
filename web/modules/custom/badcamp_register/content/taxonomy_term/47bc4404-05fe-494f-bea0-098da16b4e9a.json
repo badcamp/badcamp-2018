@@ -1,0 +1,63 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/badcamp-2018.docksal\/session-track\/business?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/taxonomy_term\/session_track"
+        }
+    },
+    "tid": [
+        {
+            "value": 12
+        }
+    ],
+    "uuid": [
+        {
+            "value": "47bc4404-05fe-494f-bea0-098da16b4e9a"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en",
+            "lang": "en"
+        }
+    ],
+    "vid": [
+        {
+            "target_id": "session_track"
+        }
+    ],
+    "name": [
+        {
+            "value": "business",
+            "lang": "en"
+        }
+    ],
+    "weight": [
+        {
+            "value": 0
+        }
+    ],
+    "changed": [
+        {
+            "value": "2018-06-11T00:29:06+00:00",
+            "lang": "en",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "path": [
+        {
+            "alias": "\/session-track\/business",
+            "pid": 57,
+            "langcode": "en",
+            "lang": "en"
+        }
+    ]
+}

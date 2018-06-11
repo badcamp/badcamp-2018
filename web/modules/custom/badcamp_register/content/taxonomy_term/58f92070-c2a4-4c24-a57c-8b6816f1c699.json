@@ -1,0 +1,63 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/badcamp-2018.docksal\/skill-level\/advanced?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/taxonomy_term\/skill_level"
+        }
+    },
+    "tid": [
+        {
+            "value": 43
+        }
+    ],
+    "uuid": [
+        {
+            "value": "58f92070-c2a4-4c24-a57c-8b6816f1c699"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en",
+            "lang": "en"
+        }
+    ],
+    "vid": [
+        {
+            "target_id": "skill_level"
+        }
+    ],
+    "name": [
+        {
+            "value": "Advanced",
+            "lang": "en"
+        }
+    ],
+    "weight": [
+        {
+            "value": 2
+        }
+    ],
+    "changed": [
+        {
+            "value": "2018-06-11T05:58:06+00:00",
+            "lang": "en",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "path": [
+        {
+            "alias": "\/skill-level\/advanced",
+            "pid": 89,
+            "langcode": "en",
+            "lang": "en"
+        }
+    ]
+}

@@ -9,16 +9,16 @@ _core:
 id: session
 label: Session
 type: 'canonical_entities:node'
-pattern: 'sessions/[node:field_session_track]/[node:title]'
+pattern: 'session/[node:title]'
 selection_criteria:
-  9e9e1526-7ce7-4aa9-ba06-7a5f1c778c67:
+  e9d09763-b34b-46d9-8f26-a2b638b84bc8:
     id: node_type
     bundles:
       session: session
     negate: false
     context_mapping:
       node: node
-    uuid: 9e9e1526-7ce7-4aa9-ba06-7a5f1c778c67
+    uuid: e9d09763-b34b-46d9-8f26-a2b638b84bc8
 selection_logic: and
 weight: -5
 relationships: {  }

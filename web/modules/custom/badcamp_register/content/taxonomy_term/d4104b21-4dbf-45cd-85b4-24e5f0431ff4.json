@@ -1,0 +1,63 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/badcamp-2018.docksal\/session-track\/decoupled?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/taxonomy_term\/session_track"
+        }
+    },
+    "tid": [
+        {
+            "value": 20
+        }
+    ],
+    "uuid": [
+        {
+            "value": "d4104b21-4dbf-45cd-85b4-24e5f0431ff4"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en",
+            "lang": "en"
+        }
+    ],
+    "vid": [
+        {
+            "target_id": "session_track"
+        }
+    ],
+    "name": [
+        {
+            "value": "decoupled",
+            "lang": "en"
+        }
+    ],
+    "weight": [
+        {
+            "value": 0
+        }
+    ],
+    "changed": [
+        {
+            "value": "2018-06-11T00:29:39+00:00",
+            "lang": "en",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "path": [
+        {
+            "alias": "\/session-track\/decoupled",
+            "pid": 65,
+            "langcode": "en",
+            "lang": "en"
+        }
+    ]
+}

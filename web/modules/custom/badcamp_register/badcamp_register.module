@@ -1,5 +1,8 @@
 <?php
 
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Link;
+
 /**
  * Implements hook_theme().
  */
@@ -55,4 +58,12 @@ function badcamp_register_badcamp_swag_selector_form_complete_alter(&$url, $paym
   if ($current_route == 'badcamp_register.page_2_swag') {
     $url = 'badcamp_register.page_3';
   }
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function badcamp_register_form_node_session_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+	$form['#title'] = t('Submit A Session');
+	$form['actions']['submit']['#value'] = t('Save Session');
 }

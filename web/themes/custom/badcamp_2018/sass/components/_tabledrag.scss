@@ -1,0 +1,64 @@
+table tbody tr {
+  padding: 0;
+
+  .form-item{
+    margin-bottom: 1rem;
+  }
+}
+
+a.tabledrag-handle {
+  cursor: pointer;
+  .handle{
+    background: none;
+
+    &:hover{
+      background: none;
+    }
+
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: 2em;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    margin: -0.5em 0.5em 0;
+
+    &:before {
+      content: "\f0dc";
+    }
+  }
+}
+
+.warning.tabledrag-changed{
+  display: none;
+}
+
+.form-item {
+  table {
+    thead {
+      background: transparent;
+      border: 0px solid;
+      th {
+        padding-left: 0;
+        h4 {
+          @extend label;
+
+          font-size: 1rem;
+          font-weight: 700;
+          text-transform: uppercase;
+          margin-bottom: 1em;
+
+          background: none;
+          color: $black;
+          font-family: $quicksand;
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+.tabledrag-toggle-weight-wrapper{
+  display: none;
+}

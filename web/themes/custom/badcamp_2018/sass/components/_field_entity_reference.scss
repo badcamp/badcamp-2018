@@ -1,0 +1,13 @@
+.field--type-entity-reference{
+  fieldset{
+    legend{
+      font-family: $quicksand;
+      @extend label;
+
+      font-size: 1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 1em;
+    }
+  }
+}

@@ -29,19 +29,24 @@ third_party_settings:
       children:
         - title
         - field_speakers
-        - field_session_track
         - field_skill_level
+        - field_session_track
         - field_session_description
         - field_session_files
         - field_session_video
         - field_sponsors
       parent_name: ''
       weight: 0
-      format_type: fieldset
+      format_type: html_element
       format_settings:
         label: Information
-        description: ''
+        element: div
+        show_label: false
+        label_element: h3
         required_fields: true
+        attributes: ''
+        effect: none
+        speed: fast
         id: ''
         classes: ''
       label: Information
@@ -49,7 +54,6 @@ third_party_settings:
     group_session_admin:
       children:
         - field_venue
-        - field_registration_limit
         - field_date
         - field_stick_to_top_of_schedule
         - field_stick_to_top_of_date
@@ -105,10 +109,13 @@ content:
     type: options_select
     region: content
   field_session_track:
-    weight: 2
-    settings: {  }
+    weight: 3
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
-    type: options_select
+    type: entity_reference_autocomplete
     region: content
   field_session_video:
     weight: 6
@@ -117,7 +124,7 @@ content:
     type: video_embed_field_textfield
     region: content
   field_skill_level:
-    weight: 3
+    weight: 2
     settings: {  }
     third_party_settings: {  }
     type: options_select

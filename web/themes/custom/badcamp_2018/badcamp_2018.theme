@@ -274,3 +274,10 @@ function badcamp_2018_form_views_exposed_form_alter(&$form, &$form_state) {
       break;
   }
 }
+
+/**
+ * @param $vars
+ */
+function badcamp_2018_preprocess_field_multiple_value_form(&$vars) {
+
+}

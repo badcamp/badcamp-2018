@@ -13,7 +13,7 @@ field_name: field_session_track
 entity_type: node
 bundle: session
 label: Track
-description: ''
+description: 'Select the tracks that best accompany your session. In order of preference select up to 3 tags that best fit your session''s track.'
 required: true
 translatable: false
 default_value: {  }

@@ -56,15 +56,13 @@
         </div>
     {% endif %}
 
-    <div class="grid-x grid-margin-x">
-        <div class="cell small-12 medium-3 large-4">
+    <div >
         {% if exposed %}
             <div class="view-filters">
                 {{ exposed }}
             </div>
         {% endif %}
-        </div>
-        <div class="cell small-12 medium-9 large-8">
+
         {% if rows %}
             <div class="view-content">
                 {{ rows }}
@@ -74,7 +72,6 @@
                 {{ empty }}
             </div>
         {% endif %}
-        </div>
     </div>
 
     {% if pager %}

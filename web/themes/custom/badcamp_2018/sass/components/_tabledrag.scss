@@ -3,16 +3,32 @@ table tbody tr {
 
   .form-item{
     margin-bottom: 1rem;
+    &.js-form-type-select{
+      margin-bottom: 0;
+    }
+  }
+
+  &.draggable td.field-multiple-drag:first-child{
+    width: 7%;
+    min-width: 50px;
   }
 }
 
 a.tabledrag-handle {
   cursor: pointer;
+  &:hover,
+  &:active,
+  &:focus{
+    background-image: none;
+    .handle {
+      background-image: none;
+    }
+  }
   .handle{
-    background: none;
+    background-image: none;
 
     &:hover{
-      background: none;
+      background-image: none;
     }
 
     display: inline-block;

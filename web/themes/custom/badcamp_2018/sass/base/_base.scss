@@ -21,6 +21,10 @@ a.action-button,
   @extend .button;
 }
 
+.button {
+  margin-top: 1rem;
+}
+
 input[type="tel"],
 input[type="password"],
 input[type="text"],

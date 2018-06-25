@@ -10,13 +10,13 @@
     'platforms',
     appearance.orientation == 'h' ? 'inline horizontal' : 'vertical',
     'text-center',
-    'medium-text-right'
+    'grid-x',
 ]
 %}
 
-<ul{{ attributes.addClass(classes) }}>
+<div{{ attributes.addClass(classes) }}>
     {% for platform in platforms %}
-        <li>
+        <span>
             <a href="{{ platform.url }}" {{ platform.attributes}} >
                 {{ platform.element }}
             </a>
@@ -28,6 +28,6 @@
 
                 <span><a href="{{ platform.url }}" {{ link_attributes }}>{{ platform.name }}</a></span>
             {% endif %}
-        </li>
+        </span>
     {% endfor %}
-</ul>
+</div>

@@ -76,24 +76,15 @@
 
     <div{{ content_attributes }}>
 
-        <div>
-            {{ content.field_session_video }}
+        {{ content | without('flag_interested', 'field_sponsors')}}
+
+        <div class="cell auto">
+            <h4>Sponsors</h4>
+            {{ content.field_sponsors }}
         </div>
 
-        <div class="grid-x grid-margin-x">
-            <div class="cell auto">
-                <h4>Speaker(s)</h4>
-                {{ content.field_speakers }}
-            </div>
-            <div class="cell auto">
-                <h4>Sponsors</h4>
-                {{ content.field_sponsors }}
-            </div>
-        </div>
-
-        {{ content | without('field_speakers', 'field_sponsors', 'flag_interested', 'field_session_video')}}
-
-        <div>
+        <div class="margin-vertical-1">
+            <p>Interested in attending this session? Letting us know helps us allocate space.<br/>The more people that show interest, the bigger the room we will attempt to book.<br/>Click the button below to let us know.</p>
             {{ content.flag_interested }}
         </div>
     </div>

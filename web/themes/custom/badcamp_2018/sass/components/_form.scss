@@ -11,3 +11,12 @@
     margin-bottom: 1em;
   }
 }
+
+.form-required{
+  &:after {
+    content: " *";
+    color: red;
+    font-weight: 700;
+    font-size: 1.25em;
+  }
+}

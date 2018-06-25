@@ -20,9 +20,8 @@ class RouteSubscriber extends RouteSubscriberBase {
 	 */
 	protected function alterRoutes(RouteCollection $collection) {
 		// Get the route you want to alter
-		$route = $collection->get('user.register');
-		$route->setRequirements([
-			'_access' => FALSE
-		]);
+		if ($route = $collection->get('user.register')) {
+			$route->setRequirement('_access', 'FALSE');
+		}
 	}
 }

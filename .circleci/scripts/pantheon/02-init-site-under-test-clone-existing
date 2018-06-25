@@ -20,3 +20,5 @@ terminus -n drush "$TERMINUS_SITE.$TERMINUS_ENV" -- updatedb -y
 if [ -f "config/system.site.yml" ] ; then
   terminus -n drush "$TERMINUS_SITE.$TERMINUS_ENV" -- config-import --yes
 fi
+
+terminus env:clone-content "$TERMINUS_SITE.live" "$TERMINUS_ENV" --yes

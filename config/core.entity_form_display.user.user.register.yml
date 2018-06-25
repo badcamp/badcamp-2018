@@ -23,6 +23,7 @@ dependencies:
     - image
     - link
     - mailchimp_lists
+    - social_media_links_field
     - text
     - user
 third_party_settings:
@@ -117,17 +118,14 @@ third_party_settings:
       region: content
     group_option_groups:
       children:
-        - group_jobs_wrapper
         - field_i_am_interested_in_drupal_
-        - group_hearing_from_sponsors_wrap
         - field_i_am_interested_in_hearing
         - field_i_m_interested_in_voluntee
       parent_name: group_personal_information
       weight: 25
       format_type: html_element
       format_settings:
-        id: ''
-        classes: 'grid-x grid-margin-x'
+        label: 'Option Groups'
         element: div
         show_label: false
         label_element: h3
@@ -135,6 +133,8 @@ third_party_settings:
         attributes: ''
         effect: none
         speed: fast
+        id: ''
+        classes: 'grid-x grid-margin-x margin-horizontal-1'
       label: 'Option Groups'
       region: content
     group_organization_wrapper:
@@ -301,6 +301,12 @@ content:
       progress_indicator: throbber
       preview_image_style: thumbnail
     third_party_settings: {  }
+  field_user_social_profile_links:
+    type: social_media_links_field_default
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   field_user_title:
     type: string_textfield
     weight: 23
@@ -311,7 +317,7 @@ content:
     third_party_settings: {  }
 hidden:
   field_user_public_schedule: true
-  field_user_social_profile_links: true
+  google_analytics: true
   language: true
   path: true
   timezone: true

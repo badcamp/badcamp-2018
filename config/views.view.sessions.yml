@@ -289,6 +289,7 @@ display:
         filter_groups: false
         exposed_form: false
         group_by: false
+        use_ajax: false
       sorts:
         title:
           id: title
@@ -418,25 +419,25 @@ display:
           exposed: true
           expose:
             operator_id: field_skill_level_target_id_op
-            label: Level
+            label: 'Level of Understanding'
             description: ''
             use_operator: false
             operator: field_skill_level_target_id_op
-            identifier: skill_level
+            identifier: skill
             required: false
             remember: false
             multiple: true
             remember_roles:
               authenticated: authenticated
+              anonymous: '0'
               sponsor_manager: '0'
               event_manager: '0'
               session_manager: '0'
               summit_manager: '0'
-              anonymous: '0'
               training_manager: '0'
-              administrator: '0'
               volunteer: '0'
               volunteer_manager: '0'
+              administrator: '0'
             reduce: false
           is_grouped: false
           group_info:
@@ -470,25 +471,25 @@ display:
           exposed: true
           expose:
             operator_id: field_session_track_target_id_op
-            label: Track
+            label: 'Presentation Topics'
             description: ''
             use_operator: false
             operator: field_session_track_target_id_op
-            identifier: session_track
+            identifier: session-track
             required: false
             remember: false
             multiple: true
             remember_roles:
               authenticated: authenticated
+              anonymous: '0'
               sponsor_manager: '0'
               event_manager: '0'
               session_manager: '0'
               summit_manager: '0'
-              anonymous: '0'
               training_manager: '0'
-              administrator: '0'
               volunteer: '0'
               volunteer_manager: '0'
+              administrator: '0'
             reduce: false
           is_grouped: false
           group_info:
@@ -517,7 +518,7 @@ display:
         type: bef
         options:
           submit_button: Filter
-          reset_button: true
+          reset_button: false
           reset_button_label: Reset
           exposed_sorts_label: 'Sort by'
           expose_sort_order: true
@@ -550,6 +551,7 @@ display:
                   filter_rewrite_values: ''
           text_input_required_format: basic_html
       group_by: true
+      use_ajax: true
     cache_metadata:
       max-age: -1
       contexts:

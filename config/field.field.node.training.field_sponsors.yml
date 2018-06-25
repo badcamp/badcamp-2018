@@ -6,6 +6,12 @@ dependencies:
     - field.storage.node.field_sponsors
     - node.type.sponsor
     - node.type.training
+  module:
+    - custom_add_another
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
 _core:
   default_config_hash: Ui9d-WI3oAa7M40BmniqR_XB7gAslKdhg78lZgMsGYk
 id: node.training.field_sponsors

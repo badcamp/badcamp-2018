@@ -6,7 +6,12 @@ dependencies:
     - field.storage.node.field_sponsor_logo
     - node.type.sponsor
   module:
+    - custom_add_another
     - image
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
 _core:
   default_config_hash: w7s7uU-9dmwzrvx_DhnTBGGJvvNd7_SXlDbFON2Mx9s
 id: node.sponsor.field_sponsor_logo

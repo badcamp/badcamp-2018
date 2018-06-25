@@ -12,11 +12,11 @@ entity_type: node
 global: false
 weight: 0
 flag_short: Interested
-flag_long: ''
-flag_message: ''
+flag_long: 'Letting us know helps us allocate space. The more people that show interest, the bigger the room we will attempt to book.'
+flag_message: 'Thank you for letting us know you are interested in this session!'
 unflag_short: 'No Longer Interested'
 unflag_long: ''
-unflag_message: ''
+unflag_message: 'Thank you for letting us know you changed your mind and are no longer interested!'
 unflag_denied_text: ''
 flag_type: 'entity:node'
 link_type: ajax_link

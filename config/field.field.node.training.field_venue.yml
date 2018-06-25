@@ -6,6 +6,12 @@ dependencies:
     - field.storage.node.field_venue
     - node.type.training
     - taxonomy.vocabulary.venues
+  module:
+    - custom_add_another
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
 _core:
   default_config_hash: m0lO_RnQrWIhLJ9b2mejE_Uf4u3VlVDKMgiHe6t1wSk
 id: node.training.field_venue

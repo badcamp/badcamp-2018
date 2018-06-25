@@ -1,0 +1,10 @@
+uuid: dc5887c8-accd-4a97-a6cf-2db188f78873
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.user_entry
+label: 'User Entry'
+targetEntityType: node
+cache: true

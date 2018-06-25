@@ -119,17 +119,14 @@ third_party_settings:
       region: content
     group_option_groups:
       children:
-        - group_jobs_wrapper
         - field_i_am_interested_in_drupal_
-        - group_hearing_from_sponsors_wrap
         - field_i_am_interested_in_hearing
         - field_i_m_interested_in_voluntee
       parent_name: group_personal_information
       weight: 24
       format_type: html_element
       format_settings:
-        id: ''
-        classes: 'grid-x grid-margin-x'
+        label: 'Option Groups'
         element: div
         show_label: false
         label_element: h3
@@ -137,6 +134,8 @@ third_party_settings:
         attributes: ''
         effect: none
         speed: fast
+        id: ''
+        classes: 'grid-x grid-margin-x margin-horizontal-1'
       label: 'Option Groups'
       region: content
     group_organization_wrapper:
@@ -323,6 +322,11 @@ content:
     settings:
       size: 60
       placeholder: ''
+    third_party_settings: {  }
+  google_analytics:
+    weight: 3
+    region: content
+    settings: {  }
     third_party_settings: {  }
 hidden:
   language: true

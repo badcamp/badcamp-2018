@@ -6,7 +6,12 @@ dependencies:
     - field.storage.node.field_training_description
     - node.type.training
   module:
+    - custom_add_another
     - text
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
 _core:
   default_config_hash: GdJI7aOXRbgQjnMTH_q-elUQaWCcxC9WZASOh-KdaC8
 id: node.training.field_training_description

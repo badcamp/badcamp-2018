@@ -5,8 +5,13 @@ dependencies:
   config:
     - field.storage.user.field_user_bio
   module:
+    - custom_add_another
     - text
     - user
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
 _core:
   default_config_hash: MQu7Hs6K3NVTZoD63rPnUDUP57q3Zc5N0FmFPlr8fRA
 id: user.user.field_user_bio

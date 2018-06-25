@@ -5,7 +5,12 @@ dependencies:
   config:
     - field.storage.user.field_i_m_interested_in_voluntee
   module:
+    - custom_add_another
     - user
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
 id: user.user.field_i_m_interested_in_voluntee
 field_name: field_i_m_interested_in_voluntee
 entity_type: user

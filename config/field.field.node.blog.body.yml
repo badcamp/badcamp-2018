@@ -6,7 +6,12 @@ dependencies:
     - field.storage.node.body
     - node.type.blog
   module:
+    - custom_add_another
     - text
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
 _core:
   default_config_hash: 2J2ieB6u00ahEtCVS1Zw5J2Wdt6rNytLmoV5ltIkg9Q
 id: node.blog.body

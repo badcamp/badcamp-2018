@@ -6,7 +6,12 @@ dependencies:
     - block_content.type.basic_block
     - field.storage.block_content.body
   module:
+    - custom_add_another
     - text
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
 id: block_content.basic_block.body
 field_name: body
 entity_type: block_content

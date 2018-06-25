@@ -5,6 +5,12 @@ dependencies:
   config:
     - block_content.type.sponsorship_block
     - field.storage.block_content.field_sponsorship_title
+  module:
+    - custom_add_another
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
 id: block_content.sponsorship_block.field_sponsorship_title
 field_name: field_sponsorship_title
 entity_type: block_content

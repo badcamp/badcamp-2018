@@ -6,7 +6,12 @@ dependencies:
     - badcamp_stripe_payment.stripe_payment_type.individual_sponsorship
     - field.storage.stripe_payment.field_hoodie_size
   module:
+    - custom_add_another
     - options
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
 id: stripe_payment.individual_sponsorship.field_hoodie_size
 field_name: field_hoodie_size
 entity_type: stripe_payment

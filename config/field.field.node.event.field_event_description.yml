@@ -6,7 +6,12 @@ dependencies:
     - field.storage.node.field_event_description
     - node.type.event
   module:
+    - custom_add_another
     - text
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
 _core:
   default_config_hash: G0_t2P5Ao3hI4qAc1ICqCnqNRzcYM8wVLDR9n1GJFfg
 id: node.event.field_event_description

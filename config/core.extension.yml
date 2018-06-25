@@ -24,6 +24,7 @@ module:
   config_readonly: 0
   contextual: 0
   ctools: 0
+  custom_add_another: 0
   daterange_compact: 0
   datetime: 0
   datetime_range: 0
@@ -42,6 +43,7 @@ module:
   file: 0
   filter: 0
   flag: 0
+  google_analytics: 0
   hal: 0
   help: 0
   honeypot: 0
@@ -58,6 +60,7 @@ module:
   mailsystem: 0
   menu_link_attributes: 0
   menu_ui: 0
+  multiple_selects: 0
   node: 0
   options: 0
   page_cache: 0

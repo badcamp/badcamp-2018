@@ -7,6 +7,12 @@ dependencies:
     - block_content.type.block_reference
     - block_content.type.sponsorship_block
     - field.storage.block_content.field_blocks
+  module:
+    - custom_add_another
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
 id: block_content.block_reference.field_blocks
 field_name: field_blocks
 entity_type: block_content

@@ -2,6 +2,7 @@
 
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Link;
+use Drupal\Core\Entity\EntityInterface;
 
 /**
  * Implements hook_theme().
@@ -64,6 +65,41 @@ function badcamp_register_badcamp_swag_selector_form_complete_alter(&$url, $paym
  * Implements hook_form_FORM_ID_alter().
  */
 function badcamp_register_form_node_session_form_alter(&$form, FormStateInterface $form_state, $form_id) {
-	$form['#title'] = t('Submit A Session');
+	$form['#title'] = t('Submit Session');
 	$form['actions']['submit']['#value'] = t('Save Session');
+}
+
+/**
+ * Implements hook_entity_type_alter().
+ */
+function badcamp_register_entity_type_alter(array &$entity_types) {
+	// We get all form modes, for all entities, and loop through them.
+	$form_modes = \Drupal::service('entity_display.repository')->getAllFormModes();
+	foreach ($form_modes as $entity_type => $display_modes) {
+		if ($entity_type !== 'node') {
+			// We are only interested in adding a handler to the Node entity.
+			continue;
+		}
+
+		$node_type = $entity_types[$entity_type];
+		foreach ($display_modes as $machine_name => $form_display) {
+			if ($machine_name !== 'user_entry') {
+				// We are only interested in adding this form mode to the definition.
+				continue;
+			}
+			// We get the default handler class. It will be enough for us.
+			$default_handler_class = $node_type->getHandlerClasses()['form']['default'];
+			// We set the form class, keyed by the machine name of our custom form mode.
+			$node_type->setFormClass($machine_name, $default_handler_class);
+		}
+	}
+}
+
+/**
+ * Implements hook_entity_insert().
+ */
+function badcamp_register_entity_insert(EntityInterface $entity) {
+	if ($entity->getEntityTypeId() == 'node' && $entity->bundle() == 'session') {
+		drupal_set_message(t('Thank you for your submission!'));
+	}
 }

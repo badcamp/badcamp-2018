@@ -29,3 +29,11 @@ badcamp_register.page_3:
     _title: 'Registration'
   requirements:
     _user_is_logged_in: 'TRUE'
+
+#badcamp_register.add_session:
+#  path: '/session/create'
+#  defaults:
+#    _controller: '\Drupal\badcamp_register\Controller\SessionCreation::page'
+#    _title: 'Submit a Session'
+#  requirements:
+#    _user_is_logged_in: 'TRUE'

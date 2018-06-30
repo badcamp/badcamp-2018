@@ -31,7 +31,6 @@ fix_permissions ()
 composer_install ()
 {
   cd $PROJECT_ROOT
-  composer global require hirak/prestissimo:^0.3
   composer install --ansi
 }
 
@@ -42,6 +41,5 @@ composer_install ()
 # Project initialization steps
 composer_install
 fix_permissions
-eval ${PROJECT_ROOT}/.docksal/commands/terminus install
 eval ${PROJECT_ROOT}/.docksal/commands/refresh
 #-------------------------- END: Execution --------------------------------

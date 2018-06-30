@@ -1,18 +1,18 @@
-#block-aboutbadcamp{
+#block-aboutbadcamp {
   @include background-img('../images/background-about.png', cover, center, repeat);
   color: $white;
 
-  > div{
+  > div {
     position: relative;
   }
 
-  p{
+  p {
     font-size: 28px;
     line-height: 1.36;
     margin: 0;
   }
 
-  .left{
+  .left {
     @include background-img('../images/left_stars.svg', contain);
   }
 
@@ -20,7 +20,7 @@
     @include background-img('../images/right_stars.svg', contain);
   }
 
-  .header-img{
+  .header-img {
     height: 100px;
     @include background-img('../images/about_badcamp.svg', cover);
     margin: 25px 0;
@@ -31,7 +31,7 @@
     }
   }
 
-  .footer-img{
+  .footer-img {
     @include background-img('../images/about_badcamp_bottom.svg', cover);
     height: 50px;
     margin: 35px 0;
@@ -41,15 +41,18 @@
     }
   }
 
-  .strongman{
-    @include background-img('../images/strongman.png', contain, bottom center);
+  .circusman {
+    @include background-img('../images/circusman.png', contain, bottom center);
 
-    width: 539px;
-    height: 687px;
+    width: 820px;
+    height: 636px;
     position: absolute;
-    left: -240px;
+    left: -575px;
     bottom: 0px;
+    display: none;
 
-    @include show-for(medium);
+    @include breakpoint(1200 up) {
+      display: block;
+    }
   }
 }

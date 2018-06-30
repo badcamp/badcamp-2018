@@ -84,7 +84,7 @@ if [ $ELEMENTS = 'all' ] || [ $ELEMENTS = 'db' ]; then
     fi
 
     echo "Importing Database..."
-    drush sql-drop -y
+    ${PROJECT_ROOT}/bin/drupal database:drop -y > /dev/null
     drush sql-cli < ${DBFILE}
 fi
 

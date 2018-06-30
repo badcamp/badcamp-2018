@@ -83,8 +83,12 @@ if [ $ELEMENTS = 'all' ] || [ $ELEMENTS = 'db' ]; then
       fi
     fi
 
+    if [[ "$(${PROJECT_ROOT}/bin/drupal 2>/dev/null)" =~ "database:drop" ]]; then
+        echo "Dropping Old Database..."
+        ${PROJECT_ROOT}/bin/drupal database:drop
+    fi
+
     echo "Importing Database..."
-    ${PROJECT_ROOT}/bin/drupal database:drop -y > /dev/null
     drush sql-cli < ${DBFILE}
 fi
 

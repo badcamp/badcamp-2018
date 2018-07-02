@@ -34,11 +34,30 @@
     }
     input[type="text"] {
       display: inline-block;
-      width: 200px;
+      max-width: 400px;
+      width: 100%;
     }
   }
 }
 
 .social-profile-links {
   max-width: 250px;
+}
+
+#edit-field-user-social-profile-links-0{
+  .fieldset-wrapper {
+    .form-item {
+      margin-bottom: 1rem;
+      label {
+        display: inline-block;
+        width: 125px;
+      }
+    }
+  }
+}
+
+#edit-field-subscribe-to-badcamp-newsl-0-value{
+  .form-item {
+    margin-bottom: 1rem;
+  }
 }

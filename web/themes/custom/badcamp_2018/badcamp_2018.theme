@@ -347,3 +347,22 @@ function badcamp_2018_preprocess_field__field_session_track(&$vars){
 		}
 	}
 }
+
+/**
+ * Implements template_preprocess_field__HOOK().
+ * @param $vars
+ */
+function badcamp_2018_preprocess_node__session(&$vars) {
+	$node = $vars['node'];
+	$status_field = $node->get('field_session_status')->getValue();
+	$session_status = $status_field[0]['value'];
+
+	switch ($session_status) {
+		case "proposed":
+			unset($vars['content']['flag_add_to_schedule']);
+			break;
+		case "accepted":
+			unset($vars['content']['flag_interested']);
+			break;
+	}
+}

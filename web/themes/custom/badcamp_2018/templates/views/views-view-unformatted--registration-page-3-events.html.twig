@@ -19,10 +19,10 @@
 #}
 <div class="summit-list-page">
     {% if title %}
-        <h3>{{ title }}</h3>
+        <h3 class="color-camel">{{ title }}</h3>
     {% endif %}
 
-    <div class="grid-x grid-padding-x small-up-1 medium-up-1 large-up-3" data-equalizer data-equalize-on="medium" data-equalize-by-row="true">
+    <div class="grid-x grid-padding-x small-up-1 medium-up-1 large-up-3" data-equalizer="container" data-equalize-on="medium" data-equalize-by-row="true">
     {% for row in rows %}
         {%
             set row_classes = [
@@ -32,7 +32,7 @@
             'medium-4'
         ]
         %}
-        <div{{ row.attributes.addClass(row_classes) }} data-equalizer-watch>
+        <div{{ row.attributes.addClass(row_classes) }} data-equalizer-watch="container" data-equalizer="item">
             {{ row.content }}
         </div>
     {% endfor %}

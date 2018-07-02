@@ -8,4 +8,14 @@ footer{
       text-decoration: underline;
     }
   }
+
+  #block-socialmedialinks{
+    .social-media-links--platforms{
+      justify-content: flex-end;
+      -webkit-justify-content: flex-end;
+      span {
+        margin-left: 1em;
+      }
+    }
+  }
 }

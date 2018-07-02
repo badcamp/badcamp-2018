@@ -59,6 +59,14 @@ fieldset {
   }
 }
 
+a{
+  text-decoration: underline;
+}
+
+.path-frontpage h2{
+  font-size: 5rem;
+}
+
 .password-parent,
 .confirm-parent{
   float: left;
@@ -73,4 +81,47 @@ fieldset {
 
 .filter-wrapper{
   display: none
+}
+
+.color-white{
+  color: $white;
+}
+.bg-white {
+  background-color: $white;
+}
+.color-dark-grey-blue {
+  color: $dark-grey-blue;
+}
+.bg-dark-grey-blue {
+  background-color: $dark-grey-blue;
+}
+.color-dark-blue-grey{
+  color: $dark-blue-grey;
+}
+.bg-dark-blue-grey {
+  background-color: $dark-blue-grey;
+}
+.color-reddish{
+  color: $reddish;
+}
+.bg-reddish {
+  background-color: $reddish;
+}
+.color-dusk-blue{
+  color: $dusk-blue;
+}
+.bg-dusk-blue {
+  background-color: $dusk-blue;
+}
+.color-navy-two{
+  color: $navy-two;
+}
+.bg-navy-two {
+  background-color: $navy-two;
+}
+.color-camel{
+  color: $camel;
+}
+.bg-camel {
+  background-color: $camel;
 }

@@ -76,17 +76,27 @@
 
     <div{{ content_attributes }}>
 
-        {{ content | without('flag_interested', 'field_sponsors')}}
+        {{ content | without('flag_interested', 'field_sponsors' ,'flag_add_to_schedule')}}
 
+        {% if content.field_sponsors|render is not empty %}
         <div class="cell auto">
             <h4>Sponsors</h4>
             {{ content.field_sponsors }}
         </div>
+        {% endif %}
 
+        {% if content.flag_interested|render is not empty %}
         <div class="margin-vertical-1">
             <p>Interested in attending this session? Letting us know helps us allocate space.<br/>The more people that show interest, the bigger the room we will attempt to book.<br/>Click the button below to let us know.</p>
             {{ content.flag_interested }}
         </div>
+        {% endif %}
+
+        {% if content.flag_add_to_schedule|render is not empty %}
+            <div class="margin-vertical-1">
+                {{ content.flag_add_to_schedule }}
+            </div>
+        {% endif %}
     </div>
 
 </article>

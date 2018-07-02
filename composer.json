@@ -23,6 +23,7 @@
     "cweagans/composer-patches": "^1.0",
     "drupal-composer/drupal-scaffold": "^2.0.1",
     "drupal/better_exposed_filters": "^3.0@alpha",
+    "drupal/better_normalizers": "^1.0@beta",
     "drupal/config_direct_save": "^1.0",
     "drupal/config_installer": "^1.0",
     "drupal/config_provider": "2.0-alpha1",

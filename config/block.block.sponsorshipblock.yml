@@ -12,7 +12,7 @@ dependencies:
 id: sponsorshipblock
 theme: badcamp_2018
 region: content
-weight: 0
+weight: -1
 provider: null
 plugin: 'block_content:b957783c-0841-45d0-983e-330f667c66a7'
 settings:

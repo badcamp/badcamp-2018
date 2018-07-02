@@ -1,7 +1,7 @@
 {
     "_links": {
         "self": {
-            "href": "http:\/\/badcamp-2018.docksal\/block\/6?_format=hal_json"
+            "href": "http:\/\/badcamp-2018.docksal\/block\/3?_format=hal_json"
         },
         "type": {
             "href": "http:\/\/drupal.org\/rest\/type\/block_content\/sponsorship_block"
@@ -9,7 +9,7 @@
     },
     "id": [
         {
-            "value": 6
+            "value": 3
         }
     ],
     "uuid": [
@@ -19,7 +19,7 @@
     ],
     "revision_id": [
         {
-            "value": 7
+            "value": 3
         }
     ],
     "langcode": [
@@ -68,22 +68,6 @@
         {
             "value": true,
             "lang": "en"
-        }
-    ],
-    "field_payment": [
-        {
-            "enable": false,
-            "avs": false,
-            "amount": 0,
-            "payment_type": "individual_sponsorship",
-            "description_value": "<p><strong>Benefits<\/strong><\/p>\r\n\r\n<ul>\r\n\t<li>Much love and respect<\/li>\r\n<\/ul>\r\n",
-            "button_label": "Select",
-            "show_button": true,
-            "link_button": "\/registration\/events",
-            "description_format": "basic_html",
-            "max_payments": 0,
-            "max_purchases": 0,
-            "last_refund_date": ""
         }
     ],
     "field_sponsorship_amount": [

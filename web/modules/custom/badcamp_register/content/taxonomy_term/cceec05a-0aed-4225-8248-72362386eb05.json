@@ -1,7 +1,7 @@
 {
     "_links": {
         "self": {
-            "href": "http:\/\/badcamp-2018.docksal\/session-track\/project-management?_format=hal_json"
+            "href": "http:\/\/badcamp-2018.docksal\/session-topics\/project-management?_format=hal_json"
         },
         "type": {
             "href": "http:\/\/drupal.org\/rest\/type\/taxonomy_term\/session_track"
@@ -9,7 +9,7 @@
     },
     "tid": [
         {
-            "value": 34
+            "value": 42
         }
     ],
     "uuid": [
@@ -54,8 +54,8 @@
     ],
     "path": [
         {
-            "alias": "\/session-track\/project-management",
-            "pid": 79,
+            "alias": "\/session-topics\/project-management",
+            "pid": 81,
             "langcode": "en",
             "lang": "en"
         }

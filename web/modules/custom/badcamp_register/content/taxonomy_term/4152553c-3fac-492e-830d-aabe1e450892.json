@@ -1,7 +1,7 @@
 {
     "_links": {
         "self": {
-            "href": "http:\/\/badcamp-2018.docksal\/session-track\/leadership?_format=hal_json"
+            "href": "http:\/\/badcamp-2018.docksal\/session-topics\/leadership?_format=hal_json"
         },
         "type": {
             "href": "http:\/\/drupal.org\/rest\/type\/taxonomy_term\/session_track"
@@ -9,7 +9,7 @@
     },
     "tid": [
         {
-            "value": 28
+            "value": 13
         }
     ],
     "uuid": [
@@ -54,8 +54,8 @@
     ],
     "path": [
         {
-            "alias": "\/session-track\/leadership",
-            "pid": 73,
+            "alias": "\/session-topics\/leadership",
+            "pid": 52,
             "langcode": "en",
             "lang": "en"
         }

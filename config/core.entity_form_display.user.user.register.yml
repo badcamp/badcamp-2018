@@ -7,6 +7,7 @@ dependencies:
     - field.field.user.user.field_i_am_interested_in_drupal_
     - field.field.user.user.field_i_am_interested_in_hearing
     - field.field.user.user.field_i_m_interested_in_voluntee
+    - field.field.user.user.field_list_my_account_on_attende
     - field.field.user.user.field_subscribe_to_badcamp_newsl
     - field.field.user.user.field_user_bio
     - field.field.user.user.field_user_first_name
@@ -118,6 +119,7 @@ third_party_settings:
       region: content
     group_option_groups:
       children:
+        - field_list_my_account_on_attende
         - field_i_am_interested_in_drupal_
         - field_i_am_interested_in_hearing
         - field_i_m_interested_in_voluntee
@@ -228,28 +230,35 @@ content:
     third_party_settings: {  }
   field_i_am_interested_in_drupal_:
     type: boolean_checkbox
-    weight: 21
+    weight: 1
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   field_i_am_interested_in_hearing:
     type: boolean_checkbox
-    weight: 23
+    weight: 2
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   field_i_m_interested_in_voluntee:
     type: boolean_checkbox
-    weight: 24
+    weight: 3
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_list_my_account_on_attende:
+    type: boolean_checkbox
+    weight: 0
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   field_subscribe_to_badcamp_newsl:
     type: mailchimp_lists_select
-    weight: 2
+    weight: 4
     region: content
     settings: {  }
     third_party_settings: {  }

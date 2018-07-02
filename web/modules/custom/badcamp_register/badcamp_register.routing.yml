@@ -12,7 +12,7 @@ badcamp_register.page_2:
     _controller: '\Drupal\badcamp_register\Controller\RegistrationPage2Controller::page'
     _title: 'Registration'
   requirements:
-    _user_is_logged_in: 'TRUE'
+    _permission: 'access content'
 
 badcamp_register.page_2_swag:
   path: '/registration/sponsor/swag'
@@ -20,7 +20,7 @@ badcamp_register.page_2_swag:
     _controller: '\Drupal\badcamp_register\Controller\RegistrationPage2Controller::swag'
     _title: 'Registration'
   requirements:
-    _user_is_logged_in: 'TRUE'
+    _permission: 'access content'
 
 badcamp_register.page_3:
   path: '/registration/events'
@@ -28,7 +28,7 @@ badcamp_register.page_3:
     _controller: '\Drupal\badcamp_register\Controller\RegistrationPage3Controller::page'
     _title: 'Registration'
   requirements:
-    _user_is_logged_in: 'TRUE'
+    _permission: 'access content'
 
 #badcamp_register.add_session:
 #  path: '/session/create'

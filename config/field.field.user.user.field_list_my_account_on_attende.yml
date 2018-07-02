@@ -1,9 +1,9 @@
-uuid: ebf48638-f73f-4366-89e9-268f83092959
+uuid: d0999956-402e-4ad9-b543-70836535b3a4
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.user.field_i_m_interested_in_voluntee
+    - field.storage.user.field_list_my_account_on_attende
   module:
     - custom_add_another
     - user
@@ -11,17 +11,17 @@ third_party_settings:
   custom_add_another:
     custom_add_another: ''
     custom_remove: ''
-id: user.user.field_i_m_interested_in_voluntee
-field_name: field_i_m_interested_in_voluntee
+id: user.user.field_list_my_account_on_attende
+field_name: field_list_my_account_on_attende
 entity_type: user
 bundle: user
-label: 'I am Interested In volunteering'
+label: 'List Me on the Attendees Page'
 description: ''
 required: false
 translatable: false
 default_value:
   -
-    value: 0
+    value: 1
 default_value_callback: ''
 settings:
   on_label: 'On'

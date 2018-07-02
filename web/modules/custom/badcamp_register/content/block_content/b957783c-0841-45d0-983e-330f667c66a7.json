@@ -1,29 +1,29 @@
 {
     "_links": {
         "self": {
-            "href": "http:\/\/badcamp-2018.docksal\/block\/4?_format=hal_json"
+            "href": "http:\/\/badcamp-2018.docksal\/block\/5?_format=hal_json"
         },
         "type": {
             "href": "http:\/\/drupal.org\/rest\/type\/block_content\/block_reference"
         },
         "http:\/\/drupal.org\/rest\/relation\/block_content\/block_reference\/field_blocks": [
             {
-                "href": "http:\/\/badcamp-2018.docksal\/block\/6?_format=hal_json"
+                "href": "http:\/\/badcamp-2018.docksal\/block\/3?_format=hal_json"
+            },
+            {
+                "href": "http:\/\/badcamp-2018.docksal\/block\/4?_format=hal_json"
             },
             {
                 "href": "http:\/\/badcamp-2018.docksal\/block\/1?_format=hal_json"
             },
             {
                 "href": "http:\/\/badcamp-2018.docksal\/block\/2?_format=hal_json"
-            },
-            {
-                "href": "http:\/\/badcamp-2018.docksal\/block\/3?_format=hal_json"
             }
         ]
     },
     "id": [
         {
-            "value": 4
+            "value": 5
         }
     ],
     "uuid": [
@@ -33,7 +33,7 @@
     ],
     "revision_id": [
         {
-            "value": 4
+            "value": 5
         }
     ],
     "langcode": [
@@ -98,7 +98,7 @@
             {
                 "_links": {
                     "self": {
-                        "href": "http:\/\/badcamp-2018.docksal\/block\/6?_format=hal_json"
+                        "href": "http:\/\/badcamp-2018.docksal\/block\/3?_format=hal_json"
                     },
                     "type": {
                         "href": "http:\/\/drupal.org\/rest\/type\/block_content\/sponsorship_block"
@@ -113,7 +113,7 @@
             {
                 "_links": {
                     "self": {
-                        "href": "http:\/\/badcamp-2018.docksal\/block\/1?_format=hal_json"
+                        "href": "http:\/\/badcamp-2018.docksal\/block\/4?_format=hal_json"
                     },
                     "type": {
                         "href": "http:\/\/drupal.org\/rest\/type\/block_content\/sponsorship_block"
@@ -128,7 +128,7 @@
             {
                 "_links": {
                     "self": {
-                        "href": "http:\/\/badcamp-2018.docksal\/block\/2?_format=hal_json"
+                        "href": "http:\/\/badcamp-2018.docksal\/block\/1?_format=hal_json"
                     },
                     "type": {
                         "href": "http:\/\/drupal.org\/rest\/type\/block_content\/sponsorship_block"
@@ -143,7 +143,7 @@
             {
                 "_links": {
                     "self": {
-                        "href": "http:\/\/badcamp-2018.docksal\/block\/3?_format=hal_json"
+                        "href": "http:\/\/badcamp-2018.docksal\/block\/2?_format=hal_json"
                     },
                     "type": {
                         "href": "http:\/\/drupal.org\/rest\/type\/block_content\/sponsorship_block"

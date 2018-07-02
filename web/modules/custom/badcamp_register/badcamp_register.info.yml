@@ -8,6 +8,8 @@ dependencies:
   - badcamp_stripe_payment
 
 default_content:
+  file:
+    - 553fc1c2-9823-47b8-aaef-5a9dd91c9eb9
   block_content:
     - fffe464a-7730-41f0-a0c3-fd278bda3931
     - 0551ffca-5066-44b9-bda6-891300c6951a

@@ -8,23 +8,12 @@
         },
         "http:\/\/drupal.org\/rest\/relation\/node\/summit\/revision_uid": [
             {
-                "href": "http:\/\/badcamp-2018.docksal\/u\/seanedietrich?_format=hal_json"
+                "href": "http:\/\/badcamp-2018.docksal\/user\/6?_format=hal_json"
             }
         ],
         "http:\/\/drupal.org\/rest\/relation\/node\/summit\/uid": [
             {
-                "href": "http:\/\/badcamp-2018.docksal\/u\/seanedietrich?_format=hal_json",
-                "lang": "en"
-            }
-        ],
-        "http:\/\/drupal.org\/rest\/relation\/node\/summit\/field_image": [
-            {
-                "href": "http:\/\/badcamp-2018.docksal\/sites\/default\/files\/summit\/2018-05\/30207448520_9625ec2914_z.jpg"
-            }
-        ],
-        "http:\/\/drupal.org\/rest\/relation\/node\/summit\/field_sponsors": [
-            {
-                "href": "http:\/\/badcamp-2018.docksal\/sponsors\/contrib-level\/kanopi-studios?_format=hal_json",
+                "href": "http:\/\/badcamp-2018.docksal\/user\/6?_format=hal_json",
                 "lang": "en"
             }
         ]
@@ -41,7 +30,7 @@
     ],
     "vid": [
         {
-            "value": 24
+            "value": 28
         }
     ],
     "langcode": [
@@ -57,7 +46,7 @@
     ],
     "revision_timestamp": [
         {
-            "value": "2018-05-07T09:00:59+00:00",
+            "value": "2018-06-20T01:31:43+00:00",
             "format": "Y-m-d\\TH:i:sP"
         }
     ],
@@ -66,7 +55,7 @@
             {
                 "_links": {
                     "self": {
-                        "href": "http:\/\/badcamp-2018.docksal\/u\/seanedietrich?_format=hal_json"
+                        "href": "http:\/\/badcamp-2018.docksal\/user\/6?_format=hal_json"
                     },
                     "type": {
                         "href": "http:\/\/drupal.org\/rest\/type\/user\/user"
@@ -83,7 +72,7 @@
             {
                 "_links": {
                     "self": {
-                        "href": "http:\/\/badcamp-2018.docksal\/u\/seanedietrich?_format=hal_json"
+                        "href": "http:\/\/badcamp-2018.docksal\/user\/6?_format=hal_json"
                     },
                     "type": {
                         "href": "http:\/\/drupal.org\/rest\/type\/user\/user"
@@ -92,41 +81,6 @@
                 "uuid": [
                     {
                         "value": "edf5a360-2bfe-4e46-8852-071918f6822a"
-                    }
-                ],
-                "lang": "en"
-            }
-        ],
-        "http:\/\/drupal.org\/rest\/relation\/node\/summit\/field_image": [
-            {
-                "_links": {
-                    "self": {
-                        "href": "http:\/\/badcamp-2018.docksal\/sites\/default\/files\/summit\/2018-05\/30207448520_9625ec2914_z.jpg"
-                    },
-                    "type": {
-                        "href": "http:\/\/drupal.org\/rest\/type\/file\/file"
-                    }
-                },
-                "uuid": [
-                    {
-                        "value": "dae578a9-a6c2-44fe-ad68-992b50d614d0"
-                    }
-                ]
-            }
-        ],
-        "http:\/\/drupal.org\/rest\/relation\/node\/summit\/field_sponsors": [
-            {
-                "_links": {
-                    "self": {
-                        "href": "http:\/\/badcamp-2018.docksal\/sponsors\/contrib-level\/kanopi-studios?_format=hal_json"
-                    },
-                    "type": {
-                        "href": "http:\/\/drupal.org\/rest\/type\/node\/sponsor"
-                    }
-                },
-                "uuid": [
-                    {
-                        "value": "9ad63980-0c44-4cfb-aa83-d3f6e8224e1d"
                     }
                 ],
                 "lang": "en"
@@ -154,7 +108,7 @@
     ],
     "changed": [
         {
-            "value": "2018-05-07T09:00:59+00:00",
+            "value": "2018-06-20T01:31:43+00:00",
             "lang": "en",
             "format": "Y-m-d\\TH:i:sP"
         }
@@ -193,8 +147,8 @@
     ],
     "field_date": [
         {
-            "value": "2018-10-24T09:00:00",
-            "end_value": "2018-10-24T16:30:00",
+            "value": "2018-10-25T09:00:00",
+            "end_value": "2018-10-25T16:30:00",
             "lang": "en"
         }
     ],

@@ -1,7 +1,7 @@
 {
     "_links": {
         "self": {
-            "href": "http:\/\/badcamp-2018.docksal\/session-track\/culture?_format=hal_json"
+            "href": "http:\/\/badcamp-2018.docksal\/session-topics\/culture?_format=hal_json"
         },
         "type": {
             "href": "http:\/\/drupal.org\/rest\/type\/taxonomy_term\/session_track"
@@ -9,7 +9,7 @@
     },
     "tid": [
         {
-            "value": 18
+            "value": 30
         }
     ],
     "uuid": [
@@ -54,8 +54,8 @@
     ],
     "path": [
         {
-            "alias": "\/session-track\/culture",
-            "pid": 63,
+            "alias": "\/session-topics\/culture",
+            "pid": 69,
             "langcode": "en",
             "lang": "en"
         }

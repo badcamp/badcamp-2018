@@ -11,7 +11,7 @@ _core:
 id: badcamp_2018_page_title
 theme: badcamp_2018
 region: header
-weight: -7
+weight: -8
 provider: null
 plugin: page_title_block
 settings:

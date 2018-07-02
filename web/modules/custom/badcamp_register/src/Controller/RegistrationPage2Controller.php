@@ -7,6 +7,7 @@ use Drupal\Core\Entity\EntityRepositoryInterface;
 use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drupal\Core\Form\FormBuilderInterface;
 use Drupal\Core\Render\RendererInterface;
+use Drupal\Core\Session\AccountProxyInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
@@ -52,6 +53,10 @@ class RegistrationPage2Controller extends ControllerBase {
    *
    */
   public function page() {
+		if ($this->currentUser()->isAnonymous()){
+			return $this->redirect('badcamp_register.page_1');
+		}
+
     $config = $this->config('badcamp_register.settings')->get('page_2');
     $bid = $config['bid']; // Get the block id through config, SQL or some other means
     $block = $this->entityRepository->loadEntityByUuid('block_content', $bid);
@@ -75,6 +80,10 @@ class RegistrationPage2Controller extends ControllerBase {
    *
    */
   public function swag() {
+		if ($this->currentUser()->isAnonymous()){
+			return $this->redirect('badcamp_register.page_1');
+		}
+
     $config = $this->config('badcamp_register.settings')->get('page_2_swag');
 
     $form_class = '\Drupal\badcamp_register\Form\SwagSelectorForm';

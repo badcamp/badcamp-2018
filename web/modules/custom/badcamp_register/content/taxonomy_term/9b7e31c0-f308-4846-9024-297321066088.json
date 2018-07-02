@@ -1,7 +1,7 @@
 {
     "_links": {
         "self": {
-            "href": "http:\/\/badcamp-2018.docksal\/session-track\/drupal-community?_format=hal_json"
+            "href": "http:\/\/badcamp-2018.docksal\/session-topics\/drupal-community?_format=hal_json"
         },
         "type": {
             "href": "http:\/\/drupal.org\/rest\/type\/taxonomy_term\/session_track"
@@ -9,7 +9,7 @@
     },
     "tid": [
         {
-            "value": 23
+            "value": 38
         }
     ],
     "uuid": [
@@ -54,8 +54,8 @@
     ],
     "path": [
         {
-            "alias": "\/session-track\/drupal-community",
-            "pid": 68,
+            "alias": "\/session-topics\/drupal-community",
+            "pid": 77,
             "langcode": "en",
             "lang": "en"
         }

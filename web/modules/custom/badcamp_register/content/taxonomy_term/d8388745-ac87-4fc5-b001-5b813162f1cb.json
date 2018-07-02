@@ -1,7 +1,7 @@
 {
     "_links": {
         "self": {
-            "href": "http:\/\/badcamp-2018.docksal\/session-track\/testing?_format=hal_json"
+            "href": "http:\/\/badcamp-2018.docksal\/session-topics\/testing?_format=hal_json"
         },
         "type": {
             "href": "http:\/\/drupal.org\/rest\/type\/taxonomy_term\/session_track"
@@ -9,7 +9,7 @@
     },
     "tid": [
         {
-            "value": 38
+            "value": 29
         }
     ],
     "uuid": [
@@ -54,8 +54,8 @@
     ],
     "path": [
         {
-            "alias": "\/session-track\/testing",
-            "pid": 83,
+            "alias": "\/session-topics\/testing",
+            "pid": 68,
             "langcode": "en",
             "lang": "en"
         }

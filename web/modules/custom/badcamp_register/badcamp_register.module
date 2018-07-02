@@ -28,6 +28,15 @@ function badcamp_register_theme($existing, $type, $theme, $path) {
  */
 function badcamp_register_form_user_register_form_alter(&$form, &$form_state, $form_id) {
   $form['actions']['submit']['#submit'][] = 'badcamp_register_redirect_submit';
+	$form["field_user_social_profile_links"]["widget"][0]["#type"] = 'fieldset';
+	$form["field_i_am_interested_in_drupal_"]['#prefix'] = '<div class="cell small-12">';
+	$form["field_i_am_interested_in_drupal_"]['#suffix'] = '</div>';
+	$form["field_i_m_interested_in_voluntee"]['#prefix'] = '<div class="cell small-12">';
+	$form["field_i_m_interested_in_voluntee"]['#suffix'] = '</div>';
+	$form["field_i_am_interested_in_hearing"]['#prefix'] = '<div class="cell small-12">';
+	$form["field_i_am_interested_in_hearing"]['#suffix'] = '</div>';
+	$form["field_list_my_account_on_attende"]['#prefix'] = '<div class="cell small-12">';
+	$form["field_list_my_account_on_attende"]['#suffix'] = '</div>';
 }
 
 /**

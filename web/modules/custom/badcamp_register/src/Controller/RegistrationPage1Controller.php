@@ -6,7 +6,10 @@ use Drupal\Core\Controller\ControllerBase;
 use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drupal\Core\Form\FormBuilderInterface;
 use Drupal\Core\Render\RendererInterface;
+use Drupal\Core\Session\AccountProxyInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
+use Symfony\Component\HttpFoundation\RedirectResponse;
+use Symfony\Component\HttpFoundation\Response;
 
 /**
  * Class RegistrationPage1Controller.
@@ -43,6 +46,10 @@ class RegistrationPage1Controller extends ControllerBase {
   }
 
   public function page() {
+  	if ($this->currentUser()->isAuthenticated()){
+  		return $this->redirect('badcamp_register.page_2');
+		}
+
     $config = $this->config('badcamp_register.settings')->get('page_1');
 
     $entity = $this->entityTypeManager->getStorage('user')->create(array());

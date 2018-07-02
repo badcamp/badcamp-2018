@@ -9,7 +9,7 @@
     },
     "tid": [
         {
-            "value": 43
+            "value": 7
         }
     ],
     "uuid": [
@@ -55,7 +55,7 @@
     "path": [
         {
             "alias": "\/skill-level\/advanced",
-            "pid": 89,
+            "pid": 46,
             "langcode": "en",
             "lang": "en"
         }

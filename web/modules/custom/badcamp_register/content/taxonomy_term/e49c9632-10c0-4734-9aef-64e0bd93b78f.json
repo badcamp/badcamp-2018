@@ -1,7 +1,7 @@
 {
     "_links": {
         "self": {
-            "href": "http:\/\/badcamp-2018.docksal\/session-track\/backend-development?_format=hal_json"
+            "href": "http:\/\/badcamp-2018.docksal\/session-topics\/backend-development?_format=hal_json"
         },
         "type": {
             "href": "http:\/\/drupal.org\/rest\/type\/taxonomy_term\/session_track"
@@ -9,7 +9,7 @@
     },
     "tid": [
         {
-            "value": 8
+            "value": 27
         }
     ],
     "uuid": [
@@ -54,8 +54,8 @@
     ],
     "path": [
         {
-            "alias": "\/session-track\/backend-development",
-            "pid": 53,
+            "alias": "\/session-topics\/backend-development",
+            "pid": 66,
             "langcode": "en",
             "lang": "en"
         }

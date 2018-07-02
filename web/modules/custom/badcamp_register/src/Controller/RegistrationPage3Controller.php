@@ -46,6 +46,10 @@ class RegistrationPage3Controller extends ControllerBase {
    * @return array
    */
   public function page() {
+		if ($this->currentUser()->isAnonymous()){
+			return $this->redirect('badcamp_register.page_1');
+		}
+
     $config = $this->config('badcamp_register.settings')->get('page_3');
 
     $text = '';

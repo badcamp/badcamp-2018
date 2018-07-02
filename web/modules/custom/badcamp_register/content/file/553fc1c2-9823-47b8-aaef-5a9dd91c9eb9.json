@@ -1,0 +1,87 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/badcamp-2018.docksal\/sites\/default\/files\/default_images\/41275003-4fc2d94c-6dd4-11e8-9cf5-d515cd5b659e.png"
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/file\/file"
+        },
+        "http:\/\/drupal.org\/rest\/relation\/file\/file\/uid": [
+            {
+                "href": "http:\/\/badcamp-2018.docksal\/user\/6?_format=hal_json"
+            }
+        ]
+    },
+    "fid": [
+        {
+            "value": 9
+        }
+    ],
+    "uuid": [
+        {
+            "value": "553fc1c2-9823-47b8-aaef-5a9dd91c9eb9"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en"
+        }
+    ],
+    "_embedded": {
+        "http:\/\/drupal.org\/rest\/relation\/file\/file\/uid": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/badcamp-2018.docksal\/user\/6?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/user\/user"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "edf5a360-2bfe-4e46-8852-071918f6822a"
+                    }
+                ]
+            }
+        ]
+    },
+    "filename": [
+        {
+            "value": "41275003-4fc2d94c-6dd4-11e8-9cf5-d515cd5b659e.png"
+        }
+    ],
+    "uri": [
+        {
+            "value": "public:\/\/default_images\/41275003-4fc2d94c-6dd4-11e8-9cf5-d515cd5b659e.png",
+            "url": "\/sites\/default\/files\/default_images\/41275003-4fc2d94c-6dd4-11e8-9cf5-d515cd5b659e.png"
+        }
+    ],
+    "filemime": [
+        {
+            "value": "image\/png"
+        }
+    ],
+    "filesize": [
+        {
+            "value": 26213
+        }
+    ],
+    "status": [
+        {
+            "value": true
+        }
+    ],
+    "created": [
+        {
+            "value": "2018-07-02T04:03:36+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2018-07-02T04:03:42+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ]
+}

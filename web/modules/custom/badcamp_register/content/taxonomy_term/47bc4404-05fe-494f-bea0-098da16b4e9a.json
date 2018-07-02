@@ -1,7 +1,7 @@
 {
     "_links": {
         "self": {
-            "href": "http:\/\/badcamp-2018.docksal\/session-track\/business?_format=hal_json"
+            "href": "http:\/\/badcamp-2018.docksal\/session-topics\/business?_format=hal_json"
         },
         "type": {
             "href": "http:\/\/drupal.org\/rest\/type\/taxonomy_term\/session_track"
@@ -54,8 +54,8 @@
     ],
     "path": [
         {
-            "alias": "\/session-track\/business",
-            "pid": 57,
+            "alias": "\/session-topics\/business",
+            "pid": 51,
             "langcode": "en",
             "lang": "en"
         }

@@ -1,7 +1,7 @@
 {
     "_links": {
         "self": {
-            "href": "http:\/\/badcamp-2018.docksal\/session-track\/scaling?_format=hal_json"
+            "href": "http:\/\/badcamp-2018.docksal\/session-topics\/scaling?_format=hal_json"
         },
         "type": {
             "href": "http:\/\/drupal.org\/rest\/type\/taxonomy_term\/session_track"
@@ -9,7 +9,7 @@
     },
     "tid": [
         {
-            "value": 35
+            "value": 40
         }
     ],
     "uuid": [
@@ -54,8 +54,8 @@
     ],
     "path": [
         {
-            "alias": "\/session-track\/scaling",
-            "pid": 80,
+            "alias": "\/session-topics\/scaling",
+            "pid": 79,
             "langcode": "en",
             "lang": "en"
         }

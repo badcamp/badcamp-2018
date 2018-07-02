@@ -1,7 +1,7 @@
 {
     "_links": {
         "self": {
-            "href": "http:\/\/badcamp-2018.docksal\/session-track\/content-strategy?_format=hal_json"
+            "href": "http:\/\/badcamp-2018.docksal\/session-topics\/content-strategy?_format=hal_json"
         },
         "type": {
             "href": "http:\/\/drupal.org\/rest\/type\/taxonomy_term\/session_track"
@@ -54,8 +54,8 @@
     ],
     "path": [
         {
-            "alias": "\/session-track\/content-strategy",
-            "pid": 61,
+            "alias": "\/session-topics\/content-strategy",
+            "pid": 55,
             "langcode": "en",
             "lang": "en"
         }

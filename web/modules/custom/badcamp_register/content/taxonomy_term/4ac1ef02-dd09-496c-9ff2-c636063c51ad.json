@@ -1,7 +1,7 @@
 {
     "_links": {
         "self": {
-            "href": "http:\/\/badcamp-2018.docksal\/session-track\/career-development?_format=hal_json"
+            "href": "http:\/\/badcamp-2018.docksal\/session-topics\/career-development?_format=hal_json"
         },
         "type": {
             "href": "http:\/\/drupal.org\/rest\/type\/taxonomy_term\/session_track"
@@ -9,7 +9,7 @@
     },
     "tid": [
         {
-            "value": 13
+            "value": 11
         }
     ],
     "uuid": [
@@ -54,8 +54,8 @@
     ],
     "path": [
         {
-            "alias": "\/session-track\/career-development",
-            "pid": 58,
+            "alias": "\/session-topics\/career-development",
+            "pid": 50,
             "langcode": "en",
             "lang": "en"
         }

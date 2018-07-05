@@ -21,10 +21,11 @@
         <h2>{{ content.field_user_first_name.0 }} {{ content.field_user_last_name.0 }}</h2>
         <h3>
             {% if content.field_user_title.0 is not empty %}{{ content.field_user_title.0 }}{% endif %}
+            {% if content.field_user_title.0 is not empty and content.field_user_organization.0 is not empty %} / {% endif %}
+
             {% if content.field_user_organization_website.0 is not empty %}
                 <a href="{{ org_url }}">
             {% endif %}
-                {% if content.field_user_title.0 is not empty and content.field_user_organization.0 is not empty %} / {% endif %}
                 {% if content.field_user_organization.0 is not empty %}{{ content.field_user_organization.0 }}{% endif %}
             {% if content.field_user_organization_website.0 is not empty %}
                 </a>

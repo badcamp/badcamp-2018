@@ -38,9 +38,10 @@
  * @ingroup themeable
  */
 #}
-<span{{ attributes.addClass('category-icon') }}>
-    <i class="fa fa-2x fa-bullhorn"></i>
+
+<div{{ attributes }}>
+    <span class="category-icon"><i class="fa fa-bullhorn fa-2x"></i></span>
     {% for item in items %}
-        {{ item.content }} {% if not loop.last %} / {% endif %}
+        <span>{{ item.content }}</span> {% if not loop.last %} / {% endif %}
     {% endfor %}
-</span>
+</div>

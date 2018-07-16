@@ -65,6 +65,9 @@ a{
 
 .path-frontpage h2{
   font-size: 5rem;
+  @include breakpoint(small){
+    font-size: 3.5rem;
+  }
 }
 
 .password-parent,

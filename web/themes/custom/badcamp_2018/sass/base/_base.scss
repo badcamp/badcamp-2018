@@ -65,7 +65,7 @@ a{
 
 .path-frontpage h2{
   font-size: 5rem;
-  @include breakpoint(small){
+  @include breakpoint(small only){
     font-size: 3.5rem;
   }
 }

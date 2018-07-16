@@ -2,6 +2,10 @@
   @include background-img('../images/background-about.png', cover, center, repeat);
   color: $white;
 
+  @include breakpoint(medium up){
+    min-height: 636px;
+  }
+
   > div {
     position: relative;
   }

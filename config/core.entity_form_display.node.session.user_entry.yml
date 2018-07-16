@@ -176,6 +176,9 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  url_redirects:
+    weight: 50
+    region: content
 hidden:
   created: true
   field_date: true
@@ -183,6 +186,7 @@ hidden:
   field_session_video: true
   field_stick_to_top_of_date: true
   field_stick_to_top_of_schedule: true
+  field_twitter_teaser: true
   field_venue: true
   path: true
   promote: true

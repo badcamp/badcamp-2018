@@ -6,7 +6,12 @@ dependencies:
     - field.storage.node.webform
     - node.type.webform
   module:
+    - custom_add_another
     - webform
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
 _core:
   default_config_hash: IYDvt9GwiPFhqabK4wieBb-5xvTG0CkOFeRDf5A3W1E
 id: node.webform.webform

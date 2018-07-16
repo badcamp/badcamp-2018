@@ -1,0 +1,175 @@
+<?php
+
+/**
+ * @file
+ * Contains badcamp_stripe_payment.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\badcamp_stripe_payment\EventSubscriber\DonateRedirectSubscriber;
+use Drupal\user\Entity\User;
+use Drupal\Core\Url;
+use Drupal\Core\Form\FormStateInterface;
+use Symfony\Component\HttpFoundation\RedirectResponse;
+
+/**
+ * Implements hook_help().
+ */
+function badcamp_stripe_payment_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the badcamp_stripe_payment module.
+    case 'help.page.badcamp_stripe_payment':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Provides integration of the Stripe payment processing service by providing a charging and refund service as well as an entity that will store the payment data for each payment made.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function badcamp_stripe_payment_theme() {
+  $theme = [];
+  $theme['stripe_payment'] = array(
+    'render element' => 'elements',
+    'file' => 'stripe_payment.page.inc',
+    'template' => 'stripe_payment',
+  );
+  $theme['stripe_payment_content_add_list'] = [
+    'render element' => 'content',
+    'variables' => ['content' => NULL],
+    'file' => 'stripe_payment.page.inc',
+  ];
+  $theme['stripe_checkout'] = [
+    'variables' => [
+      'data_key' => NULL,
+      'description' => NULL,
+      'payment_type' => NULL,
+      'amount' => NULL,
+      'email' => NULL,
+      'org_name' => NULL,
+      'data_description' => NULL,
+      'data_zip_code' => NULL,
+      'button_label' => NULL,
+      'show_button' => FALSE,
+      'button_link' => NULL,
+      'entity_type' => NULL,
+      'entity_id' => NULL,
+      'logo' => NULL,
+      'enabled' => TRUE,
+    ],
+    'template' => 'stripe_checkout'
+  ];
+  $theme['stripe_checkout_complete'] = [
+    'variables' => [
+      'message' => NULL,
+      'amount' => NULL,
+      'statement_indicator' => NULL
+    ],
+    'template' => 'stripe_checkout_complete'
+  ];
+  $theme['stripe_checkout_error'] = [
+    'variables' => [
+      'message' => NULL,
+      'error' => NULL,
+      'decline_code' => NULL
+    ],
+    'template' => 'stripe_checkout_error'
+  ];
+  $theme['#cache']['max-age'] = 0;
+  return $theme;
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function badcamp_stripe_payment_preprocess_stripe_checkout(&$variables) {
+  $logo = theme_get_setting('logo');
+  $variables['logo'] = $logo['url'];
+  $variables['current_path'] = \Drupal::service('path.current')->getPath();
+  $variables['current_route'] = \Drupal::routeMatch()->getRouteName();
+}
+
+/**
+* Implements hook_theme_suggestions_HOOK().
+*/
+function badcamp_stripe_payment_theme_suggestions_stripe_payment(array $variables) {
+  $suggestions = array();
+  $entity = $variables['elements']['#stripe_payment'];
+  $sanitized_view_mode = strtr($variables['elements']['#view_mode'], '.', '_');
+
+  $suggestions[] = 'stripe_payment__' . $sanitized_view_mode;
+  $suggestions[] = 'stripe_payment__' . $entity->bundle();
+  $suggestions[] = 'stripe_payment__' . $entity->bundle() . '__' . $sanitized_view_mode;
+  $suggestions[] = 'stripe_payment__' . $entity->id();
+  $suggestions[] = 'stripe_payment__' . $entity->id() . '__' . $sanitized_view_mode;
+  return $suggestions;
+}
+
+/**
+ * Implements hook_entity_operation().
+ */
+function badcamp_stripe_payment_entity_operation(\Drupal\Core\Entity\EntityInterface $entity) {
+  $operations = [];
+  if ($entity->getEntityTypeId() == 'stripe_payment') {
+    $account = \Drupal::currentUser();
+    $has_permission = ($account->hasPermission('administer stripe payment entities') ||
+      $account->hasPermission('refund all purchases') ||
+      $account->hasPermission('refund own purchases'));
+    $notRefunded = ($entity->get('refunded')->first()->getValue()['value'] != 1);
+    if ($has_permission && $notRefunded) {
+      $operations['refund-payment'] = array(
+        'title' => t('Refund Payment'),
+        'weight' => 15,
+        'url' => Url::fromRoute("badcamp_stripe_payment.refund", [
+          $entity->getEntityTypeId() => $entity->id(),
+        ],[
+          'query' => [
+            'destination' =>  \Drupal::service('path.current')->getPath()
+          ]
+        ]),
+      );
+    }
+  }
+
+  return $operations;
+}
+
+/**
+ * Implements hook_user_login().
+ */
+function badcamp_stripe_payment_user_login($account) {
+  if($account->id() > 0) {
+    //have they donated? If no, redirect to donate page
+    $donations = badcamp_stripe_payment_get_donations($account->id());
+    if (count($donations) < 1) {
+      $redirect_url = URL::fromRoute('badcamp_stripe_payment.donation_page_controller');
+      //\Drupal::service('request_stack')->getCurrentRequest()->query->set('destination', $redirect_url->toString());
+    }
+  }
+}
+
+/**
+ * Get the donations for a given user ID
+ *
+ * @param $aid User account id
+ * @return mixed
+ */
+function badcamp_stripe_payment_get_donations($aid) {
+  $entityTypeManager = \Drupal::service('entity_type.manager');
+  $donateStorage = $entityTypeManager->getStorage('stripe_payment');
+  $donations = $donateStorage->loadByProperties(['user_id' => $aid]);
+  return $donations;
+}
+
+/**
+ * Implements hook_stripe_payment_successful_redirect_alter().
+ */
+function badcamp_stripe_payment_stripe_payment_successful_redirect_alter(&$url, $entity, $current_route) {
+  if($current_route['route'] == 'badcamp_stripe_payment.donation_page_controller'){
+    $url = \Drupal\Core\Url::fromRoute('badcamp_stripe_payment.donation_complete')->toString();
+  }
+}

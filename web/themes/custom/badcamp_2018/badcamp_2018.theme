@@ -72,9 +72,15 @@ function badcamp_2018_preprocess_block(array &$variables) {
  * Implements hook_theme_suggestions_field_alter().
  */
 function badcamp_2018_theme_suggestions_field_alter(array &$suggestions, array $variables) {
-  /*$element = $variables['element'];
-  $suggestions[] = 'field__' . $element['#view_mode'];
-  $suggestions[] = 'field__' . $element['#view_mode'] . '__' . $element['#field_name'];*/
+	$element = $variables['element'];
+	$field_name = $element['#field_name'];
+	$entity_type = $element['#entity_type'];
+	$bundle = $element['#bundle'];
+	$view_mode = $element['#view_mode'];
+	$suggestions[] = 'field__' . $element['#view_mode'];
+	$suggestions[] = 'field__' . $element['#view_mode'] . '__' . $element['#field_name'];
+	$suggestions[] = 'field__' . $entity_type . '__' . $field_name . '__' . $view_mode;
+	$suggestions[] = 'field__' . $entity_type . '__' . $field_name . '__' . $bundle . '__' . $view_mode;
 }
 
 /**
@@ -221,6 +227,11 @@ function badcamp_2018_theme_suggestions_user_alter(&$suggestions, $vars){
  */
 function badcamp_2018_preprocess_user(&$vars) {
   $vars['org_url'] = (!empty($vars['content']['field_user_organization_website'][0]) ? $vars['content']['field_user_organization_website'][0]['#url']->getUri() : '');
+
+  /** @var User $account */
+  $account = $vars['elements']['#user'];
+
+  $vars['username'] = $account->getDisplayName();
 }
 
 /**
@@ -240,4 +251,118 @@ function badcamp_2018_preprocess_field__node__field_blog_tags__blog(&$vars){
   foreach($vars['items'] AS &$item){
     $item['content']['#attributes']['class'][] = 'button';
   }
+}
+
+/**
+ * Implements template_preprocess_page_title__route().
+ */
+function badcamp_2018_preprocess_page_title__view__sponsors__full_list(&$vars) {
+  $nid = \Drupal::config('badcamp_2018.settings')->get('sponsor_node');
+  $node = \Drupal::entityTypeManager()->getStorage('node')->load($nid);
+  $vars['become_a_sponsor_published'] = (bool)$node->status->getString();
+  $vars['sponsor_nid'] = $nid;
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function badcamp_2018_form_views_exposed_form_alter(&$form, &$form_state) {
+  switch($form['#id']){
+    case 'views-exposed-form-attendees-page-1':
+      $form['#attributes']['class'][] = 'grid-x';
+      $form['#attributes']['class'][] = 'grid-margin-x';
+      $form['first_name']['#prefix'] = '<div class="cell small-12 medium-4">';
+      $form['first_name']['#suffix'] = '</div>';
+      $form['last_name']['#prefix'] = '<div class="cell small-12 medium-4">';
+      $form['last_name']['#suffix'] = '</div>';
+      $form['organization']['#prefix'] = '<div class="cell small-12 medium-4">';
+      $form['organization']['#suffix'] = '</div>';
+      break;
+  }
+}
+
+/**
+ * @param $vars
+ */
+function badcamp_2018_preprocess_field_multiple_value_form(&$vars) {
+
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function badcamp_2018_theme_suggestions_bef_checkboxes_alter(&$suggestions, $vars){
+	$suggestions[] = 'bef_checkboxes__' . str_ireplace('-', '_', $vars['element']['#name']);
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function badcamp_2018_theme_suggestions_form_element_alter(&$suggestions, $vars){
+	if(isset($vars['element']['#name']) && stripos($vars['element']['#name'], 'session-track') !== FALSE){
+		$suggestions[] = 'form_element__session_track';
+	}
+	if(isset($vars['element']['#name']) && stripos($vars['element']['#name'], 'skill') !== FALSE){
+		$suggestions[] = 'form_element__skill';
+	}
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function badcamp_2018_theme_suggestions_form_element_label_alter(&$suggestions, $vars){
+	if(stripos($vars['element']['#id'], 'session-track') !== FALSE){
+		$suggestions[] = 'form_element_label__session_track';
+	}
+	if(stripos($vars['element']['#id'], 'skill') !== FALSE){
+		$suggestions[] = 'form_element_label__skill';
+	}
+	if(stripos($vars['element']['#id'], 'venue') !== FALSE){
+		$suggestions[] = 'form_element_label__venue';
+	}
+}
+
+function badcamp_2018_preprocess_form_element__session_track(&$vars) {
+	$term_id = $vars['element']['#return_value'];
+	$term = \Drupal::entityTypeManager()
+		->getStorage('taxonomy_term')
+		->load($term_id);
+	$icon = $term->get('field_icon_class');
+	if (!empty($icon_class = $icon->getValue())) {
+		$vars['label']['#attributes']['data_icon'] = $icon_class[0]['value'];
+	}
+}
+
+/**
+ * Implements template_preprocess_field__HOOK().
+ */
+function badcamp_2018_preprocess_field__field_session_track(&$vars){
+	$node = $vars['element']['#object'];
+
+	foreach($node->get('field_session_track') AS $id => $term) {
+		$full_term = $term->get('entity')->getTarget()->getValue();
+		if(!empty($full_term->get('field_icon_class')->getValue())){
+			$class = $full_term->get('field_icon_class')->first()->getValue()['value'];
+			$vars['items'][$id]['icon_class'] = $class;
+		}
+	}
+}
+
+/**
+ * Implements template_preprocess_field__HOOK().
+ * @param $vars
+ */
+function badcamp_2018_preprocess_node__session(&$vars) {
+	$node = $vars['node'];
+	$status_field = $node->get('field_session_status')->getValue();
+	$session_status = $status_field[0]['value'];
+
+	switch ($session_status) {
+		case "proposed":
+			unset($vars['content']['flag_add_to_schedule']);
+			break;
+		case "accepted":
+			unset($vars['content']['flag_interested']);
+			break;
+	}
 }

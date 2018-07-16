@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.event.field_event_more_info
     - field.field.node.event.field_event_type
     - field.field.node.event.field_event_url_more_info
+    - field.field.node.event.field_image
     - field.field.node.event.field_sponsors
     - field.field.node.event.field_stick_to_top_of_date
     - field.field.node.event.field_stick_to_top_of_schedule
@@ -16,6 +17,7 @@ dependencies:
   module:
     - datetime_range
     - field_delimiter
+    - image
     - link
     - text
     - user
@@ -69,6 +71,15 @@ content:
       target: ''
     third_party_settings: {  }
     type: link
+    region: content
+  field_image:
+    weight: 8
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
     region: content
   field_sponsors:
     weight: 6

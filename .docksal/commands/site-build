@@ -24,7 +24,7 @@ ${PROJECT_ROOT}/bin/drupal cr
 echo "Running Gulp Tasks on theme"
 cd ${PROJECT_ROOT}/web/themes/custom/badcamp*
 npm i -g npm@latest
-npm install -g gulp
+npm install -g gulp-cli
 npm install
 gulp sass
 ${PROJECT_ROOT}/bin/drupal cr

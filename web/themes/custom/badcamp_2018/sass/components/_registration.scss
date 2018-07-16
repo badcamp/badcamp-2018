@@ -1,0 +1,63 @@
+.registration-steps {
+  .step-number {
+    background: $navy-two;
+    width: 75px;
+    text-align: center;
+    border-radius: 50px;
+    height: 75px;
+    padding: 16px;
+    font-size: 52px;
+    color: $white;
+    font-family: $rye;
+    opacity: .5;
+    margin: .25em auto;
+
+    &.active{
+      opacity: 1;
+    }
+  }
+
+  span {
+    display: block;
+    text-align: center;
+  }
+
+  margin: 3em auto;
+}
+
+.field--type-social-media-links-field {
+  .form-item {
+    margin: .5rem;
+    span.field-prefix {
+      display: inline-block;
+      width: 220px;
+    }
+    input[type="text"] {
+      display: inline-block;
+      max-width: 400px;
+      width: 100%;
+    }
+  }
+}
+
+.social-profile-links {
+  max-width: 250px;
+}
+
+#edit-field-user-social-profile-links-0{
+  .fieldset-wrapper {
+    .form-item {
+      margin-bottom: 1rem;
+      label {
+        display: inline-block;
+        width: 125px;
+      }
+    }
+  }
+}
+
+#edit-field-subscribe-to-badcamp-newsl-0-value{
+  .form-item {
+    margin-bottom: 1rem;
+  }
+}

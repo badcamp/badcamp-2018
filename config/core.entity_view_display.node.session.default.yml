@@ -14,6 +14,7 @@ dependencies:
     - field.field.node.session.field_sponsors
     - field.field.node.session.field_stick_to_top_of_date
     - field.field.node.session.field_stick_to_top_of_schedule
+    - field.field.node.session.field_twitter_teaser
     - field.field.node.session.field_venue
     - node.type.session
   module:
@@ -124,8 +125,14 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  flag_interested:
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   field_session_status: true
   field_stick_to_top_of_date: true
   field_stick_to_top_of_schedule: true
+  field_twitter_teaser: true
   links: true

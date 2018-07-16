@@ -1,0 +1,39 @@
+badcamp_register.page_1:
+  path: '/registration'
+  defaults:
+    _controller: '\Drupal\badcamp_register\Controller\RegistrationPage1Controller::page'
+    _title: 'Registration'
+  requirements:
+    _access_user_register: 'TRUE'
+
+badcamp_register.page_2:
+  path: '/registration/sponsor'
+  defaults:
+    _controller: '\Drupal\badcamp_register\Controller\RegistrationPage2Controller::page'
+    _title: 'Registration'
+  requirements:
+    _permission: 'access content'
+
+badcamp_register.page_2_swag:
+  path: '/registration/sponsor/swag'
+  defaults:
+    _controller: '\Drupal\badcamp_register\Controller\RegistrationPage2Controller::swag'
+    _title: 'Registration'
+  requirements:
+    _permission: 'access content'
+
+badcamp_register.page_3:
+  path: '/registration/events'
+  defaults:
+    _controller: '\Drupal\badcamp_register\Controller\RegistrationPage3Controller::page'
+    _title: 'Registration'
+  requirements:
+    _permission: 'access content'
+
+#badcamp_register.add_session:
+#  path: '/session/create'
+#  defaults:
+#    _controller: '\Drupal\badcamp_register\Controller\SessionCreation::page'
+#    _title: 'Submit a Session'
+#  requirements:
+#    _user_is_logged_in: 'TRUE'

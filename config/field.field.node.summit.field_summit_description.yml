@@ -6,7 +6,12 @@ dependencies:
     - field.storage.node.field_summit_description
     - node.type.summit
   module:
+    - custom_add_another
     - text
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
 _core:
   default_config_hash: wlzgLV--HsNq504km4X0Q5IFW6SDDCYEmpbvTAeDqJg
 id: node.summit.field_summit_description

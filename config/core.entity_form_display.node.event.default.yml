@@ -8,14 +8,17 @@ dependencies:
     - field.field.node.event.field_event_more_info
     - field.field.node.event.field_event_type
     - field.field.node.event.field_event_url_more_info
+    - field.field.node.event.field_image
     - field.field.node.event.field_sponsors
     - field.field.node.event.field_stick_to_top_of_date
     - field.field.node.event.field_stick_to_top_of_schedule
     - field.field.node.event.field_venue
+    - image.style.thumbnail
     - node.type.event
   module:
     - datetime_range
     - field_group
+    - image
     - link
     - path
     - text
@@ -25,6 +28,7 @@ third_party_settings:
       children:
         - title
         - field_event_type
+        - field_image
         - field_event_description
         - field_event_more_info
         - field_event_url_more_info
@@ -42,7 +46,6 @@ third_party_settings:
     group_event_admin:
       children:
         - field_venue
-        - field_registration_limit
         - field_date
         - field_stick_to_top_of_schedule
         - field_stick_to_top_of_date
@@ -105,6 +108,14 @@ content:
       placeholder_title: ''
     third_party_settings: {  }
     type: link_default
+    region: content
+  field_image:
+    weight: 3
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
     region: content
   field_sponsors:
     weight: 7

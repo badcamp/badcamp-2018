@@ -6,7 +6,12 @@ dependencies:
     - field.storage.node.field_session_files
     - node.type.session
   module:
+    - custom_add_another
     - file
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
 _core:
   default_config_hash: 7E7yKg-7c-i8KzJvFl925dfKG8HPQG4kOpuTJewryUQ
 id: node.session.field_session_files
@@ -14,7 +19,7 @@ field_name: field_session_files
 entity_type: node
 bundle: session
 label: Files
-description: ''
+description: 'Upload your slide deck to help the selection committee before BADCamp OR upload your slide deck after your talk.'
 required: false
 translatable: false
 default_value: {  }

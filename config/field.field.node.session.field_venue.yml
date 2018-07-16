@@ -6,6 +6,12 @@ dependencies:
     - field.storage.node.field_venue
     - node.type.session
     - taxonomy.vocabulary.venues
+  module:
+    - custom_add_another
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
 _core:
   default_config_hash: PfVyAN6uHmQY7KafD1wKn5lA6-N-hufwCljpkraIBXw
 id: node.session.field_venue

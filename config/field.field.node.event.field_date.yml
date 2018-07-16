@@ -6,7 +6,12 @@ dependencies:
     - field.storage.node.field_date
     - node.type.event
   module:
+    - custom_add_another
     - datetime_range
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
 _core:
   default_config_hash: bYFVUODsiOjs5XyW50iGVYasDHA4D6Y3Ga63cOO34vE
 id: node.event.field_date

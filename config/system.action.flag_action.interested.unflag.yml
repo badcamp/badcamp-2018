@@ -1,0 +1,13 @@
+uuid: 338e8a02-6a77-4554-b8d5-8faecac53468
+langcode: en
+status: true
+dependencies:
+  module:
+    - flag
+id: flag_action.interested.unflag
+label: 'No Longer Interested'
+type: node
+plugin: 'flag_action:interested.unflag'
+configuration:
+  flag_id: interested
+  flag_action: unflag

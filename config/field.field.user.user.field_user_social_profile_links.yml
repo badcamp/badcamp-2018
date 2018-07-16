@@ -5,8 +5,13 @@ dependencies:
   config:
     - field.storage.user.field_user_social_profile_links
   module:
+    - custom_add_another
     - social_media_links_field
     - user
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
 _core:
   default_config_hash: JARxTIyC9GceKSkWGPlsl0u-8zpn_WELCE6tfqFoLak
 id: user.user.field_user_social_profile_links
@@ -22,49 +27,27 @@ default_value:
     platform: null
     value: null
     platform_values:
-      behance:
-        value: ''
-      pinterest:
-        value: ''
-      youtube:
-        value: ''
-      vkontakte:
-        value: ''
-      vimeo:
-        value: ''
-      twitter:
-        value: ''
-      tumblr:
-        value: ''
-      slideshare:
-        value: ''
-      rss:
-        value: ''
-      linkedin:
-        value: ''
-      bitbucket:
-        value: ''
-      instagram:
-        value: ''
-      googleplus:
-        value: ''
-      github:
-        value: ''
-      flickr:
+      drupal:
         value: ''
       facebook:
         value: ''
-      email:
+      github:
         value: ''
-      drupal:
+      googleplus:
         value: ''
-      contact:
+      instagram:
         value: ''
-      youtube_channel:
+      linkedin:
+        value: ''
+      twitter:
+        value: ''
+      vimeo:
+        value: ''
+      youtube:
         value: ''
 default_value_callback: ''
 settings:
-  iconset: 'fontawesome:2x'
+  iconset: 'fontawesome:4x'
   platforms:
     behance:
       description: ''

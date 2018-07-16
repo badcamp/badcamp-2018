@@ -1,0 +1,26 @@
+.attendees-list{
+  .views-row {
+    margin-bottom: 1em;
+    text-align: center;
+
+    .uname{
+      margin: .5rem 0;
+    }
+    .name {
+      margin: .5rem 0;
+    }
+    .org {
+      margin: .5rem 0;
+    }
+    .photo {
+      border-radius: 50%;
+    }
+  }
+}
+
+#views-exposed-form-attendees-page-1{
+  .form-item {
+    margin-bottom: 1rem;
+  }
+  margin-bottom: 2.5rem;
+}

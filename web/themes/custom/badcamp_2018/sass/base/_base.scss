@@ -21,10 +21,15 @@ a.action-button,
   @extend .button;
 }
 
+.button {
+  margin-top: 1rem;
+}
+
 input[type="tel"],
 input[type="password"],
 input[type="text"],
-input[type="email"]{
+input[type="email"],
+input[type="url"]{
 
   &:active,
   &:focus,
@@ -36,4 +41,89 @@ input[type="email"]{
   border-top-width: 0;
   border-left-width: 0;
   border-right-width: 0;
+}
+
+fieldset {
+  border: 1px solid $navy-two;
+  padding: 1em;
+  border-radius: 30px;
+
+  legend {
+    font-family: $rye;
+    font-size: 2rem;
+    margin-left: 1em;
+  }
+
+  .fieldset-wrapper {
+
+  }
+}
+
+a{
+  text-decoration: underline;
+}
+
+.path-frontpage h2{
+  font-size: 5rem;
+}
+
+.password-parent,
+.confirm-parent{
+  @include breakpoint(medium up) {
+    float: left;
+    width: 45%;
+    margin-right: 5%;
+  }
+}
+
+.confirm-parent {
+  @include clearfix();
+  padding-bottom: 15px;
+}
+
+.filter-wrapper{
+  display: none
+}
+
+.color-white{
+  color: $white;
+}
+.bg-white {
+  background-color: $white;
+}
+.color-dark-grey-blue {
+  color: $dark-grey-blue;
+}
+.bg-dark-grey-blue {
+  background-color: $dark-grey-blue;
+}
+.color-dark-blue-grey{
+  color: $dark-blue-grey;
+}
+.bg-dark-blue-grey {
+  background-color: $dark-blue-grey;
+}
+.color-reddish{
+  color: $reddish;
+}
+.bg-reddish {
+  background-color: $reddish;
+}
+.color-dusk-blue{
+  color: $dusk-blue;
+}
+.bg-dusk-blue {
+  background-color: $dusk-blue;
+}
+.color-navy-two{
+  color: $navy-two;
+}
+.bg-navy-two {
+  background-color: $navy-two;
+}
+.color-camel{
+  color: $camel;
+}
+.bg-camel {
+  background-color: $camel;
 }

@@ -1,0 +1,8 @@
+uuid: 555d37d5-ef2b-4e27-b22e-726ec3372eb1
+langcode: en
+status: true
+dependencies: {  }
+id: block_reference
+label: 'Block Reference'
+revision: 0
+description: 'Link to a few different blocks'

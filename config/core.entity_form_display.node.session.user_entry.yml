@@ -1,0 +1,191 @@
+uuid: 08abadb0-f404-4262-ac37-beb86da8ed1a
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.node.user_entry
+    - field.field.node.session.field_date
+    - field.field.node.session.field_session_description
+    - field.field.node.session.field_session_files
+    - field.field.node.session.field_session_status
+    - field.field.node.session.field_session_track
+    - field.field.node.session.field_session_video
+    - field.field.node.session.field_skill_level
+    - field.field.node.session.field_speakers
+    - field.field.node.session.field_sponsors
+    - field.field.node.session.field_stick_to_top_of_date
+    - field.field.node.session.field_stick_to_top_of_schedule
+    - field.field.node.session.field_venue
+    - node.type.session
+  module:
+    - field_group
+    - file
+    - multiple_selects
+    - text
+third_party_settings:
+  field_group:
+    group_details:
+      children:
+        - title
+        - group_row
+      parent_name: ''
+      weight: 0
+      format_type: html_element
+      format_settings:
+        label: Information
+        element: div
+        show_label: false
+        label_element: h3
+        required_fields: true
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: ''
+      label: Information
+      region: content
+    group_session_admin:
+      children: {  }
+      parent_name: ''
+      weight: 13
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: 'Session Admin'
+      region: hidden
+    group_row:
+      children:
+        - group_left
+        - group_right
+      parent_name: group_details
+      weight: 1
+      format_type: html_element
+      format_settings:
+        label: Row
+        element: div
+        show_label: false
+        label_element: h3
+        required_fields: true
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: 'grid-x grid-margin-x'
+      label: Row
+      region: content
+    group_left:
+      children:
+        - field_session_description
+      parent_name: group_row
+      weight: 20
+      format_type: html_element
+      format_settings:
+        label: Left
+        element: div
+        show_label: false
+        label_element: h3
+        required_fields: true
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: 'cell small-12 medium-6 large-8'
+      label: Left
+      region: content
+    group_right:
+      children:
+        - field_speakers
+        - field_skill_level
+        - field_session_track
+        - field_session_files
+        - field_sponsors
+      parent_name: group_row
+      weight: 21
+      format_type: html_element
+      format_settings:
+        label: Right
+        element: div
+        show_label: false
+        label_element: h3
+        required_fields: true
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: 'cell small-12 medium-6 large-4'
+      label: Right
+      region: content
+_core:
+  default_config_hash: apyT8AJlcgXnZ4BPfi2whnn-ndArjW-CTH6oJVXyIk8
+id: node.session.user_entry
+targetEntityType: node
+bundle: session
+mode: user_entry
+content:
+  field_session_description:
+    weight: 5
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea_with_summary
+    region: content
+  field_session_files:
+    weight: 5
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+    type: file_generic
+    region: content
+  field_session_track:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: multiple_options_select
+    region: content
+  field_skill_level:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_speakers:
+    weight: 2
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_sponsors:
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  field_date: true
+  field_session_status: true
+  field_session_video: true
+  field_stick_to_top_of_date: true
+  field_stick_to_top_of_schedule: true
+  field_venue: true
+  path: true
+  promote: true
+  status: true
+  sticky: true
+  uid: true

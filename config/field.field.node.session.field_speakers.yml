@@ -5,14 +5,20 @@ dependencies:
   config:
     - field.storage.node.field_speakers
     - node.type.session
+  module:
+    - custom_add_another
+third_party_settings:
+  custom_add_another:
+    custom_add_another: 'Add Another Speaker'
+    custom_remove: 'Remove Speaker'
 _core:
   default_config_hash: _pRGswWcGSgwLvpPzqF3ORIH_xjrlrKnJ1qLZ9vvL54
 id: node.session.field_speakers
 field_name: field_speakers
 entity_type: node
 bundle: session
-label: Speakers
-description: ''
+label: 'BADCamp User Names of Speakers'
+description: 'Who is speaking at this session? (Must have an account on this site.)'
 required: false
 translatable: false
 default_value: {  }

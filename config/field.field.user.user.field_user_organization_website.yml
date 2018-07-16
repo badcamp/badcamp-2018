@@ -5,8 +5,13 @@ dependencies:
   config:
     - field.storage.user.field_user_organization_website
   module:
+    - custom_add_another
     - link
     - user
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
 _core:
   default_config_hash: tV6NuTfd-yoYnYiu2WKb5ZxSP2p6ZCCUzNW3fxXdZA8
 id: user.user.field_user_organization_website

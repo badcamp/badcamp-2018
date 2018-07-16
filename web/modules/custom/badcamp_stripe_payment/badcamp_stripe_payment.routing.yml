@@ -1,0 +1,32 @@
+badcamp_stripe_payment.checkout_charge:
+  path: '/checkout/charge'
+  defaults:
+    _controller: '\Drupal\badcamp_stripe_payment\Controller\StripePaymentController::checkoutCharge'
+    _title: 'Checkout Charge'
+  requirements:
+    _permission: 'add stripe payment entities'
+
+badcamp_stripe_payment.donation_page_controller:
+  path: '/donate'
+  defaults:
+    _controller: '\Drupal\badcamp_stripe_payment\Controller\DonationPageController::displayContent'
+    _title: 'Donate'
+  requirements:
+    _permission: 'add stripe payment entities'
+
+badcamp_stripe_payment.donation_complete:
+  path: '/donation-complete'
+  defaults:
+    _controller: '\Drupal\badcamp_stripe_payment\Controller\StripePaymentController::donationComplete'
+    _title: 'Thank you for your donation'
+  requirements:
+    _permission: 'add stripe payment entities'
+
+badcamp_stripe_payment.refund:
+  path: '/refund/{stripe_payment}'
+  defaults:
+    _title: 'Refund Payment'
+    _form: '\Drupal\badcamp_stripe_payment\Form\StripePaymentRefundForm'
+  requirements:
+    _custom_access: '\Drupal\badcamp_stripe_payment\Form\StripePaymentRefundForm::refundPaymentAccess'
+    stripe_payment: '^[0-9]+'

@@ -1,0 +1,38 @@
+uuid: 175390a5-b194-4c20-ae57-196879d429e7
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.block_reference
+    - field.field.block_content.block_reference.body
+    - field.field.block_content.block_reference.field_blocks
+  module:
+    - field_delimiter
+    - field_formatter_class
+    - text
+id: block_content.block_reference.default
+targetEntityType: block_content
+bundle: block_reference
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_blocks:
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings:
+      field_delimiter:
+        delimiter: ''
+      field_formatter_class:
+        class: 'grid-x block-references'
+    type: entity_reference_entity_view
+    region: content
+hidden: {  }

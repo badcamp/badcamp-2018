@@ -1,0 +1,17 @@
+<div class="checkout-complete row">
+  <div class="checkout-complete__message">
+    {{ message }}
+  </div>
+  <div class="checkout-complete__payment-details">
+    <p>You have been charged {{ amount }}.</p>
+    <p>The charge will show on your statment as {{ statement_indicator }}.</p>
+    <p>Thank you!</p>
+  </div>
+</div>
+<div class="row">
+  <div class="columns small-4"><a href="/user" class="button large expanded">Your Profile</a></div>
+  {% if user.hasPermission('administer nodes') %}
+    <div class="columns small-4"><a href="/node/add/session" class="button large expanded">Submit a Session</a></div>
+  {% endif %}
+  <div class="columns small-4"><a href="/" class="button large expanded">Home Page</a></div>
+</div>

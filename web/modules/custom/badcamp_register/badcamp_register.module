@@ -1,0 +1,120 @@
+<?php
+
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Link;
+use Drupal\Core\Entity\EntityInterface;
+
+/**
+ * Implements hook_theme().
+ */
+function badcamp_register_theme($existing, $type, $theme, $path) {
+  return [
+    'registration_page' => [
+      'variables' => [
+        'step1active' => FALSE,
+        'step2active' => FALSE,
+        'step2active_swag' => FALSE,
+        'step3active' => FALSE,
+        'content' => NULL,
+        'intro_message' => NULL,
+      ],
+      'template' => 'registration_page'
+    ]
+  ];
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function badcamp_register_form_user_register_form_alter(&$form, &$form_state, $form_id) {
+  $form['actions']['submit']['#submit'][] = 'badcamp_register_redirect_submit';
+	$form["field_user_social_profile_links"]["widget"][0]["#type"] = 'fieldset';
+	$form["field_i_am_interested_in_drupal_"]['#prefix'] = '<div class="cell small-12">';
+	$form["field_i_am_interested_in_drupal_"]['#suffix'] = '</div>';
+	$form["field_i_m_interested_in_voluntee"]['#prefix'] = '<div class="cell small-12">';
+	$form["field_i_m_interested_in_voluntee"]['#suffix'] = '</div>';
+	$form["field_i_am_interested_in_hearing"]['#prefix'] = '<div class="cell small-12">';
+	$form["field_i_am_interested_in_hearing"]['#suffix'] = '</div>';
+	$form["field_list_my_account_on_attende"]['#prefix'] = '<div class="cell small-12">';
+	$form["field_list_my_account_on_attende"]['#suffix'] = '</div>';
+}
+
+/**
+ * Redirect First Time Login Users to Registration Page 2
+ */
+function badcamp_register_redirect_submit(&$form, \Drupal\Core\Form\FormStateInterface &$form_state) {
+  $redirect_url = \Drupal\Core\Url::fromRoute('badcamp_register.page_2');
+  $form_state->setRedirectUrl($redirect_url);
+}
+
+/**
+ * Implements hook_stripe_payment_successful_redirect_alter().
+ */
+function badcamp_register_stripe_payment_successful_redirect_alter(&$url, $entity, $current_route) {
+  if($current_route['route'] == 'badcamp_register.page_2'){
+    if($entity->getEntityTypeId() == 'stripe_payment' && $entity->bundle() == 'individual_sponsorship' && ((int)$entity->get('amount')->getString() > 0)) {
+      $url = \Drupal\Core\Url::fromRoute('badcamp_register.page_2_swag')->toString();
+    }else{
+      $url = \Drupal\Core\Url::fromRoute('badcamp_register.page_3')->toString();
+    }
+  }
+}
+
+/**
+ * Implements hook_badcamp_swag_selector_form_complete_alter().
+ */
+function badcamp_register_badcamp_swag_selector_form_complete_alter(&$url, $payment) {
+  $current_route = \Drupal::routeMatch()->getRouteName();
+  if ($current_route == 'badcamp_register.page_2_swag') {
+    $url = 'badcamp_register.page_3';
+  }
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function badcamp_register_form_node_session_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+	$form['#title'] = t('Submit Session');
+	$form['actions']['submit']['#value'] = t('Save Session');
+
+	$node = $form_state->getFormObject()->getEntity();
+	if ($node->isNew()) {
+		$user = \Drupal::currentUser();
+		$form['field_speakers']['widget'][0]['target_id']['#default_value'] = \Drupal\user\Entity\User::load($user->id());
+	}
+}
+
+/**
+ * Implements hook_entity_type_alter().
+ */
+function badcamp_register_entity_type_alter(array &$entity_types) {
+	// We get all form modes, for all entities, and loop through them.
+	$form_modes = \Drupal::service('entity_display.repository')->getAllFormModes();
+	foreach ($form_modes as $entity_type => $display_modes) {
+		if ($entity_type !== 'node') {
+			// We are only interested in adding a handler to the Node entity.
+			continue;
+		}
+
+		$node_type = $entity_types[$entity_type];
+		foreach ($display_modes as $machine_name => $form_display) {
+			if ($machine_name !== 'user_entry') {
+				// We are only interested in adding this form mode to the definition.
+				continue;
+			}
+			// We get the default handler class. It will be enough for us.
+			$default_handler_class = $node_type->getHandlerClasses()['form']['default'];
+			// We set the form class, keyed by the machine name of our custom form mode.
+			$node_type->setFormClass($machine_name, $default_handler_class);
+		}
+	}
+}
+
+/**
+ * Implements hook_entity_insert().
+ */
+function badcamp_register_entity_insert(EntityInterface $entity) {
+	if ($entity->getEntityTypeId() == 'node' && $entity->bundle() == 'session') {
+		drupal_set_message(t('Thank you for your submission!'));
+	}
+}

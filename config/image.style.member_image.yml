@@ -7,8 +7,8 @@ _core:
 name: member_image
 label: 'Member Image'
 effects:
-  b73b3b8c-4979-4373-b667-128963fb3d36:
-    uuid: b73b3b8c-4979-4373-b667-128963fb3d36
+  e20af389-c447-4421-b6e1-28db6fd19d28:
+    uuid: e20af389-c447-4421-b6e1-28db6fd19d28
     id: image_scale_and_crop
     weight: 1
     data:

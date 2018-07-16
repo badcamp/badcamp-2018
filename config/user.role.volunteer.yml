@@ -6,7 +6,7 @@ _core:
   default_config_hash: h6w2ymG8trRg2h5brUw4VkDKt7XFymV12fSBbDdf46s
 id: volunteer
 label: Volunteer
-weight: 2
+weight: -3
 is_admin: null
 permissions:
   - 'access toolbar'

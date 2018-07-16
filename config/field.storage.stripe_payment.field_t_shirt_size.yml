@@ -1,0 +1,63 @@
+uuid: 1aa8c87d-8a15-45ee-a767-f38f22f8afc9
+langcode: en
+status: true
+dependencies:
+  module:
+    - badcamp_stripe_payment
+    - options
+id: stripe_payment.field_t_shirt_size
+field_name: field_t_shirt_size
+entity_type: stripe_payment
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: 'Womens X-Small'
+      label: 'Womens X-Small'
+    -
+      value: 'Womens Small'
+      label: 'Womens Small'
+    -
+      value: 'Womens Medium'
+      label: 'Womens Medium'
+    -
+      value: 'Womens Large'
+      label: 'Womens Large'
+    -
+      value: 'Womens X-Large'
+      label: 'Womens X-Large'
+    -
+      value: 'Womens XX-Large'
+      label: 'Womens XX-Large'
+    -
+      value: 'Womens XXX-Large'
+      label: 'Womens XXX-Large'
+    -
+      value: 'Mens X-Small'
+      label: 'Mens X-Small'
+    -
+      value: 'Mens Small'
+      label: 'Mens Small'
+    -
+      value: 'Mens Medium'
+      label: 'Mens Medium'
+    -
+      value: 'Mens Large'
+      label: 'Mens Large'
+    -
+      value: 'Mens X-Large'
+      label: 'Mens X-Large'
+    -
+      value: 'Mens XX-Large'
+      label: 'Mens XX-Large'
+    -
+      value: 'Mens XXX-Large'
+      label: 'Mens XXX-Large'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

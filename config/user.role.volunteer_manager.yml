@@ -6,7 +6,7 @@ _core:
   default_config_hash: xBa0JTMrnKlCuIM783pf4D5q21ICQl4zVofUorpKcRA
 id: volunteer_manager
 label: 'Volunteer Manager'
-weight: 3
+weight: -2
 is_admin: null
 permissions:
   - 'access toolbar'

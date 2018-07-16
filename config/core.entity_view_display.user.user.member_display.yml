@@ -19,6 +19,7 @@ dependencies:
     - image.style.member_image
   module:
     - image
+    - link
     - user
 _core:
   default_config_hash: jqzMyQDlS4bBvHAu5teTo5LDVoMcor5ZzcFLYE3tiqY
@@ -27,9 +28,45 @@ targetEntityType: user
 bundle: user
 mode: member_display
 content:
+  field_user_first_name:
+    type: string
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_user_last_name:
+    type: string
+    weight: 1
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_user_organization:
+    type: string
+    weight: 3
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_user_organization_website:
+    type: link
+    weight: 2
+    region: content
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
   field_user_photo:
     type: image
-    weight: 0
+    weight: 4
     region: content
     label: hidden
     settings:
@@ -39,12 +76,10 @@ content:
 hidden:
   field_i_am_interested_in_drupal_: true
   field_i_am_interested_in_hearing: true
+  field_i_m_interested_in_voluntee: true
+  field_list_my_account_on_attende: true
   field_subscribe_to_badcamp_newsl: true
   field_user_bio: true
-  field_user_first_name: true
-  field_user_last_name: true
-  field_user_organization: true
-  field_user_organization_website: true
   field_user_public_schedule: true
   field_user_social_profile_links: true
   field_user_title: true

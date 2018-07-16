@@ -6,7 +6,12 @@ dependencies:
     - field.storage.node.field_sponsor_url
     - node.type.sponsor
   module:
+    - custom_add_another
     - link
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
 _core:
   default_config_hash: Aa0DzDJf4S64oBFmKCFP5f4ZCmiYPHmdexsrJhGtQhM
 id: node.sponsor.field_sponsor_url

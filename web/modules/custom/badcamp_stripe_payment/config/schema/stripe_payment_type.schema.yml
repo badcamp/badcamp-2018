@@ -1,0 +1,12 @@
+badcamp_stripe_payment.stripe_payment_type.*:
+  type: config_entity
+  label: 'Stripe payment type config'
+  mapping:
+    id:
+      type: string
+      label: 'ID'
+    label:
+      type: label
+      label: 'Label'
+    uuid:
+      type: string

@@ -24,6 +24,8 @@
     {% endif %}
     {{ title_suffix }}
     <div class="cell">
-        <a class="action-button" href="/">Become a Sponsor</a>
+        {% if become_a_sponsor_published %}
+        <a class="action-button" href="{{ url('entity.node.canonical', {'node': sponsor_nid}) }}">Become a Sponsor</a>
+        {% endif %}
     </div>
 </div>

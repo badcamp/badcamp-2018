@@ -1,0 +1,6 @@
+uuid: 75bb2f1c-8a7c-4524-a5b3-21f97fef0995
+langcode: en
+status: true
+dependencies: {  }
+id: individual_sponsorship
+label: 'Individual Sponsorship'

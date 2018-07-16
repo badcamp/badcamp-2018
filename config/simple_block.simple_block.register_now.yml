@@ -7,5 +7,5 @@ dependencies:
 id: register_now
 title: 'Register Now'
 content:
-  value: "<p class=\"text-center sign-up-button\"><a class=\"button\" href=\"/user/register\">Sign Up Now</a></p>\r\n"
+  value: "<p class=\"text-center sign-up-button\"><a class=\"button action-button\" href=\"/registration\">Register Now</a></p>\r\n"
   format: full_html

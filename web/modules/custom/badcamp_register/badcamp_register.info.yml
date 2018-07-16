@@ -1,0 +1,65 @@
+name: 'Badcamp Register'
+type: module
+description: 'Badcamp Registration Process'
+core: 8.x
+package: 'Custom'
+
+dependencies:
+  - badcamp_stripe_payment
+
+default_content:
+  file:
+    - 553fc1c2-9823-47b8-aaef-5a9dd91c9eb9
+  block_content:
+    - fffe464a-7730-41f0-a0c3-fd278bda3931
+    - 0551ffca-5066-44b9-bda6-891300c6951a
+    - 34618894-55ad-468a-a467-e573637d7f0a
+    - 7424ecc3-88c3-4014-a668-38464e9f9101
+    - b957783c-0841-45d0-983e-330f667c66a7
+  node:
+    - 18da4260-d2b2-40ac-a5bb-2cd39a8aefcd
+    - a0cf04a8-776b-482d-8990-c825d6cc7310
+    - 414c6850-8260-46c7-948e-d41914570bd4
+    - 9c0d1505-42a4-469b-a519-cd3cf54278e4
+    - a99ee0cc-cef8-4490-9529-e207ce0290d4
+  taxonomy_term:
+    # Session Tracks
+    - 54c8fe23-d271-489a-9dc1-d401f9ccccac
+    - 0a52fb51-d611-4ce6-a772-198b16f11429
+    - d0be1b58-5855-4c01-b598-b312754084fb
+    - e49c9632-10c0-4734-9aef-64e0bd93b78f
+    - a6d952a8-5d49-4a60-a466-c7d7752ba8e4
+    - fe7285b9-1150-4c66-ad44-692deb9de457
+    - 2fdc29e0-ab53-4a79-aacf-5e8bd19d883a
+    - 47bc4404-05fe-494f-bea0-098da16b4e9a
+    - 4ac1ef02-dd09-496c-9ff2-c636063c51ad
+    - 401a3ebe-e9ba-4e24-bb6f-238a8b714f0e
+    - 53ebe174-36bd-4440-91bd-1fcdef617156
+    - 30b5bf03-e4ad-44c1-8fd2-8a32bb9fd5b5
+    - 51ee26b2-eeb5-4600-85b6-85f125f868b9
+    - d47710a4-6fc3-47dd-a83d-e1622ae64783
+    - d1dc0d08-ea2b-4d66-b2c8-edcdfc11d892
+    - d4104b21-4dbf-45cd-85b4-24e5f0431ff4
+    - ecfa529b-67a0-4100-bfba-968d7e1d9ff4
+    - 74932b27-2281-44c6-80a9-c65fe68e362c
+    - 9b7e31c0-f308-4846-9024-297321066088
+    - 60d805f5-8b2b-4341-9e77-6d5d79fae873
+    - ca1c6cbf-b3a6-41c2-947a-f794d3aebd61
+    - e38bea16-4058-4561-b1aa-ef17225fbbc7
+    - 85c3acf6-53f1-4d18-b52f-2b5da6407b17
+    - 4152553c-3fac-492e-830d-aabe1e450892
+    - ae05ca57-35ce-4013-ae18-f01ba6e603f5
+    - 62000bcb-f4b0-497c-aae8-baa500f06188
+    - fb4b8126-8131-40dc-904c-fe0eefd013c5
+    - 63aa7f90-9db1-4a07-9509-16191f202d33
+    - a34616de-55b8-46a6-bf86-362a628ea1d3
+    - cceec05a-0aed-4225-8248-72362386eb05
+    - 96585358-117f-4c03-969c-b347b324f55c
+    - 877cc6de-2995-45c1-83ad-fd92d7112a3b
+    - f124ec2d-8326-45f7-ae74-b9e3b8b9bf71
+    - d8388745-ac87-4fc5-b001-5b813162f1cb
+    - 1d507cb1-e203-4cf5-8bbb-b5b40c862ee3
+    # Skill Level
+    - 214a9033-d497-4e95-a710-a7fa8dde4da2
+    - 984eab59-b621-4703-8ed1-ce85f3f09cde
+    - 58f92070-c2a4-4c24-a57c-8b6816f1c699

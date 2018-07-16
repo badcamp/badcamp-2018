@@ -22,19 +22,20 @@
         <h3>
             {% if content.field_user_title.0 is not empty %}{{ content.field_user_title.0 }}{% endif %}
             {% if content.field_user_title.0 is not empty and content.field_user_organization.0 is not empty %} / {% endif %}
-            {% if content.field_user_organization.0 is not empty %}
-                {% if content.field_user_organization_website.0 is not empty %}
-                    <a href="{{ org_url }}">{{ content.field_user_organization.0 }}</a>
-                {% else %}
-                    {{ content.field_user_organization.0 }}
-                {% endif %}
+
+            {% if content.field_user_organization_website.0 is not empty %}
+                <a href="{{ org_url }}">
+            {% endif %}
+                {% if content.field_user_organization.0 is not empty %}{{ content.field_user_organization.0 }}{% endif %}
+            {% if content.field_user_organization_website.0 is not empty %}
+                </a>
             {% endif %}
         </h3>
         <div class="media-object stack-for-small">
             <div class="media-object-section main-section">
                 {{ content | without('field_user_photo','field_user_first_name','field_user_last_name','field_user_social_profile_links','field_user_title','field_user_organization','field_user_organization_website') }}
             </div>
-            <div class="media-object-section middle">
+            <div class="media-object-section middle social-profile-links">
                 <div>{{ content.field_user_photo }}</div>
                 <div>{{ content.field_user_social_profile_links }}</div>
             </div>

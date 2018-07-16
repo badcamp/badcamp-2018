@@ -1,0 +1,11 @@
+entity.stripe_payment.add_form:
+  route_name: 'entity.stripe_payment.add_page'
+  title: 'Add Stripe payment'
+  appears_on:
+    - entity.stripe_payment.collection
+entity.stripe_payment_type.add_form:
+  route_name: 'entity.stripe_payment_type.add_form'
+  title: 'Add Stripe payment type'
+  appears_on:
+    - entity.stripe_payment_type.collection
+

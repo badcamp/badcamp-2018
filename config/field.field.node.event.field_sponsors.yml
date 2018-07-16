@@ -6,6 +6,12 @@ dependencies:
     - field.storage.node.field_sponsors
     - node.type.event
     - node.type.sponsor
+  module:
+    - custom_add_another
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
 _core:
   default_config_hash: kLkV79rZ6jd6ZzWrqzKmrxmpd9Vmpmg0dnzs1yrlloY
 id: node.event.field_sponsors

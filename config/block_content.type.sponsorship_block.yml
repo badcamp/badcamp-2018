@@ -1,0 +1,8 @@
+uuid: aba0cc8a-8340-4692-a9d2-e72ee880a8ce
+langcode: en
+status: true
+dependencies: {  }
+id: sponsorship_block
+label: 'Sponsorship Block'
+revision: 0
+description: 'Used for collecting sponsorship money.'

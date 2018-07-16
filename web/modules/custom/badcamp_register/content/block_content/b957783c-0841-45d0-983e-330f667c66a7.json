@@ -1,0 +1,160 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/badcamp-2018.docksal\/block\/5?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/block_content\/block_reference"
+        },
+        "http:\/\/drupal.org\/rest\/relation\/block_content\/block_reference\/field_blocks": [
+            {
+                "href": "http:\/\/badcamp-2018.docksal\/block\/3?_format=hal_json"
+            },
+            {
+                "href": "http:\/\/badcamp-2018.docksal\/block\/4?_format=hal_json"
+            },
+            {
+                "href": "http:\/\/badcamp-2018.docksal\/block\/1?_format=hal_json"
+            },
+            {
+                "href": "http:\/\/badcamp-2018.docksal\/block\/2?_format=hal_json"
+            }
+        ]
+    },
+    "id": [
+        {
+            "value": 5
+        }
+    ],
+    "uuid": [
+        {
+            "value": "b957783c-0841-45d0-983e-330f667c66a7"
+        }
+    ],
+    "revision_id": [
+        {
+            "value": 5
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en",
+            "lang": "en"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "block_reference"
+        }
+    ],
+    "revision_created": [
+        {
+            "value": "2018-05-06T22:28:26+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "status": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "info": [
+        {
+            "value": "Registration Sponsorship Block",
+            "lang": "en"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2018-05-14T07:27:53+00:00",
+            "lang": "en",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "body": [
+        {
+            "value": "<p>Do you think BADCamp is awesome? Would you be willing to pay for your ticket?<\/p>\r\n\r\n<p>If so, then you can give back to the camp by purchasing an individual sponsorship level most comfortable for you.<\/p>\r\n\r\n<p>As a bonus, all individual sponsor will receive BADCamp T-shirt.<\/p>\r\n",
+            "format": "basic_html",
+            "processed": "<p>Do you think BADCamp is awesome? Would you be willing to pay for your ticket?<\/p>\n\n<p>If so, then you can give back to the camp by purchasing an individual sponsorship level most comfortable for you.<\/p>\n\n<p>As a bonus, all individual sponsor will receive BADCamp T-shirt.<\/p>",
+            "summary": "",
+            "lang": "en"
+        }
+    ],
+    "_embedded": {
+        "http:\/\/drupal.org\/rest\/relation\/block_content\/block_reference\/field_blocks": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/badcamp-2018.docksal\/block\/3?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/block_content\/sponsorship_block"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "7424ecc3-88c3-4014-a668-38464e9f9101"
+                    }
+                ]
+            },
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/badcamp-2018.docksal\/block\/4?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/block_content\/sponsorship_block"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "fffe464a-7730-41f0-a0c3-fd278bda3931"
+                    }
+                ]
+            },
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/badcamp-2018.docksal\/block\/1?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/block_content\/sponsorship_block"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "0551ffca-5066-44b9-bda6-891300c6951a"
+                    }
+                ]
+            },
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/badcamp-2018.docksal\/block\/2?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/block_content\/sponsorship_block"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "34618894-55ad-468a-a467-e573637d7f0a"
+                    }
+                ]
+            }
+        ]
+    }
+}

@@ -1,0 +1,52 @@
+stripe_payment:
+  type: mapping
+  label: 'Stripe Payment'
+  mapping:
+    enable:
+      type: int
+      label: 'Enable'
+    avs:
+      type: int
+      label: 'AVS Check'
+    description_value:
+      type: string
+      label: 'Description Value'
+    description_format:
+      type: string
+      label: 'Description Format'
+    amount:
+      type: integer
+      label: 'Amount'
+    max_payments:
+      type: integer
+      label: 'Max Payments'
+    max_purchases:
+      type: integer
+      label: 'Max Purchases'
+    payment_type:
+      type: string
+      label: 'Payment Type'
+    button_label:
+      type: string
+      label: 'Button Label'
+    show_button:
+      type: int
+      label: 'Show Button'
+    link_button:
+      type: string
+      label: 'Link ButtonZ'
+    last_refund_date:
+      type: string
+      lable: 'Last Refund Date'
+
+field.value.stripe_payment:
+  type: stripe_payment
+  label: 'Default value'
+
+field.field_settings.stripe_payment:
+  type: mapping
+  label: 'Stripe Payment settings'
+
+field.widget.settings.stripe_payment:
+  type: mapping
+  label: 'Stripe Payment widget settings'

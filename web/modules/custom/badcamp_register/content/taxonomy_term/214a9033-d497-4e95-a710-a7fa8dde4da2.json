@@ -1,0 +1,63 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/badcamp-2018.docksal\/skill-level\/beginner?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/taxonomy_term\/skill_level"
+        }
+    },
+    "tid": [
+        {
+            "value": 17
+        }
+    ],
+    "uuid": [
+        {
+            "value": "214a9033-d497-4e95-a710-a7fa8dde4da2"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en",
+            "lang": "en"
+        }
+    ],
+    "vid": [
+        {
+            "target_id": "skill_level"
+        }
+    ],
+    "name": [
+        {
+            "value": "Beginner",
+            "lang": "en"
+        }
+    ],
+    "weight": [
+        {
+            "value": 0
+        }
+    ],
+    "changed": [
+        {
+            "value": "2018-06-11T05:56:35+00:00",
+            "lang": "en",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "path": [
+        {
+            "alias": "\/skill-level\/beginner",
+            "pid": 56,
+            "langcode": "en",
+            "lang": "en"
+        }
+    ]
+}

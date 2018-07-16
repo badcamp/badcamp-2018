@@ -6,10 +6,18 @@ _core:
   default_config_hash: j5zLMOdJBqC0bMvSdth5UebkprJB8g_2FXHqhfpJzow
 id: anonymous
 label: 'Anonymous user'
-weight: 0
+weight: -10
 is_admin: false
 permissions:
   - 'access content'
+  - 'access user profiles'
+  - 'use text format basic_html'
   - 'use text format restricted_html'
   - 'view field_date'
+  - 'view field_session_status'
+  - 'view field_session_video'
+  - 'view field_venue'
   - 'view own field_date'
+  - 'view own field_session_status'
+  - 'view own field_session_video'
+  - 'view own field_venue'

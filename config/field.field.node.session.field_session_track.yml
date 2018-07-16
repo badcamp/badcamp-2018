@@ -6,14 +6,20 @@ dependencies:
     - field.storage.node.field_session_track
     - node.type.session
     - taxonomy.vocabulary.session_track
+  module:
+    - custom_add_another
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
 _core:
   default_config_hash: ONXaoKSSx5Zm4qcRuWI_R6zyUesa2G-rOkbjKC2cnGE
 id: node.session.field_session_track
 field_name: field_session_track
 entity_type: node
 bundle: session
-label: Track
-description: ''
+label: 'Presentation Topics'
+description: 'Select up to three Presentation Topics that fit your session in order of relevance, with the first being the best fit.'
 required: true
 translatable: false
 default_value: {  }

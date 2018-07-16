@@ -6,7 +6,12 @@ dependencies:
     - field.storage.node.field_date
     - node.type.summit
   module:
+    - custom_add_another
     - datetime_range
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
 _core:
   default_config_hash: UP-xtqlIzA6WuLkYQNUuHdTOlVX57smbzkGqQUAo0RE
 id: node.summit.field_date

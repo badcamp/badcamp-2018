@@ -1,0 +1,42 @@
+uuid: 395b3afc-8052-437b-90d4-26307235bf2f
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.sponsorship_block
+    - field.storage.block_content.field_payment
+  module:
+    - badcamp_stripe_payment
+    - custom_add_another
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+id: block_content.sponsorship_block.field_payment
+field_name: field_payment
+entity_type: block_content
+bundle: sponsorship_block
+label: Payment
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    description:
+      value: ''
+      format: basic_html
+    enable: 0
+    amount: 0
+    avs: 0
+    payment_type: individual_sponsorship
+    description_value: ''
+    button_label: ''
+    show_button: 0
+    link_button: ''
+    description_format: basic_html
+    max_payments: 0
+    max_purchases: 0
+    last_refund_date: ''
+default_value_callback: ''
+settings: {  }
+field_type: stripe_payment

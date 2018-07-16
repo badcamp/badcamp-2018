@@ -2,6 +2,10 @@ module:
   admin_toolbar: 0
   admin_toolbar_tools: 0
   automated_cron: 0
+  badcamp_register: 0
+  badcamp_stripe_payment: 0
+  better_exposed_filters: 0
+  better_normalizers: 0
   block: 0
   block_content: 0
   breakpoint: 0
@@ -21,24 +25,30 @@ module:
   config_readonly: 0
   contextual: 0
   ctools: 0
+  custom_add_another: 0
   daterange_compact: 0
   datetime: 0
   datetime_range: 0
-  devel_generate: 0
+  default_content: 0
+  disable_messages: 0
   dynamic_page_cache: 0
   editor: 0
   entity_reference: 0
   field: 0
   field_delimiter: 0
+  field_formatter_class: 0
   field_group: 0
   field_permissions: 0
   field_ui: 0
   file: 0
   filter: 0
   flag: 0
+  google_analytics: 0
+  hal: 0
   help: 0
   honeypot: 0
   image: 0
+  inline_entity_form: 0
   key: 0
   layout_discovery: 0
   link: 0
@@ -48,13 +58,23 @@ module:
   mailchimp_lists: 0
   mailchimp_signup: 0
   mailsystem: 0
+  me_redirect: 0
   menu_link_attributes: 0
   menu_ui: 0
+  metatag: 0
+  metatag_dc: 0
+  metatag_open_graph: 0
+  metatag_twitter_cards: 0
+  mimemail: 0
+  multiple_selects: 0
   node: 0
   options: 0
   page_cache: 0
   path: 0
   quickedit: 0
+  r4032login: 0
+  redirect: 0
+  redirect_404: 0
   responsive_image: 0
   rest: 0
   sendgrid_integration: 0
@@ -64,6 +84,7 @@ module:
   simple_block: 0
   social_media_links: 0
   social_media_links_field: 0
+  stripe_api: 0
   syslog: 0
   system: 0
   taxonomy: 0
@@ -79,6 +100,7 @@ module:
   webform_ui: 0
   menu_link_content: 1
   pathauto: 1
+  simple_pass_reset: 1
   views: 10
   camp: 1000
 theme:

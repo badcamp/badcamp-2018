@@ -23,10 +23,8 @@ services:
       file: ${HOME}/.docksal/stacks/services.yml
       service: cli
     environment:
-      - VIRTUAL_HOST
       - PANTHEON_SITE
       - PANTHEON_ENV
-      - TERMINUS_TOKEN
     volumes:
       - ${PROJECT_ROOT}/.docksal/etc/drush:/etc/drush:ro
 

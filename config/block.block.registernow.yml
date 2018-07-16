@@ -1,0 +1,28 @@
+uuid: 56b129e4-84e4-44ff-ac3f-18cd28030f59
+langcode: en
+status: true
+dependencies:
+  config:
+    - simple_block.simple_block.register_now
+  module:
+    - simple_block
+    - system
+  theme:
+    - badcamp_2018
+id: registernow
+theme: badcamp_2018
+region: header
+weight: -7
+provider: null
+plugin: 'simple_block:register_now'
+settings:
+  id: 'simple_block:register_now'
+  label: 'Register Now'
+  provider: simple_block
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

@@ -1,7 +1,15 @@
 #block-registernow{
-  position: absolute;
-  z-index: 1;
-  bottom: -96px;
-  left: 50%;
-  margin-left: -150px;
+  position: relative;
+  left: 0;
+  bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include breakpoint(medium up){
+    position: absolute;
+    z-index: 1;
+    bottom: -60px;
+    left: 50%;
+    margin-left: -150px;
+  }
 }

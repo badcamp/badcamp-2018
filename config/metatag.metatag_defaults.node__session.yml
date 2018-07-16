@@ -1,0 +1,19 @@
+uuid: a5b6c3a8-5c51-4e3e-8afb-16c5e1d012ab
+langcode: en
+status: true
+dependencies: {  }
+id: node__session
+label: 'Content: Session'
+tags:
+  description: '[node:summary]'
+  robots: 'index, follow'
+  title: '[node:title]'
+  dcterms_title: '[node:title]'
+  og_site_name: '[site:name]'
+  og_title: '[node:title]'
+  twitter_cards_description: '[node:field_twitter_teaser:value]'
+  twitter_cards_page_url: '[node:url:absolute]'
+  twitter_cards_site: '@badcamp'
+  twitter_cards_site_id: '16595328'
+  twitter_cards_title: '[node:title]'
+  twitter_cards_type: summary

@@ -4,16 +4,19 @@ status: true
 dependencies:
   config:
     - field.field.node.summit.field_date
+    - field.field.node.summit.field_image
     - field.field.node.summit.field_sponsors
     - field.field.node.summit.field_stick_to_top_of_date
     - field.field.node.summit.field_stick_to_top_of_schedule
     - field.field.node.summit.field_summit_description
     - field.field.node.summit.field_summit_leaders
     - field.field.node.summit.field_venue
+    - image.style.thumbnail
     - node.type.summit
   module:
     - datetime_range
     - field_group
+    - image
     - path
     - text
 third_party_settings:
@@ -69,6 +72,14 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: daterange_default
+    region: content
+  field_image:
+    weight: 26
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
     region: content
   field_sponsors:
     weight: 4

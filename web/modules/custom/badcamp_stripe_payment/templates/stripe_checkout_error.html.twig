@@ -1,0 +1,11 @@
+<div class="checkout-error">
+  <div class="checkout-error__message">
+    {{ message }}
+  </div>
+  <div class="checkout-complete__error">
+    <p>{{ error }}</p>
+    {% if decline_code %}
+    <p>{{ 'The reason given was: '|t }} {{ decline_code }}.</p>
+    {% endif %}
+  </div>
+</div>

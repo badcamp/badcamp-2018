@@ -5,14 +5,19 @@ dependencies:
   config:
     - field.storage.user.field_subscribe_to_badcamp_newsl
   module:
+    - custom_add_another
     - mailchimp_lists
     - user
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
 id: user.user.field_subscribe_to_badcamp_newsl
 field_name: field_subscribe_to_badcamp_newsl
 entity_type: user
 bundle: user
 label: 'Subscribe to BADCamp Newsletter'
-description: ''
+description: 'Get more information leading up to the camp and get daily updates during the camp.'
 required: false
 translatable: false
 default_value:

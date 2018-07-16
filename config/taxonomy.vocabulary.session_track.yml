@@ -4,7 +4,7 @@ status: true
 dependencies: {  }
 _core:
   default_config_hash: h386tBygE8-oGtNSIQMp5CjFfz8sx0T_dKFexCsLYm0
-name: 'Session Track'
+name: 'Session Topics'
 vid: session_track
 description: ''
 hierarchy: 0

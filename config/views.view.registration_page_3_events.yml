@@ -732,6 +732,7 @@ display:
           offset: 0
       attachment_position: after
       display_description: ''
+      enabled: false
     cache_metadata:
       max-age: 0
       contexts:

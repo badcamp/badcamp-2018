@@ -1,0 +1,11 @@
+uuid: 67877d86-d993-4833-aa54-a1f30b87cc8d
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.full_html
+id: add_session
+title: 'Add Session'
+content:
+  value: "<p class=\"text-center sign-up-button\"><a class=\"button action-button\" href=\"/submit-session\">Submit A Session</a></p>\r\n"
+  format: full_html

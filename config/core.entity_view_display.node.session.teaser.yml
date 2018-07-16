@@ -74,6 +74,7 @@ hidden:
   field_sponsors: true
   field_stick_to_top_of_date: true
   field_stick_to_top_of_schedule: true
+  field_twitter_teaser: true
   field_venue: true
   flag_add_to_schedule: true
   links: true

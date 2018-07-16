@@ -142,6 +142,7 @@ hidden:
   field_i_am_interested_in_drupal_: true
   field_i_am_interested_in_hearing: true
   field_i_m_interested_in_voluntee: true
+  field_list_my_account_on_attende: true
   field_subscribe_to_badcamp_newsl: true
   field_user_public_schedule: true
   member_for: true

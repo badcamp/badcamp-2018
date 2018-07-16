@@ -55,4 +55,10 @@
       display: block;
     }
   }
+
+  .content {
+    @include breakpoint(1200 down) {
+      width: 100%;
+    }
+  }
 }

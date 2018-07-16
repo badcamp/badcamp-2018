@@ -76,6 +76,12 @@ function badcamp_register_badcamp_swag_selector_form_complete_alter(&$url, $paym
 function badcamp_register_form_node_session_form_alter(&$form, FormStateInterface $form_state, $form_id) {
 	$form['#title'] = t('Submit Session');
 	$form['actions']['submit']['#value'] = t('Save Session');
+
+	$node = $form_state->getFormObject()->getEntity();
+	if ($node->isNew()) {
+		$user = \Drupal::currentUser();
+		$form['field_speakers']['widget'][0]['target_id']['#default_value'] = \Drupal\user\Entity\User::load($user->id());
+	}
 }
 
 /**

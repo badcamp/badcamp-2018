@@ -9,12 +9,43 @@ footer{
     }
   }
 
+  @include breakpoint(small only) {
+    .footer-left {
+      text-align: center;
+      margin-bottom: 1em;
+    }
+  }
+
+
   #block-socialmedialinks{
+    @include breakpoint(small) {
+      width: 75%;
+      margin: 0px auto;
+    }
+
     .social-media-links--platforms{
-      justify-content: flex-end;
-      -webkit-justify-content: flex-end;
-      span {
-        margin-left: 1em;
+
+      justify-content: space-between;
+      -webkit-justify-content: space-between;
+
+      @include breakpoint(medium up) {
+        justify-content: flex-end;
+        -webkit-justify-content: flex-end;
+      }
+
+      > span {
+        background: $reddish;
+        padding: 1em;
+        border-radius: 50px;
+        width: 65px;
+        margin-bottom: 1rem;
+
+        @include breakpoint(medium up) {
+          margin-left: 2rem;
+          &:first-child {
+            margin-left: 0;
+          }
+        }
       }
     }
   }

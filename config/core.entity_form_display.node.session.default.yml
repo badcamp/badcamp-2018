@@ -14,6 +14,7 @@ dependencies:
     - field.field.node.session.field_sponsors
     - field.field.node.session.field_stick_to_top_of_date
     - field.field.node.session.field_stick_to_top_of_schedule
+    - field.field.node.session.field_twitter_teaser
     - field.field.node.session.field_venue
     - node.type.session
   module:
@@ -32,6 +33,7 @@ third_party_settings:
         - field_speakers
         - field_skill_level
         - field_session_track
+        - field_twitter_teaser
         - field_session_description
         - field_session_files
         - field_session_video
@@ -88,7 +90,7 @@ content:
     type: daterange_default
     region: content
   field_session_description:
-    weight: 4
+    weight: 5
     settings:
       rows: 9
       summary_rows: 3
@@ -97,14 +99,14 @@ content:
     type: text_textarea_with_summary
     region: content
   field_session_files:
-    weight: 5
+    weight: 6
     settings:
       progress_indicator: throbber
     third_party_settings: {  }
     type: file_generic
     region: content
   field_session_status:
-    weight: 26
+    weight: 7
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -116,7 +118,7 @@ content:
     type: multiple_options_select
     region: content
   field_session_video:
-    weight: 6
+    weight: 7
     settings: {  }
     third_party_settings: {  }
     type: video_embed_field_textfield
@@ -137,7 +139,7 @@ content:
     type: entity_reference_autocomplete
     region: content
   field_sponsors:
-    weight: 7
+    weight: 8
     settings: {  }
     third_party_settings: {  }
     type: options_buttons
@@ -155,6 +157,14 @@ content:
       display_label: true
     third_party_settings: {  }
     type: boolean_checkbox
+    region: content
+  field_twitter_teaser:
+    weight: 4
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
     region: content
   field_venue:
     weight: 4

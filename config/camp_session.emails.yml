@@ -1,5 +1,5 @@
 session_accepted:
-  enabled: 1
+  enabled: 0
   subject: 'Session Accepted: [node:title]'
   message:
     value: ''
@@ -10,16 +10,16 @@ session_submitted:
     format: html
     value: ''
 session_rejected:
-  enabled: 1
+  enabled: 0
   subject: 'Session Rejected: [node:title]'
   message:
     value: ''
     format: full_html
 session_proposed:
   enabled: 1
-  subject: 'Session Submitted: [node:title]'
+  subject: 'Session Proposed: [node:title]'
   message:
-    value: ''
+    value: "<p>Your submission has been submitted for review.</p>\r\n\r\n<p>Name: [node:title]</p>\r\n\r\n<p>[node:field_session_description]</p>\r\n\r\n<p>To change your session or update it. You can do so by logging into your account.&nbsp;</p>\r\n\r\n<p>This session can be edited here as well: https://2018.badcamp.net/node/[node:nid]/edit</p>\r\n\r\n<p>Thanks,<br />\r\nBADCamp</p>\r\n"
     format: full_html
 _core:
   default_config_hash: ujg0QGueuv7o63ja7lx3OTQAh3y_mXoLAH0FxnFXoKM

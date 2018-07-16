@@ -69,9 +69,11 @@ a{
 
 .password-parent,
 .confirm-parent{
-  float: left;
-  width: 45%;
-  margin-right: 5%;
+  @include breakpoint(medium up) {
+    float: left;
+    width: 45%;
+    margin-right: 5%;
+  }
 }
 
 .confirm-parent {

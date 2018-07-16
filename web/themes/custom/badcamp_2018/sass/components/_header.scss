@@ -24,7 +24,14 @@ header{
 
   .page-title{
     color: $white;
-    font-size: 6.125rem;
+
+    font-size: 3rem;
+    @include breakpoint(medium){
+      font-size: 4.125rem;
+    }
+    @include breakpoint(large up){
+      font-size: 6.125rem;
+    }
   }
 
   .header-inner-outter{

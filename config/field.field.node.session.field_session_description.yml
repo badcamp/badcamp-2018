@@ -20,10 +20,10 @@ entity_type: node
 bundle: session
 label: Description
 description: 'In as much detail as possible, what is your session about?'
-required: false
+required: true
 translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
-  display_summary: false
+  display_summary: true
 field_type: text_with_summary

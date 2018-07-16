@@ -30,6 +30,7 @@ module:
   datetime: 0
   datetime_range: 0
   default_content: 0
+  disable_messages: 0
   dynamic_page_cache: 0
   editor: 0
   entity_reference: 0
@@ -57,14 +58,23 @@ module:
   mailchimp_lists: 0
   mailchimp_signup: 0
   mailsystem: 0
+  me_redirect: 0
   menu_link_attributes: 0
   menu_ui: 0
+  metatag: 0
+  metatag_dc: 0
+  metatag_open_graph: 0
+  metatag_twitter_cards: 0
+  mimemail: 0
   multiple_selects: 0
   node: 0
   options: 0
   page_cache: 0
   path: 0
   quickedit: 0
+  r4032login: 0
+  redirect: 0
+  redirect_404: 0
   responsive_image: 0
   rest: 0
   sendgrid_integration: 0

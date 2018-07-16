@@ -1,19 +1,13 @@
-<div class="registration-steps grid-x grid-margin-x">
-    <div class="registration one small-2 small-offset-1 text-align-center">
+<div class="registration-steps grid-x">
+    <div class="registration one small-4 text-align-center">
         <div class="step-number {{ step1active ? 'active' : '' }}">1</div>
         <span>Sign Up</span>
     </div>
-    <div class="line small-2">
-        <span></span>
-    </div>
-    <div class="registration two small-2 text-align-center">
+    <div class="registration two small-4 text-align-center">
         <div class="step-number {{ step2active ? 'active' : '' }}">2</div>
         <span>Sponsor</span>
     </div>
-    <div class="line small-2">
-        <span></span>
-    </div>
-    <div class="registration three small-2 text-align-center">
+    <div class="registration three small-4 text-align-center">
         <div class="step-number {{ step3active ? 'active' : '' }}">3</div>
         <span>Events</span>
     </div>
@@ -21,6 +15,12 @@
 
 
 <div class="registration-intro">
+    {% if step1active %}
+        <div class="text-center">
+            <p>Already have an account, take me to <a href="{{ path('user.login') }}">{{ 'log in'|t }}</a>.</p>
+        </div>
+    {% endif %}
+
     {{ intro_message }}
 </div>
 

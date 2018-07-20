@@ -7,13 +7,13 @@ _core:
 id: global
 label: Global
 tags:
-  canonical_url: '[current-page:url]'
-  description: 'BADCamp is a Drupal conference for the people. It''s an annual celebration of open-source software in Berkeley, California. Join us this October 24-27 for four days of talks, trainings, summits, sprints and socials with some of the brightest minds from all over the world, all for FREE!'
-  geo_placename: 'University of California, Berkeley'
   geo_region: US-CA
-  robots: 'index, follow'
+  geo_placename: 'University of California, Berkeley'
   title: '[current-page:title] | [site:name]'
+  canonical_url: '[current-page:url]'
+  description: 'BADCamp is an annual celebration of open-source software in Berkeley, California. Join us this October 24-27, 2018 for four days of talks, training classes, summits, sprints and socials with some of the brightest minds from all over the world! Admission to BADCamp is FREE!'
+  robots: 'index, follow'
+  twitter_cards_title: '[current-page:title]'
+  twitter_cards_site_id: '16595328'
   twitter_cards_page_url: '[current-page:url:absolute]'
   twitter_cards_site: '@badcamp'
-  twitter_cards_site_id: '16595328'
-  twitter_cards_title: '[current-page:title]'

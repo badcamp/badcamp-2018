@@ -3,6 +3,7 @@
 namespace Drupal\badcamp_stripe_payment\Form;
 
 use Drupal\badcamp_stripe_payment\Entity\StripePayment;
+use Drupal\Core\Extension\ModuleHandlerInterface;
 use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Session\AccountInterface;
@@ -30,12 +31,22 @@ class StripePaymentRefundForm extends FormBase {
    */
   protected $flagService;
 
-  /**
-   * Class constructor.
-   */
-  public function __construct(StripeApiService $stripeApiService, FlagServiceInterface $flagService) {
+	/**
+	 * @var \Drupal\Core\Extension\ModuleHandlerInterface $moduleHandler
+	 */
+  protected $moduleHandler;
+
+	/**
+	 * Class constructor.
+	 *
+	 * @param \Drupal\stripe_api\StripeApiService $stripeApiService
+	 * @param \Drupal\flag\FlagServiceInterface $flagService
+	 * @param \Drupal\Core\Extension\ModuleHandlerInterface $moduleHandler
+	 */
+  public function __construct(StripeApiService $stripeApiService, FlagServiceInterface $flagService, ModuleHandlerInterface $moduleHandler) {
     $this->stripeApi = $stripeApiService;
     $this->flagService = $flagService;
+    $this->moduleHandler = $moduleHandler;
   }
 
   /**
@@ -45,7 +56,8 @@ class StripePaymentRefundForm extends FormBase {
     // Instantiates this form class.
     return new static(
       $container->get('stripe_api.stripe_api'),
-      $container->get('flag')
+      $container->get('flag'),
+			$container->get('module_handler')
     );
   }
 
@@ -124,17 +136,10 @@ class StripePaymentRefundForm extends FormBase {
       try {
         $refund = $this->stripeApi->callWithErrors('Refund', 'create', $refund_params);
         $payment->set('refunded', 1);
-        if( $payment->getType() == 'training_registration') {
-          $payment->set('field_training_reg_cancelled_dt', date("Y-m-d\Th:i:s"));
-          $flag = $this->flagService->getFlagById('add_to_schedule');
-          $entity = $payment->get('field_train_reg_rel_training')->first()->get('entity')->getTarget()->getValue();
-          try {
-            $this->flagService->unflag($flag, $entity);
-          }
-          catch (\LogicException $e) {}
-        }
-        $payment->save();
-      }
+				$this->moduleHandler->alter('stripe_payment_refund_pre_save', $payment, $refund, $refund_params);
+				$payment->save();
+				$this->moduleHandler->alter('stripe_payment_refund_post_save', $payment, $refund, $refund_params);
+			}
       catch(\Exception $e){
         drupal_set_message($e->getMessage(), 'error');
       }

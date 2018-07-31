@@ -22,6 +22,7 @@ use Drupal\node\Entity\Node;
 use Drupal\badcamp_stripe_payment\Form\SwagSelectorForm;
 use Drupal\Core\Session\AccountInterface;
 use Drupal\Core\Access\AccessResult;
+use Stripe\Error\Base as BaseStripeException;
 
 /**
  * Class StripePaymentController.
@@ -217,10 +218,12 @@ class StripePaymentController extends ControllerBase implements ContainerInjecti
    * Handles the charging of the card via the token from Stripe.
    */
   public function checkoutCharge () {
+		if($this->request->getCurrentRequest()->getMethod() != 'POST'){
+			return new RedirectResponse('/', '301');
+		}
+
     $build = [];
     $stripe_token = $this->request->getCurrentRequest()->get('stripeToken');
-    $stripe_email = $this->request->getCurrentRequest()->get('stripeEmail');
-    $stripe_token_type = $this->request->getCurrentRequest()->get('stripeTokenType');
     $amount = $this->request->getCurrentRequest()->get('amount');
     $payment_type = $this->request->getCurrentRequest()->get('payment_type');
     $receipt_email = $this->request->getCurrentRequest()->get('stripeEmail');
@@ -251,27 +254,45 @@ class StripePaymentController extends ControllerBase implements ContainerInjecti
       // Try to charge the card, if there is an error log it and output the
       // error to the screen.
 
-      $charge = $this->stripeApi->callWithErrors('Charge','create', $charge_params);
+			try {
+				$charge = $this->stripeApi->callWithErrors('Charge', 'create', $charge_params);
 
-      if (isset($charge->declineCode)) {
-        drupal_set_message(t('There was a problem with your payment!'),'error');
-        // Show the error on screen.
-        $build = [
-          '#theme' => 'stripe_checkout_error',
-          '#message' => t('There was a problem processing your @type payment for 
-          @amount.', [
-            '@type' => $payment_type,
-            '@amount' => $amount
-          ]),
-          '#error' => $charge->getMessage(),
-          '#decline_code' => $charge->declineCode
-        ];
+				if (isset($charge->declineCode)) {
+					drupal_set_message(t('There was a problem with your payment!'), 'error');
+					// Show the error on screen.
+					$build = [
+						'#theme' => 'stripe_checkout_error',
+						'#message' => t('There was a problem processing your @type payment for @amount.', [
+							'@type' => $payment_type,
+							'@amount' => $amount
+						]),
+						'#error' => $charge->getMessage(),
+						'#decline_code' => $charge->declineCode
+					];
 
-        // disable caching for this block.
-        $build['#cache']['max-age'] = 0;
+					// disable caching for this block.
+					$build['#cache']['max-age'] = 0;
 
-        return $build;
-      }
+					return $build;
+				}
+			} catch (BaseStripeException $e) {
+				drupal_set_message(t('There was a problem with your payment!'), 'error');
+				// Show the error on screen.
+				$build = [
+					'#theme' => 'stripe_checkout_error',
+					'#message' => t('There was a problem processing your @type payment for @amount.', [
+						'@type' => $payment_type,
+						'@amount' => $amount
+					]),
+					'#error' => $e->getMessage(),
+					'#decline_code' => ''
+				];
+
+				// disable caching for this block.
+				$build['#cache']['max-age'] = 0;
+
+				return $build;
+			}
 
       // This payment was marked for review, notify the site owners
       if (isset($charge->review)) {
@@ -290,7 +311,13 @@ class StripePaymentController extends ControllerBase implements ContainerInjecti
 
       // Store the payment in Drupal
       if ($charge->captured && $charge->paid) {
-        $payment = $this->savePayment($payment_type, $charge);
+				$extra = [];
+
+				if(isset($entity) && $entity->getEntityTypeId() == 'node') {
+					$extra['entity_id'] = $entity->id();
+				}
+
+        $payment = $this->savePayment($payment_type, $charge, $extra);
 
         $url = '/';
         $msg = t('Your payment was successful');
@@ -318,13 +345,24 @@ class StripePaymentController extends ControllerBase implements ContainerInjecti
    * Handles thanking for the donation
    */
   public function donationComplete() {
-    $charge = 10000;
+  	$donation_id = $this->request->getCurrentRequest()->get('donation');
+  	if($donation_id == ''){
+  		return new RedirectResponse('/', '302');
+		}
+
+		$donation = StripePayment::load($donation_id);
+  	$donation_user = $donation->get('user_id')->first()->get('entity')->getTarget()->getValue();
+  	if(!$this->currentUser()->hasPermission('view all stripe payment revisions') && $donation_user->id() != $this->currentUser->id()){
+  		return new RedirectResponse('/', '302');
+		}
+
+    $charge = $donation->get('amount')->getString();
     setlocale(LC_MONETARY, 'en_US.UTF-8');
     $build = [
       '#title' => t('Payment Complete'),
       '#theme' => 'stripe_checkout_complete',
       '#message' => t('Thank you for your payment.'),
-      '#amount' => money_format('%.2n',number_format($charge/100,"2",".",",")),
+      '#amount' => '$'.money_format('%.2n',number_format($charge/100,"2",".",",")),
       '#statement_indicator' => $this->config('badcamp_stripe_payment.settings')->get('statement_indicator'),
     ];
 
@@ -363,11 +401,9 @@ class StripePaymentController extends ControllerBase implements ContainerInjecti
     $this->moduleHandler()->alter('stripe_payment_post_create', $data, $payment_type, $charge);
 
     try {
-
       $this->moduleHandler()->alter('stripe_payment_pre_save', $stripe_payment_entity, $payment_type, $charge);
       $stripe_payment_entity_storage->save($stripe_payment_entity);
       $this->moduleHandler()->alter('stripe_payment_post_save', $stripe_payment_entity, $payment_type, $charge);
-
     } catch (Exception $dbe) {
       $db_error = $dbe->getMessage();
       // Log the error to watchdog log
@@ -383,6 +419,6 @@ class StripePaymentController extends ControllerBase implements ContainerInjecti
       ]));
     }
 
-    return $stripe_payment_entity;
+		return $stripe_payment_entity;
   }
 }

@@ -30,3 +30,5 @@ badcamp_stripe_payment.refund:
   requirements:
     _custom_access: '\Drupal\badcamp_stripe_payment\Form\StripePaymentRefundForm::refundPaymentAccess'
     stripe_payment: '^[0-9]+'
+  options:
+    _admin_route: TRUE

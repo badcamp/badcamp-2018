@@ -1,0 +1,26 @@
+uuid: 507f68a1-9b04-477f-9e17-60d7cf253410
+langcode: en
+status: true
+dependencies:
+  config:
+    - badcamp_stripe_payment.stripe_payment_type.organization_sponsorship
+    - field.storage.stripe_payment.field_refunded_date
+  module:
+    - custom_add_another
+    - datetime
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+id: stripe_payment.organization_sponsorship.field_refunded_date
+field_name: field_refunded_date
+entity_type: stripe_payment
+bundle: organization_sponsorship
+label: Refunded
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

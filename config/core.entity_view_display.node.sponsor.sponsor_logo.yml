@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.sponsor_logo
+    - field.field.node.sponsor.field_additional_job_postings
     - field.field.node.sponsor.field_sponsor_description
     - field.field.node.sponsor.field_sponsor_level
     - field.field.node.sponsor.field_sponsor_logo
@@ -32,9 +33,12 @@ content:
     third_party_settings: {  }
 hidden:
   events: true
+  field_additional_job_postings: true
   field_sponsor_description: true
   field_sponsor_level: true
   field_sponsor_members: true
   field_sponsor_url: true
   flag_add_to_schedule: true
+  job_postings: true
   links: true
+  members: true

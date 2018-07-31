@@ -1,0 +1,31 @@
+uuid: d5837285-6370-4cd5-81da-f59ba1c26fa8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_max_job_postings
+    - taxonomy.vocabulary.sponsor_level
+  module:
+    - custom_add_another
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+id: taxonomy_term.sponsor_level.field_max_job_postings
+field_name: field_max_job_postings
+entity_type: taxonomy_term
+bundle: sponsor_level
+label: 'Max Job Postings'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  min: 0
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

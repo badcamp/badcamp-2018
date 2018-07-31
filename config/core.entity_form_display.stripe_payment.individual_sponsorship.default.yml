@@ -5,7 +5,10 @@ dependencies:
   config:
     - badcamp_stripe_payment.stripe_payment_type.individual_sponsorship
     - field.field.stripe_payment.individual_sponsorship.field_hoodie_size
+    - field.field.stripe_payment.individual_sponsorship.field_refunded_date
     - field.field.stripe_payment.individual_sponsorship.field_t_shirt_size
+  module:
+    - datetime
 id: stripe_payment.individual_sponsorship.default
 targetEntityType: stripe_payment
 bundle: individual_sponsorship
@@ -24,6 +27,12 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_refunded_date:
+    weight: 26
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
   field_t_shirt_size:
     type: options_select
     weight: 7

@@ -6,7 +6,7 @@ _core:
   default_config_hash: ngx-N0-_N6JDhk1tzJlBnvM9y6dzlk8gXY5PX4B-VBs
 id: session_manager
 label: 'Session Manager'
-weight: -6
+weight: -4
 is_admin: null
 permissions:
   - 'access toolbar'

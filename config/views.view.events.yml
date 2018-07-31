@@ -11,6 +11,7 @@ dependencies:
     - system.menu.admin
   module:
     - daterange_compact
+    - datetime
     - node
     - user
 _core:
@@ -586,7 +587,8 @@ display:
           exposed: false
           expose:
             label: ''
-          plugin_id: standard
+          plugin_id: datetime
+          entity_type: node
       header: {  }
       footer: {  }
       empty: {  }

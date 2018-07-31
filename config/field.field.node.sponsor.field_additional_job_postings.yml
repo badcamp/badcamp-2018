@@ -1,0 +1,31 @@
+uuid: c95686f5-393d-4984-adb8-c47774854233
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_additional_job_postings
+    - node.type.sponsor
+  module:
+    - custom_add_another
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+id: node.sponsor.field_additional_job_postings
+field_name: field_additional_job_postings
+entity_type: node
+bundle: sponsor
+label: 'Additional Job Postings'
+description: 'How many more job postings can this sponsor offer? This is in addition to what the cap is on the level.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  min: 0
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

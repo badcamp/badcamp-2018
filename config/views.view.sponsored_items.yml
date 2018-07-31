@@ -4,8 +4,11 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.storage.node.field_date
     - node.type.sponsor
   module:
+    - daterange_compact
+    - datetime
     - node
     - user
 _core:
@@ -157,7 +160,8 @@ display:
           exposed: false
           expose:
             label: ''
-          plugin_id: standard
+          plugin_id: datetime
+          entity_type: node
       header: {  }
       footer: {  }
       empty: {  }
@@ -221,8 +225,11 @@ display:
     cache_metadata:
       max-age: -1
       contexts:
+        - 'languages:language_content'
         - 'languages:language_interface'
         - url
         - 'user.node_grants:view'
         - user.permissions
-      tags: {  }
+      tags:
+        - 'config:field.storage.node.field_date'
+        - extensions

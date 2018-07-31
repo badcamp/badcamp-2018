@@ -1,0 +1,13 @@
+uuid: 5747c22f-ee0b-4ba7-a206-a2719cb7f6e7
+langcode: en
+status: true
+dependencies: {  }
+id: sponsor
+label: Sponsor
+weight: -7
+is_admin: null
+permissions:
+  - 'create job_posting content'
+  - 'edit own job_posting content'
+  - 'override sponsor published option'
+  - 'view own unpublished content'

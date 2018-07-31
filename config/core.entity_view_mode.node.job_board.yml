@@ -1,0 +1,10 @@
+uuid: 5faccd0d-6dd8-4651-90fa-ca35729e404f
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.job_board
+label: 'Job Board'
+targetEntityType: node
+cache: true

@@ -3,8 +3,12 @@ langcode: en
 status: true
 dependencies:
   module:
+    - field_permissions
     - node
     - taxonomy
+third_party_settings:
+  field_permissions:
+    permission_type: custom
 _core:
   default_config_hash: _Nc5JI8svthW1s_VIPl-H3BxhkBXR1bc3SFNI6i-Fxc
 id: node.field_sponsor_level

@@ -1,0 +1,39 @@
+uuid: 25c6b073-683d-4acd-8e1f-716a5d7cf906
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.timeline_section.field_section_items
+    - field.field.paragraph.timeline_section.field_section_title
+    - paragraphs.paragraphs_type.timeline_section
+  module:
+    - paragraphs
+id: paragraph.timeline_section.default
+targetEntityType: paragraph
+bundle: timeline_section
+mode: default
+content:
+  field_section_items:
+    type: entity_reference_paragraphs
+    weight: 1
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  field_section_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

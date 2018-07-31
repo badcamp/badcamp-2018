@@ -1,0 +1,141 @@
+{
+    "_links": {
+        "self": {
+            "href": ""
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/paragraph\/timeline_section_item"
+        },
+        "http:\/\/drupal.org\/rest\/relation\/paragraph\/timeline_section_item\/uid": [
+            {
+                "href": "http:\/\/badcamp-2018.docksal\/u\/sean_e_dietrich?_format=hal_json",
+                "lang": "en"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/paragraph\/timeline_section_item\/revision_uid": [
+            {
+                "href": "http:\/\/badcamp-2018.docksal\/u\/sean_e_dietrich?_format=hal_json"
+            }
+        ]
+    },
+    "id": [
+        {
+            "value": 5
+        }
+    ],
+    "uuid": [
+        {
+            "value": "662d0cfd-e600-4727-a524-70f2c9eb571d"
+        }
+    ],
+    "revision_id": [
+        {
+            "value": 5
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en",
+            "lang": "en"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "timeline_section_item"
+        }
+    ],
+    "_embedded": {
+        "http:\/\/drupal.org\/rest\/relation\/paragraph\/timeline_section_item\/uid": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/badcamp-2018.docksal\/u\/sean_e_dietrich?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/user\/user"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "edf5a360-2bfe-4e46-8852-071918f6822a"
+                    }
+                ],
+                "lang": "en"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/paragraph\/timeline_section_item\/revision_uid": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/badcamp-2018.docksal\/u\/sean_e_dietrich?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/user\/user"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "edf5a360-2bfe-4e46-8852-071918f6822a"
+                    }
+                ]
+            }
+        ]
+    },
+    "status": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "created": [
+        {
+            "value": "2018-07-31T05:50:38+00:00",
+            "lang": "en",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "parent_id": [
+        {
+            "value": "7"
+        }
+    ],
+    "parent_type": [
+        {
+            "value": "paragraph"
+        }
+    ],
+    "parent_field_name": [
+        {
+            "value": "field_section_items"
+        }
+    ],
+    "behavior_settings": [
+        {
+            "value": "a:0:{}"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "field_item_body": [
+        {
+            "value": "<ul>\r\n\t<li><a href=\"https:\/\/2013.badcamp.net\/events\/drupal-immersion-beginners-friday\">Drupal Immersion for Beginners<\/a><\/li>\r\n\t<li><a href=\"https:\/\/2013.badcamp.net\/events\/whats-new-drupal-8-friday\">What's New in Drupal 8<\/a><\/li>\r\n\t<li><a href=\"https:\/\/2013.badcamp.net\/events\/level-your-themer-friday\">Level Up Your Themer<\/a><\/li>\r\n\t<li><a href=\"https:\/\/2013.badcamp.net\/events\/building-multilingual-sites-drupal-7-friday\">Building Multilingual Sites with Drupal 7<\/a><\/li>\r\n\t<li><a href=\"https:\/\/2013.badcamp.net\/events\/drupal-development-best-practices-building-sites-pantheon-friday\">Drupal Development Best Practices &amp; Building Sites on Pantheon<\/a><\/li>\r\n\t<li><a href=\"https:\/\/2013.badcamp.net\/events\/enjoy-drupal-site-builder-basics-friday\">Enjoy Drupal: Site Builder Basics<\/a><\/li>\r\n<\/ul>\r\n",
+            "format": "basic_html",
+            "processed": "<ul><li><a href=\"https:\/\/2013.badcamp.net\/events\/drupal-immersion-beginners-friday\">Drupal Immersion for Beginners<\/a><\/li>\n\t<li><a href=\"https:\/\/2013.badcamp.net\/events\/whats-new-drupal-8-friday\">What's New in Drupal 8<\/a><\/li>\n\t<li><a href=\"https:\/\/2013.badcamp.net\/events\/level-your-themer-friday\">Level Up Your Themer<\/a><\/li>\n\t<li><a href=\"https:\/\/2013.badcamp.net\/events\/building-multilingual-sites-drupal-7-friday\">Building Multilingual Sites with Drupal 7<\/a><\/li>\n\t<li><a href=\"https:\/\/2013.badcamp.net\/events\/drupal-development-best-practices-building-sites-pantheon-friday\">Drupal Development Best Practices &amp; Building Sites on Pantheon<\/a><\/li>\n\t<li><a href=\"https:\/\/2013.badcamp.net\/events\/enjoy-drupal-site-builder-basics-friday\">Enjoy Drupal: Site Builder Basics<\/a><\/li>\n<\/ul>"
+        }
+    ],
+    "field_item_header_title": [
+        {
+            "value": "Free Drupal Training"
+        }
+    ]
+}

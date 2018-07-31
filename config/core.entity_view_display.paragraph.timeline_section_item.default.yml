@@ -1,0 +1,31 @@
+uuid: e5b36288-5faa-4079-aafd-64fa53f61a81
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.timeline_section_item.field_item_body
+    - field.field.paragraph.timeline_section_item.field_item_header_title
+    - paragraphs.paragraphs_type.timeline_section_item
+  module:
+    - text
+id: paragraph.timeline_section_item.default
+targetEntityType: paragraph
+bundle: timeline_section_item
+mode: default
+content:
+  field_item_body:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_item_header_title:
+    weight: 3
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

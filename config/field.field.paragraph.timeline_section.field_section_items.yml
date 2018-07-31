@@ -1,0 +1,39 @@
+uuid: 4b236a4d-a009-4858-a394-5073541a29d6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_section_items
+    - paragraphs.paragraphs_type.timeline_section
+    - paragraphs.paragraphs_type.timeline_section_item
+  module:
+    - custom_add_another
+    - entity_reference_revisions
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+id: paragraph.timeline_section.field_section_items
+field_name: field_section_items
+entity_type: paragraph
+bundle: timeline_section
+label: 'Section Items'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      timeline_section_item: timeline_section_item
+    target_bundles_drag_drop:
+      timeline_section:
+        weight: 3
+        enabled: false
+      timeline_section_item:
+        enabled: true
+        weight: 4
+field_type: entity_reference_revisions

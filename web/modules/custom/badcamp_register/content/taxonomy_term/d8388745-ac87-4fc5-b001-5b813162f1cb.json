@@ -9,7 +9,7 @@
     },
     "tid": [
         {
-            "value": 29
+            "value": 15
         }
     ],
     "uuid": [
@@ -52,10 +52,24 @@
             "lang": "en"
         }
     ],
+    "metatag": [
+        {
+            "value": {
+                "title": "testing | BADCAMP 2018",
+                "geo_placename": "University of California, Berkeley",
+                "geo_region": "US-CA",
+                "robots": "index, follow",
+                "canonical_url": "http:\/\/badcamp-2018.docksal\/session-topics\/testing",
+                "twitter_cards_site": "@badcamp",
+                "twitter_cards_site_id": "16595328",
+                "twitter_cards_page_url": "http:\/\/badcamp-2018.docksal\/%3Cnone%3E"
+            }
+        }
+    ],
     "path": [
         {
             "alias": "\/session-topics\/testing",
-            "pid": 68,
+            "pid": 54,
             "langcode": "en",
             "lang": "en"
         }

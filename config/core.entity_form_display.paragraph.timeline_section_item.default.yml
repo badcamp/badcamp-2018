@@ -1,0 +1,35 @@
+uuid: fe285938-1fbe-4ce6-9e1f-ef1a027bf414
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.timeline_section_item.field_item_body
+    - field.field.paragraph.timeline_section_item.field_item_header_title
+    - paragraphs.paragraphs_type.timeline_section_item
+  module:
+    - text
+id: paragraph.timeline_section_item.default
+targetEntityType: paragraph
+bundle: timeline_section_item
+mode: default
+content:
+  field_item_body:
+    weight: 3
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_item_header_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

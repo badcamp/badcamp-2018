@@ -1,0 +1,201 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/badcamp-2018.docksal\/u\/thejimbirch?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/user\/user"
+        },
+        "http:\/\/drupal.org\/rest\/relation\/user\/user\/field_user_photo": [
+            {
+                "href": "http:\/\/badcamp-2018.docksal\/sites\/default\/files\/users\/photo\/2018-07\/Jim%20at%20BADcamp.jpg"
+            }
+        ]
+    },
+    "uid": [
+        {
+            "value": 20
+        }
+    ],
+    "uuid": [
+        {
+            "value": "9b1f3ca4-9cca-4ed4-a6a0-4210c8e2e1ea"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en",
+            "lang": "en"
+        }
+    ],
+    "name": [
+        {
+            "value": "thejimbirch"
+        }
+    ],
+    "created": [
+        {
+            "value": "2018-07-16T16:05:12+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2018-07-16T16:06:31+00:00",
+            "lang": "en",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "metatag": [
+        {
+            "value": {
+                "title": "thejimbirch | BADCAMP 2018",
+                "geo_placename": "University of California, Berkeley",
+                "geo_region": "US-CA",
+                "robots": "index, follow",
+                "canonical_url": "http:\/\/badcamp-2018.docksal\/u\/thejimbirch",
+                "twitter_cards_site": "@badcamp",
+                "description": "BADCAMP 2018",
+                "twitter_cards_site_id": "16595328",
+                "twitter_cards_page_url": "http:\/\/badcamp-2018.docksal\/%3Cnone%3E"
+            }
+        }
+    ],
+    "path": [
+        {
+            "alias": "\/u\/thejimbirch",
+            "pid": 103,
+            "langcode": "en",
+            "lang": "en"
+        }
+    ],
+    "field_i_am_interested_in_drupal_": [
+        {
+            "value": false
+        }
+    ],
+    "field_i_am_interested_in_hearing": [
+        {
+            "value": true
+        }
+    ],
+    "field_i_m_interested_in_voluntee": [
+        {
+            "value": true
+        }
+    ],
+    "field_list_my_account_on_attende": [
+        {
+            "value": true
+        }
+    ],
+    "field_subscribe_to_badcamp_newsl": [
+        {
+            "subscribe": false,
+            "interest_groups": ""
+        }
+    ],
+    "field_user_bio": [
+        {
+            "value": "<p>Jim Birch is an internet professional who can bridge the gap between technical staff and business goals with specialties in Drupal development, Front End development, Content Strategy, and SEO. He also specializes in planning, architecting, and developing digital projects for clients in the Education, Exhibition, Floor Coverings, Government, Publishing, and Technology industries.<\/p>\r\n\r\n<p>Jim is a seasoned technology speaker having written and presented sessions at DrupalCon North America, Drupal Camp Northern Lights, Bay Area Drupal Camp, Open Camps at the United Nations, WordCamp Chicago, Twin Cities Drupal Camp, DrupalCorn, Texas Camp and many Chicago area meetups. He also writes about web development at http:\/\/jimbir.ch and has been featured in the Drupal Watchdog magazine, Drupal Planet, and The Weekly Drop\/Drupal Association Newsletter.<\/p>\r\n\r\n<p>Jim is the organizer of the Drupal Chicago Meetup Group and along with a great group of volunteers, helps runs MidCamp, the Midwest Drupal Camp and is an administrator of the Chicago group on Drupal.org.<\/p>\r\n",
+            "format": "basic_html",
+            "processed": "<p>Jim Birch is an internet professional who can bridge the gap between technical staff and business goals with specialties in Drupal development, Front End development, Content Strategy, and SEO. He also specializes in planning, architecting, and developing digital projects for clients in the Education, Exhibition, Floor Coverings, Government, Publishing, and Technology industries.<\/p>\n\n<p>Jim is a seasoned technology speaker having written and presented sessions at DrupalCon North America, Drupal Camp Northern Lights, Bay Area Drupal Camp, Open Camps at the United Nations, WordCamp Chicago, Twin Cities Drupal Camp, DrupalCorn, Texas Camp and many Chicago area meetups. He also writes about web development at <a href=\"http:\/\/jimbir.ch\">http:\/\/jimbir.ch<\/a> and has been featured in the Drupal Watchdog magazine, Drupal Planet, and The Weekly Drop\/Drupal Association Newsletter.<\/p>\n\n<p>Jim is the organizer of the Drupal Chicago Meetup Group and along with a great group of volunteers, helps runs MidCamp, the Midwest Drupal Camp and is an administrator of the Chicago group on Drupal.org.<\/p>"
+        }
+    ],
+    "field_user_first_name": [
+        {
+            "value": "Jim"
+        }
+    ],
+    "field_user_last_name": [
+        {
+            "value": "Birch"
+        }
+    ],
+    "field_user_organization": [
+        {
+            "value": "Kanopi Studios"
+        }
+    ],
+    "field_user_organization_website": [
+        {
+            "uri": "https:\/\/www.kanopistudios.com\/",
+            "title": "",
+            "options": []
+        }
+    ],
+    "_embedded": {
+        "http:\/\/drupal.org\/rest\/relation\/user\/user\/field_user_photo": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/badcamp-2018.docksal\/sites\/default\/files\/users\/photo\/2018-07\/Jim%20at%20BADcamp.jpg"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/file\/file"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "4ea42c89-df21-43fc-a8f1-bd30ff870a7b"
+                    }
+                ],
+                "alt": "",
+                "title": "",
+                "width": "1440",
+                "height": "1440"
+            }
+        ]
+    },
+    "field_user_public_schedule": [
+        {
+            "value": false
+        }
+    ],
+    "field_user_social_profile_links": [
+        {
+            "platform": null,
+            "value": null,
+            "platform_values": {
+                "drupal": {
+                    "value": "thejimbirch"
+                },
+                "facebook": {
+                    "value": ""
+                },
+                "github": {
+                    "value": "thejimbirch"
+                },
+                "googleplus": {
+                    "value": ""
+                },
+                "instagram": {
+                    "value": "thejimbirch"
+                },
+                "linkedin": {
+                    "value": "in\/jimbirch"
+                },
+                "twitter": {
+                    "value": "thejimbirch"
+                },
+                "vimeo": {
+                    "value": ""
+                },
+                "youtube": {
+                    "value": ""
+                }
+            }
+        }
+    ],
+    "field_user_title": [
+        {
+            "value": "Senior Drupal Engineer"
+        }
+    ]
+}

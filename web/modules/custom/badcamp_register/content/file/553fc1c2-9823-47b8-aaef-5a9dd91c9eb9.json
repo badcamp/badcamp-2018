@@ -1,7 +1,7 @@
 {
     "_links": {
         "self": {
-            "href": "http:\/\/badcamp-2018.docksal\/sites\/default\/files\/default_images\/41275003-4fc2d94c-6dd4-11e8-9cf5-d515cd5b659e.png"
+            "href": "http:\/\/badcamp-2018.docksal\/sites\/default\/files\/default_images\/41275003-4fc2d94c-6dd4-11e8-9cf5-d515cd5b659e_0.png"
         },
         "type": {
             "href": "http:\/\/drupal.org\/rest\/type\/file\/file"
@@ -53,8 +53,8 @@
     ],
     "uri": [
         {
-            "value": "public:\/\/default_images\/41275003-4fc2d94c-6dd4-11e8-9cf5-d515cd5b659e.png",
-            "url": "\/sites\/default\/files\/default_images\/41275003-4fc2d94c-6dd4-11e8-9cf5-d515cd5b659e.png"
+            "value": "public:\/\/default_images\/41275003-4fc2d94c-6dd4-11e8-9cf5-d515cd5b659e_0.png",
+            "url": "\/sites\/default\/files\/default_images\/41275003-4fc2d94c-6dd4-11e8-9cf5-d515cd5b659e_0.png"
         }
     ],
     "filemime": [

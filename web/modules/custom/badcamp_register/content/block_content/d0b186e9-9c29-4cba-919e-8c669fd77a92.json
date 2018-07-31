@@ -1,0 +1,180 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/badcamp-2018.docksal\/block\/7?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/block_content\/timeline_block"
+        },
+        "http:\/\/drupal.org\/rest\/relation\/block_content\/timeline_block\/field_timeline_sections": [
+            {
+                "href": ""
+            },
+            {
+                "href": ""
+            },
+            {
+                "href": ""
+            },
+            {
+                "href": ""
+            }
+        ]
+    },
+    "id": [
+        {
+            "value": 7
+        }
+    ],
+    "uuid": [
+        {
+            "value": "d0b186e9-9c29-4cba-919e-8c669fd77a92"
+        }
+    ],
+    "revision_id": [
+        {
+            "value": 7
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en",
+            "lang": "en"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "timeline_block"
+        }
+    ],
+    "revision_created": [
+        {
+            "value": "2018-07-31T05:49:12+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "status": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "info": [
+        {
+            "value": "Timeline Block",
+            "lang": "en"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2018-07-31T05:55:13+00:00",
+            "lang": "en",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "metatag": [
+        {
+            "value": {
+                "title": "| BADCAMP 2018",
+                "geo_placename": "University of California, Berkeley",
+                "geo_region": "US-CA",
+                "robots": "index, follow",
+                "canonical_url": "http:\/\/badcamp-2018.docksal\/%3Cnone%3E",
+                "twitter_cards_site": "@badcamp",
+                "description": "BADCamp is an annual celebration of open-source software in Berkeley, California. Join us this October 24-27, 2018 for four days of talks, training classes, summits, sprints and socials with some of the brightest minds from all over the world! Admission to BADCamp is FREE!",
+                "twitter_cards_site_id": "16595328",
+                "twitter_cards_page_url": "http:\/\/badcamp-2018.docksal\/%3Cnone%3E"
+            }
+        }
+    ],
+    "field_end_timeline_text": [
+        {
+            "value": "Leave inspired."
+        }
+    ],
+    "field_start_timeline_text": [
+        {
+            "value": "Eager Arrival"
+        }
+    ],
+    "_embedded": {
+        "http:\/\/drupal.org\/rest\/relation\/block_content\/timeline_block\/field_timeline_sections": [
+            {
+                "_links": {
+                    "self": {
+                        "href": ""
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/paragraph\/timeline_section"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "c41c5767-5deb-4f79-8ebe-fdb715c30aa6"
+                    }
+                ],
+                "target_revision_id": "3"
+            },
+            {
+                "_links": {
+                    "self": {
+                        "href": ""
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/paragraph\/timeline_section"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "e4e085ea-5927-44b7-97cb-f254318506a0"
+                    }
+                ],
+                "target_revision_id": "7"
+            },
+            {
+                "_links": {
+                    "self": {
+                        "href": ""
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/paragraph\/timeline_section"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "083209dd-bc0d-41e2-a5c4-6edad2180a53"
+                    }
+                ],
+                "target_revision_id": "11"
+            },
+            {
+                "_links": {
+                    "self": {
+                        "href": ""
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/paragraph\/timeline_section"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "1b945c0c-b228-4244-a991-d51ed3201a9c"
+                    }
+                ],
+                "target_revision_id": "15"
+            }
+        ]
+    }
+}

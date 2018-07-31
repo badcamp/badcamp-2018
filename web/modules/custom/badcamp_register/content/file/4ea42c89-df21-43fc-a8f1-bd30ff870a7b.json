@@ -1,0 +1,92 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/badcamp-2018.docksal\/sites\/default\/files\/users\/photo\/2018-07\/Jim%20at%20BADcamp.jpg"
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/file\/file"
+        },
+        "http:\/\/drupal.org\/rest\/relation\/file\/file\/uid": [
+            {
+                "href": "http:\/\/badcamp-2018.docksal\/user\/0?_format=hal_json"
+            }
+        ]
+    },
+    "fid": [
+        {
+            "value": 11
+        }
+    ],
+    "uuid": [
+        {
+            "value": "4ea42c89-df21-43fc-a8f1-bd30ff870a7b"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en"
+        }
+    ],
+    "_embedded": {
+        "http:\/\/drupal.org\/rest\/relation\/file\/file\/uid": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/badcamp-2018.docksal\/user\/0?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/user\/user"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "a48e2300-dbe5-4fdf-8b19-969a5598b1c8"
+                    }
+                ]
+            }
+        ]
+    },
+    "filename": [
+        {
+            "value": "Jim at BADcamp.jpg"
+        }
+    ],
+    "uri": [
+        {
+            "value": "public:\/\/users\/photo\/2018-07\/Jim at BADcamp.jpg",
+            "url": "\/sites\/default\/files\/users\/photo\/2018-07\/Jim%20at%20BADcamp.jpg"
+        }
+    ],
+    "filemime": [
+        {
+            "value": "image\/jpeg"
+        }
+    ],
+    "filesize": [
+        {
+            "value": 173437
+        }
+    ],
+    "status": [
+        {
+            "value": true
+        }
+    ],
+    "created": [
+        {
+            "value": "2018-07-16T16:05:12+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2018-07-16T16:06:31+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "data": [
+        {
+            "value": ""
+        }
+    ]
+}

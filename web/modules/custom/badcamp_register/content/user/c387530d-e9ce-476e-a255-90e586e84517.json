@@ -1,0 +1,149 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/badcamp-2018.docksal\/u\/test2?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/user\/user"
+        }
+    },
+    "uid": [
+        {
+            "value": 133
+        }
+    ],
+    "uuid": [
+        {
+            "value": "c387530d-e9ce-476e-a255-90e586e84517"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en",
+            "lang": "en"
+        }
+    ],
+    "name": [
+        {
+            "value": "test2"
+        }
+    ],
+    "created": [
+        {
+            "value": "2018-07-21T07:15:38+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2018-07-21T08:23:00+00:00",
+            "lang": "en",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "metatag": [
+        {
+            "value": {
+                "title": "test2 | BADCAMP 2018",
+                "geo_placename": "University of California, Berkeley",
+                "geo_region": "US-CA",
+                "robots": "index, follow",
+                "canonical_url": "http:\/\/badcamp-2018.docksal\/u\/test2",
+                "twitter_cards_site": "@badcamp",
+                "description": "BADCAMP 2018",
+                "twitter_cards_site_id": "16595328",
+                "twitter_cards_page_url": "http:\/\/badcamp-2018.docksal\/%3Cnone%3E"
+            }
+        }
+    ],
+    "path": [
+        {
+            "alias": "\/u\/test2",
+            "pid": 186,
+            "langcode": "en",
+            "lang": "en"
+        }
+    ],
+    "field_i_am_interested_in_drupal_": [
+        {
+            "value": false
+        }
+    ],
+    "field_i_am_interested_in_hearing": [
+        {
+            "value": false
+        }
+    ],
+    "field_i_m_interested_in_voluntee": [
+        {
+            "value": false
+        }
+    ],
+    "field_list_my_account_on_attende": [
+        {
+            "value": true
+        }
+    ],
+    "field_subscribe_to_badcamp_newsl": [
+        {
+            "subscribe": false,
+            "interest_groups": ""
+        }
+    ],
+    "field_user_first_name": [
+        {
+            "value": "test"
+        }
+    ],
+    "field_user_last_name": [
+        {
+            "value": "test"
+        }
+    ],
+    "field_user_public_schedule": [
+        {
+            "value": false
+        }
+    ],
+    "field_user_social_profile_links": [
+        {
+            "platform": null,
+            "value": null,
+            "platform_values": {
+                "drupal": {
+                    "value": ""
+                },
+                "facebook": {
+                    "value": ""
+                },
+                "github": {
+                    "value": ""
+                },
+                "googleplus": {
+                    "value": ""
+                },
+                "instagram": {
+                    "value": ""
+                },
+                "linkedin": {
+                    "value": ""
+                },
+                "twitter": {
+                    "value": ""
+                },
+                "vimeo": {
+                    "value": ""
+                },
+                "youtube": {
+                    "value": ""
+                }
+            }
+        }
+    ]
+}

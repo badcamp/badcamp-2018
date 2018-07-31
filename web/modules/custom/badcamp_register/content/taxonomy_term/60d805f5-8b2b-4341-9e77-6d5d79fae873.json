@@ -9,7 +9,7 @@
     },
     "tid": [
         {
-            "value": 6
+            "value": 33
         }
     ],
     "uuid": [
@@ -52,10 +52,24 @@
             "lang": "en"
         }
     ],
+    "metatag": [
+        {
+            "value": {
+                "title": "drupal core | BADCAMP 2018",
+                "geo_placename": "University of California, Berkeley",
+                "geo_region": "US-CA",
+                "robots": "index, follow",
+                "canonical_url": "http:\/\/badcamp-2018.docksal\/session-topics\/drupal-core",
+                "twitter_cards_site": "@badcamp",
+                "twitter_cards_site_id": "16595328",
+                "twitter_cards_page_url": "http:\/\/badcamp-2018.docksal\/%3Cnone%3E"
+            }
+        }
+    ],
     "path": [
         {
             "alias": "\/session-topics\/drupal-core",
-            "pid": 45,
+            "pid": 72,
             "langcode": "en",
             "lang": "en"
         }

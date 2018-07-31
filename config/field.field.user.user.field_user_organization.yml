@@ -18,7 +18,7 @@ field_name: field_user_organization
 entity_type: user
 bundle: user
 label: Organization
-description: 'What''s the name of the place you work at?'
+description: 'What''s the name of the place where you work?'
 required: false
 translatable: false
 default_value: {  }

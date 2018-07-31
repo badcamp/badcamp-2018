@@ -118,3 +118,12 @@ function badcamp_register_entity_insert(EntityInterface $entity) {
 		drupal_set_message(t('Thank you for your submission!'));
 	}
 }
+
+/**
+ * Implements hook_module_implements_alter().
+ */
+function badcamp_register_module_implements_alter(&$implementations, $hook) {
+        if($hook == 'link_alter') {
+                unset($implementations['login_destination']);
+        }
+}

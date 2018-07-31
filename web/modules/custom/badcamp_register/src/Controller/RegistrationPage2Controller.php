@@ -57,6 +57,12 @@ class RegistrationPage2Controller extends ControllerBase {
 			return $this->redirect('badcamp_register.page_1');
 		}
 
+		$donations = badcamp_stripe_payment_get_donations($this->currentUser->id());
+		if(count($donations) > 0) {
+			drupal_set_message(t('Thank you for your donation!'));
+			return $this->redirect('badcamp_register.page_3');
+		}
+
     $config = $this->config('badcamp_register.settings')->get('page_2');
     $bid = $config['bid']; // Get the block id through config, SQL or some other means
     $block = $this->entityRepository->loadEntityByUuid('block_content', $bid);

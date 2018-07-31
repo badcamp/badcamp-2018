@@ -1,0 +1,39 @@
+uuid: 84d5f654-d623-4255-924d-f27747fa3faf
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.timeline_block
+    - field.storage.block_content.field_timeline_sections
+    - paragraphs.paragraphs_type.timeline_section
+  module:
+    - custom_add_another
+    - entity_reference_revisions
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+id: block_content.timeline_block.field_timeline_sections
+field_name: field_timeline_sections
+entity_type: block_content
+bundle: timeline_block
+label: 'Timeline Sections'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      timeline_section: timeline_section
+    target_bundles_drag_drop:
+      timeline_section:
+        enabled: true
+        weight: 3
+      timeline_section_item:
+        weight: 4
+        enabled: false
+field_type: entity_reference_revisions

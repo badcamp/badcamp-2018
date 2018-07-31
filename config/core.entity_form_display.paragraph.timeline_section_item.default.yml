@@ -4,12 +4,9 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.timeline_section_item.field_item_body
-    - field.field.paragraph.timeline_section_item.field_item_featured
-    - field.field.paragraph.timeline_section_item.field_item_header_link
     - field.field.paragraph.timeline_section_item.field_item_header_title
     - paragraphs.paragraphs_type.timeline_section_item
   module:
-    - link
     - text
 id: paragraph.timeline_section_item.default
 targetEntityType: paragraph
@@ -23,21 +20,6 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: text_textarea
-    region: content
-  field_item_featured:
-    weight: 2
-    settings:
-      display_label: true
-    third_party_settings: {  }
-    type: boolean_checkbox
-    region: content
-  field_item_header_link:
-    weight: 1
-    settings:
-      placeholder_url: ''
-      placeholder_title: ''
-    third_party_settings: {  }
-    type: link_default
     region: content
   field_item_header_title:
     weight: 0

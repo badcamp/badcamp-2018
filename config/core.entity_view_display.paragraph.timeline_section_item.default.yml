@@ -4,12 +4,9 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.timeline_section_item.field_item_body
-    - field.field.paragraph.timeline_section_item.field_item_featured
-    - field.field.paragraph.timeline_section_item.field_item_header_link
     - field.field.paragraph.timeline_section_item.field_item_header_title
     - paragraphs.paragraphs_type.timeline_section_item
   module:
-    - link
     - text
 id: paragraph.timeline_section_item.default
 targetEntityType: paragraph
@@ -22,28 +19,6 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: text_default
-    region: content
-  field_item_featured:
-    weight: 1
-    label: hidden
-    settings:
-      format: default
-      format_custom_false: ''
-      format_custom_true: ''
-    third_party_settings: {  }
-    type: boolean
-    region: content
-  field_item_header_link:
-    weight: 2
-    label: hidden
-    settings:
-      trim_length: 80
-      url_only: false
-      url_plain: false
-      rel: ''
-      target: ''
-    third_party_settings: {  }
-    type: link
     region: content
   field_item_header_title:
     weight: 3

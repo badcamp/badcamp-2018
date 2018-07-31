@@ -193,8 +193,7 @@ function badcamp_2018_preprocess_views_view_unformatted__sponsors__full_list(&$v
     case 'core-level':
       $vars['sizing_class'] = 'small-up-1 medium-up-3';
       break;
-    case 'contrib-level':
-    case 'supporting-level':
+    default:
       $vars['sizing_class'] = 'small-up-2 medium-up-4';
       break;
   }

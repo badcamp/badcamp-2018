@@ -71,36 +71,15 @@
  */
 #}
 <article{{ attributes }}>
-    <div{{ content_attributes }}>
-        <div class="media-object stack-for-small">
-            <div class="media-object-section main-section">
-                {{ content.field_sponsor_description }}
-            </div>
-            <div class="media-object-section middle grid-x">
-                <a href="{{ sponsor_url }}" title="{{ title }}">{{ logo }}</a>
-            </div>
-        </div>
 
-        {% if content.members|render|striptags|trim is not empty %}
-        <div class="margin-vertical-2">
-            <h2 class="margin-vertical-1 callout primary">{{ "Meet the Team" | t }}</h2>
-            {{ content.members }}
-        </div>
-        {% endif %}
+    {{ title_prefix }}
+    {% if not page %}
+        <h3{{ title_attributes }}>
+            <a href="{{ url }}" rel="bookmark">{{ label }}</a>
+        </h3>
+    {% endif %}
+    {{ title_suffix }}
 
-        {% if content.job_postings|render|striptags|trim is not empty %}
-        <div class="margin-vertical-2">
-            <h2 class="margin-vertical-1 callout primary">{{ "Join the Team" | t }}</h2>
-            {{ content.job_postings }}
-        </div>
-        {% endif %}
+    {{ content }}
 
-        {% if content.events|render|striptags|trim is not empty %}
-        <div class="margin-vertical-2">
-            <h2 class="margin-vertical-1 callout primary">{{ "Catch Us At These Events" | t }}</h2>
-            {{ content.events }}
-        </div>
-        {% endif %}
-
-    </div>
 </article>

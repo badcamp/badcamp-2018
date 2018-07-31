@@ -52,8 +52,8 @@
         {% endfor %}
     {% endif %}
 {% else %}
-    <div{{ attributes }}>
-        <div{{ title_attributes }}>{{ label }}</div>
+    <div{{ attributes.addClass('field-item') }}>
+        <div{{ title_attributes.addClass('field-label') }}>{{ label }}</div>
         {% if multiple %}
         <div>
             {% endif %}

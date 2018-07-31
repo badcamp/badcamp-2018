@@ -70,37 +70,33 @@
  *   in different view modes.
  */
 #}
-<article{{ attributes }}>
-    <div{{ content_attributes }}>
-        <div class="media-object stack-for-small">
-            <div class="media-object-section main-section">
-                {{ content.field_sponsor_description }}
-            </div>
-            <div class="media-object-section middle grid-x">
-                <a href="{{ sponsor_url }}" title="{{ title }}">{{ logo }}</a>
-            </div>
-        </div>
+<article{{ attributes.addClass('grid-x') }}>
 
-        {% if content.members|render|striptags|trim is not empty %}
-        <div class="margin-vertical-2">
-            <h2 class="margin-vertical-1 callout primary">{{ "Meet the Team" | t }}</h2>
-            {{ content.members }}
-        </div>
-        {% endif %}
-
-        {% if content.job_postings|render|striptags|trim is not empty %}
-        <div class="margin-vertical-2">
-            <h2 class="margin-vertical-1 callout primary">{{ "Join the Team" | t }}</h2>
-            {{ content.job_postings }}
-        </div>
-        {% endif %}
-
-        {% if content.events|render|striptags|trim is not empty %}
-        <div class="margin-vertical-2">
-            <h2 class="margin-vertical-1 callout primary">{{ "Catch Us At These Events" | t }}</h2>
-            {{ content.events }}
-        </div>
-        {% endif %}
-
+    <div class="columns small-12 medium-4">
+        <h4>{{ content.field_date }}</h4>
+        {{ content.register_button }}
+        {{ content.field_payment }}
     </div>
+
+    <div class="columns small-12 small-offset-0 medium-8 medium-offset-0">
+        {{ title_prefix }}
+        <h3{{ title_attributes.addClass('title') }}>
+            <a href="{{ url }}" rel="bookmark">{{ label }}</a>
+        </h3>
+        {{ title_suffix }}
+
+        <div class="info">
+            {{ content.field_trainers }}
+            {{ content.field_skill_level }}
+        </div>
+
+        <div class="info">
+            {{ content.field_venue }}
+        </div>
+
+        <div class="content">
+            {{ content|without('field_date','flag_add_to_schedule','field_trainers','field_venue','field_skill_level','register_button','field_payment')}}
+        </div>
+    </div>
+
 </article>

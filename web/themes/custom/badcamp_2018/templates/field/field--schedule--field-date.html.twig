@@ -39,8 +39,7 @@
  */
 #}
 
-<div{{ attributes.addClass('category-icon') }}>
-    <span class="category-icon"><i class="fa fa-bolt fa-2x"></i></span>
+<div{{ attributes }}>
     {% for item in items %}
         <span>{{ item.content }}</span> {% if not loop.last %} / {% endif %}
     {% endfor %}

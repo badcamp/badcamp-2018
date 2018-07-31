@@ -1,7 +1,7 @@
 {#
 /**
  * @file
- * Theme override for main view template.
+ * Default theme implementation for main view template.
  *
  * Available variables:
  * - attributes: Remaining HTML attributes for the element.
@@ -28,6 +28,8 @@
  *   Javascript.
  *
  * @see template_preprocess_views_view()
+ *
+ * @ingroup themeable
  */
 #}
 {%
@@ -43,25 +45,30 @@
     {{ title_suffix }}
 
     {% if header %}
-        <div class="header">
+        <header>
             {{ header }}
-        </div>
+        </header>
     {% endif %}
 
-    {{ exposed }}
     {{ attachment_before }}
 
-    {{ rows }}
-    {{ empty }}
-    {{ pager }}
+    <div class="grid-x">
+        <div class="small-12 medium-12 large-3">{{ exposed }}</div>
+
+        <div class="small-12 medium-12 large-9">
+            {{ rows }}
+            {{ empty }}
+            {{ pager }}
+        </div>
+    </div>
 
     {{ attachment_after }}
     {{ more }}
 
     {% if footer %}
-        <div class="footer">
+        <footer>
             {{ footer }}
-        </div>
+        </footer>
     {% endif %}
 
     {{ feed_icons }}

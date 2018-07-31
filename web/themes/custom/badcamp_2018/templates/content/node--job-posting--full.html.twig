@@ -70,37 +70,18 @@
  *   in different view modes.
  */
 #}
-<article{{ attributes }}>
+<article{{ attributes.addClass('job-posting') }}>
     <div{{ content_attributes }}>
-        <div class="media-object stack-for-small">
-            <div class="media-object-section main-section">
-                {{ content.field_sponsor_description }}
+        {{ title_prefix }}
+        {{ title_suffix }}
+
+        <div class="clearfix job-description">
+            <div class="company-logo">
+                {{ content.field_company }}
             </div>
-            <div class="media-object-section middle grid-x">
-                <a href="{{ sponsor_url }}" title="{{ title }}">{{ logo }}</a>
+            <div class="job-content">
+                {{ content | without('field_company')}}
             </div>
         </div>
-
-        {% if content.members|render|striptags|trim is not empty %}
-        <div class="margin-vertical-2">
-            <h2 class="margin-vertical-1 callout primary">{{ "Meet the Team" | t }}</h2>
-            {{ content.members }}
-        </div>
-        {% endif %}
-
-        {% if content.job_postings|render|striptags|trim is not empty %}
-        <div class="margin-vertical-2">
-            <h2 class="margin-vertical-1 callout primary">{{ "Join the Team" | t }}</h2>
-            {{ content.job_postings }}
-        </div>
-        {% endif %}
-
-        {% if content.events|render|striptags|trim is not empty %}
-        <div class="margin-vertical-2">
-            <h2 class="margin-vertical-1 callout primary">{{ "Catch Us At These Events" | t }}</h2>
-            {{ content.events }}
-        </div>
-        {% endif %}
-
     </div>
 </article>

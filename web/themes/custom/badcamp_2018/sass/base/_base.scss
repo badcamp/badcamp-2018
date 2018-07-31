@@ -18,7 +18,18 @@ a.action-button,
   min-width: 300px;
   color: $white;
 
+  .schedule & {
+    min-width: 10px;
+    width: 100%;
+    max-width: 270px;
+  }
+
   @extend .button;
+
+  a {
+    color: $white;
+    text-decoration: none;
+  }
 }
 
 .button {
@@ -57,6 +68,12 @@ fieldset {
   .fieldset-wrapper {
 
   }
+}
+
+.error {
+  background-color: $reddish;
+  border-color: $reddish;
+  color: $white;
 }
 
 a{

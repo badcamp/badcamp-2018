@@ -1,0 +1,82 @@
+.schedule {
+  div[data-drupal-selector="edit-session-track"] {
+    margin: 1rem 0;
+    input[type="checkbox"] {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      -ms-progress-appearance: none;
+      display: none;
+    }
+
+    label {
+      @extend .category-icon;
+      > i {
+        background-color: lightgrey;
+      }
+    }
+
+    input[type="checkbox"]:checked + label {
+      > i {
+        background-color: orange;
+      }
+    }
+
+    .form-item {
+      margin-bottom: .5rem;
+    }
+  }
+
+  fieldset[data-drupal-selector="edit-date"],
+  div[data-drupal-selector="edit-type"]{
+    margin: 1rem;
+    text-align: center;
+    > .fieldset-wrapper {
+      text-align: center;
+    }
+    input[type="radio"],
+    input[type="checkbox"]{
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      -ms-progress-appearance: none;
+      display: none;
+    }
+
+    div.form-item {
+      display: inline-block;
+      text-align: center;
+
+      label {
+        background-color: lightgrey;
+        color: white;
+        font-weight: 700;
+        font-size: 1.25rem;
+        text-align: center;
+        margin: 0px;
+        padding: .5rem 1rem;
+        min-width: 100px;
+      }
+
+      input[type="radio"]:checked + label,
+      input[type="checkbox"]:checked + label{
+        background-color: blue;
+      }
+    }
+  }
+
+  .schedule-results .views-row{
+    margin-bottom: 1em;
+    padding-bottom: 1em;
+    border-bottom: 1px solid lightgrey;
+    &:last-child{
+      border-bottom: 0px solid;
+    }
+  }
+
+  h3.title {
+    line-height: 1.25;
+  }
+
+  .info > div {
+    margin: 1.5rem;
+  }
+}

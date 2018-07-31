@@ -6,6 +6,8 @@
  */
 
 use Drupal\Component\Utility\Html;
+use Drupal\Core\Url;
+use Drupal\Core\Link;
 
 /**
  * Implements hook_preprocess_HOOK() for html.html.twig.
@@ -99,6 +101,23 @@ function badcamp_2018_theme_suggestions_fieldset_alter(array &$suggestions, arra
 function badcamp_2018_preprocess_node(array &$variables) {
   // Default to turning off byline/submitted.
   //$variables['display_submitted'] = FALSE;
+
+	$account = \Drupal::currentUser();
+	if($account->isAnonymous() && in_array($variables['node']->getType(), ['event','session','training',])){
+
+		$url = Url::fromRoute('user.login', [], [
+			'query' => [
+				'destination' => Url::fromRoute('entity.node.canonical', ['node' => $variables['node']->id()])->getInternalPath()
+			]
+		]);
+		$link = Link::fromTextAndUrl(t('Login to Register'), $url)->toRenderable();
+		$link['#attributes']['class'][] = 'action-button';
+
+		$variables['content']['register_button'] = [
+			'#markup' => render($link),
+			'#weight' => 1000
+		];
+	}
 }
 
 /**
@@ -193,8 +212,7 @@ function badcamp_2018_preprocess_views_view_unformatted__sponsors__full_list(&$v
     case 'core-level':
       $vars['sizing_class'] = 'small-up-1 medium-up-3';
       break;
-    case 'contrib-level':
-    case 'supporting-level':
+		default:
       $vars['sizing_class'] = 'small-up-2 medium-up-4';
       break;
   }

@@ -1,0 +1,31 @@
+uuid: 269cdd51-3073-4e0b-b1bd-b21e39dfbe33
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:timeline_block:d0b186e9-9c29-4cba-919e-8c669fd77a92'
+  module:
+    - block_content
+    - system
+  theme:
+    - badcamp_2018
+id: timelineblock
+theme: badcamp_2018
+region: content
+weight: 0
+provider: null
+plugin: 'block_content:d0b186e9-9c29-4cba-919e-8c669fd77a92'
+settings:
+  id: 'block_content:d0b186e9-9c29-4cba-919e-8c669fd77a92'
+  label: 'Timeline Block'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /about
+    negate: false
+    context_mapping: {  }

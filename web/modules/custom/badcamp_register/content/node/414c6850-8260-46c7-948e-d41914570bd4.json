@@ -8,13 +8,18 @@
         },
         "http:\/\/drupal.org\/rest\/relation\/node\/summit\/revision_uid": [
             {
-                "href": "http:\/\/badcamp-2018.docksal\/u\/sean_e_dietrich?_format=hal_json"
+                "href": "http:\/\/badcamp-2018.docksal\/u\/admin?_format=hal_json"
             }
         ],
         "http:\/\/drupal.org\/rest\/relation\/node\/summit\/uid": [
             {
                 "href": "http:\/\/badcamp-2018.docksal\/u\/sean_e_dietrich?_format=hal_json",
                 "lang": "en"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/summit\/field_summit_leaders": [
+            {
+                "href": "http:\/\/badcamp-2018.docksal\/u\/test2?_format=hal_json"
             }
         ]
     },
@@ -30,7 +35,7 @@
     ],
     "vid": [
         {
-            "value": 27
+            "value": 43
         }
     ],
     "langcode": [
@@ -46,7 +51,7 @@
     ],
     "revision_timestamp": [
         {
-            "value": "2018-06-20T01:31:12+00:00",
+            "value": "2018-07-21T07:30:07+00:00",
             "format": "Y-m-d\\TH:i:sP"
         }
     ],
@@ -55,7 +60,7 @@
             {
                 "_links": {
                     "self": {
-                        "href": "http:\/\/badcamp-2018.docksal\/u\/sean_e_dietrich?_format=hal_json"
+                        "href": "http:\/\/badcamp-2018.docksal\/u\/admin?_format=hal_json"
                     },
                     "type": {
                         "href": "http:\/\/drupal.org\/rest\/type\/user\/user"
@@ -63,7 +68,7 @@
                 },
                 "uuid": [
                     {
-                        "value": "edf5a360-2bfe-4e46-8852-071918f6822a"
+                        "value": "b592e264-84db-41b9-95b3-1071111fb61b"
                     }
                 ]
             }
@@ -84,6 +89,23 @@
                     }
                 ],
                 "lang": "en"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/summit\/field_summit_leaders": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/badcamp-2018.docksal\/u\/test2?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/user\/user"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "c387530d-e9ce-476e-a255-90e586e84517"
+                    }
+                ]
             }
         ]
     },
@@ -108,7 +130,7 @@
     ],
     "changed": [
         {
-            "value": "2018-06-20T01:31:12+00:00",
+            "value": "2018-07-21T07:30:07+00:00",
             "lang": "en",
             "format": "Y-m-d\\TH:i:sP"
         }
@@ -135,6 +157,20 @@
         {
             "value": true,
             "lang": "en"
+        }
+    ],
+    "metatag": [
+        {
+            "value": {
+                "title": "Higher Education Summit | BADCAMP 2018",
+                "geo_placename": "University of California, Berkeley",
+                "geo_region": "US-CA",
+                "robots": "index, follow",
+                "canonical_url": "http:\/\/badcamp-2018.docksal\/summits\/higher-education-summit",
+                "twitter_cards_site": "@badcamp",
+                "twitter_cards_site_id": "16595328",
+                "twitter_cards_page_url": "http:\/\/badcamp-2018.docksal\/%3Cnone%3E"
+            }
         }
     ],
     "path": [

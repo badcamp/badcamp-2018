@@ -8,16 +8,19 @@
         },
         "http:\/\/drupal.org\/rest\/relation\/block_content\/block_reference\/field_blocks": [
             {
-                "href": "http:\/\/badcamp-2018.docksal\/block\/3?_format=hal_json"
+                "href": "http:\/\/badcamp-2018.docksal\/block\/1?_format=hal_json"
             },
             {
                 "href": "http:\/\/badcamp-2018.docksal\/block\/4?_format=hal_json"
             },
             {
-                "href": "http:\/\/badcamp-2018.docksal\/block\/1?_format=hal_json"
+                "href": "http:\/\/badcamp-2018.docksal\/block\/3?_format=hal_json"
             },
             {
                 "href": "http:\/\/badcamp-2018.docksal\/block\/2?_format=hal_json"
+            },
+            {
+                "href": "http:\/\/badcamp-2018.docksal\/block\/6?_format=hal_json"
             }
         ]
     },
@@ -67,7 +70,7 @@
     ],
     "changed": [
         {
-            "value": "2018-05-14T07:27:53+00:00",
+            "value": "2018-07-22T06:06:13+00:00",
             "lang": "en",
             "format": "Y-m-d\\TH:i:sP"
         }
@@ -84,6 +87,21 @@
             "lang": "en"
         }
     ],
+    "metatag": [
+        {
+            "value": {
+                "title": "| BADCAMP 2018",
+                "geo_placename": "University of California, Berkeley",
+                "geo_region": "US-CA",
+                "robots": "index, follow",
+                "canonical_url": "http:\/\/badcamp-2018.docksal\/%3Cnone%3E",
+                "twitter_cards_site": "@badcamp",
+                "description": "BADCamp is an annual celebration of open-source software in Berkeley, California. Join us this October 24-27, 2018 for four days of talks, training classes, summits, sprints and socials with some of the brightest minds from all over the world! Admission to BADCamp is FREE!",
+                "twitter_cards_site_id": "16595328",
+                "twitter_cards_page_url": "http:\/\/badcamp-2018.docksal\/%3Cnone%3E"
+            }
+        }
+    ],
     "body": [
         {
             "value": "<p>Do you think BADCamp is awesome? Would you be willing to pay for your ticket?<\/p>\r\n\r\n<p>If so, then you can give back to the camp by purchasing an individual sponsorship level most comfortable for you.<\/p>\r\n\r\n<p>As a bonus, all individual sponsor will receive BADCamp T-shirt.<\/p>\r\n",
@@ -98,7 +116,7 @@
             {
                 "_links": {
                     "self": {
-                        "href": "http:\/\/badcamp-2018.docksal\/block\/3?_format=hal_json"
+                        "href": "http:\/\/badcamp-2018.docksal\/block\/1?_format=hal_json"
                     },
                     "type": {
                         "href": "http:\/\/drupal.org\/rest\/type\/block_content\/sponsorship_block"
@@ -128,7 +146,7 @@
             {
                 "_links": {
                     "self": {
-                        "href": "http:\/\/badcamp-2018.docksal\/block\/1?_format=hal_json"
+                        "href": "http:\/\/badcamp-2018.docksal\/block\/3?_format=hal_json"
                     },
                     "type": {
                         "href": "http:\/\/drupal.org\/rest\/type\/block_content\/sponsorship_block"
@@ -152,6 +170,21 @@
                 "uuid": [
                     {
                         "value": "34618894-55ad-468a-a467-e573637d7f0a"
+                    }
+                ]
+            },
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/badcamp-2018.docksal\/block\/6?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/block_content\/sponsorship_block"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "66adc48b-664f-4290-a48a-546e2e929f5c"
                     }
                 ]
             }

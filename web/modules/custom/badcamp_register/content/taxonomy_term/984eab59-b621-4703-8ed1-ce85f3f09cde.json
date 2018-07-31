@@ -9,7 +9,7 @@
     },
     "tid": [
         {
-            "value": 39
+            "value": 37
         }
     ],
     "uuid": [
@@ -52,10 +52,24 @@
             "lang": "en"
         }
     ],
+    "metatag": [
+        {
+            "value": {
+                "title": "Intermediate | BADCAMP 2018",
+                "geo_placename": "University of California, Berkeley",
+                "geo_region": "US-CA",
+                "robots": "index, follow",
+                "canonical_url": "http:\/\/badcamp-2018.docksal\/skill-level\/intermediate",
+                "twitter_cards_site": "@badcamp",
+                "twitter_cards_site_id": "16595328",
+                "twitter_cards_page_url": "http:\/\/badcamp-2018.docksal\/%3Cnone%3E"
+            }
+        }
+    ],
     "path": [
         {
             "alias": "\/skill-level\/intermediate",
-            "pid": 78,
+            "pid": 76,
             "langcode": "en",
             "lang": "en"
         }

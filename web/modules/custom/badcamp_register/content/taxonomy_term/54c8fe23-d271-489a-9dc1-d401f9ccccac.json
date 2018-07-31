@@ -9,7 +9,7 @@
     },
     "tid": [
         {
-            "value": 8
+            "value": 31
         }
     ],
     "uuid": [
@@ -52,10 +52,24 @@
             "lang": "en"
         }
     ],
+    "metatag": [
+        {
+            "value": {
+                "title": "apis | BADCAMP 2018",
+                "geo_placename": "University of California, Berkeley",
+                "geo_region": "US-CA",
+                "robots": "index, follow",
+                "canonical_url": "http:\/\/badcamp-2018.docksal\/session-topics\/apis",
+                "twitter_cards_site": "@badcamp",
+                "twitter_cards_site_id": "16595328",
+                "twitter_cards_page_url": "http:\/\/badcamp-2018.docksal\/%3Cnone%3E"
+            }
+        }
+    ],
     "path": [
         {
             "alias": "\/session-topics\/apis",
-            "pid": 47,
+            "pid": 70,
             "langcode": "en",
             "lang": "en"
         }

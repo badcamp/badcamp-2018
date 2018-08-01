@@ -1,0 +1,26 @@
+uuid: 23b47b25-499f-4511-bd9b-40d7bf7e5044
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.block_content.field_block_content
+    - paragraphs.paragraphs_type.block_content
+  module:
+    - field_formatter_class
+id: paragraph.block_content.default
+targetEntityType: paragraph
+bundle: block_content
+mode: default
+content:
+  field_block_content:
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings:
+      field_formatter_class:
+        class: ''
+    type: entity_reference_entity_view
+    region: content
+hidden: {  }

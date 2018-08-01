@@ -1,0 +1,47 @@
+uuid: 926f5e04-f53e-4648-b52e-2594a8bf7d93
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_components
+    - node.type.page
+    - paragraphs.paragraphs_type.block_content
+    - paragraphs.paragraphs_type.text
+  module:
+    - custom_add_another
+    - entity_reference_revisions
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+id: node.page.field_components
+field_name: field_components
+entity_type: node
+bundle: page
+label: Components
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      block_content: block_content
+      text: text
+    target_bundles_drag_drop:
+      block_content:
+        enabled: true
+        weight: 4
+      timeline_section:
+        weight: 5
+        enabled: false
+      text:
+        enabled: true
+        weight: 6
+      timeline_section_item:
+        weight: 6
+        enabled: false
+field_type: entity_reference_revisions

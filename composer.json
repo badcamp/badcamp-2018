@@ -15,9 +15,24 @@
     {
       "type": "composer",
       "url": "https://asset-packagist.org"
-    }
+  	},
+	{
+		"type": "package",
+		"package": {
+		  "name": "library/masonry",
+		  "version": "master",
+		  "type": "drupal-library",
+		  "dist": {
+			"type": "zip",
+			"url": "https://github.com/desandro/masonry/archive/v3.3.2.zip",
+			"reference": "master"
+		  }
+		}
+	}
   ],
   "require": {
+    "bower-asset/dropzone": "^5.1",
+    "bower-asset/imagesloaded": "^4.1",
     "badcamp/camp": "8.4.x-dev",
     "composer/installers": "^1.0.20",
     "cweagans/composer-patches": "^1.0",
@@ -30,17 +45,20 @@
     "drupal/config_readonly": "^1.0@beta",
     "drupal/config_sync": "2.0-alpha4",
     "drupal/console": "^1",
-    "drupal/core": "8.5.1",
+    "drupal/core": "^8.5",
     "drupal/custom_add_another": "^1.0@beta",
     "drupal/default_content": "^1.0-dev",
     "drupal/disable_messages": "^1.1",
+    "drupal/entity_browser": "^1.5",
     "drupal/fico": "^1.0",
     "drupal/field_delimiter": "^1.0",
     "drupal/field_formatter_class": "^1.1",
+    "drupal/file_browser": "^1.1",
     "drupal/google_analytics": "^2.2",
     "drupal/inline_entity_form": "^1.0@beta",
     "drupal/key": "^1.7",
     "drupal/mailchimp": "^1.6",
+    "drupal/media_entity_browser": "^2.0",
     "drupal/menu_link_attributes": "^1.0",
     "drupal/metatag": "^1.5",
     "drupal/mimemail": "^1.0@alpha",
@@ -53,6 +71,7 @@
     "drupal/social_media_links": "^2.6",
     "drupal/stripe_api": "1.x-dev",
     "drush/drush": "~8",
+	"library/masonry": "dev-master",
     "oomphinc/composer-installers-extender": "^1.1",
     "rvtraveller/qs-composer-installer": "^1.1",
     "webflo/drupal-core-strict": "^8",
@@ -110,7 +129,8 @@
     "enable-patching": true,
     "patches": {
       "drupal/core": {
-        "Error when saving settings of an entity reference field": "https://www.drupal.org/files/issues/drupal-filter_empty_array_items-2833650-2-d8.patch"
+        "Error when saving settings of an entity reference field": "https://www.drupal.org/files/issues/drupal-filter_empty_array_items-2833650-2-d8.patch",
+        "Media entity forms": "https://www.drupal.org/files/issues/2018-07-03/2557299-118.patch"
       },
       "drupal/stripe_api": {
         "Allow for Stripe Exceptions to be thrown": "https://www.drupal.org/files/issues/2018-05-14/allow_for_stripe-2834605-5.patch"

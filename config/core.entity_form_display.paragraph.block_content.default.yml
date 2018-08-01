@@ -1,0 +1,22 @@
+uuid: 60388ea9-6ce8-49fc-b772-9b92672da5f1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.block_content.field_block_content
+    - paragraphs.paragraphs_type.block_content
+id: paragraph.block_content.default
+targetEntityType: paragraph
+bundle: block_content
+mode: default
+content:
+  field_block_content:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

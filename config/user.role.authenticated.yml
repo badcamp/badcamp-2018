@@ -24,6 +24,7 @@ permissions:
   - 'view field_session_status'
   - 'view field_session_video'
   - 'view field_venue'
+  - 'view media'
   - 'view own field_date'
   - 'view own field_session_status'
   - 'view own field_session_video'

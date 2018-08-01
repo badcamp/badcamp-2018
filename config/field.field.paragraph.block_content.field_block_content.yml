@@ -1,0 +1,40 @@
+uuid: 3a35470c-e3c8-458e-a52d-53c064a869a2
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.basic_block
+    - block_content.type.block_reference
+    - block_content.type.sponsorship_block
+    - block_content.type.timeline_block
+    - field.storage.paragraph.field_block_content
+    - paragraphs.paragraphs_type.block_content
+  module:
+    - custom_add_another
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+id: paragraph.block_content.field_block_content
+field_name: field_block_content
+entity_type: paragraph
+bundle: block_content
+label: 'Block Content'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:block_content'
+  handler_settings:
+    target_bundles:
+      basic_block: basic_block
+      block_reference: block_reference
+      sponsorship_block: sponsorship_block
+      timeline_block: timeline_block
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: basic_block
+field_type: entity_reference

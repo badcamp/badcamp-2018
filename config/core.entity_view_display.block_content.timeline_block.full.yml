@@ -1,9 +1,10 @@
-uuid: 06d744b2-e287-46ba-a002-703046262f38
+uuid: 9c14ac3f-ee57-44f9-8ad4-4029da2af884
 langcode: en
 status: true
 dependencies:
   config:
     - block_content.type.timeline_block
+    - core.entity_view_mode.block_content.full
     - field.field.block_content.timeline_block.body
     - field.field.block_content.timeline_block.field_end_timeline_text
     - field.field.block_content.timeline_block.field_start_timeline_text
@@ -11,10 +12,10 @@ dependencies:
   module:
     - entity_reference_revisions
     - text
-id: block_content.timeline_block.default
+id: block_content.timeline_block.full
 targetEntityType: block_content
 bundle: timeline_block
-mode: default
+mode: full
 content:
   body:
     label: hidden

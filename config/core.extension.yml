@@ -29,10 +29,17 @@ module:
   daterange_compact: 0
   datetime: 0
   datetime_range: 0
+  dblog: 0
   default_content: 0
   disable_messages: 0
+  dropzonejs: 0
+  dropzonejs_eb_widget: 0
   dynamic_page_cache: 0
   editor: 0
+  embed: 0
+  entity: 0
+  entity_browser: 0
+  entity_embed: 0
   entity_reference: 0
   entity_reference_revisions: 0
   field: 0
@@ -42,6 +49,7 @@ module:
   field_permissions: 0
   field_ui: 0
   file: 0
+  file_browser: 0
   filter: 0
   flag: 0
   google_analytics: 0
@@ -61,6 +69,7 @@ module:
   mailsystem: 0
   me_redirect: 0
   menu_item_visibility: 0
+  media: 0
   menu_link_attributes: 0
   menu_ui: 0
   metatag: 0

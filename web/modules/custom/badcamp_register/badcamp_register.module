@@ -3,6 +3,10 @@
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Link;
 use Drupal\Core\Entity\EntityInterface;
+use Drupal\node\NodeInterface;
+use Drupal\Core\Session\AccountInterface;
+use Drupal\Core\Entity\Display\EntityViewDisplayInterface;
+use Drupal\Core\Cache\RefinableCacheableDependencyInterface;
 
 /**
  * Implements hook_theme().
@@ -126,4 +130,69 @@ function badcamp_register_module_implements_alter(&$implementations, $hook) {
         if($hook == 'link_alter') {
                 unset($implementations['login_destination']);
         }
+}
+
+/**
+ * Implements hook_node_access_records().
+ */
+function badcamp_register_node_access_records(NodeInterface $node) {
+        $grants = [];
+
+        switch($node->bundle()){
+                case 'training':
+                        foreach ($node->get('field_trainers')->getValue() AS $id) {
+                                $grants[] = [
+                                        'realm' => 'trainer',
+                                        'gid' => $id['target_id'],
+                                        'grant_view' => 1,
+                                        'grant_update' => 1,
+                                        'grant_delete' => 0
+                                ];
+                        }
+                        break;
+
+                case 'job_posting':
+                        /** @var NodeInterface $entity */
+                        $entity = $node->get('field_company')->first()->get('entity')->getTarget()->getValue();
+                        $grants[] = [
+                                'realm' => 'sponsors',
+                                'gid' => $entity->id(),
+                                'grant_view' => 1,
+                                'grant_update' => 1,
+                                'grant_delete' => 0
+                        ];
+                        break;
+
+                case 'summit':
+                        foreach ($node->get('field_summit_leaders')->getValue() AS $id) {
+                                $grants[] = [
+                                        'realm' => 'summit_leader',
+                                        'gid' => $id['target_id'],
+                                        'grant_view' => 1,
+                                        'grant_update' => 1,
+                                        'grant_delete' => 0
+                                ];
+                        }
+                        break;
+        }
+
+        return $grants;
+}
+
+/**
+ * Implements hook_node_grants().
+ */
+function badcamp_register_node_grants(AccountInterface $account, $op) {
+        $grants = [];
+
+        if($account->isAuthenticated()){
+                $grants['trainer'] = array(
+                        $account->id()
+                );
+                $grants['summit_leader'] = array(
+                        $account->id()
+                );
+        }
+
+        return $grants;
 }

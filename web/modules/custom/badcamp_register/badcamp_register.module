@@ -192,9 +192,6 @@ function badcamp_register_node_grants(AccountInterface $account, $op) {
                 $grants['summit_leader'] = array(
                         $account->id()
                 );
-
-                $sponsors = badcamp_register_get_user_sponsors($account);
-                $grants['sponsors'] = array_keys($sponsors);
         }
 
         return $grants;

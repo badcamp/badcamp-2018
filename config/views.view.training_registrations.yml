@@ -864,7 +864,7 @@ display:
     position: 1
     display_options:
       display_extenders: {  }
-      path: node/%node/registrations
+      path: node/%node/training-registrations
       menu:
         type: tab
         title: Registrations

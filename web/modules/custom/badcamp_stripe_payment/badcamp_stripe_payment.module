@@ -228,11 +228,12 @@ function badcamp_stripe_payment_stripe_payment_refund_post_save_alter(StripePaym
 
 	switch($payment->bundle()){
 		case 'training':
+			$flagService = \Drupal::service('flag');
 			$payment->set('field_refunded_date', date("Y-m-d\Th:i:s"));
-			$flag = $this->flagService->getFlagById('add_to_schedule');
+			$flag = $flagService->getFlagById('add_to_schedule');
 			$entity = $payment->get('entity_id')->first()->get('entity')->getTarget()->getValue();
 			try {
-				$this->flagService->unflag($flag, $entity);
+				$flagService->unflag($flag, $entity);
 			}
 			catch (\LogicException $e) {}
 			break;

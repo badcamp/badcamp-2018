@@ -33,6 +33,8 @@
 {%
     set classes = [
     dom_id ? 'js-view-dom-id-' ~ dom_id,
+    css_name,
+    css_class,
 ]
 %}
 <div{{ attributes.addClass(classes) }}>

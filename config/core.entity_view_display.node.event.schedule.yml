@@ -49,16 +49,10 @@ content:
     region: content
     label: hidden
     settings:
-      link: true
-    third_party_settings: {  }
-  field_sponsors:
-    type: entity_reference_label
-    weight: 4
-    region: content
-    label: hidden
-    settings:
-      link: true
-    third_party_settings: {  }
+      link: false
+    third_party_settings:
+      field_formatter_class:
+        class: ''
   field_venue:
     type: entity_reference_label
     weight: 1
@@ -72,7 +66,7 @@ content:
       field_formatter_class:
         class: ''
   flag_add_to_schedule:
-    weight: 5
+    weight: 4
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -80,6 +74,7 @@ hidden:
   field_event_more_info: true
   field_event_url_more_info: true
   field_image: true
+  field_sponsors: true
   field_stick_to_top_of_date: true
   field_stick_to_top_of_schedule: true
   links: true

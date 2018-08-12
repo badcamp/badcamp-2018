@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.training.field_date
+    - field.field.node.training.field_payment
     - field.field.node.training.field_skill_level
     - field.field.node.training.field_sponsors
     - field.field.node.training.field_stick_to_top_of_date
@@ -12,10 +13,13 @@ dependencies:
     - field.field.node.training.field_training_description
     - field.field.node.training.field_training_files
     - field.field.node.training.field_training_links
+    - field.field.node.training.field_twitter_teaser
     - field.field.node.training.field_venue
     - node.type.training
   module:
-    - datetime_range
+    - badcamp_stripe_payment
+    - daterange_compact
+    - field_formatter_class
     - file
     - link
     - text
@@ -31,14 +35,21 @@ content:
     weight: 0
     label: visually_hidden
     settings:
-      format_type: start_date_only_full_day_full_month_day_number
-      separator: '-'
-      timezone_override: ''
+      format_type: medium
+    third_party_settings:
+      field_formatter_class:
+        class: ''
+    type: daterange_compact
+    region: content
+  field_payment:
+    weight: 9
+    label: hidden
+    settings: {  }
     third_party_settings: {  }
-    type: daterange_default
+    type: stripe_payment
     region: content
   field_skill_level:
-    weight: 5
+    weight: 2
     label: visually_hidden
     settings:
       link: false
@@ -55,7 +66,7 @@ content:
     type: entity_reference_entity_view
     region: content
   field_trainers:
-    weight: 1
+    weight: 3
     label: visually_hidden
     settings:
       view_mode: member_display
@@ -64,7 +75,7 @@ content:
     type: entity_reference_entity_view
     region: content
   field_training_description:
-    weight: 2
+    weight: 4
     label: visually_hidden
     settings: {  }
     third_party_settings: {  }
@@ -79,7 +90,7 @@ content:
     type: file_table
     region: content
   field_training_links:
-    weight: 4
+    weight: 5
     label: visually_hidden
     settings:
       trim_length: 80
@@ -91,7 +102,7 @@ content:
     type: link
     region: content
   field_venue:
-    weight: 3
+    weight: 1
     label: visually_hidden
     settings:
       link: true
@@ -106,4 +117,5 @@ content:
 hidden:
   field_stick_to_top_of_date: true
   field_stick_to_top_of_schedule: true
+  field_twitter_teaser: true
   links: true

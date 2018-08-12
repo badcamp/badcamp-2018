@@ -6,7 +6,7 @@ _core:
   default_config_hash: lLkQThkY7zhy4RZOTktqRREPYzQ0ErcACq52OSyZmJc
 id: summit_manager
 label: 'Summit Manager'
-weight: -5
+weight: -3
 is_admin: null
 permissions:
   - 'access toolbar'

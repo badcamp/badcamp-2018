@@ -78,12 +78,14 @@ function badcamp_register_badcamp_swag_selector_form_complete_alter(&$url, $paym
  * Implements hook_form_FORM_ID_alter().
  */
 function badcamp_register_form_node_session_form_alter(&$form, FormStateInterface $form_state, $form_id) {
-	$form['#title'] = t('Submit Session');
-	$form['actions']['submit']['#value'] = t('Save Session');
+	$form['#title'] = t('Edit Session');
+	$form['actions']['submit']['#value'] = t('Save');
 
 	$node = $form_state->getFormObject()->getEntity();
 	if ($node->isNew()) {
 		$user = \Drupal::currentUser();
+		$form['#title'] = t('Submit Session');
+		$form['actions']['submit']['#value'] = t('Submit Session');
 		$form['field_speakers']['widget'][0]['target_id']['#default_value'] = \Drupal\user\Entity\User::load($user->id());
 	}
 }
@@ -124,75 +126,228 @@ function badcamp_register_entity_insert(EntityInterface $entity) {
 }
 
 /**
- * Implements hook_module_implements_alter().
+ * Implements hook_form_FORM_ID_alter().
  */
-function badcamp_register_module_implements_alter(&$implementations, $hook) {
-        if($hook == 'link_alter') {
-                unset($implementations['login_destination']);
-        }
+function badcamp_register_form_node_job_posting_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+	badcamp_register_alter_job_posting_form($form, $form_state, $form_id);
+	$form['#validate'][] = 'badcamp_register_job_post_validate';
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function badcamp_register_form_node_job_posting_edit_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+	badcamp_register_alter_job_posting_form($form, $form_state, $form_id);
+}
+
+/**
+ * @param $form
+ * @param \Drupal\Core\Form\FormStateInterface $formState
+ */
+function badcamp_register_job_post_validate(&$form, FormStateInterface $formState){
+	$company_id = $formState->getValue('field_company');
+	$company = \Drupal\node\Entity\Node::load($company_id[0]['target_id']);
+	$company_addl = (int)$company->get('field_additional_job_postings')->getString();
+	/** @var \Drupal\taxonomy\TermInterface $level */
+	$level = $company->get('field_sponsor_level')->first()->get('entity')->getTarget()->getValue();
+	$level_limit = (int)$level->get('field_max_job_postings')->getString();
+	$jobs = \Drupal::entityTypeManager()->getStorage('node')->loadByProperties([
+		'field_company' => $company_id[0]['target_id'],
+	]);
+
+	if($level_limit > 0 && (count($jobs) >= ($level_limit + $company_addl))){
+		$message = t('%name is only allowed %number job posting.<br/>Contact anne@badcamp.net for additional postings.', [
+			'%name' => $company->getTitle(),
+			'%number' => ($level_limit + $company_addl)
+		]);
+		$formState->setErrorByName('field_company', $message);
+	}
+}
+
+/**
+ * @param $form
+ * @param \Drupal\Core\Form\FormStateInterface $form_state
+ * @param $form_id
+ */
+function badcamp_register_alter_job_posting_form(&$form, FormStateInterface $form_state, $form_id) {
+	$account = \Drupal::currentUser();
+	if(!$account->hasPermission('edit any job_posting content')) {
+		$sponsors = badcamp_register_get_user_sponsors($account);
+		foreach($form['field_company']['widget']['#options'] AS $id => $company){
+			if(!isset($sponsors[$id])){
+				unset($form['field_company']['widget']['#options'][$id]);
+			}
+		}
+	}
 }
 
 /**
  * Implements hook_node_access_records().
  */
 function badcamp_register_node_access_records(NodeInterface $node) {
-        $grants = [];
+	$grants = [];
 
-        switch($node->bundle()){
-                case 'training':
-                        foreach ($node->get('field_trainers')->getValue() AS $id) {
-                                $grants[] = [
-                                        'realm' => 'trainer',
-                                        'gid' => $id['target_id'],
-                                        'grant_view' => 1,
-                                        'grant_update' => 1,
-                                        'grant_delete' => 0
-                                ];
-                        }
-                        break;
+	switch($node->bundle()){
+		case 'training':
+			foreach ($node->get('field_trainers')->getValue() AS $id) {
+				$grants[] = [
+					'realm' => 'trainer',
+					'gid' => $id['target_id'],
+					'grant_view' => 1,
+					'grant_update' => 1,
+					'grant_delete' => 0
+				];
+			}
+			break;
 
-                case 'job_posting':
-                        /** @var NodeInterface $entity */
-                        $entity = $node->get('field_company')->first()->get('entity')->getTarget()->getValue();
-                        $grants[] = [
-                                'realm' => 'sponsors',
-                                'gid' => $entity->id(),
-                                'grant_view' => 1,
-                                'grant_update' => 1,
-                                'grant_delete' => 0
-                        ];
-                        break;
+		case 'job_posting':
+			/** @var NodeInterface $entity */
+			$entity = $node->get('field_company')->first()->get('entity')->getTarget()->getValue();
+			$grants[] = [
+				'realm' => 'sponsors',
+				'gid' => $entity->id(),
+				'grant_view' => 1,
+				'grant_update' => 1,
+				'grant_delete' => 0
+			];
+			break;
 
-                case 'summit':
-                        foreach ($node->get('field_summit_leaders')->getValue() AS $id) {
-                                $grants[] = [
-                                        'realm' => 'summit_leader',
-                                        'gid' => $id['target_id'],
-                                        'grant_view' => 1,
-                                        'grant_update' => 1,
-                                        'grant_delete' => 0
-                                ];
-                        }
-                        break;
-        }
+		case 'summit':
+			foreach ($node->get('field_summit_leaders')->getValue() AS $id) {
+				$grants[] = [
+					'realm' => 'summit_leader',
+					'gid' => $id['target_id'],
+					'grant_view' => 1,
+					'grant_update' => 1,
+					'grant_delete' => 0
+				];
+			}
+			break;
+	}
 
-        return $grants;
+	return $grants;
 }
 
 /**
  * Implements hook_node_grants().
  */
 function badcamp_register_node_grants(AccountInterface $account, $op) {
-        $grants = [];
+	$grants = [];
 
-        if($account->isAuthenticated()){
-                $grants['trainer'] = array(
-                        $account->id()
-                );
-                $grants['summit_leader'] = array(
-                        $account->id()
-                );
-        }
+	if($account->isAuthenticated()){
+		$grants['trainer'] = array(
+			$account->id()
+		);
+		$grants['summit_leader'] = array(
+			$account->id()
+		);
 
-        return $grants;
+		$sponsors = badcamp_register_get_user_sponsors($account);
+		$grants['sponsors'] = array_keys($sponsors);
+	}
+
+	return $grants;
+}
+
+/**
+ * @param $account
+ *
+ * @return \Drupal\Core\Entity\EntityInterface[]
+ * @throws \Drupal\Component\Plugin\Exception\InvalidPluginDefinitionException
+ */
+function badcamp_register_get_user_sponsors($account) {
+	$sponsors = \Drupal::entityTypeManager()->getStorage('node')->loadByProperties([
+		'field_sponsor_members' => $account->id()
+	]);
+	return $sponsors;
+}
+
+/**
+ * Implements hook_ENTITY_TYPE_view().
+ */
+function badcamp_register_node_view(array &$build, EntityInterface $entity, EntityViewDisplayInterface $display, $view_mode) {
+
+	if ($entity->getEntityTypeId() == 'node' && $entity->bundle() == 'sponsor' && $view_mode == 'full') {
+		$view = \Drupal\views\Views::getView('job_board');
+		$build['job_postings'] = $view->buildRenderable('embed_1');
+
+		$view = \Drupal\views\Views::getView('attendees');
+		$build['members'] = $view->buildRenderable('embed_1');
+
+		$view = \Drupal\views\Views::getView('sponsored_events');
+		$build['events'] = $view->buildRenderable('embed_1');
+
+	}
+}
+
+/**
+ * Implements hook_entity_extra_field_info().
+ */
+function badcamp_register_entity_extra_field_info() {
+	$extra = [];
+	$extra['node']['sponsor']['display']['job_postings'] = [
+		'label' => t('Job Postings'),
+		'description' => t('List of all Job Postings for Sponsor')
+	];
+
+	$extra['node']['sponsor']['display']['members'] = [
+		'label' => t('Members'),
+		'description' => t('List of all Member for Sponsor')
+	];
+
+	$extra['node']['sponsor']['display']['events'] = [
+		'label' => t('Events'),
+		'description' => t('List of all Events for Sponsor')
+	];
+	return $extra;
+}
+
+/**
+ * Implements hook_menu_local_tasks_alter().
+ */
+function badcamp_register_menu_local_tasks_alter(&$data, $route_name, RefinableCacheableDependencyInterface &$cacheability) {
+	if($route_name == 'entity.node.canonical') {
+
+		$node = \Drupal::routeMatch()->getParameter('node');
+		if ($node instanceof \Drupal\node\NodeInterface) {
+
+			unset($data['tabs'][0]['entity.node.registrations']);
+
+			if($node->bundle() == 'sponsor'){
+				unset($data['tabs'][0]['views_view:view.summit_attendees.page_1']);
+				unset($data['tabs'][0]['views_view:view.training_registrations.page_1']);
+			}
+
+			if($node->bundle() == 'training'){
+				unset($data['tabs'][0]['views_view:view.summit_attendees.page_1']);
+			}
+
+			if($node->bundle() == 'summit'){
+				unset($data['tabs'][0]['views_view:view.training_registrations.page_1']);
+			}
+		}
+	}
+
+	if ($route_name == 'camp_schedule.schedule_display') {
+
+	}
+
+	if ($route_name == 'entity.user.canonical') {
+		$user = \Drupal::routeMatch()->getParameter('user');
+		if ($user instanceof \Drupal\user\UserInterface) {
+			$public_schedule = $user->get('field_user_public_schedule')->getString();
+			if($public_schedule != 1) {
+				unset($data[0]['views_view:view.schedule.page_2']);
+			}
+		}
+	}
+}
+
+/**
+ * Implements hook_module_implements_alter().
+ */
+function badcamp_register_module_implements_alter(&$implementations, $hook) {
+	if($hook == 'link_alter') {
+		unset($implementations['login_destination']);
+	}
 }

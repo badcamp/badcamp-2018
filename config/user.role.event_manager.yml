@@ -6,7 +6,7 @@ _core:
   default_config_hash: m4eXC7JlCGN-jw--vP205CVVdq1Q6HwzdNoArWNhFXI
 id: event_manager
 label: 'Event Manager'
-weight: -7
+weight: -5
 is_admin: null
 permissions:
   - 'access toolbar'

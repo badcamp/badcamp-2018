@@ -38,7 +38,7 @@
                     {% endfor %}
                 </div>
             {% else %}
-                {{ messages|first }}
+                <div><p>{{ messages|first }}</p></div>
             {% endif %}
             {% if type == 'error' %}
         </div>

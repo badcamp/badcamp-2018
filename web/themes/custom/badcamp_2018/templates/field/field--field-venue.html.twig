@@ -39,8 +39,8 @@
  */
 #}
 
-<div{{ attributes }}>
-    <span class="category-icon"><i class="fa fa-marker fa-2x"></i></span>
+<div{{ attributes.addClass('category-icon') }}>
+    <span class="category-icon"><i class="fa fa-map fa-2x"></i></span>
     {% for item in items %}
         <span>{{ item.content }}</span> {% if not loop.last %} / {% endif %}
     {% endfor %}

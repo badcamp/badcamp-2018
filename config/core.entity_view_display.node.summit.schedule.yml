@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.schedule
     - field.field.node.summit.field_date
+    - field.field.node.summit.field_image
     - field.field.node.summit.field_sponsors
     - field.field.node.summit.field_stick_to_top_of_date
     - field.field.node.summit.field_stick_to_top_of_schedule
@@ -13,7 +14,10 @@ dependencies:
     - field.field.node.summit.field_venue
     - node.type.summit
   module:
-    - datetime_range
+    - daterange_compact
+    - field_delimiter
+    - field_formatter_class
+    - text
     - user
 _core:
   default_config_hash: l3mlMdPFZHs1n6CYlTG27AEVGJAE2sqXtyRQZCSQvPw
@@ -23,32 +27,51 @@ bundle: summit
 mode: schedule
 content:
   field_date:
-    weight: 103
-    label: above
+    weight: 1
+    label: hidden
     settings:
-      separator: '-'
-      format_type: medium
-      timezone_override: ''
-    third_party_settings: {  }
-    type: daterange_default
+      format_type: time_only_12hr
+    third_party_settings:
+      field_formatter_class:
+        class: ''
+    type: daterange_compact
     region: content
-  field_sponsors:
-    weight: 102
-    label: above
+  field_summit_description:
+    type: text_summary_or_trimmed
+    weight: 2
+    region: content
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+  field_summit_leaders:
+    type: entity_reference_label
+    weight: 3
+    region: content
+    label: hidden
     settings:
       link: true
     third_party_settings: {  }
+  field_venue:
     type: entity_reference_label
+    weight: 4
     region: content
+    label: hidden
+    settings:
+      link: false
+    third_party_settings:
+      field_delimiter:
+        delimiter: ''
+      field_formatter_class:
+        class: ''
   flag_add_to_schedule:
-    weight: 10
+    weight: 0
     region: content
-  links:
-    weight: 100
-    region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
+  field_image: true
+  field_sponsors: true
   field_stick_to_top_of_date: true
   field_stick_to_top_of_schedule: true
-  field_summit_description: true
-  field_summit_leaders: true
-  field_venue: true
+  links: true

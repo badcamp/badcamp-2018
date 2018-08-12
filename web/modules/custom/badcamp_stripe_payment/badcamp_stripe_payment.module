@@ -11,6 +11,7 @@ use Drupal\user\Entity\User;
 use Drupal\Core\Url;
 use Drupal\Core\Form\FormStateInterface;
 use Symfony\Component\HttpFoundation\RedirectResponse;
+use Drupal\badcamp_stripe_payment\Entity\StripePayment;
 
 /**
  * Implements hook_help().
@@ -168,8 +169,85 @@ function badcamp_stripe_payment_get_donations($aid) {
 /**
  * Implements hook_stripe_payment_successful_redirect_alter().
  */
-function badcamp_stripe_payment_stripe_payment_successful_redirect_alter(&$url, $entity, $current_route) {
+function badcamp_stripe_payment_stripe_payment_successful_redirect_alter(&$url, \Drupal\Core\Entity\EntityInterface $entity, $current_route) {
   if($current_route['route'] == 'badcamp_stripe_payment.donation_page_controller'){
-    $url = \Drupal\Core\Url::fromRoute('badcamp_stripe_payment.donation_complete')->toString();
+    $url = Url::fromRoute('badcamp_stripe_payment.donation_complete', [], ['query' => ['donation' => $entity->id()]])->toString();
   }
+
+  switch($entity->bundle()){
+		case 'training':
+			$flag = \Drupal::service('flag')->getFlagById('add_to_schedule');
+			$entity = $entity->get('entity_id')->first()->get('entity')->getTarget()->getValue();
+			try {
+				\Drupal::service('flag')->flag($flag, $entity);
+			}
+			catch (\LogicException $e) {}
+			break;
+		case 'organization_sponsorship':
+
+			$current_user = \Drupal::currentUser();
+			$account = User::load($current_user->id());
+			$account->addRole('sponsor');
+			$account->save();
+
+			$supporting_sponsor = taxonomy_term_load_multiple_by_name('Supporting Level', 'sponsor_level');
+			$supporting_sponsor = array_shift($supporting_sponsor);
+
+			$definition = \Drupal::entityTypeManager()->getDefinition('node');
+			$sponsor = \Drupal::entityTypeManager()->getStorage('node')->create([
+				$definition->getKey('bundle') => 'sponsor',
+				'langcode' => \Drupal\Core\Language\Language::LANGCODE_NOT_SPECIFIED,
+				'title' => t(':name Supporting sponsor', [':name' => $account->getAccountName()]),
+				'field_sponsor_members' => [
+					[
+						'target_id' => $account->id()
+					]
+				],
+				'field_sponsor_level' => [
+					'target_id' => $supporting_sponsor->id()
+				],
+				'uid' => $account->id(),
+				'status' => 1,
+			]);
+			$sponsor->enforceIsNew();
+			$sponsor->save();
+
+			$entity->set('entity_id', $sponsor->id());
+			$entity->save();
+
+			$url = Url::fromRoute('entity.node.edit_form', ['node' => $sponsor->id()])->toString();
+
+			break;
+	}
+}
+
+/**
+ * Implements hook_stripe_payment_refund_post_save_alter().
+ */
+function badcamp_stripe_payment_stripe_payment_refund_post_save_alter(StripePayment $payment, $refund, $refund_params) {
+
+	switch($payment->bundle()){
+		case 'training':
+			$flagService = \Drupal::service('flag');
+			$payment->set('field_refunded_date', date("Y-m-d\Th:i:s"));
+			$flag = $flagService->getFlagById('add_to_schedule');
+			$entity = $payment->get('entity_id')->first()->get('entity')->getTarget()->getValue();
+			try {
+				$flagService->unflag($flag, $entity);
+			}
+			catch (\LogicException $e) {}
+			break;
+		case 'organization_sponsor':
+
+			break;
+	}
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function badcamp_stripe_payment_form_node_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+	/* @var Drupal\Core\Entity\FieldableEntityInterface $node */
+	$node = $form_state->getFormObject()->getEntity();
+	$form['#title'] = t('Editing :type', [':type' => $node->bundle()]);
 }

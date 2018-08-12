@@ -12,6 +12,7 @@ dependencies:
     - system.menu.admin
   module:
     - daterange_compact
+    - datetime
     - node
     - user
 _core:
@@ -254,7 +255,8 @@ display:
           exposed: false
           expose:
             label: ''
-          plugin_id: standard
+          plugin_id: datetime
+          entity_type: node
         random:
           id: random
           table: views
@@ -776,7 +778,8 @@ display:
           exposed: false
           expose:
             label: ''
-          plugin_id: standard
+          plugin_id: datetime
+          entity_type: node
         random:
           id: random
           table: views
@@ -857,7 +860,11 @@ display:
           group_type: group
           admin_label: ''
           operator: 'not empty'
-          value: ''
+          value:
+            min: ''
+            max: ''
+            value: ''
+            type: date
           group: 1
           exposed: false
           expose:
@@ -885,7 +892,8 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          plugin_id: string
+          plugin_id: datetime
+          entity_type: node
       filter_groups:
         operator: AND
         groups:

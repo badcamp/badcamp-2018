@@ -6,16 +6,18 @@ _core:
   default_config_hash: Mpf41HC-mggRNHfFBAA5VGrsi2-o8JHdqHPAjYFK090
 id: sponsor_manager
 label: 'Sponsor Manager'
-weight: -8
+weight: -6
 is_admin: null
 permissions:
   - 'access toolbar'
+  - 'create job_posting content'
   - 'create sponsor content'
   - 'delete any sponsor content'
   - 'delete own sponsor content'
   - 'delete sponsor revisions'
   - 'delete terms in sponsor_level'
   - 'edit any sponsor content'
+  - 'edit own job_posting content'
   - 'edit own sponsor content'
   - 'edit terms in sponsor_level'
   - 'revert sponsor revisions'

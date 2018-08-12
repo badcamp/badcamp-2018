@@ -1,0 +1,39 @@
+uuid: f93a54f7-5c4b-42a0-8aad-0de645c37e7b
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.job_board
+    - field.field.node.job_posting.body
+    - field.field.node.job_posting.field_company
+    - node.type.job_posting
+  module:
+    - field_formatter_class
+    - text
+    - user
+id: node.job_posting.job_board
+targetEntityType: node
+bundle: job_posting
+mode: job_board
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 1
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  field_company:
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: sponsor_logo
+      link: false
+    third_party_settings:
+      field_formatter_class:
+        class: ''
+    type: entity_reference_entity_view
+    region: content
+hidden:
+  links: true

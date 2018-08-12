@@ -40,7 +40,6 @@ third_party_settings:
     group_summit_admin:
       children:
         - field_venue
-        - field_registration_limit
         - field_date
         - field_stick_to_top_of_date
         - field_stick_to_top_of_schedule
@@ -83,12 +82,9 @@ content:
     region: content
   field_sponsors:
     weight: 4
-    settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
+    settings: {  }
     third_party_settings: {  }
-    type: entity_reference_autocomplete
+    type: options_buttons
     region: content
   field_stick_to_top_of_date:
     weight: 5
@@ -161,6 +157,8 @@ content:
   url_redirects:
     weight: 50
     region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   promote: true
   sticky: true

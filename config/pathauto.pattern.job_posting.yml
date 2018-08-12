@@ -1,0 +1,22 @@
+uuid: 7c9abb44-9c7d-4463-8ee0-0a8c06452330
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: job_posting
+label: 'Job Posting'
+type: 'canonical_entities:node'
+pattern: 'job-board/[node:field_company:entity:title]/[node:title]'
+selection_criteria:
+  ebe142b5-aa58-4d03-ac7e-a94f38d0de06:
+    id: node_type
+    bundles:
+      job_posting: job_posting
+    negate: false
+    context_mapping:
+      node: node
+    uuid: ebe142b5-aa58-4d03-ac7e-a94f38d0de06
+selection_logic: and
+weight: -5
+relationships: {  }

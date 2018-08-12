@@ -7,6 +7,7 @@ dependencies:
     - node.type.training
     - system.menu.admin
   module:
+    - datetime
     - node
     - user
 _core:
@@ -164,7 +165,8 @@ display:
           exposed: false
           expose:
             label: ''
-          plugin_id: standard
+          plugin_id: datetime
+          entity_type: node
         field_date_end_value:
           id: field_date_end_value
           table: node__field_date
@@ -176,7 +178,8 @@ display:
           exposed: false
           expose:
             label: ''
-          plugin_id: standard
+          plugin_id: datetime
+          entity_type: node
       header: {  }
       footer: {  }
       empty: {  }
@@ -291,6 +294,7 @@ display:
         style: false
         row: false
         sorts: false
+        pager: false
       style:
         type: default
         options:
@@ -304,6 +308,19 @@ display:
           relationship: none
           view_mode: teaser
       sorts:
+        field_date_value:
+          id: field_date_value
+          table: node__field_date
+          field: field_date_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: ASC
+          exposed: false
+          expose:
+            label: ''
+          plugin_id: datetime
+          entity_type: node
         title:
           id: title
           table: node_field_data
@@ -319,12 +336,15 @@ display:
           entity_field: title
           plugin_id: standard
       display_description: ''
+      pager:
+        type: none
+        options:
+          offset: 0
     cache_metadata:
       max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
-        - url.query_args
         - 'user.node_grants:view'
         - user.permissions
       tags: {  }

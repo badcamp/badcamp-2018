@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.page.body
     - field.field.node.page.field_components
+    - field.field.node.page.field_display_title
     - node.type.page
   module:
     - entity_reference_revisions
@@ -41,4 +42,5 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  field_display_title: true

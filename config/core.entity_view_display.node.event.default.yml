@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.event.field_date
+    - field.field.node.event.field_display_title
     - field.field.node.event.field_event_description
     - field.field.node.event.field_event_more_info
     - field.field.node.event.field_event_type
@@ -106,6 +107,7 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
+  field_display_title: true
   field_stick_to_top_of_date: true
   field_stick_to_top_of_schedule: true
   links: true

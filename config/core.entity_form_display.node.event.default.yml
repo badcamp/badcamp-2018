@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.event.field_date
+    - field.field.node.event.field_display_title
     - field.field.node.event.field_event_description
     - field.field.node.event.field_event_more_info
     - field.field.node.event.field_event_type
@@ -177,5 +178,6 @@ content:
     weight: 50
     region: content
 hidden:
+  field_display_title: true
   promote: true
   sticky: true

@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.job_posting.body
     - field.field.node.job_posting.field_company
+    - field.field.node.job_posting.field_display_title
     - node.type.job_posting
   module:
     - field_formatter_class
@@ -38,4 +39,5 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  field_display_title: true

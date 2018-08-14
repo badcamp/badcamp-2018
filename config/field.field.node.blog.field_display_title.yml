@@ -1,0 +1,25 @@
+uuid: 8841252a-ea95-46d7-9f03-1c3f7ddc7a78
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_display_title
+    - node.type.blog
+  module:
+    - custom_add_another
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+id: node.blog.field_display_title
+field_name: field_display_title
+entity_type: node
+bundle: blog
+label: Title
+description: 'Manage Display Title'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

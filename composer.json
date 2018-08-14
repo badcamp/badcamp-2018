@@ -134,8 +134,7 @@
     "patches": {
       "drupal/core": {
         "Error when saving settings of an entity reference field": "https://www.drupal.org/files/issues/drupal-filter_empty_array_items-2833650-2-d8.patch",
-        "Views integration Datetime Range fields should extend the views integration for regular Datetime fields": "https://www.drupal.org/files/issues/2786577-270_0.patch",
-        "Media entity forms": "https://www.drupal.org/files/issues/2018-07-03/2557299-118.patch"
+        "Views integration Datetime Range fields should extend the views integration for regular Datetime fields": "https://www.drupal.org/files/issues/2786577-270_0.patch"
       },
       "drupal/stripe_api": {
         "Allow for Stripe Exceptions to be thrown": "https://www.drupal.org/files/issues/2018-05-14/allow_for_stripe-2834605-5.patch"

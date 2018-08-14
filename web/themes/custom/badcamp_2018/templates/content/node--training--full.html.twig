@@ -74,28 +74,16 @@
 #}
 <article{{ attributes }}>
 
-    <div{{ content_attributes }}>
-		<div class="category-icon">
-			<span class="category-icon"><i class="fa fa-book fa-2x"></i></span>
-			<span>{{label}}</span>     
-		</div>
+  {{ title_prefix }}
+  {{ title_suffix }}
 
-        {{ content | without('field_sponsors' ,'flag_add_to_schedule')}}
+  <div{{ content_attributes }}>
+	<div class="category-icon">
+		<span class="category-icon"><i class="fa fa-book fa-2x"></i></span>
+		<span>{{label}}</span>     
+	</div>
 
-        {% if content.field_sponsors|render is not empty %}
-        <div class="cell auto">
-            <h4>Sponsors</h4>
-            {{ content.field_sponsors }}
-        </div>
-        {% endif %}
-
-        {% if logged_in %}
-            {% if content.flag_add_to_schedule|render is not empty %}
-                <div class="margin-vertical-1">
-                    {{ content.flag_add_to_schedule }}
-                </div>
-            {% endif %}
-        {% endif %}
-    </div>
+	{{ content }}
+  </div>
 
 </article>

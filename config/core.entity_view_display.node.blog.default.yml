@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.blog.body
     - field.field.node.blog.field_blog_tags
+    - field.field.node.blog.field_display_title
     - node.type.blog
   module:
     - text
@@ -36,4 +37,5 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  field_display_title: true

@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.training.field_date
+    - field.field.node.training.field_display_title
     - field.field.node.training.field_payment
     - field.field.node.training.field_skill_level
     - field.field.node.training.field_sponsors
@@ -115,6 +116,7 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
+  field_display_title: true
   field_stick_to_top_of_date: true
   field_stick_to_top_of_schedule: true
   field_twitter_teaser: true

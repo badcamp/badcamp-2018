@@ -387,3 +387,15 @@ function badcamp_2018_preprocess_node__session(&$vars) {
 			break;
 	}
 }
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function badcamp_2018_form_user_login_form_alter(&$form, \Drupal\Core\Form\FormStateInterface &$form_state, $form_id) {
+	$form['disclaimer'] = [
+		'#markup' => t("Don't have an account yet? Register for one %here.", [
+			'%here' => Link::fromTextAndUrl(t('here'), Url::fromUserInput('/registration'))->toString()
+		]),
+		'#weight' => -100,
+	];
+}

@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.page.body
     - field.field.node.page.field_components
+    - field.field.node.page.field_display_title
     - node.type.page
   module:
     - paragraphs
@@ -91,4 +92,5 @@ content:
   url_redirects:
     weight: 50
     region: content
-hidden: {  }
+hidden:
+  field_display_title: true

@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.session.field_date
+    - field.field.node.session.field_display_title
     - field.field.node.session.field_session_description
     - field.field.node.session.field_session_files
     - field.field.node.session.field_session_status
@@ -131,6 +132,7 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
+  field_display_title: true
   field_session_status: true
   field_stick_to_top_of_date: true
   field_stick_to_top_of_schedule: true

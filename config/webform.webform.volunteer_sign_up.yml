@@ -13,6 +13,7 @@ open: null
 close: null
 uid: 1
 template: false
+archive: false
 id: volunteer_sign_up
 title: 'Got Skills? Join Us + Volunteer!'
 description: 'Basic form used for collecting names'

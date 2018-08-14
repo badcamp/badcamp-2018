@@ -219,10 +219,16 @@ function badcamp_2018_preprocess_views_view_unformatted__sponsors__full_list(&$v
 }
 
 /**
- * Implements template_preprocess_page_title_alter().
+ * Implements template_preprocess_page_title().
  */
-function badcamp_2018_preprocess_page_title_alter(&$vars){
-
+function badcamp_2018_preprocess_page_title(&$vars){
+	$node = \Drupal::request()->attributes->get('node');
+	if(!is_null($node) && $node->getEntityTypeId() == 'node' && $node->bundle() == 'session') {
+		$vars['title'] = t('Session');
+	}
+	else if(!is_null($node) && $node->getEntityTypeId() == 'node' && $node->bundle() == 'training') {
+		$vars['title'] = t('Training');
+	}
 }
 
 /**
@@ -378,9 +384,6 @@ function badcamp_2018_preprocess_node__session(&$vars) {
 	switch ($session_status) {
 		case "proposed":
 			unset($vars['content']['flag_add_to_schedule']);
-			break;
-		case "accepted":
-			unset($vars['content']['flag_interested']);
 			break;
 	}
 }

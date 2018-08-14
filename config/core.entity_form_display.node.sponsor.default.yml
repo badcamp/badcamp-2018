@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.sponsor.field_additional_job_postings
+    - field.field.node.sponsor.field_display_title
     - field.field.node.sponsor.field_sponsor_description
     - field.field.node.sponsor.field_sponsor_level
     - field.field.node.sponsor.field_sponsor_logo
@@ -112,5 +113,6 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
+  field_display_title: true
   promote: true
   sticky: true

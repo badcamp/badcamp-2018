@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.sponsor.field_additional_job_postings
+    - field.field.node.sponsor.field_display_title
     - field.field.node.sponsor.field_sponsor_description
     - field.field.node.sponsor.field_sponsor_level
     - field.field.node.sponsor.field_sponsor_logo
@@ -66,7 +67,14 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  job_postings:
+    weight: null
+    region: content
+  members:
+    weight: null
+    region: content
 hidden:
+  field_display_title: true
   field_sponsor_level: true
   field_sponsor_url: true
   links: true

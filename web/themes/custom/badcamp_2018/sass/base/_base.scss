@@ -30,6 +30,10 @@ a.action-button,
     color: $white;
     text-decoration: none;
   }
+
+  &.small-button{
+    min-width: min-content;
+  }
 }
 
 .button {

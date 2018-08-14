@@ -225,6 +225,24 @@ function badcamp_register_node_access_records(NodeInterface $node) {
 			break;
 	}
 
+	if($node->isPublished()) {
+		$grants[] = [
+			'realm' => 'all',
+			'gid' => 0,
+			'grant_view' => 1,
+			'grant_update' => 0,
+			'grant_delete' => 0
+		];
+	} else {
+		$grants[] = [
+			'realm' => 'unpublished',
+			'gid' => $node->getOwnerId(),
+			'grant_view' => 1,
+			'grant_update' => 0,
+			'grant_delete' => 0
+		];
+	}
+
 	return $grants;
 }
 
@@ -244,6 +262,14 @@ function badcamp_register_node_grants(AccountInterface $account, $op) {
 
 		$sponsors = badcamp_register_get_user_sponsors($account);
 		$grants['sponsors'] = array_keys($sponsors);
+	}
+
+	$grants['all'] = [0];
+
+	if($account->hasPermission('view own unpublished content')){
+		$grants['unpublished'] = [
+			$account->id()
+		];
 	}
 
 	return $grants;
@@ -349,5 +375,11 @@ function badcamp_register_menu_local_tasks_alter(&$data, $route_name, RefinableC
 function badcamp_register_module_implements_alter(&$implementations, $hook) {
 	if($hook == 'link_alter') {
 		unset($implementations['login_destination']);
+	}
+
+	if($hook == 'node_access_records') {
+		$implementations = [
+			'badcamp_register' => FALSE
+		];
 	}
 }

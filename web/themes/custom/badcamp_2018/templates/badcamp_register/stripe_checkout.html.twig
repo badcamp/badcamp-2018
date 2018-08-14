@@ -1,0 +1,41 @@
+<div class="stripe-checkout description">
+    {{ description }}
+</div>
+
+{% if logged_in %}
+    {% if enabled %}
+        <form action="/checkout/charge" method="POST">
+            <input type="hidden" name="current_path" value="{{ current_path }}" />
+            <input type="hidden" name="current_route" value="{{ current_route }}" />
+            <input type="hidden" name="amount" value="{{ amount }}" />
+            <input type="hidden" name="payment_type" value="{{ payment_type }}" />
+            <input type="hidden" name="entity_type" value="{{ entity_type }}" />
+            <input type="hidden" name="entity_id" value="{{ entity_id }}" />
+            <script
+                    src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                    data-key="{{ data_key }}"
+                    data-amount="{{ amount }}"
+                    data-email="{{ email }}"
+                    data-name="{{ org_name }}"
+                    data-description="{{ data_description }}"
+                    data-image="{{ logo }}"
+                    data-locale="auto"
+                    data-label="{{ button_label }}"
+                    {% if data_zip_code %}
+                        data-zip-code="true"
+                    {% endif %}
+            >
+            </script>
+        </form>
+    {% endif %}
+
+    {% if not enabled and show_button %}
+        <a type="submit" class="stripe-button-el" href="{{ button_link }}" style="display: inline-block;">
+            <span style="display: block; min-height: 30px;">{{ button_label }}</span>
+        </a>
+    {% endif %}
+{% else %}
+    <a class="action-button small-button use-ajax" href="/user/login?destination=/donate" data-dialog-type="modal" >
+        <span style="display: block; min-height: 30px;">{{ "Log in to Donate" | t }}</span>
+    </a>
+{% endif %}

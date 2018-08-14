@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.summit.field_date
+    - field.field.node.summit.field_display_title
     - field.field.node.summit.field_image
     - field.field.node.summit.field_sponsors
     - field.field.node.summit.field_stick_to_top_of_date
@@ -104,4 +105,5 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  field_display_title: true

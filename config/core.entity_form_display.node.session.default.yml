@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.session.field_date
+    - field.field.node.session.field_display_title
     - field.field.node.session.field_session_description
     - field.field.node.session.field_session_files
     - field.field.node.session.field_session_status
@@ -212,4 +213,5 @@ content:
     weight: 50
     region: content
 hidden:
+  field_display_title: true
   sticky: true

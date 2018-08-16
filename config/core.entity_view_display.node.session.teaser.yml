@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.session.field_date
+    - field.field.node.session.field_display_title
     - field.field.node.session.field_session_description
     - field.field.node.session.field_session_files
     - field.field.node.session.field_session_status
@@ -15,6 +16,7 @@ dependencies:
     - field.field.node.session.field_sponsors
     - field.field.node.session.field_stick_to_top_of_date
     - field.field.node.session.field_stick_to_top_of_schedule
+    - field.field.node.session.field_twitter_teaser
     - field.field.node.session.field_venue
     - node.type.session
   module:
@@ -60,13 +62,9 @@ content:
     third_party_settings:
       field_formatter_class:
         class: margin-vertical-1
-  flag_interested:
-    weight: 3
-    region: content
-    settings: {  }
-    third_party_settings: {  }
 hidden:
   field_date: true
+  field_display_title: true
   field_session_files: true
   field_session_status: true
   field_session_video: true
@@ -77,4 +75,5 @@ hidden:
   field_twitter_teaser: true
   field_venue: true
   flag_add_to_schedule: true
+  flag_interested: true
   links: true

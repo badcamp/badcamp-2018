@@ -11,6 +11,7 @@ dependencies:
     - field.field.node.summit.field_stick_to_top_of_schedule
     - field.field.node.summit.field_summit_description
     - field.field.node.summit.field_summit_leaders
+    - field.field.node.summit.field_timeslot
     - field.field.node.summit.field_venue
     - image.style.thumbnail
     - node.type.summit
@@ -42,6 +43,7 @@ third_party_settings:
       children:
         - field_venue
         - field_date
+        - field_timeslot
         - field_stick_to_top_of_date
         - field_stick_to_top_of_schedule
       parent_name: ''
@@ -68,7 +70,7 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_date:
-    weight: 4
+    weight: 3
     settings: {  }
     third_party_settings: {  }
     type: daterange_default
@@ -118,6 +120,12 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: entity_reference_autocomplete
+    region: content
+  field_timeslot:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
     region: content
   field_venue:
     weight: 2

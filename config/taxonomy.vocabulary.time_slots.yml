@@ -1,0 +1,9 @@
+uuid: 8aeeb88b-205d-42c5-ae82-7a2c14b1a25c
+langcode: en
+status: true
+dependencies: {  }
+name: 'Time Slots'
+vid: time_slots
+description: ''
+hierarchy: 0
+weight: 0

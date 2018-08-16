@@ -3,3 +3,6 @@ mlid:
     roles:
       - anonymous
     access_check: false
+  'menu_link_content:dd1ebf4d-362a-44d9-ba6c-669065256d36':
+    roles: {  }
+    access_check: false

@@ -10,6 +10,7 @@ dependencies:
     - field.field.node.training.field_sponsors
     - field.field.node.training.field_stick_to_top_of_date
     - field.field.node.training.field_stick_to_top_of_schedule
+    - field.field.node.training.field_timeslot
     - field.field.node.training.field_trainers
     - field.field.node.training.field_training_description
     - field.field.node.training.field_training_files
@@ -65,6 +66,14 @@ content:
       link: false
     third_party_settings: {  }
     type: entity_reference_entity_view
+    region: content
+  field_timeslot:
+    weight: 10
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
     region: content
   field_trainers:
     weight: 3

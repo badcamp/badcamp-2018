@@ -5,17 +5,18 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.summit.field_date
+    - field.field.node.summit.field_display_title
     - field.field.node.summit.field_image
     - field.field.node.summit.field_sponsors
     - field.field.node.summit.field_stick_to_top_of_date
     - field.field.node.summit.field_stick_to_top_of_schedule
     - field.field.node.summit.field_summit_description
     - field.field.node.summit.field_summit_leaders
+    - field.field.node.summit.field_timeslot
     - field.field.node.summit.field_venue
     - image.style.summit_teaser
     - node.type.summit
   module:
-    - field_delimiter
     - field_formatter_class
     - image
     - text
@@ -38,19 +39,6 @@ content:
     third_party_settings:
       field_formatter_class:
         class: ''
-  field_sponsors:
-    type: entity_reference_entity_view
-    weight: 2
-    region: content
-    label: hidden
-    settings:
-      view_mode: sponsor_logo
-      link: false
-    third_party_settings:
-      field_delimiter:
-        delimiter: ''
-      field_formatter_class:
-        class: ''
   field_summit_description:
     type: text_summary_or_trimmed
     weight: 1
@@ -60,14 +48,17 @@ content:
       trim_length: 600
     third_party_settings: {  }
   flag_add_to_schedule:
-    weight: 3
+    weight: 2
     region: content
     settings: {  }
     third_party_settings: {  }
 hidden:
   field_date: true
+  field_display_title: true
+  field_sponsors: true
   field_stick_to_top_of_date: true
   field_stick_to_top_of_schedule: true
   field_summit_leaders: true
+  field_timeslot: true
   field_venue: true
   links: true

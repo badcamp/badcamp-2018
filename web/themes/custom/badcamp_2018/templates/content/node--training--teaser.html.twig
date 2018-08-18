@@ -71,17 +71,26 @@
  */
 #}
 <article{{ attributes.addClass('node-type--summit','display--teaser', 'grid-y', 'grid-padding-y', 'grid-frame') }}>
-    <div class="cell training-title">
+    <div class="cell training-title small-2">
         {{ title_prefix }}
         <h4{{ title_attributes }}>
-            <a href="{{ url }}" rel="bookmark">{{ label }}</a>
+            {% set text = label|render|striptags|trim %}
+            {% set limit = 33 %}
+            <a href="{{ url }}" rel="bookmark">{{ (text|length > limit ? text|slice(0, limit) ~ '...' : text) }}</a>
         </h4>
         {{ title_suffix }}
     </div>
 
-    <div class="">
-        <div{{ content_attributes }}>
-            {{ content | without('flag_add_to_schedule') }}
+    <div class="cell small-8 grid-y">
+        <div{{ content_attributes.addClass('small-10') }}>
+            {{ content | without('flag_add_to_schedule', 'links', 'field_sponsors', 'field_skill_level') }}
         </div>
+        <div class="small-1">
+            {{ content.field_skill_level }}
+        </div>
+    </div>
+
+    <div class="cell align-center small-2">
+        {{ content.links }}
     </div>
 </article>

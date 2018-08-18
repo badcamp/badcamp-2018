@@ -72,22 +72,24 @@
 #}
 <article{{ attributes.addClass('node-type--summit','display--teaser', 'grid-y', 'grid-padding-y', 'grid-frame') }}>
 
-    <div class="cell summit-title">
+    <div class="cell summit-title small-2">
         {{ title_prefix }}
         <h4{{ title_attributes }}>
-            <a href="{{ url }}" rel="bookmark">{{ label }}</a>
+            {% set text = label|render|striptags|trim %}
+            {% set limit = 33 %}
+            <a href="{{ url }}" rel="bookmark">{{ (text|length > limit ? text|slice(0, limit) ~ '...' : text) }}</a>
         </h4>
         {{ title_suffix }}
     </div>
 
-    <div class="cell summit-contents">
+    <div class="cell summit-contents small-8">
 
         <div{{ content_attributes }}>
             {{ content | without('flag_add_to_schedule','field_image') }}
         </div>
     </div>
 
-    <div class="cell summit-add-to-schedule align-center">
+    <div class="cell summit-add-to-schedule align-center small-2">
         {{ content.flag_add_to_schedule }}
     </div>
 </article>

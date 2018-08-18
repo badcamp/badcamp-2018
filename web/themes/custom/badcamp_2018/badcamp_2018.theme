@@ -223,11 +223,15 @@ function badcamp_2018_preprocess_views_view_unformatted__sponsors__full_list(&$v
  */
 function badcamp_2018_preprocess_page_title(&$vars){
 	$node = \Drupal::request()->attributes->get('node');
-	if(!is_null($node) && $node->getEntityTypeId() == 'node' && $node->bundle() == 'session') {
-		$vars['title'] = t('Session');
-	}
-	else if(!is_null($node) && $node->getEntityTypeId() == 'node' && $node->bundle() == 'training') {
-		$vars['title'] = t('Training');
+	if(!is_null($node) && is_object($node)) {
+		if ($node->getEntityTypeId() == 'node' && $node->bundle() == 'session') {
+			$vars['title'] = t('Session');
+		}
+		else {
+			if ($node->getEntityTypeId() == 'node' && $node->bundle() == 'training') {
+				$vars['title'] = t('Training');
+			}
+		}
 	}
 }
 

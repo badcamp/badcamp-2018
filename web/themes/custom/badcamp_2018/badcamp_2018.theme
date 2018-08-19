@@ -103,7 +103,7 @@ function badcamp_2018_preprocess_node(array &$variables) {
   //$variables['display_submitted'] = FALSE;
 
 	$account = \Drupal::currentUser();
-	if($account->isAnonymous() && in_array($variables['node']->getType(), ['event','session','training',])){
+	if($account->isAnonymous() && in_array($variables['node']->getType(), ['event','session',])){
 
 		$url = Url::fromRoute('user.login', [], [
 			'query' => [
@@ -115,7 +115,7 @@ function badcamp_2018_preprocess_node(array &$variables) {
 
 		$variables['content']['register_button'] = [
 			'#markup' => render($link),
-			'#weight' => 1000
+			'#weight' => 10000
 		];
 	}
 }

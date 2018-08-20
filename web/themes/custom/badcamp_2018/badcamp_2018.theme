@@ -103,7 +103,7 @@ function badcamp_2018_preprocess_node(array &$variables) {
   //$variables['display_submitted'] = FALSE;
 
 	$account = \Drupal::currentUser();
-	if($account->isAnonymous() && in_array($variables['node']->getType(), ['event','session',])){
+	if($account->isAnonymous() && in_array($variables['node']->getType(), ['event','session','summit'])){
 
 		$url = Url::fromRoute('user.login', [], [
 			'query' => [

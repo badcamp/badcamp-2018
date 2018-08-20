@@ -70,7 +70,7 @@
  *   in different view modes.
  */
 #}
-<article{{ attributes.addClass('node-type--summit','display--teaser', 'grid-y', 'grid-padding-y', 'grid-frame') }}>
+<article{{ attributes.addClass('node-type--summit','display--teaser', 'grid-y', 'grid-frame') }}>
 
     <div class="cell summit-title small-2">
         {{ title_prefix }}
@@ -85,11 +85,12 @@
     <div class="cell summit-contents small-8">
 
         <div{{ content_attributes }}>
-            {{ content | without('flag_add_to_schedule','field_image') }}
+            {{ content | without('flag_add_to_schedule','field_image', 'register_button') }}
         </div>
     </div>
 
     <div class="cell summit-add-to-schedule align-center small-2">
         {{ content.flag_add_to_schedule }}
+        {{ content.register_button }}
     </div>
 </article>

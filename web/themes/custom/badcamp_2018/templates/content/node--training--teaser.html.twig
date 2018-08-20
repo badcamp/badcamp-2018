@@ -70,7 +70,7 @@
  *   in different view modes.
  */
 #}
-<article{{ attributes.addClass('node-type--summit','display--teaser', 'grid-y', 'grid-padding-y', 'grid-frame') }}>
+<article{{ attributes.addClass('node-type--summit','display--teaser', 'grid-y', 'grid-frame') }}>
     <div class="cell training-title small-2">
         {{ title_prefix }}
         <h4{{ title_attributes }}>
@@ -82,10 +82,10 @@
     </div>
 
     <div class="cell small-8 grid-y">
-        <div{{ content_attributes.addClass('small-10') }}>
+        <div{{ content_attributes.addClass('cell','small-10') }}>
             {{ content | without('flag_add_to_schedule', 'links', 'field_sponsors', 'field_skill_level') }}
         </div>
-        <div class="small-1">
+        <div class="cell small-1 align-center">
             {{ content.field_skill_level }}
         </div>
     </div>

@@ -9,7 +9,7 @@ label: Global
 tags:
   geo_region: US-CA
   geo_placename: 'University of California, Berkeley'
-  title: '[current-page:title] | [site:name]'
+  title: 'What is BADCamp?'
   canonical_url: '[current-page:url]'
   description: 'BADCamp is an annual celebration of open-source software in Berkeley, California. Join us this October 24-27, 2018 for four days of talks, training classes, summits, sprints and socials with some of the brightest minds from all over the world! Admission to BADCamp is FREE!'
   robots: 'index, follow'

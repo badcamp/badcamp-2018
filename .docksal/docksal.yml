@@ -5,11 +5,24 @@ version: "2.1"
 services:
   # Web
   web:
-    extends:
-      file: ${HOME}/.docksal/stacks/services.yml
-      service: web
-    depends_on:
-      - cli
+    image: wodby/drupal-nginx:8-1.12-4.0.4
+    volumes:
+      - ${PROJECT_ROOT}:/var/www:ro
+      # Suppress the permissions fixer script in wodby/drupal-nginx
+      - ${PROJECT_ROOT}/.docksal/services/web/init_volumes:/usr/local/bin/init_volumes
+    labels:
+      - io.docksal.virtual-host=${VIRTUAL_HOST},*.${VIRTUAL_HOST}
+      - io.docksal.project-root=${PROJECT_ROOT}
+    environment:
+      - NGINX_BACKEND_HOST=cli
+      - NGINX_SERVER_ROOT=/var/www/${DOCROOT}
+      - NGINX_DRUPAL_FILE_PROXY_URL
+      - NGINX_VHOST_PRESET
+      - NGINX_SERVER_EXTRA_CONF_FILEPATH
+    dns:
+      - ${DOCKSAL_DNS1}
+      - ${DOCKSAL_DNS2}
+    working_dir: /var/www/${DOCROOT}
 
   # DB
   db:

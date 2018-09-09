@@ -2,6 +2,11 @@
 
 h1,h2,h3,h4,h5,h6{
   text-transform: uppercase;
+
+  .path-frontpage &,
+  .page-title-holder &{
+    font-family: $rye;
+  }
 }
 
 a.action-button,
@@ -64,7 +69,7 @@ fieldset {
   border-radius: 30px;
 
   legend {
-    font-family: $rye;
+    font-family: $quicksand;
     font-size: 2rem;
     margin-left: 1em;
   }

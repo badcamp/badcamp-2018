@@ -35,7 +35,7 @@ settings:
       description: ''
       weight: '-7'
     email:
-      value: info@badcamp.net
+      value: info@badcamp.org
       description: ''
       weight: '-6'
     facebook:

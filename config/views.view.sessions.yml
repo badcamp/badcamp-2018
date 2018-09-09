@@ -291,18 +291,6 @@ display:
         group_by: false
         use_ajax: false
       sorts:
-        random:
-          id: random
-          table: views
-          field: random
-          relationship: none
-          group_type: group
-          admin_label: ''
-          order: ASC
-          exposed: false
-          expose:
-            label: ''
-          plugin_id: random
         title:
           id: title
           table: node_field_data
@@ -565,7 +553,7 @@ display:
       group_by: true
       use_ajax: true
     cache_metadata:
-      max-age: 0
+      max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'

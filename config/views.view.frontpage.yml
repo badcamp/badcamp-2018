@@ -199,7 +199,7 @@ display:
           row_class: ''
           default_row_class: true
           uses_fields: false
-      title: 'What is BADCamp?'
+      title: ''
       header: {  }
       footer: {  }
       relationships: {  }

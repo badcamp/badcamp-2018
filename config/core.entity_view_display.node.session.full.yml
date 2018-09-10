@@ -16,11 +16,11 @@ dependencies:
     - field.field.node.session.field_sponsors
     - field.field.node.session.field_stick_to_top_of_date
     - field.field.node.session.field_stick_to_top_of_schedule
+    - field.field.node.session.field_timeslot
     - field.field.node.session.field_twitter_teaser
     - field.field.node.session.field_venue
     - node.type.session
   module:
-    - daterange_compact
     - field_delimiter
     - field_formatter_class
     - field_group
@@ -32,7 +32,7 @@ third_party_settings:
   field_group:
     group_container:
       children:
-        - field_date
+        - field_timeslot
         - field_venue
       parent_name: ''
       weight: 3
@@ -56,14 +56,6 @@ targetEntityType: node
 bundle: session
 mode: full
 content:
-  field_date:
-    weight: 1
-    label: hidden
-    settings:
-      format_type: medium
-    third_party_settings: {  }
-    type: daterange_compact
-    region: content
   field_session_description:
     weight: 5
     label: hidden
@@ -143,6 +135,16 @@ content:
         class: cell
     type: entity_reference_entity_view
     region: content
+  field_timeslot:
+    type: entity_reference_label
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      link: false
+    third_party_settings:
+      field_formatter_class:
+        class: ''
   field_venue:
     weight: 2
     label: hidden
@@ -162,6 +164,7 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
+  field_date: true
   field_display_title: true
   field_session_status: true
   field_stick_to_top_of_date: true

@@ -85,7 +85,7 @@ if [ $ELEMENTS = 'all' ] || [ $ELEMENTS = 'db' ]; then
 
     if [[ "$(${PROJECT_ROOT}/bin/drupal 2>/dev/null)" =~ "database:drop" ]]; then
         echo "Dropping Old Database..."
-        ${PROJECT_ROOT}/bin/drupal database:drop
+        ${PROJECT_ROOT}/bin/drupal database:drop -y
     fi
 
     echo "Importing Database..."
@@ -106,7 +106,7 @@ if [ $ELEMENTS = 'all' ] || [ $ELEMENTS = 'files' ]; then
       terminus rsync ${PANTHEON_SITE}.${PANTHEON_ENV}:files .
     else
       FILES="/tmp/${PANTHEON_ENV}.${PANTHEON_SITE}.tar.gz"
-      terminus backup:get kanopi-support.live --element=files --to="${FILES}"
+      terminus backup:get ${PANTHEON_ENV}.${PANTHEON_SITE} --element=files --to="${FILES}"
       rm -rf ${FILES_DIRECTORY}
       tar -xf ${FILES}
       mv files_* files
@@ -116,4 +116,5 @@ if [ $ELEMENTS = 'all' ] || [ $ELEMENTS = 'files' ]; then
 fi
 
 cd ${DOCROOT_PATH}
-${PROJECT_ROOT}/.docksal/commands/site-build
+#${PROJECT_ROOT}/.docksal/commands/site-build
+echo "Done!"

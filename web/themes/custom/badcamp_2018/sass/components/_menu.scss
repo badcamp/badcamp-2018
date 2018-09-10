@@ -1,5 +1,8 @@
 #block-mainnavigation{
-  float: right;
+  @include breakpoint('large') {
+    float: right;
+  }
+
   .menu {
     &.menu-level-0 {
       > li {
@@ -47,5 +50,13 @@
   }
   .menu-icon{
     vertical-align: top;
+  }
+
+  &:hover,
+  &:active,
+  &:focus{
+    span, button {
+      color: $camel;
+    }
   }
 }

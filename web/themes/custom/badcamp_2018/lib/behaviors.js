@@ -13,4 +13,12 @@
       }
   }
 
+  Drupal.behaviors.menuToggle = {
+      attach: function(context) {
+          $('.responsive-menu-button-wrap').on('toggled.zf.responsiveToggle', function(e) {
+              $('.header-parent').toggleClass('opened');
+          });
+      }
+  }
+
 }(Drupal, jQuery));

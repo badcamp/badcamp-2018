@@ -72,29 +72,20 @@
  * @ingroup themeable
  */
 #}
-<article{{ attributes.addClass('grid-x') }}>
+<article{{ attributes }}>
+    {{ title_prefix }}
+    <h3{{ title_attributes.addClass('title') }}>
+        <a href="{{ url }}" rel="bookmark">{{ label }}</a>
+    </h3>
+    {{ title_suffix }}
 
-    <div class="columns small-12 medium-4">
-        <h4>{{ content.field_date }}</h4>
-        {{ content.flag_add_to_schedule }}
-        {{ content.register_button }}
+    <div class="info">
+        {{ content.field_summit_leaders }}
+        {{ content.field_venue }}
     </div>
 
-    <div class="columns small-12 small-offset-0 medium-8 medium-offset-0">
-        {{ title_prefix }}
-        <h3{{ title_attributes.addClass('title') }}>
-            <a href="{{ url }}" rel="bookmark">{{ label }}</a>
-        </h3>
-        {{ title_suffix }}
-
-        <div class="info">
-            {{ content.field_summit_leaders }}
-            {{ content.field_venue }}
-        </div>
-
-        <div class="content">
-            {{ content|without('field_date','flag_add_to_schedule','field_venue','field_summit_leaders','register_button')}}
-        </div>
+    <div class="content">
+        {{ content|without('field_date','flag_add_to_schedule','field_venue','field_summit_leaders','register_button')}}
     </div>
 
 </article>

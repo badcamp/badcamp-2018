@@ -6,6 +6,11 @@ footer{
     a{
       color: $white;
       text-decoration: underline;
+
+      &:hover,
+      &:focus {
+        text-decoration: none;
+      }
     }
   }
 
@@ -39,6 +44,11 @@ footer{
         border-radius: 50px;
         width: 65px;
         margin-bottom: 1rem;
+
+        &:hover,
+        &:focus {
+          background: darken($reddish, 25%);
+        }
 
         @include breakpoint(medium up) {
           margin-left: 2rem;

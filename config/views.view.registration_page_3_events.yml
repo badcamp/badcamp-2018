@@ -14,6 +14,7 @@ dependencies:
     - daterange_compact
     - datetime
     - node
+    - taxonomy
     - user
 _core:
   default_config_hash: vMh1jPFF2ycQHwCWX2L_bDpi_-aG1ED9TOgklP_ccmU
@@ -66,7 +67,7 @@ display:
         options:
           grouping:
             -
-              field: field_date
+              field: name_1
               rendered: true
               rendered_strip: false
           row_class: ''
@@ -125,11 +126,11 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-        field_date:
-          id: field_date
-          table: node__field_date
-          field: field_date
-          relationship: none
+        name:
+          id: name
+          table: taxonomy_term_field_data
+          field: name
+          relationship: field_timeslot
           group_type: group
           admin_label: ''
           label: ''
@@ -174,9 +175,9 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
-          type: daterange_compact
+          type: string
           settings:
-            format_type: start_date_only_full_day_full_month_day_number
+            link_to_entity: false
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -187,7 +188,76 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
+          convert_spaces: false
+          entity_type: taxonomy_term
+          entity_field: name
+          plugin_id: term_name
+        name_1:
+          id: name_1
+          table: taxonomy_term_field_data
+          field: name
+          relationship: parent
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: false
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          convert_spaces: false
+          entity_type: taxonomy_term
+          entity_field: name
+          plugin_id: term_name
       filters:
         status:
           value: '1'
@@ -277,7 +347,25 @@ display:
           plugin_id: text_custom
       footer: {  }
       empty: {  }
-      relationships: {  }
+      relationships:
+        field_timeslot:
+          id: field_timeslot
+          table: node__field_timeslot
+          field: field_timeslot
+          relationship: none
+          group_type: group
+          admin_label: 'field_timeslot: Taxonomy term'
+          required: true
+          plugin_id: standard
+        parent:
+          id: parent
+          table: taxonomy_term_hierarchy
+          field: parent
+          relationship: field_timeslot
+          group_type: group
+          admin_label: Parent
+          required: true
+          plugin_id: standard
       arguments: {  }
       display_extenders: {  }
       title: Summits
@@ -288,9 +376,7 @@ display:
         - 'languages:language_interface'
         - 'user.node_grants:view'
         - user.permissions
-      tags:
-        - 'config:field.storage.node.field_date'
-        - extensions
+      tags: {  }
   admin:
     display_plugin: page
     id: admin
@@ -742,9 +828,7 @@ display:
         - 'languages:language_interface'
         - 'user.node_grants:view'
         - user.permissions
-      tags:
-        - 'config:field.storage.node.field_date'
-        - extensions
+      tags: {  }
   list:
     display_plugin: block
     id: list
@@ -767,19 +851,20 @@ display:
           entity_type: node
           entity_field: type
           plugin_id: standard
-        field_date_value:
-          id: field_date_value
-          table: node__field_date
-          field: field_date_value
-          relationship: none
+        weight_1:
+          id: weight_1
+          table: taxonomy_term_field_data
+          field: weight
+          relationship: parent
           group_type: group
           admin_label: ''
           order: ASC
           exposed: false
           expose:
             label: ''
-          plugin_id: datetime
-          entity_type: node
+          entity_type: taxonomy_term
+          entity_field: weight
+          plugin_id: standard
         random:
           id: random
           table: views
@@ -819,7 +904,6 @@ display:
           operator: in
           value:
             event: event
-            session: session
             summit: summit
             training: training
           group: 1
@@ -852,48 +936,6 @@ display:
           entity_type: node
           entity_field: type
           plugin_id: bundle
-        field_date_value:
-          id: field_date_value
-          table: node__field_date
-          field: field_date_value
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: 'not empty'
-          value:
-            min: ''
-            max: ''
-            value: ''
-            type: date
-          group: 1
-          exposed: false
-          expose:
-            operator_id: ''
-            label: ''
-            description: ''
-            use_operator: false
-            operator: ''
-            identifier: ''
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-            placeholder: ''
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          plugin_id: datetime
-          entity_type: node
       filter_groups:
         operator: AND
         groups:
@@ -908,7 +950,7 @@ display:
           admin_label: ''
           empty: true
           tokenize: true
-          content: "<div class=\"margin-vertical-2\">\n<p>BADCamp is accepting session proposals. Participation is welcome from all walks of life, and any industry.  Don't miss out on your chance to share your javascript, PHP, or general knowledge about how to integrate new technologies, frameworks, and workflows with an API platform and centralized data hub- Drupal!</p>\n<p class=\"text-center\"><a class=\"button action-button\" href=\"{{ path('entity.node.canonical', {'node': 17}) }}\">{{ 'Submit A Session'|t }}</a></p>\n</div>"
+          content: "<div class=\"margin-vertical-2\">\n<p class=\"text-center\"><a class=\"button action-button\" href=\"/schedule\">{{ 'View Schedule'|t }}</a></p>\n</div>"
           plugin_id: text_custom
     cache_metadata:
       max-age: 0
@@ -917,6 +959,4 @@ display:
         - 'languages:language_interface'
         - 'user.node_grants:view'
         - user.permissions
-      tags:
-        - 'config:field.storage.node.field_date'
-        - extensions
+      tags: {  }

@@ -26,6 +26,7 @@
     }
   }
 
+  div[data-drupal-selector="edit-day"],
   fieldset[data-drupal-selector="edit-date"],
   div[data-drupal-selector="edit-type"]{
     margin: 1rem;
@@ -78,5 +79,21 @@
 
   .info > div {
     margin: 1.5rem;
+  }
+
+  .view-grouping{
+
+  }
+
+  .views-row {
+    padding: 1rem;
+    &:hover{
+      background-color: $light-gray;
+    }
+  }
+
+  .timeslot {
+    padding: 1rem 0;
+    border-bottom: 5px solid $reddish;
   }
 }

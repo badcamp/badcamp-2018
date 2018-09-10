@@ -35,3 +35,12 @@
     margin-bottom: .5em;
   }
 }
+
+
+.the-sponsor-logo {
+  &:hover,
+  &:focus {
+    background: rgba(0,0,0,.25);
+    border-radius: 25px;
+  }
+}

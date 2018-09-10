@@ -403,3 +403,29 @@ function badcamp_2018_form_user_login_form_alter(&$form, \Drupal\Core\Form\FormS
 		'#weight' => -100,
 	];
 }
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function badcamp_2018_preprocess_field__field_timeslot(&$vars) {
+	$node = $vars['element']['#object'];
+	/** @var \Drupal\taxonomy\Entity\Term $timeslot */
+	try {
+		$timeslot = $node->get('field_timeslot')
+			->first()
+			->get('entity')
+			->getTarget()
+			->getValue();
+		$parents = \Drupal::entityTypeManager()
+			->getStorage('taxonomy_term')
+			->loadParents($timeslot->id());
+		$parent = array_shift($parents);
+		$day = $parent->label();
+		$time = $timeslot->label();
+		$vars['items'][0]['content']['#plain_text'] = t('@day @time', [
+			'@day' => $day,
+			'@time' => $time
+		]);
+	}
+	catch(\Exception $exception) {}
+}

@@ -16,7 +16,6 @@ dependencies:
     - image.style.thumbnail
     - node.type.summit
   module:
-    - datetime_range
     - field_group
     - image
     - path
@@ -42,7 +41,6 @@ third_party_settings:
     group_summit_admin:
       children:
         - field_venue
-        - field_date
         - field_timeslot
         - field_stick_to_top_of_date
         - field_stick_to_top_of_schedule
@@ -65,18 +63,12 @@ mode: default
 content:
   created:
     type: datetime_timestamp
-    weight: 7
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-  field_date:
     weight: 3
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: daterange_default
-    region: content
   field_image:
-    weight: 26
+    weight: 6
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
@@ -135,7 +127,7 @@ content:
     region: content
   path:
     type: path
-    weight: 8
+    weight: 4
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -143,7 +135,7 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 9
+    weight: 5
     region: content
     third_party_settings: {  }
   title:
@@ -156,7 +148,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 6
+    weight: 2
     settings:
       match_operator: CONTAINS
       size: 60
@@ -164,11 +156,12 @@ content:
     region: content
     third_party_settings: {  }
   url_redirects:
-    weight: 50
+    weight: 7
     region: content
     settings: {  }
     third_party_settings: {  }
 hidden:
+  field_date: true
   field_display_title: true
   promote: true
   sticky: true

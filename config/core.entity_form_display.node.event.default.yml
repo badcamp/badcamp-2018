@@ -13,11 +13,11 @@ dependencies:
     - field.field.node.event.field_sponsors
     - field.field.node.event.field_stick_to_top_of_date
     - field.field.node.event.field_stick_to_top_of_schedule
+    - field.field.node.event.field_timeslot
     - field.field.node.event.field_venue
     - image.style.thumbnail
     - node.type.event
   module:
-    - datetime_range
     - field_group
     - image
     - link
@@ -47,7 +47,7 @@ third_party_settings:
     group_event_admin:
       children:
         - field_venue
-        - field_date
+        - field_timeslot
         - field_stick_to_top_of_schedule
         - field_stick_to_top_of_date
       parent_name: ''
@@ -69,16 +69,10 @@ mode: default
 content:
   created:
     type: datetime_timestamp
-    weight: 7
+    weight: 3
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_date:
-    weight: 7
-    settings: {  }
-    third_party_settings: {  }
-    type: daterange_default
-    region: content
   field_event_description:
     weight: 4
     settings:
@@ -138,6 +132,12 @@ content:
     settings:
       display_label: true
     third_party_settings: {  }
+  field_timeslot:
+    weight: 7
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
   field_venue:
     weight: 5
     settings: {  }
@@ -146,13 +146,13 @@ content:
     region: content
   path:
     type: path
-    weight: 8
+    weight: 4
     region: content
     settings: {  }
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    weight: 9
+    weight: 5
     region: content
     settings:
       display_label: true
@@ -167,7 +167,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 6
+    weight: 2
     region: content
     settings:
       match_operator: CONTAINS
@@ -175,9 +175,12 @@ content:
       placeholder: ''
     third_party_settings: {  }
   url_redirects:
-    weight: 50
+    weight: 6
     region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
+  field_date: true
   field_display_title: true
   promote: true
   sticky: true

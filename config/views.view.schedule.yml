@@ -4,17 +4,20 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.schedule
-    - field.storage.node.field_date
     - flag.flag.add_to_schedule
     - node.type.event
     - node.type.session
     - node.type.summit
     - node.type.training
     - taxonomy.vocabulary.session_track
+    - taxonomy.vocabulary.time_slots
+  content:
+    - 'taxonomy_term:time_slots:8545b94a-8647-499f-ba3c-82620cd1c1da'
+    - 'taxonomy_term:time_slots:964dc522-d462-4fcb-838f-1bb045245de7'
+    - 'taxonomy_term:time_slots:a17aa0a4-246c-4309-bd25-07959e957df7'
+    - 'taxonomy_term:time_slots:a19afbe7-0e8b-40fb-94f7-18c722420207'
   module:
     - better_exposed_filters
-    - daterange_compact
-    - datetime
     - flag
     - node
     - taxonomy
@@ -68,10 +71,15 @@ display:
               autosubmit: true
               autosubmit_exclude_textfield: false
               autosubmit_hide: true
-            field_date_value_1:
-              bef_format: default
+            tid:
+              bef_format: bef
               more_options:
+                bef_select_all_none: false
+                bef_select_all_none_nested: false
+                bef_collapsible: false
                 is_secondary: false
+                rewrite:
+                  filter_rewrite_values: "October 24|Wed\nOctober 25|Thur\nOctober 26|Fri\nOctober 27|Sat"
             type:
               bef_format: bef
               more_options:
@@ -98,7 +106,11 @@ display:
         options:
           grouping:
             -
-              field: field_date
+              field: name_1
+              rendered: true
+              rendered_strip: false
+            -
+              field: name
               rendered: true
               rendered_strip: false
           row_class: ''
@@ -110,11 +122,11 @@ display:
           relationship: none
           view_mode: schedule
       fields:
-        field_date:
-          id: field_date
-          table: node__field_date
-          field: field_date
-          relationship: none
+        name:
+          id: name
+          table: taxonomy_term_field_data
+          field: name
+          relationship: field_timeslot
           group_type: group
           admin_label: ''
           label: ''
@@ -159,9 +171,9 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
-          type: daterange_compact
+          type: string
           settings:
-            format_type: start_date_only_full_day_full_month_day_number
+            link_to_entity: false
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -172,7 +184,76 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
+          convert_spaces: false
+          entity_type: taxonomy_term
+          entity_field: name
+          plugin_id: term_name
+        name_1:
+          id: name_1
+          table: taxonomy_term_field_data
+          field: name
+          relationship: parent
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: false
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          convert_spaces: false
+          entity_type: taxonomy_term
+          entity_field: name
+          plugin_id: term_name
       filters:
         status:
           value: '1'
@@ -185,34 +266,44 @@ display:
           expose:
             operator: ''
           group: 1
-        field_date_value:
-          id: field_date_value
-          table: node__field_date
-          field: field_date_value
-          relationship: none
+        tid:
+          id: tid
+          table: taxonomy_term_field_data
+          field: tid
+          relationship: parent
           group_type: group
           admin_label: ''
-          operator: 'not empty'
+          operator: or
           value:
-            min: ''
-            max: ''
-            value: ''
-            type: date
+            57: 57
+            58: 58
+            59: 59
+            60: 60
           group: 1
-          exposed: false
+          exposed: true
           expose:
-            operator_id: ''
+            operator_id: tid_op
             label: ''
             description: ''
             use_operator: false
-            operator: ''
-            identifier: ''
+            operator: tid_op
+            identifier: day
             required: false
             remember: false
-            multiple: false
+            multiple: true
             remember_roles:
               authenticated: authenticated
-            placeholder: ''
+              anonymous: '0'
+              sponsor: '0'
+              sponsor_manager: '0'
+              event_manager: '0'
+              session_manager: '0'
+              summit_manager: '0'
+              training_manager: '0'
+              volunteer: '0'
+              volunteer_manager: '0'
+              administrator: '0'
+            reduce: true
           is_grouped: false
           group_info:
             label: ''
@@ -225,91 +316,15 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          plugin_id: datetime
-          entity_type: node
-        field_date_value_1:
-          id: field_date_value_1
-          table: node__field_date
-          field: field_date_value
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: '='
-          value:
-            min: ''
-            max: ''
-            value: ''
-            type: date
-          group: 1
-          exposed: true
-          expose:
-            operator_id: field_date_value_1_op
-            label: 'Date (field_date)'
-            description: null
-            use_operator: false
-            operator: field_date_value_1_op
-            identifier: field_date_value_1
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-            placeholder: null
-            min_placeholder: null
-            max_placeholder: null
-          is_grouped: true
-          group_info:
-            label: ''
-            description: ''
-            identifier: date
-            optional: false
-            widget: radios
-            multiple: false
-            remember: false
-            default_group: '1'
-            default_group_multiple: {  }
-            group_items:
-              1:
-                title: All
-                operator: 'not empty'
-                value:
-                  type: date
-                  value: ''
-                  min: ''
-                  max: ''
-              2:
-                title: Wed
-                operator: between
-                value:
-                  type: date
-                  value: ''
-                  min: '2018-10-24 00:00:00'
-                  max: '2018-10-24 23:59:59'
-              3:
-                title: Thurs
-                operator: between
-                value:
-                  type: date
-                  value: ''
-                  min: '2018-10-25 00:00:00'
-                  max: '2018-10-25 23:59:59'
-              4:
-                title: Fri
-                operator: between
-                value:
-                  type: date
-                  value: ''
-                  min: '2018-10-26 00:00:00'
-                  max: '2018-10-26 23:59:59'
-              5:
-                title: Sat
-                operator: between
-                value:
-                  type: date
-                  value: ''
-                  min: '2018-10-27 00:00:00'
-                  max: '2018-10-27 23:59:59'
-          plugin_id: datetime
+          reduce_duplicates: false
+          type: select
+          limit: true
+          vid: time_slots
+          hierarchy: true
+          error_message: true
+          entity_type: taxonomy_term
+          entity_field: tid
+          plugin_id: taxonomy_index_tid
         type:
           id: type
           table: node_field_data
@@ -417,56 +432,34 @@ display:
           error_message: true
           plugin_id: taxonomy_index_tid
       sorts:
-        field_stick_to_top_of_schedule_value:
-          id: field_stick_to_top_of_schedule_value
-          table: node__field_stick_to_top_of_schedule
-          field: field_stick_to_top_of_schedule_value
-          relationship: none
-          group_type: group
-          admin_label: ''
-          order: DESC
-          exposed: false
-          expose:
-            label: ''
-          plugin_id: standard
-        field_date_value:
-          id: field_date_value
-          table: node__field_date
-          field: field_date_value
-          relationship: none
+        weight:
+          id: weight
+          table: taxonomy_term_field_data
+          field: weight
+          relationship: parent
           group_type: group
           admin_label: ''
           order: ASC
           exposed: false
           expose:
             label: ''
-          plugin_id: datetime
-          entity_type: node
-        field_stick_to_top_of_date_value:
-          id: field_stick_to_top_of_date_value
-          table: node__field_stick_to_top_of_date
-          field: field_stick_to_top_of_date_value
-          relationship: none
-          group_type: group
-          admin_label: ''
-          order: DESC
-          exposed: false
-          expose:
-            label: ''
+          entity_type: taxonomy_term
+          entity_field: weight
           plugin_id: standard
-        field_date_end_value:
-          id: field_date_end_value
-          table: node__field_date
-          field: field_date_end_value
-          relationship: none
+        weight_1:
+          id: weight_1
+          table: taxonomy_term_field_data
+          field: weight
+          relationship: field_timeslot
           group_type: group
           admin_label: ''
           order: ASC
           exposed: false
           expose:
             label: ''
-          plugin_id: datetime
-          entity_type: node
+          entity_type: taxonomy_term
+          entity_field: weight
+          plugin_id: standard
         title:
           id: title
           table: node_field_data
@@ -484,7 +477,25 @@ display:
       header: {  }
       footer: {  }
       empty: {  }
-      relationships: {  }
+      relationships:
+        field_timeslot:
+          id: field_timeslot
+          table: node__field_timeslot
+          field: field_timeslot
+          relationship: none
+          group_type: group
+          admin_label: 'field_timeslot: Taxonomy term'
+          required: true
+          plugin_id: standard
+        parent:
+          id: parent
+          table: taxonomy_term_hierarchy
+          field: parent
+          relationship: field_timeslot
+          group_type: group
+          admin_label: Parent
+          required: true
+          plugin_id: standard
       arguments: {  }
       display_extenders: {  }
       title: Schedule
@@ -502,9 +513,7 @@ display:
         - user
         - 'user.node_grants:view'
         - user.permissions
-      tags:
-        - 'config:field.storage.node.field_date'
-        - extensions
+      tags: {  }
   page_1:
     display_plugin: page
     id: page_1
@@ -522,9 +531,7 @@ display:
         - user
         - 'user.node_grants:view'
         - user.permissions
-      tags:
-        - 'config:field.storage.node.field_date'
-        - extensions
+      tags: {  }
   page_2:
     display_plugin: page
     id: page_2
@@ -556,6 +563,24 @@ display:
           user_scope: any
           entity_type: node
           plugin_id: flag_relationship
+        field_timeslot:
+          id: field_timeslot
+          table: node__field_timeslot
+          field: field_timeslot
+          relationship: none
+          group_type: group
+          admin_label: 'field_timeslot: Taxonomy term'
+          required: true
+          plugin_id: standard
+        parent:
+          id: parent
+          table: taxonomy_term_hierarchy
+          field: parent
+          relationship: field_timeslot
+          group_type: group
+          admin_label: Parent
+          required: true
+          plugin_id: standard
       defaults:
         relationships: false
         arguments: false
@@ -606,6 +631,4 @@ display:
         - user
         - 'user.node_grants:view'
         - user.permissions
-      tags:
-        - 'config:field.storage.node.field_date'
-        - extensions
+      tags: {  }

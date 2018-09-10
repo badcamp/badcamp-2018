@@ -1,0 +1,35 @@
+uuid: 862e6ea9-9e73-45be-8fbf-9cd45daf6c4d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_timeslot
+    - node.type.event
+    - taxonomy.vocabulary.time_slots
+  module:
+    - custom_add_another
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+id: node.event.field_timeslot
+field_name: field_timeslot
+entity_type: node
+bundle: event
+label: Timeslot
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      time_slots: time_slots
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

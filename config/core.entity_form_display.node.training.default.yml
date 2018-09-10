@@ -20,7 +20,6 @@ dependencies:
     - node.type.training
   module:
     - badcamp_stripe_payment
-    - datetime_range
     - field_group
     - file
     - link
@@ -52,7 +51,6 @@ third_party_settings:
     group_admin:
       children:
         - field_venue
-        - field_date
         - field_timeslot
         - field_stick_to_top_of_date
         - field_stick_to_top_of_schedule
@@ -81,12 +79,6 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_date:
-    weight: 10
-    settings: {  }
-    third_party_settings: {  }
-    type: daterange_default
-    region: content
   field_payment:
     weight: 14
     settings: {  }
@@ -203,11 +195,12 @@ content:
       placeholder: ''
     third_party_settings: {  }
   url_redirects:
-    weight: 50
+    weight: 6
     region: content
     settings: {  }
     third_party_settings: {  }
 hidden:
+  field_date: true
   field_display_title: true
   promote: true
   sticky: true

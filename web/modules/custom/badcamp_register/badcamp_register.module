@@ -381,5 +381,9 @@ function badcamp_register_module_implements_alter(&$implementations, $hook) {
 		$implementations = [
 			'badcamp_register' => FALSE
 		];
-	}
+        }
+
+        if($hook == 'menu_local_tasks_alter') {
+                unset($implementations['camp_schedule']);
+        }
 }

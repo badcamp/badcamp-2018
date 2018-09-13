@@ -1,25 +1,30 @@
 {
     "_links": {
         "self": {
-            "href": "http:\/\/badcamp-2018.docksal\/block\/3?_format=hal_json"
+            "href": "http:\/\/badcamp-2018.docksal\/block\/8?_format=hal_json"
         },
         "type": {
-            "href": "http:\/\/drupal.org\/rest\/type\/block_content\/sponsorship_block"
-        }
+            "href": "http:\/\/drupal.org\/rest\/type\/block_content\/block_reference"
+        },
+        "http:\/\/drupal.org\/rest\/relation\/block_content\/block_reference\/field_blocks": [
+            {
+                "href": "http:\/\/badcamp-2018.docksal\/block\/7?_format=hal_json"
+            }
+        ]
     },
     "id": [
         {
-            "value": 3
+            "value": 8
         }
     ],
     "uuid": [
         {
-            "value": "0551ffca-5066-44b9-bda6-891300c6951a"
+            "value": "12698cc5-742c-4694-93c8-d1d1e834e224"
         }
     ],
     "revision_id": [
         {
-            "value": 3
+            "value": 12
         }
     ],
     "langcode": [
@@ -30,12 +35,12 @@
     ],
     "type": [
         {
-            "target_id": "sponsorship_block"
+            "target_id": "block_reference"
         }
     ],
     "revision_created": [
         {
-            "value": "2018-05-06T22:23:09+00:00",
+            "value": "2018-09-13T19:47:55+00:00",
             "format": "Y-m-d\\TH:i:sP"
         }
     ],
@@ -47,13 +52,13 @@
     ],
     "info": [
         {
-            "value": "$50 Indvidual Sponsorship",
+            "value": "Organization Sponsorships",
             "lang": "en"
         }
     ],
     "changed": [
         {
-            "value": "2018-05-14T07:24:17+00:00",
+            "value": "2018-09-13T19:47:55+00:00",
             "lang": "en",
             "format": "Y-m-d\\TH:i:sP"
         }
@@ -85,30 +90,23 @@
             }
         }
     ],
-    "field_payment": [
-        {
-            "enable": true,
-            "avs": true,
-            "amount": 5000,
-            "payment_type": "individual_sponsorship",
-            "description_value": "<p><strong>Benefits<\/strong><\/p>\r\n\r\n<ul>\r\n\t<li>Much love and respect<\/li>\r\n\t<li>BADCamp T-shirt<\/li>\r\n\t<li>Surprise Swag<\/li>\r\n<\/ul>\r\n",
-            "button_label": "Select",
-            "show_button": false,
-            "link_button": "",
-            "description_format": "basic_html",
-            "max_payments": 0,
-            "max_purchases": 0,
-            "last_refund_date": ""
-        }
-    ],
-    "field_sponsorship_amount": [
-        {
-            "value": 50
-        }
-    ],
-    "field_sponsorship_title": [
-        {
-            "value": "Acrobat"
-        }
-    ]
+    "_embedded": {
+        "http:\/\/drupal.org\/rest\/relation\/block_content\/block_reference\/field_blocks": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/badcamp-2018.docksal\/block\/7?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/block_content\/sponsorship_block"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "3467273a-8a26-47dc-913a-eada83b33e95"
+                    }
+                ]
+            }
+        ]
+    }
 }

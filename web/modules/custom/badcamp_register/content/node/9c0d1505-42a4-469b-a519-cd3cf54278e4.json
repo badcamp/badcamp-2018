@@ -8,12 +8,45 @@
         },
         "http:\/\/drupal.org\/rest\/relation\/node\/summit\/revision_uid": [
             {
-                "href": "http:\/\/badcamp-2018.docksal\/u\/sean_e_dietrich?_format=hal_json"
+                "href": "http:\/\/badcamp-2018.docksal\/u\/jqtnguyen?_format=hal_json"
             }
         ],
         "http:\/\/drupal.org\/rest\/relation\/node\/summit\/uid": [
             {
                 "href": "http:\/\/badcamp-2018.docksal\/u\/sean_e_dietrich?_format=hal_json",
+                "lang": "en"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/summit\/field_sponsors": [
+            {
+                "href": "http:\/\/badcamp-2018.docksal\/sponsors\/core-level\/ddev?_format=hal_json",
+                "lang": "en"
+            },
+            {
+                "href": "http:\/\/badcamp-2018.docksal\/sponsors\/contrib-level\/devshopsupport?_format=hal_json",
+                "lang": "en"
+            },
+            {
+                "href": "http:\/\/badcamp-2018.docksal\/sponsors\/core-level\/platformsh?_format=hal_json",
+                "lang": "en"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/summit\/field_summit_leaders": [
+            {
+                "href": "http:\/\/badcamp-2018.docksal\/u\/areynolds?_format=hal_json"
+            },
+            {
+                "href": "http:\/\/badcamp-2018.docksal\/u\/pirog?_format=hal_json"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/summit\/field_timeslot": [
+            {
+                "href": "http:\/\/badcamp-2018.docksal\/time-slots\/october-25\/900-am-430-pm?_format=hal_json"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/summit\/field_venue": [
+            {
+                "href": "http:\/\/badcamp-2018.docksal\/venues\/toll?_format=hal_json",
                 "lang": "en"
             }
         ]
@@ -30,7 +63,7 @@
     ],
     "vid": [
         {
-            "value": 29
+            "value": 337
         }
     ],
     "langcode": [
@@ -46,7 +79,7 @@
     ],
     "revision_timestamp": [
         {
-            "value": "2018-06-20T01:32:13+00:00",
+            "value": "2018-09-10T20:53:26+00:00",
             "format": "Y-m-d\\TH:i:sP"
         }
     ],
@@ -55,7 +88,7 @@
             {
                 "_links": {
                     "self": {
-                        "href": "http:\/\/badcamp-2018.docksal\/u\/sean_e_dietrich?_format=hal_json"
+                        "href": "http:\/\/badcamp-2018.docksal\/u\/jqtnguyen?_format=hal_json"
                     },
                     "type": {
                         "href": "http:\/\/drupal.org\/rest\/type\/user\/user"
@@ -63,7 +96,7 @@
                 },
                 "uuid": [
                     {
-                        "value": "edf5a360-2bfe-4e46-8852-071918f6822a"
+                        "value": "c66e9316-d1c4-4ff3-81d1-f7a8da26e741"
                     }
                 ]
             }
@@ -81,6 +114,123 @@
                 "uuid": [
                     {
                         "value": "edf5a360-2bfe-4e46-8852-071918f6822a"
+                    }
+                ],
+                "lang": "en"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/summit\/field_sponsors": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/badcamp-2018.docksal\/sponsors\/core-level\/ddev?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/node\/sponsor"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "76e1b238-f087-42ab-8f70-167330e4c238"
+                    }
+                ],
+                "lang": "en"
+            },
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/badcamp-2018.docksal\/sponsors\/contrib-level\/devshopsupport?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/node\/sponsor"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "138fed7f-5050-4cd2-a2a5-ffe008ae39d5"
+                    }
+                ],
+                "lang": "en"
+            },
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/badcamp-2018.docksal\/sponsors\/core-level\/platformsh?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/node\/sponsor"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "d833e3bb-67cb-4525-a71a-0207b99d44b6"
+                    }
+                ],
+                "lang": "en"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/summit\/field_summit_leaders": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/badcamp-2018.docksal\/u\/areynolds?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/user\/user"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "db2486bf-3561-4304-92ba-6878ad7f64d2"
+                    }
+                ]
+            },
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/badcamp-2018.docksal\/u\/pirog?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/user\/user"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "f93bdb99-0719-441c-a450-e79e04542f55"
+                    }
+                ]
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/summit\/field_timeslot": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/badcamp-2018.docksal\/time-slots\/october-25\/900-am-430-pm?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/taxonomy_term\/time_slots"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "74e8cddd-009e-4968-a965-2a2e6b2b913b"
+                    }
+                ]
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/summit\/field_venue": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/badcamp-2018.docksal\/venues\/toll?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/taxonomy_term\/venues"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "892a4cac-f123-435a-9f56-3b8e009eee06"
                     }
                 ],
                 "lang": "en"
@@ -108,7 +258,7 @@
     ],
     "changed": [
         {
-            "value": "2018-06-20T01:32:13+00:00",
+            "value": "2018-09-10T20:53:26+00:00",
             "lang": "en",
             "format": "Y-m-d\\TH:i:sP"
         }
@@ -147,7 +297,7 @@
                 "canonical_url": "http:\/\/badcamp-2018.docksal\/summits\/devops-summit",
                 "twitter_cards_site": "@badcamp",
                 "twitter_cards_site_id": "16595328",
-                "twitter_cards_page_url": "http:\/\/badcamp-2018.docksal\/%3Cnone%3E"
+                "twitter_cards_page_url": "http:\/\/badcamp-2018.docksal\/node"
             }
         }
     ],

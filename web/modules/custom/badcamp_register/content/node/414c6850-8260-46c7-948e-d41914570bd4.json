@@ -8,7 +8,7 @@
         },
         "http:\/\/drupal.org\/rest\/relation\/node\/summit\/revision_uid": [
             {
-                "href": "http:\/\/badcamp-2018.docksal\/u\/admin?_format=hal_json"
+                "href": "http:\/\/badcamp-2018.docksal\/u\/jqtnguyen?_format=hal_json"
             }
         ],
         "http:\/\/drupal.org\/rest\/relation\/node\/summit\/uid": [
@@ -17,9 +17,33 @@
                 "lang": "en"
             }
         ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/summit\/field_sponsors": [
+            {
+                "href": "http:\/\/badcamp-2018.docksal\/sponsors\/contrib-level\/aten?_format=hal_json",
+                "lang": "en"
+            },
+            {
+                "href": "http:\/\/badcamp-2018.docksal\/sponsors\/badcamp-love\/y3ti?_format=hal_json",
+                "lang": "en"
+            }
+        ],
         "http:\/\/drupal.org\/rest\/relation\/node\/summit\/field_summit_leaders": [
             {
-                "href": "http:\/\/badcamp-2018.docksal\/u\/test2?_format=hal_json"
+                "href": "http:\/\/badcamp-2018.docksal\/u\/jkealy?_format=hal_json"
+            },
+            {
+                "href": "http:\/\/badcamp-2018.docksal\/u\/shawndearmond?_format=hal_json"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/summit\/field_timeslot": [
+            {
+                "href": "http:\/\/badcamp-2018.docksal\/time-slots\/october-24\/900-am-430-pm?_format=hal_json"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/summit\/field_venue": [
+            {
+                "href": "http:\/\/badcamp-2018.docksal\/venues\/pauley-east?_format=hal_json",
+                "lang": "en"
             }
         ]
     },
@@ -35,7 +59,7 @@
     ],
     "vid": [
         {
-            "value": 43
+            "value": 339
         }
     ],
     "langcode": [
@@ -51,7 +75,7 @@
     ],
     "revision_timestamp": [
         {
-            "value": "2018-07-21T07:30:07+00:00",
+            "value": "2018-09-10T20:54:21+00:00",
             "format": "Y-m-d\\TH:i:sP"
         }
     ],
@@ -60,7 +84,7 @@
             {
                 "_links": {
                     "self": {
-                        "href": "http:\/\/badcamp-2018.docksal\/u\/admin?_format=hal_json"
+                        "href": "http:\/\/badcamp-2018.docksal\/u\/jqtnguyen?_format=hal_json"
                     },
                     "type": {
                         "href": "http:\/\/drupal.org\/rest\/type\/user\/user"
@@ -68,7 +92,7 @@
                 },
                 "uuid": [
                     {
-                        "value": "b592e264-84db-41b9-95b3-1071111fb61b"
+                        "value": "c66e9316-d1c4-4ff3-81d1-f7a8da26e741"
                     }
                 ]
             }
@@ -91,11 +115,45 @@
                 "lang": "en"
             }
         ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/summit\/field_sponsors": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/badcamp-2018.docksal\/sponsors\/contrib-level\/aten?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/node\/sponsor"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "7b18ef45-50c6-4565-8b1c-b49981089e80"
+                    }
+                ],
+                "lang": "en"
+            },
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/badcamp-2018.docksal\/sponsors\/badcamp-love\/y3ti?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/node\/sponsor"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "6daf1fc6-f95b-4d89-88ee-5902555eccd7"
+                    }
+                ],
+                "lang": "en"
+            }
+        ],
         "http:\/\/drupal.org\/rest\/relation\/node\/summit\/field_summit_leaders": [
             {
                 "_links": {
                     "self": {
-                        "href": "http:\/\/badcamp-2018.docksal\/u\/test2?_format=hal_json"
+                        "href": "http:\/\/badcamp-2018.docksal\/u\/jkealy?_format=hal_json"
                     },
                     "type": {
                         "href": "http:\/\/drupal.org\/rest\/type\/user\/user"
@@ -103,9 +161,59 @@
                 },
                 "uuid": [
                     {
-                        "value": "c387530d-e9ce-476e-a255-90e586e84517"
+                        "value": "fb16f2ae-ee06-45cd-a968-e4f3867428bc"
                     }
                 ]
+            },
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/badcamp-2018.docksal\/u\/shawndearmond?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/user\/user"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "52c9550a-ef2d-4610-8f3f-f766d64aa7e0"
+                    }
+                ]
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/summit\/field_timeslot": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/badcamp-2018.docksal\/time-slots\/october-24\/900-am-430-pm?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/taxonomy_term\/time_slots"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "35d9b87c-586d-4281-95cf-8c6831f1cd09"
+                    }
+                ]
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/summit\/field_venue": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/badcamp-2018.docksal\/venues\/pauley-east?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/taxonomy_term\/venues"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "4fd69564-55d7-4a8e-80b3-5e47fb333def"
+                    }
+                ],
+                "lang": "en"
             }
         ]
     },
@@ -130,7 +238,7 @@
     ],
     "changed": [
         {
-            "value": "2018-07-21T07:30:07+00:00",
+            "value": "2018-09-10T20:54:21+00:00",
             "lang": "en",
             "format": "Y-m-d\\TH:i:sP"
         }
@@ -169,7 +277,7 @@
                 "canonical_url": "http:\/\/badcamp-2018.docksal\/summits\/higher-education-summit",
                 "twitter_cards_site": "@badcamp",
                 "twitter_cards_site_id": "16595328",
-                "twitter_cards_page_url": "http:\/\/badcamp-2018.docksal\/%3Cnone%3E"
+                "twitter_cards_page_url": "http:\/\/badcamp-2018.docksal\/node"
             }
         }
     ],
@@ -190,9 +298,9 @@
     ],
     "field_summit_description": [
         {
-            "value": "<p>The Higher Education Summit is a unique opportunity for site owners, IT managers, developers, content creators, and agencies dedicated to supporting and advancing the use of Drupal in academia to share, learn, and strengthen our community of practice. Through panels, talks, and ample breakout sessions, participants share and learn from one another\u2019s victories and challenges, and build momentum in cross-institutional initiatives. This year's theme is using Drupal as a collaboration tool (intranets, research sites, data sharing, administrative tasks, portals, etc.).<\/p>\r\n",
+            "value": "<p>The Higher Education Summit is a unique opportunity for site owners, IT managers, developers, content creators, and agencies dedicated to supporting and advancing the use of Drupal in academia to share, learn, and strengthen our community of practice. Through panels, talks, and ample breakout sessions, participants share and learn from one another\u2019s victories and challenges, and build momentum in cross-institutional initiatives.<\/p>\r\n\r\n<p>This year's&nbsp;theme is <strong>Building Your University's Drupal Community<\/strong>. We\u2019ll cover community building, training, documentation, and community organizing.<\/p>\r\n\r\n<p>If you have a strong campus Drupal community we\u2019d love to learn from you!<\/p>\r\n",
             "format": "basic_html",
-            "processed": "<p>The Higher Education Summit is a unique opportunity for site owners, IT managers, developers, content creators, and agencies dedicated to supporting and advancing the use of Drupal in academia to share, learn, and strengthen our community of practice. Through panels, talks, and ample breakout sessions, participants share and learn from one another\u2019s victories and challenges, and build momentum in cross-institutional initiatives. This year's theme is using Drupal as a collaboration tool (intranets, research sites, data sharing, administrative tasks, portals, etc.).<\/p>",
+            "processed": "<p>The Higher Education Summit is a unique opportunity for site owners, IT managers, developers, content creators, and agencies dedicated to supporting and advancing the use of Drupal in academia to share, learn, and strengthen our community of practice. Through panels, talks, and ample breakout sessions, participants share and learn from one another\u2019s victories and challenges, and build momentum in cross-institutional initiatives.<\/p>\n\n<p>This year's\u00a0theme is <strong>Building Your University's Drupal Community<\/strong>. We\u2019ll cover community building, training, documentation, and community organizing.<\/p>\n\n<p>If you have a strong campus Drupal community we\u2019d love to learn from you!<\/p>",
             "summary": "",
             "lang": "en"
         }

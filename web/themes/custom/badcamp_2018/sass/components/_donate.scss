@@ -69,6 +69,11 @@
   .cell {
     text-align: center;
     margin: 1em 0;
+
+    .organization-sponsors & {
+      margin: 1em auto;
+    }
+
     .sponsorship-title {
       font-family: $rye;
       font-size: 1.5rem;

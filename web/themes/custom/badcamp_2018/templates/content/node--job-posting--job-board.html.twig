@@ -70,21 +70,19 @@
  *   in different view modes.
  */
 #}
-<article{{ attributes }}>
+<article{{ attributes.addClass('margin-vertical-2') }}>
 
-    {{ title_prefix }}
-    {% if not page %}
-        <h2{{ title_attributes }}>
-            <a href="{{ url }}" rel="bookmark">{{ label }}</a>
-        </h2>
-    {% endif %}
-    {{ title_suffix }}
-
-    <div{{ content_attributes.addClass('grid-x') }}>
-        <div class="small-12 medium-3">
+    <div class="media-object grid-x">
+        <div class="media-object-section text-align-center small-12 medium-3">
             {{ content.field_company }}
         </div>
-        <div class="small-12 medium-9">
+        <div class="media-object-section main-section small-12 medium-9">
+            {{ title_prefix }}
+            <h2{{ title_attributes }} style="margin-bottom: 1rem;">
+                <a href="{{ url }}" rel="bookmark">{{ label }}</a>
+            </h2>
+            {{ title_suffix }}
+
             {{ content | without('field_company') }}
         </div>
     </div>

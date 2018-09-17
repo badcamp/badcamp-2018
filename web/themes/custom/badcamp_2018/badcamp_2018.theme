@@ -436,7 +436,7 @@ function badcamp_2018_preprocess_field__field_timeslot(&$vars) {
 function badcamp_2018_preprocess_registration_page(&$vars) {
 
 	if ($vars['step2active']) {
-		$bid = '12698cc5-742c-4694-93c8-d1d1e834e224';
+		$bid = '522c14ca-49d9-428c-8c6f-7f6b35e86ba5';
 		$block = \Drupal::service('entity.repository')->loadEntityByUuid('block_content', $bid);
 		$render = \Drupal::entityTypeManager()->getViewBuilder('block_content')->view($block);
 		$vars['sponsor_block'] = $render;

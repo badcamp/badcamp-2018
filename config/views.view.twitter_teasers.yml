@@ -9,6 +9,7 @@ dependencies:
     - user.role.administrator
   module:
     - node
+    - options
     - user
 id: twitter_teasers
 label: 'Twitter Teasers for AmyJune'
@@ -468,6 +469,55 @@ display:
           entity_type: node
           entity_field: type
           plugin_id: bundle
+        field_session_status_value:
+          id: field_session_status_value
+          table: node__field_session_status
+          field: field_session_status_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value:
+            accepted: accepted
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_session_status_value_op
+            label: Status
+            description: ''
+            use_operator: false
+            operator: field_session_status_value_op
+            identifier: field_session_status_value
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              sponsor: '0'
+              sponsor_manager: '0'
+              event_manager: '0'
+              session_manager: '0'
+              summit_manager: '0'
+              training_manager: '0'
+              volunteer: '0'
+              volunteer_manager: '0'
+              administrator: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          plugin_id: list_field
       sorts:
         created:
           id: created

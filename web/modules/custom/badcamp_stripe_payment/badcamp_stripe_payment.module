@@ -9,9 +9,8 @@ use Drupal\Core\Routing\RouteMatchInterface;
 use Drupal\badcamp_stripe_payment\EventSubscriber\DonateRedirectSubscriber;
 use Drupal\user\Entity\User;
 use Drupal\Core\Url;
-use Drupal\Core\Form\FormStateInterface;
-use Symfony\Component\HttpFoundation\RedirectResponse;
 use Drupal\badcamp_stripe_payment\Entity\StripePayment;
+use Drupal\Core\Link;
 
 /**
  * Implements hook_help().
@@ -194,20 +193,15 @@ function badcamp_stripe_payment_stripe_payment_successful_redirect_alter(&$url, 
 			$supporting_sponsor = array_shift($supporting_sponsor);
 
 			$definition = \Drupal::entityTypeManager()->getDefinition('node');
+			$org = trim($account->get('field_user_organization')->getString());
 			$sponsor = \Drupal::entityTypeManager()->getStorage('node')->create([
 				$definition->getKey('bundle') => 'sponsor',
 				'langcode' => \Drupal\Core\Language\Language::LANGCODE_NOT_SPECIFIED,
-				'title' => t(':name Supporting sponsor', [':name' => $account->getAccountName()]),
-				'field_sponsor_members' => [
-					[
-						'target_id' => $account->id()
-					]
-				],
-				'field_sponsor_level' => [
-					'target_id' => $supporting_sponsor->id()
-				],
+				'title' => t(':name', [':name' => ($org != '' ? $org : $account->getAccountName())]),
+				'field_sponsor_members' => [['target_id' => $account->id()]],
+				'field_sponsor_level' => ['target_id' => $supporting_sponsor->id()],
 				'uid' => $account->id(),
-				'status' => 1,
+				'status' => 0,
 			]);
 			$sponsor->enforceIsNew();
 			$sponsor->save();
@@ -215,7 +209,9 @@ function badcamp_stripe_payment_stripe_payment_successful_redirect_alter(&$url, 
 			$entity->set('entity_id', $sponsor->id());
 			$entity->save();
 
-			$url = Url::fromRoute('entity.node.edit_form', ['node' => $sponsor->id()])->toString();
+			$node_url = Url::fromRoute('entity.node.edit_form', ['node' => $sponsor->id()]);
+			$url = '/user';
+			drupal_set_message(t('Sponsor Created. Complete the sponsor information <a href="@here">here</a>.', ['@here' => $node_url->toString()]));
 
 			break;
 	}

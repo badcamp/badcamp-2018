@@ -1,0 +1,5 @@
+badcamp_register.my_schedule:
+  class: Drupal\badcamp_register\Plugin\Menu\MyScheduleLink
+  menu_name: main
+  title: 'My Schedule'
+  route_name: 'view.schedule.page_2'

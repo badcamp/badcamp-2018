@@ -21,11 +21,13 @@
     {% endif %}
     {{ title_suffix }}
 
-    <div class="text-center margin-vertical-1">To post a job, email anne@badcamp.net</div>
-
     {% if user.hasPermission('create job_posting content') %}
         <div class="text-center margin-vertical-1">
             <a href="{{ url('node.add',{'node_type' : 'job_posting'}) }}" class="action-button">{{ "Create a Job Posting" | t }}</a>
+        </div>
+    {% else %}
+        <div class="text-center margin-vertical-1">
+            <a href="/supporting-sponsor" class="action-button">{{ "Create a Job Posting" | t }}</a>
         </div>
     {% endif %}
 </div>

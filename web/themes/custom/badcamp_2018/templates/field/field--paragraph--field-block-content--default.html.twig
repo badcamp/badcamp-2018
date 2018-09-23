@@ -45,6 +45,7 @@
             <div>
                 {{ item.content | without('field_start_timeline_text', 'field_timeline_sections', 'field_end_timeline_text') }}
             </div>
+            {% if item.id == 6 %}
             <div class="row example-centered">
                 <div class="col-md-12 example-title title-start">
                     <h2>{{ item.content.field_start_timeline_text|render|striptags|trim }}</h2>
@@ -58,6 +59,7 @@
                     <h2>{{ item.content.field_end_timeline_text|render|striptags|trim }}</h2>
                 </div>
             </div>
+            {% endif %}
     </div>
 </div>
 {% endfor %}

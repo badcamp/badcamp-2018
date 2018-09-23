@@ -202,6 +202,15 @@ function badcamp_2018_preprocess_node__sponsor__full(&$vars){
 }
 
 /**
+ * Implements template_preprocess_node__node_type__node_display().
+ */
+function badcamp_2018_preprocess_node__sponsor__sponsor_logo(&$vars){
+	/** @var \Drupal\node\Entity\Node $node */
+	$node = $vars['elements']['#node'];
+	$vars['can_edit'] = $node->access('update');
+}
+
+/**
  * Implements template_preprocess_views_view_unformatted__view__display().
  */
 function badcamp_2018_preprocess_views_view_unformatted__sponsors__full_list(&$vars){
@@ -327,6 +336,8 @@ function badcamp_2018_theme_suggestions_bef_checkboxes_alter(&$suggestions, $var
  * Implements hook_theme_suggestions_HOOK_alter().
  */
 function badcamp_2018_theme_suggestions_form_element_alter(&$suggestions, $vars){
+	$suggestions[] = 'form_element__type__' . $vars['element']['#type'];
+
 	if(isset($vars['element']['#name']) && stripos($vars['element']['#name'], 'session-track') !== FALSE){
 		$suggestions[] = 'form_element__session_track';
 	}
@@ -396,9 +407,11 @@ function badcamp_2018_preprocess_node__session(&$vars) {
  * Implements hook_form_FORM_ID_alter().
  */
 function badcamp_2018_form_user_login_form_alter(&$form, \Drupal\Core\Form\FormStateInterface &$form_state, $form_id) {
+
+	$destination = \Drupal::destination()->getAsArray();
 	$form['disclaimer'] = [
 		'#markup' => t("Don't have an account yet? Register for one %here.", [
-			'%here' => Link::fromTextAndUrl(t('here'), Url::fromUserInput('/registration'))->toString()
+			'%here' => Link::fromTextAndUrl(t('here'), Url::fromUserInput('/registration', ['query' => $destination]))->toString()
 		]),
 		'#weight' => -100,
 	];
@@ -435,10 +448,24 @@ function badcamp_2018_preprocess_field__field_timeslot(&$vars) {
  */
 function badcamp_2018_preprocess_registration_page(&$vars) {
 
-	if ($vars['step2active']) {
-		$bid = '12698cc5-742c-4694-93c8-d1d1e834e224';
-		$block = \Drupal::service('entity.repository')->loadEntityByUuid('block_content', $bid);
-		$render = \Drupal::entityTypeManager()->getViewBuilder('block_content')->view($block);
-		$vars['sponsor_block'] = $render;
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function badcamp_2018_preprocess_field__paragraph__field_block_content__default(&$vars) {
+	foreach ($vars['items'] AS &$item) {
+		$item['id'] = $item['content']['#block_content']->id();
+	}
+}
+
+/**
+ * Implements hook_preprocess_stripe_checkout().
+ */
+function badcamp_2018_preprocess_stripe_checkout(&$vars) {
+	$vars['logged_out_label'] = t('Login to Sponsor');
+	$vars['user_register_link'] = Url::fromUserInput('/user/login',['query' => ['destination' => '/donate']])->toString();
+	if ($vars['payment_type'] == 'organization_sponsorship') {
+		$vars['user_register_link'] = Url::fromUserInput('/user/login',['query' => ['destination' => '/supporting-sponsor']])->toString();
 	}
 }

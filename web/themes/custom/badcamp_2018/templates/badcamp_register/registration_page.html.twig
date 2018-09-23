@@ -25,17 +25,7 @@
 </div>
 
 <div class="registration-content">
-    {% if step2active %}
-    <h2 class="text-align-center">{{ "Individual Sponsorships" | t }}</h2>
-    {% endif %}
     {{ content }}
-
-    {% if step2active %}
-    <h2 class="text-align-center">{{ "Organization Sponsorship" | t }}</h2>
-    <div class="organization-sponsors">
-        {{ sponsor_block }}
-    </div>
-    {% endif %}
 </div>
 
 <div class="registration-footer align-center">

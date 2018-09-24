@@ -1,7 +1,7 @@
 footer {
   .node--type-sponsor {
     &.node--view-mode-sponsor-logo {
-      a {
+      .node__content a {
         display: block;
         width: 100%;
         position: relative;
@@ -48,6 +48,11 @@ footer {
   margin: 5em 0;
   h2{
     margin-bottom: .5em;
+  }
+
+  .the-sponsor-logo a img{
+    display: block;
+    padding: 1rem;
   }
 }
 

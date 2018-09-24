@@ -1,6 +1,7 @@
 .schedule {
   div[data-drupal-selector="edit-session-track"] {
     margin: 1rem 0;
+    text-align: center;
     input[type="checkbox"] {
       -webkit-appearance: none;
       -moz-appearance: none;
@@ -27,8 +28,14 @@
   }
 
   div[data-drupal-selector="edit-day"],
+  div[id^="edit-day"],
+  div#edit-day,
   fieldset[data-drupal-selector="edit-date"],
-  div[data-drupal-selector="edit-type"]{
+  fieldset[id^="edit-date"],
+  div#edit-date,
+  div[data-drupal-selector="edit-type"],
+  div[id^="edit-type"],
+  div#edit-type{
     margin: 1rem;
     text-align: center;
     > .fieldset-wrapper {
@@ -42,12 +49,22 @@
       display: none;
     }
 
-    div.form-item {
+    .checkmark-container{
+      display: inline-block;
+      margin-bottom: 0;
+      padding-left: 0;
+      .checkmark {
+        display: none;
+      }
+    }
+
+    div.form-item,
+    div.form-checkboxes{
       display: inline-block;
       text-align: center;
 
       label {
-        background-color: lightgrey;
+        background-color: $navy-two;
         color: white;
         font-weight: 700;
         font-size: 1.25rem;
@@ -59,7 +76,7 @@
 
       input[type="radio"]:checked + label,
       input[type="checkbox"]:checked + label{
-        background-color: blue;
+          background-color: $camel;
       }
     }
   }
@@ -95,5 +112,18 @@
   .timeslot {
     padding: 1rem 0;
     border-bottom: 5px solid $reddish;
+    &:last-child{
+      border-bottom: 0px solid;
+    }
+  }
+}
+
+.schedule-item{
+  h3.title{
+    margin-bottom: 1rem;
+    line-height: 1.5;
+  }
+  .info > div {
+    margin-bottom: 1rem;
   }
 }

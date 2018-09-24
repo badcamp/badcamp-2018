@@ -70,7 +70,7 @@
  *   in different view modes.
  */
 #}
-<article{{ attributes }}>
+<article{{ attributes.addClass('schedule-item', 'training') }}>
 
     {{ title_prefix }}
     <h3{{ title_attributes.addClass('title') }}>
@@ -81,9 +81,6 @@
     <div class="info">
         {{ content.field_trainers }}
         {{ content.field_skill_level }}
-    </div>
-
-    <div class="info">
         {{ content.field_venue }}
     </div>
 

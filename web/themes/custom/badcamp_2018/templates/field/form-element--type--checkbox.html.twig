@@ -63,11 +63,11 @@
         {{ description.content }}
     </div>
 {% endif %}
-<label{{ attributes.addClass(classes) }}>
-    {{ label }}
+<div{{ attributes.addClass(classes) }}>
     {{ children }}
+    {{ label }}
     <span class="checkmark"></span>
-</label>
+</div>
 {% if suffix is not empty %}
     <span class="field-suffix">{{ suffix }}</span>
 {% endif %}

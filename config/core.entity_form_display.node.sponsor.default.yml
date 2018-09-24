@@ -38,7 +38,7 @@ content:
     type: number
     region: content
   field_sponsor_description:
-    weight: 5
+    weight: 4
     settings:
       rows: 9
       summary_rows: 3
@@ -70,7 +70,7 @@ content:
     type: entity_reference_autocomplete
     region: content
   field_sponsor_url:
-    weight: 4
+    weight: 5
     settings:
       placeholder_url: ''
       placeholder_title: ''

@@ -293,6 +293,7 @@ display:
         filter_groups: false
         relationships: false
         arguments: false
+        sorts: false
       filters:
         status:
           value: '1'
@@ -382,8 +383,9 @@ display:
           entity_type: node
           entity_field: nid
           plugin_id: node_nid
+      sorts: {  }
     cache_metadata:
-      max-age: 0
+      max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'

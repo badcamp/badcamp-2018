@@ -379,9 +379,19 @@ function badcamp_register_entity_extra_field_info() {
  * Implements hook_menu_local_tasks_alter().
  */
 function badcamp_register_menu_local_tasks_alter(&$data, $route_name, RefinableCacheableDependencyInterface &$cacheability) {
-	if($route_name == 'entity.node.canonical') {
+	$routes = [
+		'entity.node.canonical',
+		'entity.node.edit_form',
+		'view.summit_attendees.page_1',
+		'view.training_registrations.page_1'
+	];
+	if(in_array($route_name, $routes)) {
 
 		$node = \Drupal::routeMatch()->getParameter('node');
+		if (!($node instanceof \Drupal\node\NodeInterface)){
+			$node = \Drupal::entityTypeManager()->getStorage('node')->load($node);
+		}
+
 		if ($node instanceof \Drupal\node\NodeInterface) {
 
 			unset($data['tabs'][0]['entity.node.registrations']);
@@ -393,10 +403,18 @@ function badcamp_register_menu_local_tasks_alter(&$data, $route_name, RefinableC
 
 			if($node->bundle() == 'training'){
 				unset($data['tabs'][0]['views_view:view.summit_attendees.page_1']);
+
+				if(!$node->access('update')){
+					unset($data['tabs'][0]['views_view:view.training_registrations.page_1']);
+				}
 			}
 
 			if($node->bundle() == 'summit'){
 				unset($data['tabs'][0]['views_view:view.training_registrations.page_1']);
+
+				if(!$node->access('update')){
+					unset($data['tabs'][0]['views_view:view.summit_attendees.page_1']);
+				}
 			}
 		}
 	}

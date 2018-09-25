@@ -88,4 +88,7 @@
     </div>
     {{ title_suffix }}
 
+    {% if can_edit %}
+        <a href="{{ path('entity.node.edit_form', {'node': node.id}) }}">{{ "Edit" | t }} {{ label }}</a>
+    {% endif %}
 </article>

@@ -31,7 +31,7 @@ display:
       access:
         type: perm
         options:
-          perm: 'edit own training content'
+          perm: 'access content'
       cache:
         type: tag
         options: {  }

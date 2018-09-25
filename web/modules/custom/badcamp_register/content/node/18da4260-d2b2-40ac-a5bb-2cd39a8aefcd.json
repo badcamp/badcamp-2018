@@ -1,14 +1,14 @@
 {
     "_links": {
         "self": {
-            "href": "http:\/\/badcamp-2018.docksal\/summits\/front-end-summit?_format=hal_json"
+            "href": "http:\/\/badcamp-2018.docksal\/summits\/frontend-summit?_format=hal_json"
         },
         "type": {
             "href": "http:\/\/drupal.org\/rest\/type\/node\/summit"
         },
         "http:\/\/drupal.org\/rest\/relation\/node\/summit\/revision_uid": [
             {
-                "href": "http:\/\/badcamp-2018.docksal\/u\/admin?_format=hal_json"
+                "href": "http:\/\/badcamp-2018.docksal\/u\/anne?_format=hal_json"
             }
         ],
         "http:\/\/drupal.org\/rest\/relation\/node\/summit\/uid": [
@@ -17,9 +17,37 @@
                 "lang": "en"
             }
         ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/summit\/field_image": [
+            {
+                "href": "http:\/\/badcamp-2018.docksal\/sites\/default\/files\/summit\/2018-09\/30207448520_9625ec2914_z.jpg"
+            }
+        ],
         "http:\/\/drupal.org\/rest\/relation\/node\/summit\/field_sponsors": [
             {
-                "href": "http:\/\/badcamp-2018.docksal\/sponsors\/contrib-level\/kanopi-studios?_format=hal_json",
+                "href": "http:\/\/badcamp-2018.docksal\/sponsors\/badcamp-love\/chapter-three?_format=hal_json",
+                "lang": "en"
+            },
+            {
+                "href": "http:\/\/badcamp-2018.docksal\/sponsors\/badcamp-love\/y3ti?_format=hal_json",
+                "lang": "en"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/summit\/field_summit_leaders": [
+            {
+                "href": "http:\/\/badcamp-2018.docksal\/u\/vneumark?_format=hal_json"
+            },
+            {
+                "href": "http:\/\/badcamp-2018.docksal\/u\/zakiya?_format=hal_json"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/summit\/field_timeslot": [
+            {
+                "href": "http:\/\/badcamp-2018.docksal\/time-slots\/october-25\/900-am-500-pm?_format=hal_json"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/summit\/field_venue": [
+            {
+                "href": "http:\/\/badcamp-2018.docksal\/venues\/pauley-east?_format=hal_json",
                 "lang": "en"
             }
         ]
@@ -36,7 +64,7 @@
     ],
     "vid": [
         {
-            "value": 58
+            "value": 342
         }
     ],
     "langcode": [
@@ -52,7 +80,7 @@
     ],
     "revision_timestamp": [
         {
-            "value": "2018-07-22T09:28:20+00:00",
+            "value": "2018-09-11T13:51:22+00:00",
             "format": "Y-m-d\\TH:i:sP"
         }
     ],
@@ -61,7 +89,7 @@
             {
                 "_links": {
                     "self": {
-                        "href": "http:\/\/badcamp-2018.docksal\/u\/admin?_format=hal_json"
+                        "href": "http:\/\/badcamp-2018.docksal\/u\/anne?_format=hal_json"
                     },
                     "type": {
                         "href": "http:\/\/drupal.org\/rest\/type\/user\/user"
@@ -69,7 +97,7 @@
                 },
                 "uuid": [
                     {
-                        "value": "b592e264-84db-41b9-95b3-1071111fb61b"
+                        "value": "e6a8dd60-cebe-4c00-82ed-c90c2a4a59c7"
                     }
                 ]
             }
@@ -92,11 +120,32 @@
                 "lang": "en"
             }
         ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/summit\/field_image": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/badcamp-2018.docksal\/sites\/default\/files\/summit\/2018-09\/30207448520_9625ec2914_z.jpg"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/file\/file"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "4d08148b-a47e-47a2-b79a-5f86b2b59507"
+                    }
+                ],
+                "alt": "frontend summit",
+                "title": "frontend summit",
+                "width": "640",
+                "height": "345"
+            }
+        ],
         "http:\/\/drupal.org\/rest\/relation\/node\/summit\/field_sponsors": [
             {
                 "_links": {
                     "self": {
-                        "href": "http:\/\/badcamp-2018.docksal\/sponsors\/contrib-level\/kanopi-studios?_format=hal_json"
+                        "href": "http:\/\/badcamp-2018.docksal\/sponsors\/badcamp-love\/chapter-three?_format=hal_json"
                     },
                     "type": {
                         "href": "http:\/\/drupal.org\/rest\/type\/node\/sponsor"
@@ -104,7 +153,90 @@
                 },
                 "uuid": [
                     {
-                        "value": "9ad63980-0c44-4cfb-aa83-d3f6e8224e1d"
+                        "value": "5edaeec8-2ac0-457b-aae1-0fea10034796"
+                    }
+                ],
+                "lang": "en"
+            },
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/badcamp-2018.docksal\/sponsors\/badcamp-love\/y3ti?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/node\/sponsor"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "6daf1fc6-f95b-4d89-88ee-5902555eccd7"
+                    }
+                ],
+                "lang": "en"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/summit\/field_summit_leaders": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/badcamp-2018.docksal\/u\/vneumark?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/user\/user"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "b98a3892-0694-4e9e-80de-5769ed7007c6"
+                    }
+                ]
+            },
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/badcamp-2018.docksal\/u\/zakiya?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/user\/user"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "76e3e654-f64f-4d31-9cad-191e4aca34c0"
+                    }
+                ]
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/summit\/field_timeslot": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/badcamp-2018.docksal\/time-slots\/october-25\/900-am-500-pm?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/taxonomy_term\/time_slots"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "4cb19789-44ef-4114-9ad2-29ffafdc2232"
+                    }
+                ]
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/summit\/field_venue": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/badcamp-2018.docksal\/venues\/pauley-east?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/taxonomy_term\/venues"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "4fd69564-55d7-4a8e-80b3-5e47fb333def"
                     }
                 ],
                 "lang": "en"
@@ -119,7 +251,7 @@
     ],
     "title": [
         {
-            "value": "Front-end Summit",
+            "value": "Frontend Summit",
             "lang": "en"
         }
     ],
@@ -132,7 +264,7 @@
     ],
     "changed": [
         {
-            "value": "2018-07-22T09:28:20+00:00",
+            "value": "2018-09-11T13:51:22+00:00",
             "lang": "en",
             "format": "Y-m-d\\TH:i:sP"
         }
@@ -164,20 +296,20 @@
     "metatag": [
         {
             "value": {
-                "title": "Front-end Summit | BADCAMP 2018",
+                "title": "Frontend Summit | BADCAMP 2018",
                 "geo_placename": "University of California, Berkeley",
                 "geo_region": "US-CA",
                 "robots": "index, follow",
-                "canonical_url": "http:\/\/badcamp-2018.docksal\/summits\/front-end-summit",
+                "canonical_url": "http:\/\/badcamp-2018.docksal\/summits\/frontend-summit",
                 "twitter_cards_site": "@badcamp",
                 "twitter_cards_site_id": "16595328",
-                "twitter_cards_page_url": "http:\/\/badcamp-2018.docksal\/%3Cnone%3E"
+                "twitter_cards_page_url": "http:\/\/badcamp-2018.docksal\/node"
             }
         }
     ],
     "path": [
         {
-            "alias": "\/summits\/front-end-summit",
+            "alias": "\/summits\/frontend-summit",
             "pid": 26,
             "langcode": "en",
             "lang": "en"
@@ -185,16 +317,16 @@
     ],
     "field_date": [
         {
-            "value": "2018-10-25T09:00:00",
-            "end_value": "2018-10-25T16:30:00",
+            "value": "2018-10-25T16:00:00",
+            "end_value": "2018-10-26T00:00:00",
             "lang": "en"
         }
     ],
     "field_summit_description": [
         {
-            "value": "<p>Front-end development has evolved more rapidly than any other web discipline over the past several years. We flex and grow to absorb an ever-changing variety of workflows, toolsets, best practices, and technologies. We've got a full day of informal presentations and breakout sessions planned to cover a wide variety of cutting-edge front end technologies and challenges.<\/p>\r\n",
+            "value": "<p>Frontend development has evolved more rapidly than any other web discipline over the past several years. We flex and grow to absorb an ever-changing variety of workflows, toolsets, best practices, and technologies. We've got a full day of informal presentations and breakout sessions planned to cover a wide variety of cutting-edge frontend technologies and challenges.<\/p>\r\n\r\n<p dir=\"ltr\">The frontend summit will cover a wide variety of topics. We'll talk about things like the nuts and bolts of twig, component- and pattern-based development, and JavaScript frameworks. We\u2019ll help you up your game around performance, accessibility, testing, and tools. We will share our pains and insights around the design process and cross-team collaboration. Along with whatever else is most relevant to you!<\/p>\r\n\r\n<p dir=\"ltr\">One of the key features of the front end summit this year is an \u201cunconference\u201d approach. We don\u2019t want structured agendas, formal presentations, or panelists with carefully curated responses. What we want is you! The day should be a collaborative one that gets your questions answered and helps you network with like-minded folks.<\/p>\r\n\r\n<p dir=\"ltr\">Last year topics &amp; potential 2018 topics include:<\/p>\r\n\r\n<ul>\r\n\t<li dir=\"ltr\">\r\n\t<p dir=\"ltr\">Introduction to Twig<\/p>\r\n\t<\/li>\r\n\t<li dir=\"ltr\">\r\n\t<p dir=\"ltr\">Decoupled API Design<\/p>\r\n\t<\/li>\r\n\t<li dir=\"ltr\">\r\n\t<p dir=\"ltr\">Tools &amp; Strategies for working with Accessibility<\/p>\r\n\t<\/li>\r\n\t<li dir=\"ltr\">\r\n\t<p dir=\"ltr\">Layout Management in Drupal 8<\/p>\r\n\t<\/li>\r\n\t<li dir=\"ltr\">\r\n\t<p dir=\"ltr\">Component-Based Design<\/p>\r\n\t<\/li>\r\n<\/ul>\r\n\r\n<ul>\r\n\t<li dir=\"ltr\">\r\n\t<p dir=\"ltr\">Project Communication<\/p>\r\n\t<\/li>\r\n\t<li dir=\"ltr\">\r\n\t<p dir=\"ltr\">Advanced Twig<\/p>\r\n\t<\/li>\r\n\t<li dir=\"ltr\">\r\n\t<p dir=\"ltr\">D7 to D8 Transitions &amp; Comparisons<\/p>\r\n\t<\/li>\r\n\t<li dir=\"ltr\">\r\n\t<p dir=\"ltr\">Automation &amp; Workflows<\/p>\r\n\t<\/li>\r\n\t<li dir=\"ltr\">\r\n\t<p dir=\"ltr\">Prototyping\/Frameworks<\/p>\r\n\t<\/li>\r\n\t<li dir=\"ltr\">\r\n\t<p dir=\"ltr\">Frontend Performance<\/p>\r\n\t<\/li>\r\n<\/ul>\r\n\r\n<p>Check out&nbsp;<a href=\"https:\/\/docs.google.com\/document\/d\/112QSCJtvqAsgeDNTx_VfSztAorbZgThWTKvj_h7ym_o\/edit#heading=h.cq6aj45giq8f\">last year's collaborative notes<\/a><\/p>\r\n\r\n<p>This year on Thursday, October 25th, we want to evolve the summit to be even more closely aligned than ever to serve attendees and we would love your feedback. The community is so important to us and before crafting the final agenda for the day, we want to hear from you all to help make this the most impactful experience possible.<\/p>\r\n\r\n<p dir=\"ltr\">We want an inclusive event and would love your feedback and input. Everyone has something to contribute. Please fill out this&nbsp;<a href=\"https:\/\/www.surveymonkey.com\/r\/M9T529Z\">survey<\/a>&nbsp;and help us co-create an amazing day!<\/p>\r\n\r\n<p><a href=\"https:\/\/www.surveymonkey.com\/r\/M9T529Z\">Click to Complete Survey<\/a><\/p>\r\n\r\n<h2 dir=\"ltr\">&nbsp;<\/h2>\r\n\r\n<h2 dir=\"ltr\">Agenda Hacking<\/h2>\r\n\r\n<p dir=\"ltr\">The morning of the frontend summit, we\u2019ll do a big agenda hack. Agenda hacking is a chance for everyone to share what they want to discuss, in the moment, the day of the event. So we\u2019ll have Sharpie pens and sticky notes at the ready! We\u2019ll divide the collected ideas into topical groups. Based on the topics, we will create working sessions on what you care about most.<\/p>\r\n\r\n<h2 dir=\"ltr\">Working Sessions<\/h2>\r\n\r\n<p dir=\"ltr\">Subject matter experts will facilitate working sessions driven by the participants through open dialogue and knowledge sharing. As a group, we will set a single goal for the session, establish the means to achieve our goal, and make sure we capture all the goodness we\u2019ve learned at the end. Bring your positive energy, collaborative instincts, and a goal-oriented focus!<\/p>\r\n\r\n<p dir=\"ltr\">&nbsp;<\/p>\r\n\r\n<h2 dir=\"ltr\">Working Agenda<\/h2>\r\n\r\n<p dir=\"ltr\">9:00-9:30: Arrival &amp; Registration<\/p>\r\n\r\n<ul>\r\n\t<li dir=\"ltr\">\r\n\t<p dir=\"ltr\">Coffee &amp; bagels<\/p>\r\n\t<\/li>\r\n<\/ul>\r\n\r\n<p dir=\"ltr\">9:30-10:00 Introductions &amp; Welcome<\/p>\r\n\r\n<ul>\r\n\t<li dir=\"ltr\">\r\n\t<p dir=\"ltr\">Overview &amp; icebreakers<\/p>\r\n\t<\/li>\r\n<\/ul>\r\n\r\n<p dir=\"ltr\">10:00-10:30: Agenda Hacking<\/p>\r\n\r\n<ul>\r\n\t<li dir=\"ltr\">\r\n\t<p dir=\"ltr\">Topic Rundown Review<\/p>\r\n\t<\/li>\r\n\t<li dir=\"ltr\">\r\n\t<p dir=\"ltr\">Each group will generate 50 sticky notes (2-3 people) in each group<\/p>\r\n\t<\/li>\r\n\t<li dir=\"ltr\">\r\n\t<p dir=\"ltr\">Each person shares one that feels particularly connected to discussing for the day<\/p>\r\n\t<\/li>\r\n<\/ul>\r\n\r\n<p dir=\"ltr\">10:30-10:45: Quick Break<\/p>\r\n\r\n<p dir=\"ltr\">10:45-12:00: Breakout Groups<\/p>\r\n\r\n<ul>\r\n\t<li dir=\"ltr\">\r\n\t<p dir=\"ltr\">Discussion oriented around key themes that were brought up in the morning on topics and facilitated by Subject Matter Experts<\/p>\r\n\t<\/li>\r\n<\/ul>\r\n\r\n<p dir=\"ltr\">12:00-1:00:&nbsp;Lunch Break<\/p>\r\n\r\n<p dir=\"ltr\">1:00-1:30: Agenda Hacking<\/p>\r\n\r\n<ul>\r\n\t<li dir=\"ltr\">\r\n\t<p dir=\"ltr\">Remaining agenda review \/ sticky boards &amp; afternoon planning session<\/p>\r\n\t<\/li>\r\n<\/ul>\r\n\r\n<p dir=\"ltr\">1:30-2:30: Panel Discussion<\/p>\r\n\r\n<ul>\r\n\t<li dir=\"ltr\">\r\n\t<p dir=\"ltr\">Pulling questions and topics from the established agenda for panel discussion and insight<\/p>\r\n\t<\/li>\r\n<\/ul>\r\n\r\n<p dir=\"ltr\">2:30-2:45: Quick Break<\/p>\r\n\r\n<p dir=\"ltr\">2:45-3:45: Breakout Groups<\/p>\r\n\r\n<ul>\r\n\t<li dir=\"ltr\">\r\n\t<p dir=\"ltr\">Discussion oriented around key themes that were brought up in the morning on topics and facilitated by Subject Matter Experts<\/p>\r\n\t<\/li>\r\n<\/ul>\r\n\r\n<p dir=\"ltr\">3:45-4:45: Conversations: TBD<\/p>\r\n\r\n<p dir=\"ltr\">4:45 - Wrap-up &amp; Closing Remarks<\/p>\r\n\r\n<p dir=\"ltr\">5:00 - Head to Jupiter for Networking<\/p>\r\n\r\n<p>&nbsp;<\/p>\r\n\r\n<p>&nbsp;<\/p>\r\n\r\n<p>&nbsp;<\/p>\r\n\r\n<p>&nbsp;<\/p>\r\n",
             "format": "basic_html",
-            "processed": "<p>Front-end development has evolved more rapidly than any other web discipline over the past several years. We flex and grow to absorb an ever-changing variety of workflows, toolsets, best practices, and technologies. We've got a full day of informal presentations and breakout sessions planned to cover a wide variety of cutting-edge front end technologies and challenges.<\/p>",
+            "processed": "<p>Frontend development has evolved more rapidly than any other web discipline over the past several years. We flex and grow to absorb an ever-changing variety of workflows, toolsets, best practices, and technologies. We've got a full day of informal presentations and breakout sessions planned to cover a wide variety of cutting-edge frontend technologies and challenges.<\/p>\n\n<p dir=\"ltr\">The frontend summit will cover a wide variety of topics. We'll talk about things like the nuts and bolts of twig, component- and pattern-based development, and JavaScript frameworks. We\u2019ll help you up your game around performance, accessibility, testing, and tools. We will share our pains and insights around the design process and cross-team collaboration. Along with whatever else is most relevant to you!<\/p>\n\n<p dir=\"ltr\">One of the key features of the front end summit this year is an \u201cunconference\u201d approach. We don\u2019t want structured agendas, formal presentations, or panelists with carefully curated responses. What we want is you! The day should be a collaborative one that gets your questions answered and helps you network with like-minded folks.<\/p>\n\n<p dir=\"ltr\">Last year topics &amp; potential 2018 topics include:<\/p>\n\n<ul><li dir=\"ltr\">\n\t<p dir=\"ltr\">Introduction to Twig<\/p>\n\t<\/li>\n\t<li dir=\"ltr\">\n\t<p dir=\"ltr\">Decoupled API Design<\/p>\n\t<\/li>\n\t<li dir=\"ltr\">\n\t<p dir=\"ltr\">Tools &amp; Strategies for working with Accessibility<\/p>\n\t<\/li>\n\t<li dir=\"ltr\">\n\t<p dir=\"ltr\">Layout Management in Drupal 8<\/p>\n\t<\/li>\n\t<li dir=\"ltr\">\n\t<p dir=\"ltr\">Component-Based Design<\/p>\n\t<\/li>\n<\/ul><ul><li dir=\"ltr\">\n\t<p dir=\"ltr\">Project Communication<\/p>\n\t<\/li>\n\t<li dir=\"ltr\">\n\t<p dir=\"ltr\">Advanced Twig<\/p>\n\t<\/li>\n\t<li dir=\"ltr\">\n\t<p dir=\"ltr\">D7 to D8 Transitions &amp; Comparisons<\/p>\n\t<\/li>\n\t<li dir=\"ltr\">\n\t<p dir=\"ltr\">Automation &amp; Workflows<\/p>\n\t<\/li>\n\t<li dir=\"ltr\">\n\t<p dir=\"ltr\">Prototyping\/Frameworks<\/p>\n\t<\/li>\n\t<li dir=\"ltr\">\n\t<p dir=\"ltr\">Frontend Performance<\/p>\n\t<\/li>\n<\/ul><p>Check out\u00a0<a href=\"https:\/\/docs.google.com\/document\/d\/112QSCJtvqAsgeDNTx_VfSztAorbZgThWTKvj_h7ym_o\/edit#heading=h.cq6aj45giq8f\">last year's collaborative notes<\/a><\/p>\n\n<p>This year on Thursday, October 25th, we want to evolve the summit to be even more closely aligned than ever to serve attendees and we would love your feedback. The community is so important to us and before crafting the final agenda for the day, we want to hear from you all to help make this the most impactful experience possible.<\/p>\n\n<p dir=\"ltr\">We want an inclusive event and would love your feedback and input. Everyone has something to contribute. Please fill out this\u00a0<a href=\"https:\/\/www.surveymonkey.com\/r\/M9T529Z\">survey<\/a>\u00a0and help us co-create an amazing day!<\/p>\n\n<p><a href=\"https:\/\/www.surveymonkey.com\/r\/M9T529Z\">Click to Complete Survey<\/a><\/p>\n\n<h2 dir=\"ltr\">\u00a0<\/h2>\n\n<h2 dir=\"ltr\">Agenda Hacking<\/h2>\n\n<p dir=\"ltr\">The morning of the frontend summit, we\u2019ll do a big agenda hack. Agenda hacking is a chance for everyone to share what they want to discuss, in the moment, the day of the event. So we\u2019ll have Sharpie pens and sticky notes at the ready! We\u2019ll divide the collected ideas into topical groups. Based on the topics, we will create working sessions on what you care about most.<\/p>\n\n<h2 dir=\"ltr\">Working Sessions<\/h2>\n\n<p dir=\"ltr\">Subject matter experts will facilitate working sessions driven by the participants through open dialogue and knowledge sharing. As a group, we will set a single goal for the session, establish the means to achieve our goal, and make sure we capture all the goodness we\u2019ve learned at the end. Bring your positive energy, collaborative instincts, and a goal-oriented focus!<\/p>\n\n<p dir=\"ltr\">\u00a0<\/p>\n\n<h2 dir=\"ltr\">Working Agenda<\/h2>\n\n<p dir=\"ltr\">9:00-9:30: Arrival &amp; Registration<\/p>\n\n<ul><li dir=\"ltr\">\n\t<p dir=\"ltr\">Coffee &amp; bagels<\/p>\n\t<\/li>\n<\/ul><p dir=\"ltr\">9:30-10:00 Introductions &amp; Welcome<\/p>\n\n<ul><li dir=\"ltr\">\n\t<p dir=\"ltr\">Overview &amp; icebreakers<\/p>\n\t<\/li>\n<\/ul><p dir=\"ltr\">10:00-10:30: Agenda Hacking<\/p>\n\n<ul><li dir=\"ltr\">\n\t<p dir=\"ltr\">Topic Rundown Review<\/p>\n\t<\/li>\n\t<li dir=\"ltr\">\n\t<p dir=\"ltr\">Each group will generate 50 sticky notes (2-3 people) in each group<\/p>\n\t<\/li>\n\t<li dir=\"ltr\">\n\t<p dir=\"ltr\">Each person shares one that feels particularly connected to discussing for the day<\/p>\n\t<\/li>\n<\/ul><p dir=\"ltr\">10:30-10:45: Quick Break<\/p>\n\n<p dir=\"ltr\">10:45-12:00: Breakout Groups<\/p>\n\n<ul><li dir=\"ltr\">\n\t<p dir=\"ltr\">Discussion oriented around key themes that were brought up in the morning on topics and facilitated by Subject Matter Experts<\/p>\n\t<\/li>\n<\/ul><p dir=\"ltr\">12:00-1:00:\u00a0Lunch Break<\/p>\n\n<p dir=\"ltr\">1:00-1:30: Agenda Hacking<\/p>\n\n<ul><li dir=\"ltr\">\n\t<p dir=\"ltr\">Remaining agenda review \/ sticky boards &amp; afternoon planning session<\/p>\n\t<\/li>\n<\/ul><p dir=\"ltr\">1:30-2:30: Panel Discussion<\/p>\n\n<ul><li dir=\"ltr\">\n\t<p dir=\"ltr\">Pulling questions and topics from the established agenda for panel discussion and insight<\/p>\n\t<\/li>\n<\/ul><p dir=\"ltr\">2:30-2:45: Quick Break<\/p>\n\n<p dir=\"ltr\">2:45-3:45: Breakout Groups<\/p>\n\n<ul><li dir=\"ltr\">\n\t<p dir=\"ltr\">Discussion oriented around key themes that were brought up in the morning on topics and facilitated by Subject Matter Experts<\/p>\n\t<\/li>\n<\/ul><p dir=\"ltr\">3:45-4:45: Conversations: TBD<\/p>\n\n<p dir=\"ltr\">4:45 - Wrap-up &amp; Closing Remarks<\/p>\n\n<p dir=\"ltr\">5:00 - Head to Jupiter for Networking<\/p>\n\n<p>\u00a0<\/p>\n\n<p>\u00a0<\/p>\n\n<p>\u00a0<\/p>\n\n<p>\u00a0<\/p>",
             "summary": "",
             "lang": "en"
         }

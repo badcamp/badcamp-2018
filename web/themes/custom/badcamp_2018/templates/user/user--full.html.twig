@@ -33,12 +33,26 @@
         </h3>
         <div class="media-object stack-for-small">
             <div class="media-object-section main-section">
-                {{ content | without('field_user_photo','field_user_first_name','field_user_last_name','field_user_social_profile_links','field_user_title','field_user_organization','field_user_organization_website') }}
+                {{ content | without('sponsors','sessions','field_user_photo','field_user_first_name','field_user_last_name','field_user_social_profile_links','field_user_title','field_user_organization','field_user_organization_website') }}
             </div>
             <div class="media-object-section middle social-profile-links">
                 <div>{{ content.field_user_photo }}</div>
                 <div>{{ content.field_user_social_profile_links }}</div>
             </div>
         </div>
+
+        {% if show_sponsors %}
+            <div class="margin-vertical-2">
+                <h2 class="margin-vertical-1 callout primary">{{ "Sponsors We Represent" | t }}</h2>
+                {{ content.sponsors }}
+            </div>
+        {% endif %}
+
+        {% if show_sessions %}
+            <div class="margin-vertical-2">
+                <h2 class="margin-vertical-1 callout primary">{{ "See Me At These Sessions" | t }}</h2>
+                {{ content.sessions }}
+            </div>
+        {% endif %}
     </div>
 </article>

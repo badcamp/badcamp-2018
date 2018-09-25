@@ -8,12 +8,38 @@
         },
         "http:\/\/drupal.org\/rest\/relation\/node\/summit\/revision_uid": [
             {
-                "href": "http:\/\/badcamp-2018.docksal\/u\/sean_e_dietrich?_format=hal_json"
+                "href": "http:\/\/badcamp-2018.docksal\/u\/anne?_format=hal_json"
             }
         ],
         "http:\/\/drupal.org\/rest\/relation\/node\/summit\/uid": [
             {
                 "href": "http:\/\/badcamp-2018.docksal\/u\/sean_e_dietrich?_format=hal_json",
+                "lang": "en"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/summit\/field_sponsors": [
+            {
+                "href": "http:\/\/badcamp-2018.docksal\/sponsors\/contrib-level\/aten?_format=hal_json",
+                "lang": "en"
+            },
+            {
+                "href": "http:\/\/badcamp-2018.docksal\/sponsors\/badcamp-love\/thinkshout?_format=hal_json",
+                "lang": "en"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/summit\/field_summit_leaders": [
+            {
+                "href": "http:\/\/badcamp-2018.docksal\/u\/anne-kanopi?_format=hal_json"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/summit\/field_timeslot": [
+            {
+                "href": "http:\/\/badcamp-2018.docksal\/time-slots\/october-24\/900-am-500-pm?_format=hal_json"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/summit\/field_venue": [
+            {
+                "href": "http:\/\/badcamp-2018.docksal\/venues\/marsh-theatre?_format=hal_json",
                 "lang": "en"
             }
         ]
@@ -30,7 +56,7 @@
     ],
     "vid": [
         {
-            "value": 26
+            "value": 343
         }
     ],
     "langcode": [
@@ -46,7 +72,7 @@
     ],
     "revision_timestamp": [
         {
-            "value": "2018-06-20T01:30:37+00:00",
+            "value": "2018-09-11T13:54:44+00:00",
             "format": "Y-m-d\\TH:i:sP"
         }
     ],
@@ -55,7 +81,7 @@
             {
                 "_links": {
                     "self": {
-                        "href": "http:\/\/badcamp-2018.docksal\/u\/sean_e_dietrich?_format=hal_json"
+                        "href": "http:\/\/badcamp-2018.docksal\/u\/anne?_format=hal_json"
                     },
                     "type": {
                         "href": "http:\/\/drupal.org\/rest\/type\/user\/user"
@@ -63,7 +89,7 @@
                 },
                 "uuid": [
                     {
-                        "value": "edf5a360-2bfe-4e46-8852-071918f6822a"
+                        "value": "e6a8dd60-cebe-4c00-82ed-c90c2a4a59c7"
                     }
                 ]
             }
@@ -81,6 +107,92 @@
                 "uuid": [
                     {
                         "value": "edf5a360-2bfe-4e46-8852-071918f6822a"
+                    }
+                ],
+                "lang": "en"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/summit\/field_sponsors": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/badcamp-2018.docksal\/sponsors\/contrib-level\/aten?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/node\/sponsor"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "7b18ef45-50c6-4565-8b1c-b49981089e80"
+                    }
+                ],
+                "lang": "en"
+            },
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/badcamp-2018.docksal\/sponsors\/badcamp-love\/thinkshout?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/node\/sponsor"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "6636a563-adf7-4ec2-a7e4-b1ca0f743e9d"
+                    }
+                ],
+                "lang": "en"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/summit\/field_summit_leaders": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/badcamp-2018.docksal\/u\/anne-kanopi?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/user\/user"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "c7bb23f3-abeb-4431-b907-35e18d275f7b"
+                    }
+                ]
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/summit\/field_timeslot": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/badcamp-2018.docksal\/time-slots\/october-24\/900-am-500-pm?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/taxonomy_term\/time_slots"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "5586f85f-1c35-4822-84c0-dc89bdf47c2f"
+                    }
+                ]
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/summit\/field_venue": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/badcamp-2018.docksal\/venues\/marsh-theatre?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/taxonomy_term\/venues"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "17e66f02-8925-4b64-874b-8e0a3a2c480f"
                     }
                 ],
                 "lang": "en"
@@ -108,7 +220,7 @@
     ],
     "changed": [
         {
-            "value": "2018-06-20T01:30:37+00:00",
+            "value": "2018-09-11T13:54:44+00:00",
             "lang": "en",
             "format": "Y-m-d\\TH:i:sP"
         }
@@ -147,7 +259,7 @@
                 "canonical_url": "http:\/\/badcamp-2018.docksal\/summits\/nonprofit-summit",
                 "twitter_cards_site": "@badcamp",
                 "twitter_cards_site_id": "16595328",
-                "twitter_cards_page_url": "http:\/\/badcamp-2018.docksal\/%3Cnone%3E"
+                "twitter_cards_page_url": "http:\/\/badcamp-2018.docksal\/node"
             }
         }
     ],
@@ -161,16 +273,16 @@
     ],
     "field_date": [
         {
-            "value": "2018-10-24T09:00:00",
-            "end_value": "2018-10-24T16:30:00",
+            "value": "2018-10-24T16:00:00",
+            "end_value": "2018-10-25T00:00:00",
             "lang": "en"
         }
     ],
     "field_summit_description": [
         {
-            "value": "<p>The BADCamp Nonprofit Summit (NPS) is back in Berkeley for 2018 with even more opportunities for nonprofits and developers to collaborate, learn, and grow! We\u2019ve got a full day of case studies, presentations, and small-group breakout sessions, all led by nonprofit tech experts. Come discover new tools and strategies, learn how to use them, and make contacts with other members of the Drupal nonprofit community!<\/p>\r\n",
+            "value": "<p>Come with a challenge, leave with a solution. The BADCamp Nonprofit Summit (NPS) is back in Berkeley for 2018 with even more opportunities for nonprofits and developers to collaborate, learn, and grow!&nbsp;<\/p>\r\n\r\n<p>We\u2019ve got a full day of small-group breakout sessions, all led by nonprofit tech experts. Come to discover new tools and strategies, learn how to use them, and make contacts with other members of the Drupal nonprofit community.<\/p>\r\n\r\n<p>One of the key features of the nonprofit&nbsp;summit&nbsp;is that we take an \u201cunconference\u201d approach followed up with an interactive&nbsp;workshop.&nbsp;<\/p>\r\n\r\n<p dir=\"ltr\">We don\u2019t want structured agendas, formal presentations, or panelists with carefully curated responses. What we want is you! The day should be a collaborative one that gets your questions answered and helps you network with like-minded folks.<\/p>\r\n\r\n<p>Last year topics &amp; potential 2018 topics include:&nbsp;<\/p>\r\n\r\n<ul>\r\n\t<li>Drupal 8<\/li>\r\n\t<li>User Experience<\/li>\r\n\t<li>Design<\/li>\r\n\t<li>Web Teams<\/li>\r\n\t<li>Integrations&nbsp;<\/li>\r\n\t<li>Support&nbsp;<\/li>\r\n\t<li>Stakeholders<\/li>\r\n\t<li>Communication Strategies<\/li>\r\n\t<li>DevOps<\/li>\r\n\t<li>Frontend<\/li>\r\n\t<li>Requirements Gathering&nbsp;<\/li>\r\n\t<li>Project Management&nbsp;<\/li>\r\n\t<li>Accessibility<\/li>\r\n\t<li>User Research<\/li>\r\n<\/ul>\r\n\r\n<p>Check out <a href=\"https:\/\/docs.google.com\/document\/d\/17p_6v_OuJ-B11nIlp9TGgY0oH69cz9wI8Fbuq6hIHIA\/edit\">last year's collaborative notes<\/a><\/p>\r\n\r\n<p>This year on Wednesday, October 24th, we want to evolve the summit to be even more closely aligned than ever to serve nonprofit attendees and we would love your feedback. The community is so important to us and before crafting the final agenda for the day, we want to hear from you all to help make this the most impactful experience possible.<\/p>\r\n\r\n<p dir=\"ltr\">We want an inclusive event and would love your feedback and input. Everyone has something to contribute. Please fill out this&nbsp;<a href=\"https:\/\/www.surveymonkey.com\/r\/RZTDRCB\">survey<\/a>&nbsp;and help us co-create an amazing day!<\/p>\r\n\r\n<p><a href=\"https:\/\/www.surveymonkey.com\/r\/RZTDRCB\">Click to Complete Survey<\/a><\/p>\r\n\r\n<h2 dir=\"ltr\">Agenda Hacking<\/h2>\r\n\r\n<p dir=\"ltr\">The morning of the summit, we\u2019ll do a big agenda hack. Agenda hacking is a chance for everyone to share what they want to discuss, in the moment, the day of the event. So we\u2019ll have Sharpie pens and sticky notes at the ready! We\u2019ll divide the collected ideas into topical groups. Based on the topics, we will create working sessions on what you care about most.<\/p>\r\n\r\n<h2 dir=\"ltr\">Working Sessions<\/h2>\r\n\r\n<p dir=\"ltr\">Subject matter experts will facilitate working sessions driven by the participants through open dialogue and knowledge sharing. As a group, we will set a single goal for the session, establish the means to achieve our goal, and make sure we capture all the goodness we\u2019ve learned at the end. Bring your positive energy, collaborative instincts, and a goal-oriented focus!<\/p>\r\n\r\n<h2 dir=\"ltr\">Working Agenda<\/h2>\r\n\r\n<p dir=\"ltr\"><strong>8:30-9:00: Arrival &amp; Registration<\/strong><\/p>\r\n\r\n<ul dir=\"ltr\">\r\n\t<li>Coffee &amp; bagels<\/li>\r\n<\/ul>\r\n\r\n<p dir=\"ltr\"><strong>9:00-930: Introductions &amp; Welcome<\/strong><\/p>\r\n\r\n<ul dir=\"ltr\">\r\n\t<li>Overview &amp; icebreakers<\/li>\r\n<\/ul>\r\n\r\n<p dir=\"ltr\"><strong>9:30-10:00: Agenda Hacking<\/strong><\/p>\r\n\r\n<ul>\r\n\t<li dir=\"ltr\">\r\n\t<p dir=\"ltr\">Topic Rundown Review<\/p>\r\n\t<\/li>\r\n\t<li dir=\"ltr\">\r\n\t<p dir=\"ltr\">Each group will generate 50 sticky notes (2-3 people) in each group<\/p>\r\n\t<\/li>\r\n<\/ul>\r\n\r\n<p dir=\"ltr\"><strong><em>10:00-10:15: Quick Break<\/em><\/strong><\/p>\r\n\r\n<p dir=\"ltr\"><strong>10:15-11:15: Breakout Groups&nbsp;<\/strong><\/p>\r\n\r\n<ul>\r\n\t<li dir=\"ltr\">\r\n\t<p dir=\"ltr\">Discussion oriented around key themes that were brought up in the morning on topics and&nbsp;facilitated by Subject Matter Experts<\/p>\r\n\t<\/li>\r\n<\/ul>\r\n\r\n<p dir=\"ltr\"><strong>11:15-11:30: Sharing with Larger Group<\/strong><\/p>\r\n\r\n<p dir=\"ltr\"><strong>11:30-12:00: Sponsor Presentations&nbsp;<\/strong><br \/>\r\n<br \/>\r\n<em><strong>12:00-1:00: Lunch Break<\/strong><\/em><\/p>\r\n\r\n<p><strong>1:00-1:15:&nbsp;Welcome back<\/strong><\/p>\r\n\r\n<ul>\r\n\t<li dir=\"ltr\">\r\n\t<p dir=\"ltr\">Remaining agenda review \/ sticky boards &amp; afternoon planning session<\/p>\r\n\t<\/li>\r\n<\/ul>\r\n\r\n<p dir=\"ltr\"><strong>1:15-2:15: Breakout Groups<\/strong><\/p>\r\n\r\n<ul dir=\"ltr\">\r\n\t<li>\r\n\t<p dir=\"ltr\">Discussion oriented around key themes facilitated by Subject Matter Experts<\/p>\r\n\t<\/li>\r\n<\/ul>\r\n\r\n<p dir=\"ltr\"><strong>2:15-2:30: Sharing with Larger Group<\/strong><\/p>\r\n\r\n<p dir=\"ltr\"><em><strong>2:30-2:45: Quick Break<\/strong><\/em><\/p>\r\n\r\n<p dir=\"ltr\"><strong>2:45-3:30: Breakout Groups<\/strong><\/p>\r\n\r\n<ul dir=\"ltr\">\r\n\t<li>\r\n\t<p dir=\"ltr\">Final 30-minute&nbsp;discussion oriented around key themes facilitated by Subject Matter Experts<\/p>\r\n\t<\/li>\r\n<\/ul>\r\n\r\n<p dir=\"ltr\"><strong>3:30-4:45: Workshop: 2018 Details TBD!!<\/strong><\/p>\r\n\r\n<ul dir=\"ltr\">\r\n\t<li>\r\n\t<p>2017 Workshop: Visual Story Telling: This workshop will be a highly collaborative and interactive experience where we explore ways to use visual thinking to create compelling stories and visual narratives that illustrate our mission and work in new ways.&nbsp;<\/p>\r\n\t<\/li>\r\n<\/ul>\r\n\r\n<p dir=\"ltr\"><strong>4:45-5:00: Closing Remarks then Head to Jupiter for Networking&nbsp;<\/strong><\/p>\r\n",
             "format": "basic_html",
-            "processed": "<p>The BADCamp Nonprofit Summit (NPS) is back in Berkeley for 2018 with even more opportunities for nonprofits and developers to collaborate, learn, and grow! We\u2019ve got a full day of case studies, presentations, and small-group breakout sessions, all led by nonprofit tech experts. Come discover new tools and strategies, learn how to use them, and make contacts with other members of the Drupal nonprofit community!<\/p>",
+            "processed": "<p>Come with a challenge, leave with a solution. The BADCamp Nonprofit Summit (NPS) is back in Berkeley for 2018 with even more opportunities for nonprofits and developers to collaborate, learn, and grow!\u00a0<\/p>\n\n<p>We\u2019ve got a full day of small-group breakout sessions, all led by nonprofit tech experts. Come to discover new tools and strategies, learn how to use them, and make contacts with other members of the Drupal nonprofit community.<\/p>\n\n<p>One of the key features of the nonprofit\u00a0summit\u00a0is that we take an \u201cunconference\u201d approach followed up with an interactive\u00a0workshop.\u00a0<\/p>\n\n<p dir=\"ltr\">We don\u2019t want structured agendas, formal presentations, or panelists with carefully curated responses. What we want is you! The day should be a collaborative one that gets your questions answered and helps you network with like-minded folks.<\/p>\n\n<p>Last year topics &amp; potential 2018 topics include:\u00a0<\/p>\n\n<ul><li>Drupal 8<\/li>\n\t<li>User Experience<\/li>\n\t<li>Design<\/li>\n\t<li>Web Teams<\/li>\n\t<li>Integrations\u00a0<\/li>\n\t<li>Support\u00a0<\/li>\n\t<li>Stakeholders<\/li>\n\t<li>Communication Strategies<\/li>\n\t<li>DevOps<\/li>\n\t<li>Frontend<\/li>\n\t<li>Requirements Gathering\u00a0<\/li>\n\t<li>Project Management\u00a0<\/li>\n\t<li>Accessibility<\/li>\n\t<li>User Research<\/li>\n<\/ul><p>Check out <a href=\"https:\/\/docs.google.com\/document\/d\/17p_6v_OuJ-B11nIlp9TGgY0oH69cz9wI8Fbuq6hIHIA\/edit\">last year's collaborative notes<\/a><\/p>\n\n<p>This year on Wednesday, October 24th, we want to evolve the summit to be even more closely aligned than ever to serve nonprofit attendees and we would love your feedback. The community is so important to us and before crafting the final agenda for the day, we want to hear from you all to help make this the most impactful experience possible.<\/p>\n\n<p dir=\"ltr\">We want an inclusive event and would love your feedback and input. Everyone has something to contribute. Please fill out this\u00a0<a href=\"https:\/\/www.surveymonkey.com\/r\/RZTDRCB\">survey<\/a>\u00a0and help us co-create an amazing day!<\/p>\n\n<p><a href=\"https:\/\/www.surveymonkey.com\/r\/RZTDRCB\">Click to Complete Survey<\/a><\/p>\n\n<h2 dir=\"ltr\">Agenda Hacking<\/h2>\n\n<p dir=\"ltr\">The morning of the summit, we\u2019ll do a big agenda hack. Agenda hacking is a chance for everyone to share what they want to discuss, in the moment, the day of the event. So we\u2019ll have Sharpie pens and sticky notes at the ready! We\u2019ll divide the collected ideas into topical groups. Based on the topics, we will create working sessions on what you care about most.<\/p>\n\n<h2 dir=\"ltr\">Working Sessions<\/h2>\n\n<p dir=\"ltr\">Subject matter experts will facilitate working sessions driven by the participants through open dialogue and knowledge sharing. As a group, we will set a single goal for the session, establish the means to achieve our goal, and make sure we capture all the goodness we\u2019ve learned at the end. Bring your positive energy, collaborative instincts, and a goal-oriented focus!<\/p>\n\n<h2 dir=\"ltr\">Working Agenda<\/h2>\n\n<p dir=\"ltr\"><strong>8:30-9:00: Arrival &amp; Registration<\/strong><\/p>\n\n<ul dir=\"ltr\"><li>Coffee &amp; bagels<\/li>\n<\/ul><p dir=\"ltr\"><strong>9:00-930: Introductions &amp; Welcome<\/strong><\/p>\n\n<ul dir=\"ltr\"><li>Overview &amp; icebreakers<\/li>\n<\/ul><p dir=\"ltr\"><strong>9:30-10:00: Agenda Hacking<\/strong><\/p>\n\n<ul><li dir=\"ltr\">\n\t<p dir=\"ltr\">Topic Rundown Review<\/p>\n\t<\/li>\n\t<li dir=\"ltr\">\n\t<p dir=\"ltr\">Each group will generate 50 sticky notes (2-3 people) in each group<\/p>\n\t<\/li>\n<\/ul><p dir=\"ltr\"><strong><em>10:00-10:15: Quick Break<\/em><\/strong><\/p>\n\n<p dir=\"ltr\"><strong>10:15-11:15: Breakout Groups\u00a0<\/strong><\/p>\n\n<ul><li dir=\"ltr\">\n\t<p dir=\"ltr\">Discussion oriented around key themes that were brought up in the morning on topics and\u00a0facilitated by Subject Matter Experts<\/p>\n\t<\/li>\n<\/ul><p dir=\"ltr\"><strong>11:15-11:30: Sharing with Larger Group<\/strong><\/p>\n\n<p dir=\"ltr\"><strong>11:30-12:00: Sponsor Presentations\u00a0<\/strong><br \/><br \/><em><strong>12:00-1:00: Lunch Break<\/strong><\/em><\/p>\n\n<p><strong>1:00-1:15:\u00a0Welcome back<\/strong><\/p>\n\n<ul><li dir=\"ltr\">\n\t<p dir=\"ltr\">Remaining agenda review \/ sticky boards &amp; afternoon planning session<\/p>\n\t<\/li>\n<\/ul><p dir=\"ltr\"><strong>1:15-2:15: Breakout Groups<\/strong><\/p>\n\n<ul dir=\"ltr\"><li>\n\t<p dir=\"ltr\">Discussion oriented around key themes facilitated by Subject Matter Experts<\/p>\n\t<\/li>\n<\/ul><p dir=\"ltr\"><strong>2:15-2:30: Sharing with Larger Group<\/strong><\/p>\n\n<p dir=\"ltr\"><em><strong>2:30-2:45: Quick Break<\/strong><\/em><\/p>\n\n<p dir=\"ltr\"><strong>2:45-3:30: Breakout Groups<\/strong><\/p>\n\n<ul dir=\"ltr\"><li>\n\t<p dir=\"ltr\">Final 30-minute\u00a0discussion oriented around key themes facilitated by Subject Matter Experts<\/p>\n\t<\/li>\n<\/ul><p dir=\"ltr\"><strong>3:30-4:45: Workshop: 2018 Details TBD!!<\/strong><\/p>\n\n<ul dir=\"ltr\"><li>\n\t<p>2017 Workshop: Visual Story Telling: This workshop will be a highly collaborative and interactive experience where we explore ways to use visual thinking to create compelling stories and visual narratives that illustrate our mission and work in new ways.\u00a0<\/p>\n\t<\/li>\n<\/ul><p dir=\"ltr\"><strong>4:45-5:00: Closing Remarks then Head to Jupiter for Networking\u00a0<\/strong><\/p>",
             "summary": "",
             "lang": "en"
         }

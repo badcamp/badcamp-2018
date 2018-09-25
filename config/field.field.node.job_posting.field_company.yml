@@ -16,8 +16,8 @@ id: node.job_posting.field_company
 field_name: field_company
 entity_type: node
 bundle: job_posting
-label: Company
-description: ''
+label: Organization
+description: 'Select the name of the Organization for this Job Posting.'
 required: true
 translatable: false
 default_value: {  }

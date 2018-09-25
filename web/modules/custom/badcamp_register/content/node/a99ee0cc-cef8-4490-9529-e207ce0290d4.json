@@ -8,12 +8,36 @@
         },
         "http:\/\/drupal.org\/rest\/relation\/node\/summit\/revision_uid": [
             {
-                "href": "http:\/\/badcamp-2018.docksal\/u\/sean_e_dietrich?_format=hal_json"
+                "href": "http:\/\/badcamp-2018.docksal\/u\/jqtnguyen?_format=hal_json"
             }
         ],
         "http:\/\/drupal.org\/rest\/relation\/node\/summit\/uid": [
             {
                 "href": "http:\/\/badcamp-2018.docksal\/u\/sean_e_dietrich?_format=hal_json",
+                "lang": "en"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/summit\/field_image": [
+            {
+                "href": "http:\/\/badcamp-2018.docksal\/sites\/default\/files\/summit\/2018-08\/Backdrop-Logo-Horizontal.png"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/summit\/field_summit_leaders": [
+            {
+                "href": "http:\/\/badcamp-2018.docksal\/user\/113?_format=hal_json"
+            },
+            {
+                "href": "http:\/\/badcamp-2018.docksal\/user\/204?_format=hal_json"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/summit\/field_timeslot": [
+            {
+                "href": "http:\/\/badcamp-2018.docksal\/time-slots\/october-24\/900-am-430-pm?_format=hal_json"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/summit\/field_venue": [
+            {
+                "href": "http:\/\/badcamp-2018.docksal\/venues\/bayview?_format=hal_json",
                 "lang": "en"
             }
         ]
@@ -30,7 +54,7 @@
     ],
     "vid": [
         {
-            "value": 8
+            "value": 338
         }
     ],
     "langcode": [
@@ -46,7 +70,7 @@
     ],
     "revision_timestamp": [
         {
-            "value": "2018-04-08T07:10:06+00:00",
+            "value": "2018-09-10T20:54:03+00:00",
             "format": "Y-m-d\\TH:i:sP"
         }
     ],
@@ -55,7 +79,7 @@
             {
                 "_links": {
                     "self": {
-                        "href": "http:\/\/badcamp-2018.docksal\/u\/sean_e_dietrich?_format=hal_json"
+                        "href": "http:\/\/badcamp-2018.docksal\/u\/jqtnguyen?_format=hal_json"
                     },
                     "type": {
                         "href": "http:\/\/drupal.org\/rest\/type\/user\/user"
@@ -63,7 +87,7 @@
                 },
                 "uuid": [
                     {
-                        "value": "edf5a360-2bfe-4e46-8852-071918f6822a"
+                        "value": "c66e9316-d1c4-4ff3-81d1-f7a8da26e741"
                     }
                 ]
             }
@@ -81,6 +105,94 @@
                 "uuid": [
                     {
                         "value": "edf5a360-2bfe-4e46-8852-071918f6822a"
+                    }
+                ],
+                "lang": "en"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/summit\/field_image": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/badcamp-2018.docksal\/sites\/default\/files\/summit\/2018-08\/Backdrop-Logo-Horizontal.png"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/file\/file"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "92777b92-53c5-4e1d-9b5a-cb7de1e67ab6"
+                    }
+                ],
+                "alt": "Backdrop CMS logo",
+                "title": "",
+                "width": "600",
+                "height": "135"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/summit\/field_summit_leaders": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/badcamp-2018.docksal\/user\/113?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/user\/user"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "14bb0f0a-f728-4aaf-a37a-11991943f7d6"
+                    }
+                ]
+            },
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/badcamp-2018.docksal\/user\/204?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/user\/user"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "ba57bde6-33e9-4886-a801-10c9eb7295f8"
+                    }
+                ]
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/summit\/field_timeslot": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/badcamp-2018.docksal\/time-slots\/october-24\/900-am-430-pm?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/taxonomy_term\/time_slots"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "35d9b87c-586d-4281-95cf-8c6831f1cd09"
+                    }
+                ]
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/summit\/field_venue": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/badcamp-2018.docksal\/venues\/bayview?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/taxonomy_term\/venues"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "def7946b-7b27-4191-82d6-1dc63e32b7cc"
                     }
                 ],
                 "lang": "en"
@@ -108,7 +220,7 @@
     ],
     "changed": [
         {
-            "value": "2018-04-08T07:10:06+00:00",
+            "value": "2018-09-10T20:54:03+00:00",
             "lang": "en",
             "format": "Y-m-d\\TH:i:sP"
         }
@@ -147,7 +259,7 @@
                 "canonical_url": "http:\/\/badcamp-2018.docksal\/summits\/backdrop-cms-summit",
                 "twitter_cards_site": "@badcamp",
                 "twitter_cards_site_id": "16595328",
-                "twitter_cards_page_url": "http:\/\/badcamp-2018.docksal\/%3Cnone%3E"
+                "twitter_cards_page_url": "http:\/\/badcamp-2018.docksal\/node"
             }
         }
     ],
@@ -168,9 +280,9 @@
     ],
     "field_summit_description": [
         {
-            "value": "<p>Backdrop CMS is a content management system based on the Drupal you know and love, but with a new mission that aims to decrease the cost of long-term website ownership. The goal of this Drupal fork is to empower more people to do more things on the web. At the Backdrop Summit you'll learn about the Backdrop software and its differences from the Drupal CMS.<\/p>\r\n",
+            "value": "<p>Backdrop CMS is a content management system based on the Drupal you know and love, but with a new mission that aims to decrease the cost of long-term website ownership.<\/p>\r\n\r\n<p>At the Backdrop Summit you'll learn about the Backdrop software and its differences from the Drupal CMS. Topics covered will include:<\/p>\r\n\r\n<ul>\r\n\t<li>Showcases of sites built with Backdrop CMS<\/li>\r\n\t<li>Feature differences between Backdrop and Drupal<\/li>\r\n\t<li>Conceptual differences between&nbsp;Backdrop and Drupal<\/li>\r\n\t<li>Code differences between Backdrop and Drupal<\/li>\r\n\t<li>Porting modules,&nbsp;themes &amp; layouts<\/li>\r\n\t<li>Contribution to the Backdrop project<\/li>\r\n\t<li>Upgrading from Drupal 7<\/li>\r\n\t<li>Backdrop Past and Future<\/li>\r\n<\/ul>\r\n",
             "format": "basic_html",
-            "processed": "<p>Backdrop CMS is a content management system based on the Drupal you know and love, but with a new mission that aims to decrease the cost of long-term website ownership. The goal of this Drupal fork is to empower more people to do more things on the web. At the Backdrop Summit you'll learn about the Backdrop software and its differences from the Drupal CMS.<\/p>",
+            "processed": "<p>Backdrop CMS is a content management system based on the Drupal you know and love, but with a new mission that aims to decrease the cost of long-term website ownership.<\/p>\n\n<p>At the Backdrop Summit you'll learn about the Backdrop software and its differences from the Drupal CMS. Topics covered will include:<\/p>\n\n<ul><li>Showcases of sites built with Backdrop CMS<\/li>\n\t<li>Feature differences between Backdrop and Drupal<\/li>\n\t<li>Conceptual differences between\u00a0Backdrop and Drupal<\/li>\n\t<li>Code differences between Backdrop and Drupal<\/li>\n\t<li>Porting modules,\u00a0themes &amp; layouts<\/li>\n\t<li>Contribution to the Backdrop project<\/li>\n\t<li>Upgrading from Drupal 7<\/li>\n\t<li>Backdrop Past and Future<\/li>\n<\/ul>",
             "summary": "",
             "lang": "en"
         }

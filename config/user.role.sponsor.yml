@@ -10,4 +10,8 @@ permissions:
   - 'create job_posting content'
   - 'edit own job_posting content'
   - 'override sponsor published option'
+  - 'publish editable node type sponsor'
+  - 'publish own node type sponsor'
+  - 'unpublish editable node type sponsor'
+  - 'unpublish own node type sponsor'
   - 'view own unpublished content'

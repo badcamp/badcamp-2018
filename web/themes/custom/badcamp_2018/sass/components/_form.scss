@@ -21,3 +21,119 @@
     font-size: 1.25em;
   }
 }
+
+// Forms.
+// Checkbox and Radios.
+// The container.
+.checkmark-container {
+  cursor: pointer;
+  display: block;
+  font-size: 22px;
+  margin-bottom: 32px;
+  padding-left: 50px;
+  position: relative;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+// Hide the browser's default checkbox.
+.checkmark-container input {
+  cursor: pointer;
+  opacity: 0;
+  position: absolute;
+}
+
+// Create a custom checkbox.
+.checkmark {
+  border: 1px solid #838383;
+  height: 39px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 39px;
+}
+
+.checkmark-container.checkmark-container--radio .checkmark {
+  border-radius: 50%;
+}
+
+// Create the checkmark (hidden when not checked).
+.checkmark:after {
+  content: "";
+  display: none;
+  position: absolute;
+}
+
+// Show the checkmark when checked.
+.checkmark-container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+// Style the checkmark.
+.checkmark-container .checkmark:after {
+  border: solid #255b86;
+  border-width: 0 3px 3px 0;
+  height: 26px;
+  left: 12px;
+  top: 2px;
+  transform: rotate(45deg);
+  width: 13px;
+}
+
+/* Style the indicator (dot/circle) */
+.checkmark-container.checkmark-container--radio .checkmark:after {
+  background: #255b86;
+  border: none;
+  border-radius: 50%;
+  border-width: 0;
+  height: 29px;
+  left: 4px;
+  top: 4px;
+  width: 29px;
+}
+
+// Descriptions.
+.form-item .description {
+  margin: .5rem 0 1rem 0;
+}
+
+.checkboxes--wrapper.form-item .description,
+.radios--wrapper.form-item .description,
+.form-item-services-requested.form-item .description {
+  margin-top: 0;
+}
+
+// Required fields.
+.form-required:after {
+  content: ' *';
+  color: #e42e2e;
+}
+
+// Fieldset.
+fieldset {
+  border: 1px solid #ccc;
+  margin-bottom: 1rem;
+  padding: 1rem;
+}
+
+// Select.
+select {
+  background-image: url('data:image/svg+xml;utf8,<svg height="11" viewBox="0 0 18 11" width="18" xmlns="http://www.w3.org/2000/svg"><path d="m323.240978 36.341146-7.714788 7.7147482c-.372075.3720758-.975304.3720758-1.34734 0l-.899802-.8998019c-.371441-.3714407-.372156-.973439-.001588-1.345753l6.114103-6.1428836-6.114103-6.1428439c-.370568-.372314-.369853-.9743123.001588-1.345753l.899802-.8998019c.372075-.3720759.975304-.3720759 1.34734 0l7.714749 7.7147482c.372075.3720361.372075.975265.000039 1.3473409z" fill="#3b3b3b" fill-rule="evenodd" transform="matrix(0 1 -1 0 44.927476 -312.592524)"/></svg>');
+  background-position: right center;
+  background-size: 20px;
+}
+
+// Summary.
+summary {
+  border-bottom: 1px solid #ccc;
+  font-size: 1.875rem;
+  margin-bottom: 1rem;
+}
+
+label label {
+  font-size: 1.5rem;
+  line-height: 1.5;
+  font-weight: 700;
+}

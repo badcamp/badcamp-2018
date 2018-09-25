@@ -30,7 +30,7 @@ display:
       access:
         type: perm
         options:
-          perm: 'edit own summit content'
+          perm: 'access content'
       cache:
         type: tag
         options: {  }
@@ -678,7 +678,7 @@ display:
           specify_validation: true
           validate:
             type: 'entity:node'
-            fail: 'not found'
+            fail: 'access denied'
           validate_options:
             bundles:
               summit: summit

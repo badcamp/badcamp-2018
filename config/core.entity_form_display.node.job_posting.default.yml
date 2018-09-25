@@ -31,7 +31,7 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_company:
-    weight: 1
+    weight: 0
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -65,7 +65,7 @@ content:
     third_party_settings: {  }
   title:
     type: string_textfield
-    weight: 0
+    weight: 1
     region: content
     settings:
       size: 60

@@ -72,7 +72,7 @@
  * @ingroup themeable
  */
 #}
-<article{{ attributes }}>
+<article{{ attributes.addClass('schedule-item', 'session') }}>
 
     <div class="">
         {{ title_prefix }}
@@ -85,9 +85,6 @@
             {{ content.field_session_track }}
             {{ content.field_skill_level }}
             {{ content.field_speakers }}
-        </div>
-
-        <div class="info">
             {{ content.field_venue }}
         </div>
 

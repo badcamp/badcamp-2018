@@ -209,9 +209,9 @@ function badcamp_stripe_payment_stripe_payment_successful_redirect_alter(&$url, 
 			$entity->set('entity_id', $sponsor->id());
 			$entity->save();
 
-			$node_url = Url::fromRoute('entity.node.edit_form', ['node' => $sponsor->id()]);
-			$url = '/user';
-			drupal_set_message(t('Sponsor Created. Complete the sponsor information <a href="@here">here</a>.', ['@here' => $node_url->toString()]));
+			$url = Url::fromRoute('entity.node.edit_form', ['node' => $sponsor->id()])->toString();
+			//$url = '/user';
+			//drupal_set_message(t('Sponsor Created. Complete the sponsor information <a href="@here">here</a>.', ['@here' => $node_url->toString()]));
 
 			break;
 	}
@@ -245,5 +245,7 @@ function badcamp_stripe_payment_stripe_payment_refund_post_save_alter(StripePaym
 function badcamp_stripe_payment_form_node_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
 	/* @var Drupal\Core\Entity\FieldableEntityInterface $node */
 	$node = $form_state->getFormObject()->getEntity();
-	$form['#title'] = t('Editing :type', [':type' => $node->bundle()]);
+	$form['#title'] = t(':action :type', [
+		':action' => $node->isNew() ? 'Creating' : 'Editing',
+		':type' => str_ireplace('_',' ', $node->bundle())]);
 }

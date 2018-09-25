@@ -95,7 +95,17 @@ function badcamp_register_form_node_session_form_alter(&$form, FormStateInterfac
  */
 function badcamp_register_form_node_sponsor_edit_form_alter(&$form, FormStateInterface $form_state, $form_id) {
 	$form['revision_information']['#access'] = false;
+	$form['description'] = [
+		'#markup' => '<div class="callout success">' .
+		'<p>'.t('Thank you for sponsoring BADCamp.').'</p>' .
+		'<p>'.t('Please take a moment and fill out the following information about your organization.').' ' .
+		t('Also make sure to include a Logo so that we can display your organization on our <a href="/sponsors">Sponsor page</a>.').'</p>' .
+		'<p>'.t('Once this is completed you will be able to post a job within our <a href="/job-board">job board</a>.').'</p>' .
+		'</div>',
+		'#weight' => -100
+	];
 	$form['status']['#access'] = true;
+	$form['status']['widget']['value']['#description'] = '<p>' . t('When you are ready for the sponsor to show in the directory check the Publish box.') . '</p>';
 	$form['status']['widget']['value']['#title'] = t('Publish');
 }
 
@@ -140,6 +150,7 @@ function badcamp_register_entity_insert(EntityInterface $entity) {
 function badcamp_register_form_node_job_posting_form_alter(&$form, FormStateInterface $form_state, $form_id) {
 	badcamp_register_alter_job_posting_form($form, $form_state, $form_id);
 	$form['#validate'][] = 'badcamp_register_job_post_validate';
+	$form['revision_information']['#access'] = false;
 }
 
 /**
@@ -350,27 +361,32 @@ function badcamp_register_entity_extra_field_info() {
 	$extra = [];
 	$extra['user']['user']['display']['sponsors'] = [
 		'label' => t('Sponsors'),
-		'description' => t('List of all sponsors for user')
+		'description' => t('List of all sponsors for user'),
+		'weight' => 0,
 	];
 
 	$extra['user']['user']['display']['sessions'] = [
 		'label' => t('Sessions'),
-		'description' => t('List of all sessions for user')
+		'description' => t('List of all sessions for user'),
+		'weight' => 0,
 	];
 
 	$extra['node']['sponsor']['display']['job_postings'] = [
 		'label' => t('Job Postings'),
-		'description' => t('List of all Job Postings for Sponsor')
+		'description' => t('List of all Job Postings for Sponsor'),
+		'weight' => 0,
 	];
 
 	$extra['node']['sponsor']['display']['members'] = [
 		'label' => t('Members'),
-		'description' => t('List of all Member for Sponsor')
+		'description' => t('List of all Member for Sponsor'),
+		'weight' => 0,
 	];
 
 	$extra['node']['sponsor']['display']['events'] = [
 		'label' => t('Events'),
-		'description' => t('List of all Events for Sponsor')
+		'description' => t('List of all Events for Sponsor'),
+		'weight' => 0,
 	];
 	return $extra;
 }
@@ -474,7 +490,7 @@ function badcamp_register_help($route_name, \Drupal\Core\Routing\RouteMatchInter
 				/** @var \Drupal\Core\Entity\EntityInterface $referencedEntity */
 				$referencedEntity = $entityAdapter->getValue();
 				if ($referencedEntity->label() == 'Supporting Level'){
-					$output .= '<p>'. t('Fill out the following fields for your company\'s profile as a Supporting Sponsor.') . '</p>';
+
 				}
 			}
 			break;

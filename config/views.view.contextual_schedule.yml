@@ -595,6 +595,7 @@ display:
         operator: AND
         groups:
           1: AND
+      css_class: schedule
     cache_metadata:
       max-age: -1
       contexts:
@@ -675,6 +676,7 @@ display:
       defaults:
         relationships: false
         arguments: false
+        empty: false
       arguments:
         uid:
           id: uid
@@ -713,6 +715,20 @@ display:
           entity_type: flagging
           entity_field: uid
           plugin_id: numeric
+      empty:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: true
+          tokenize: false
+          content:
+            value: "<div class=\"callout warning\">\n<p class=\"text-center\">No Items Added. Go to <a href=\"/schedule\">schedule</a> and add items to show here.</p>\n</div>"
+            format: full_html
+          plugin_id: text
     cache_metadata:
       max-age: -1
       contexts:

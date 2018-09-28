@@ -1,9 +1,15 @@
 definitions:
   user__logout:
+    weight: -49
+    parent: 'menu_link_content:7fac6d71-1d92-4b49-a696-af87b043264a'
     menu_name: main
-    parent: ''
-    weight: 10
     expanded: false
     enabled: true
+  badcamp_register__my_schedule:
+    weight: -50
+    parent: 'menu_link_content:7fac6d71-1d92-4b49-a696-af87b043264a'
+    menu_name: main
+    enabled: true
+    expanded: false
 _core:
   default_config_hash: jdY7AU0tU-QsjmiOw3W8vwpYMb-By--_MSFgbqKUTYM

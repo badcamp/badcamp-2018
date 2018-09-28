@@ -6,3 +6,11 @@ mlid:
   'menu_link_content:dd1ebf4d-362a-44d9-ba6c-669065256d36':
     roles: {  }
     access_check: false
+  'menu_link_content:7fac6d71-1d92-4b49-a696-af87b043264a':
+    roles:
+      - authenticated
+    access_check: false
+  'menu_link_content:44fa582e-fe98-4524-a8dd-cbfbac16e6a9':
+    roles:
+      - anonymous
+    access_check: false

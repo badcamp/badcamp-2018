@@ -69,13 +69,12 @@ class MyScheduleLink extends MenuLinkDefault {
 		return [
 			'user' => $this->accountProxy->id(),
 		];
-        }
+	}
 
-        /**
-         * {@inheritdoc}
-         */
-        public function getCacheMaxAge() {
-                return 0;
-        }
+	/**
+	 * {@inheritdoc}
+	 */
+	public function getCacheMaxAge() {
+		return 0;
+	}
 }
-

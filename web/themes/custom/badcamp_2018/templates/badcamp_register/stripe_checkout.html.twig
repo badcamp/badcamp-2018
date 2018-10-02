@@ -19,18 +19,17 @@
         <button id="{{ payment_button_id }}" class="action-button small-button">{{ button_label }}</button>
         <script src="https://checkout.stripe.com/checkout.js"></script>
         <script type="text/javascript">
-            var handler = StripeCheckout.configure({
-                key: '{{ data_key }}',
-                image: '{{ logo }}',
-                locale: 'auto',
-                
-                token: function(token) {
-                    jQuery('[name="stripeToken"]', jQuery("#{{ payment_form_id }}")).val(token.id);
-                    jQuery("#{{ payment_form_id }}").submit();
-                }
-            });
-
             document.getElementById('{{ payment_button_id }}').addEventListener('click', function(e) {
+                var handler = StripeCheckout.configure({
+                    key: '{{ data_key }}',
+                    image: '{{ logo }}',
+                    locale: 'auto',
+
+                    token: function(token) {
+                        jQuery('[name="stripeToken"]', jQuery("#{{ payment_form_id }}")).val(token.id);
+                        jQuery("#{{ payment_form_id }}").submit();
+                    }
+                });
                 // Open Checkout with further options:
                 handler.open({
                     name: "{{ org_name }}",

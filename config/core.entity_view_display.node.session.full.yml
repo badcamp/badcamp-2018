@@ -122,19 +122,6 @@ content:
         class: margin-vertical-2
     type: entity_reference_label
     region: content
-  field_sponsors:
-    weight: 7
-    label: hidden
-    settings:
-      view_mode: sponsor_logo
-      link: false
-    third_party_settings:
-      field_delimiter:
-        delimiter: ''
-      field_formatter_class:
-        class: cell
-    type: entity_reference_entity_view
-    region: content
   field_timeslot:
     type: entity_reference_label
     weight: 0
@@ -159,7 +146,7 @@ content:
     settings: {  }
     third_party_settings: {  }
   flag_add_to_schedule:
-    weight: 8
+    weight: 7
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -167,6 +154,7 @@ hidden:
   field_date: true
   field_display_title: true
   field_session_status: true
+  field_sponsors: true
   field_stick_to_top_of_date: true
   field_stick_to_top_of_schedule: true
   field_twitter_teaser: true

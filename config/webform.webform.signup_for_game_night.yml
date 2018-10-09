@@ -1,32 +1,25 @@
-uuid: fcb1e89a-1c93-4baf-8ad3-4e6c5554ec5a
+uuid: b86e1bb3-196b-4709-9421-bc5720ed6470
 langcode: en
 status: open
-dependencies:
-  module:
-    - honeypot
-third_party_settings:
-  honeypot:
-    honeypot: true
-_core:
-  default_config_hash: AFDr1TjzVluYY92yEvYXiKwNKKgOFCAfp_FRXsTTbK4
+dependencies: {  }
 open: null
 close: null
-uid: 1
+uid: 185
 template: false
 archive: false
-id: volunteer_sign_up
-title: 'Got Skills? Join Us + Volunteer!'
-description: 'Basic form used for collecting names'
-category: Volunteer
-elements: "processed_text:\n  '#type': processed_text\n  '#text': \"<p><strong>Yes, you! BADCamp</strong>&nbsp;would not be possible without love + support from volunteers!</p>\\n\\n<p><b>Volunteer Now Through Our New Online Portal!</b></p>\\n\\n<p><a href=\\\"http://bayareadrupalcamp.volunteerlocal.com/volunteer/?id=29132\\\" target=\\\"_blank\\\"><img alt=\\\"Sign Up To Volunteer\\\" border=\\\"0\\\" height=\\\"30\\\" src=\\\"https://app.volunteerlocal.com/images/volunteer_signup_widget_165x30.gif\\\" width=\\\"165\\\" /></a></p>\\n\\n<h3><strong><a href=\\\"http://bayareadrupalcamp.volunteerlocal.com/volunteer/?id=29132\\\" target=\\\"_blank\\\">View the Job List »</a></strong></h3>\\n\\n<p>&nbsp;</p>\\n\\n<hr />\\n<p>&nbsp;</p>\\n\\n<p><u><strong>Volunteer opportunities include:</strong></u></p>\\n\\n<ul>\\n\\t<li>Marketing + communications</li>\\n\\t<li>Day-of-coordination</li>\\n\\t<li>Registration desk help</li>\\n\\t<li>Store assistants + managers</li>\\n\\t<li>Room monitors + coordinators</li>\\n\\t<li>Stuff movers + badge checkers</li>\\n\\t<li>Room setup + maintenance</li>\\n\\t<li>AV, Internet + Photographers</li>\\n\\t<li>Signage distributors</li>\\n\\t<li>Venue setup + teardown</li>\\n</ul>\\n\\n<p>-OR-</p>\\n\\n<p><strong>Use the form below and we will be in contact.</strong></p>\\n\"\n  '#format': full_html\nname:\n  '#type': textfield\n  '#title': Name\n  '#required': true\nemail:\n  '#type': email\n  '#title': Email\n  '#required': true\n  '#required_error': 'Email Address is Required'\n  '#unique': true\n  '#unique_error': 'This email has already been used.'\nphone_number:\n  '#type': tel\n  '#title': 'Phone Number'\n"
-css: ''
+id: signup_for_game_night
+title: 'Signup for Game Night'
+description: ''
+category: 'Game Night'
+elements: "logged_in_user:\n  '#type': hidden\n  '#title': 'logged in user'\n  '#default_value': '[current-user:account-name]'\nuser_email:\n  '#type': hidden\n  '#title': user-email\n  '#default_value': '[current-user:mail]'\nyour_name:\n  '#type': textfield\n  '#title': 'Your Name'\n  '#placeholder': 'Full Name'\n  '#required': true\n  '#unique': true\n  '#unique_error': 'Did you already sign up? We already have you signed up.'\ntelephone:\n  '#type': tel\n  '#title': 'Telephone at BADCamp'\n  '#placeholder': 'Optional telephone to contact you during BADCamp'\nnumber_of_people:\n  '#type': number\n  '#title': 'Number of People'\n  '#placeholder': 'You and how many people will coming?'\n  '#required': true\n  '#required_error': 'We need to know the size of your party!'\n  '#min': '1'\n  '#max': '10'\n"
+css: "div a[href*=\"/u/\"] {\r\n  display: none;\r\n};"
 javascript: ''
 settings:
-  ajax: true
+  ajax: false
   ajax_scroll_top: form
   page: true
-  page_submit_path: volunteer
-  page_confirm_path: volunteer/successful
+  page_submit_path: ''
+  page_confirm_path: ''
   form_submit_once: false
   form_exception_message: ''
   form_open_message: ''
@@ -49,15 +42,18 @@ settings:
   form_submit_back: false
   form_autofocus: false
   form_details_toggle: false
-  form_login: false
+  form_login: true
   form_login_message: ''
   submission_label: ''
   submission_log: false
   submission_user_columns: {  }
+  submission_user_duplicate: false
   submission_login: false
   submission_login_message: ''
   submission_exception_message: ''
   submission_locked_message: ''
+  previous_submission_message: ''
+  previous_submissions_message: ''
   autofill: false
   autofill_message: ''
   autofill_excluded_elements: {  }
@@ -75,6 +71,7 @@ settings:
   preview_attributes: {  }
   preview_excluded_elements: {  }
   preview_exclude_empty: true
+  preview_exclude_empty_checkbox: false
   draft: none
   draft_multiple: false
   draft_auto_save: false
@@ -108,48 +105,43 @@ settings:
 access:
   create:
     roles:
-      - anonymous
       - authenticated
     users: {  }
     permissions: {  }
   view_any:
     roles:
+      - event_manager
+      - session_manager
       - volunteer_manager
+      - administrator
     users: {  }
     permissions: {  }
   update_any:
-    roles:
-      - volunteer_manager
+    roles: {  }
     users: {  }
     permissions: {  }
   delete_any:
-    roles:
-      - volunteer_manager
+    roles: {  }
     users: {  }
     permissions: {  }
   purge_any:
-    roles:
-      - volunteer_manager
+    roles: {  }
     users: {  }
     permissions: {  }
   view_own:
-    roles:
-      - volunteer_manager
+    roles: {  }
     users: {  }
     permissions: {  }
   update_own:
-    roles:
-      - volunteer_manager
+    roles: {  }
     users: {  }
     permissions: {  }
   delete_own:
-    roles:
-      - volunteer_manager
+    roles: {  }
     users: {  }
     permissions: {  }
   administer:
-    roles:
-      - volunteer_manager
+    roles: {  }
     users: {  }
     permissions: {  }
   test:

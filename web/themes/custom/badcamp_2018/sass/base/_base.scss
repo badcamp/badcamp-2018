@@ -78,11 +78,17 @@ fieldset {
   legend {
     font-family: $quicksand;
     font-size: 2rem;
-    margin-left: 1em;
+    margin-left: 0em;
   }
 
   .fieldset-wrapper {
 
+  }
+}
+
+details {
+  summary {
+    border-bottom: 0px solid;
   }
 }
 

@@ -444,7 +444,7 @@ function badcamp_register_menu_local_tasks_alter(&$data, $route_name, RefinableC
 		if ($user instanceof \Drupal\user\UserInterface) {
 			$public_schedule = $user->get('field_user_public_schedule')->getString();
 			if($public_schedule != 1) {
-				unset($data[0]['views_view:view.schedule.page_2']);
+				//unset($data[0]['views_view:view.schedule.page_2']);
 			}
 		}
 	}

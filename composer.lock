@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "36be8348581b10b69482004c54fc7e0d",
+    "content-hash": "01e7a737f63fd47336663b60f5a07de7",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -301,7 +301,7 @@
             "version": "v1.1.1",
             "source": {
                 "type": "git",
-                "url": "git@github.com:metafizzy/ev-emitter.git",
+                "url": "https://github.com/metafizzy/ev-emitter.git",
                 "reference": "1baa3a03d8e07f665b0eb797661fcc2b0d2a5736"
             },
             "dist": {
@@ -4535,6 +4535,73 @@
             }
         },
         {
+            "name": "drupal/menu_breadcrumb",
+            "version": "1.6.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/menu_breadcrumb",
+                "reference": "8.x-1.6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/menu_breadcrumb-8.x-1.6.zip",
+                "reference": "8.x-1.6",
+                "shasum": "ef6c58bda143509151df9fa284ea7063f478e1f9"
+            },
+            "require": {
+                "drupal/core": "~8.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.6",
+                    "datestamp": "1531735125",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "RyanPrice",
+                    "homepage": "https://www.drupal.org/user/873848"
+                },
+                {
+                    "name": "aaron",
+                    "homepage": "https://www.drupal.org/user/33420"
+                },
+                {
+                    "name": "gdevlugt",
+                    "homepage": "https://www.drupal.org/user/167273"
+                },
+                {
+                    "name": "rphair",
+                    "homepage": "https://www.drupal.org/user/3196607"
+                },
+                {
+                    "name": "vaibhavjain",
+                    "homepage": "https://www.drupal.org/user/1159692"
+                },
+                {
+                    "name": "xurizaemon",
+                    "homepage": "https://www.drupal.org/user/76026"
+                }
+            ],
+            "description": "Create breadcrumbs from nested menu titles and/or taxonomy membership.",
+            "homepage": "https://www.drupal.org/project/menu_breadcrumb",
+            "support": {
+                "source": "http://cgit.drupalcode.org/menu_breadcrumb"
+            }
+        },
+        {
             "name": "drupal/menu_item_visibility",
             "version": "dev-1.x",
             "source": {
@@ -6073,6 +6140,57 @@
                 "source": "http://cgit.drupalcode.org/views_bulk_operations",
                 "issues": "https://www.drupal.org/project/issues/views_bulk_operations?version=8.x",
                 "docs": "https://www.drupal.org/docs/8/modules/views-bulk-operations-vbo"
+            }
+        },
+        {
+            "name": "drupal/views_ef_fieldset",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/views_ef_fieldset",
+                "reference": "8.x-1.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/views_ef_fieldset-8.x-1.1.zip",
+                "reference": "8.x-1.1",
+                "shasum": "7e0a18f933121b16d42d5e1155b862245cc6ff9c"
+            },
+            "require": {
+                "drupal/core": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.1",
+                    "datestamp": "1500983642",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Pol",
+                    "homepage": "https://www.drupal.org/user/47194"
+                },
+                {
+                    "name": "ciss",
+                    "homepage": "https://www.drupal.org/user/1632364"
+                }
+            ],
+            "description": "Provide an option to render the \"exposed form widgets\" in a fieldset.",
+            "homepage": "https://www.drupal.org/project/views_ef_fieldset",
+            "support": {
+                "source": "http://cgit.drupalcode.org/views_ef_fieldset"
             }
         },
         {

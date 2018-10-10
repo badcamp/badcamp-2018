@@ -48,7 +48,7 @@ display:
         type: views_query
         options:
           disable_sql_rewrite: false
-          distinct: false
+          distinct: true
           replica: false
           query_comment: ''
           query_tags: {  }
@@ -283,7 +283,7 @@ display:
           exposed: true
           expose:
             operator_id: tid_op
-            label: ''
+            label: 'Day of the Week'
             description: ''
             use_operator: false
             operator: tid_op
@@ -342,7 +342,7 @@ display:
           exposed: true
           expose:
             operator_id: type_op
-            label: ''
+            label: Type
             description: ''
             use_operator: false
             operator: type_op
@@ -391,7 +391,7 @@ display:
           exposed: true
           expose:
             operator_id: field_session_track_target_id_op
-            label: ''
+            label: Topics
             description: ''
             use_operator: false
             operator: field_session_track_target_id_op
@@ -432,6 +432,18 @@ display:
           error_message: true
           plugin_id: taxonomy_index_tid
       sorts:
+        field_stick_to_top_of_schedule_value:
+          id: field_stick_to_top_of_schedule_value
+          table: node__field_stick_to_top_of_schedule
+          field: field_stick_to_top_of_schedule_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: DESC
+          exposed: false
+          expose:
+            label: ''
+          plugin_id: standard
         weight:
           id: weight
           table: taxonomy_term_field_data
@@ -445,6 +457,18 @@ display:
             label: ''
           entity_type: taxonomy_term
           entity_field: weight
+          plugin_id: standard
+        field_stick_to_top_of_date_value:
+          id: field_stick_to_top_of_date_value
+          table: node__field_stick_to_top_of_date
+          field: field_stick_to_top_of_date_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: DESC
+          exposed: false
+          expose:
+            label: ''
           plugin_id: standard
         weight_1:
           id: weight_1
@@ -460,6 +484,20 @@ display:
           entity_type: taxonomy_term
           entity_field: weight
           plugin_id: standard
+        sticky:
+          id: sticky
+          table: node_field_data
+          field: sticky
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: DESC
+          exposed: false
+          expose:
+            label: ''
+          entity_type: node
+          entity_field: sticky
+          plugin_id: standard
         title:
           id: title
           table: node_field_data
@@ -474,7 +512,17 @@ display:
           entity_type: node
           entity_field: title
           plugin_id: standard
-      header: {  }
+      header:
+        result:
+          id: result
+          table: views
+          field: result
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          content: 'Showing @total items.'
+          plugin_id: result
       footer: {  }
       empty: {  }
       relationships:
@@ -520,8 +568,101 @@ display:
     display_title: Page
     position: 1
     display_options:
-      display_extenders: {  }
+      display_extenders:
+        views_ef_fieldset:
+          views_ef_fieldset:
+            enabled: 1
+            options:
+              sort:
+                root:
+                  container_type: details
+                  title: Filter
+                  description: ''
+                  weight: '0'
+                  open: 0
+                  id: root
+                  pid: ''
+                  depth: '0'
+                  type: container
+                tid:
+                  weight: '-8'
+                  id: tid
+                  pid: root
+                  depth: '1'
+                  type: filter
+                type:
+                  weight: '-8'
+                  id: type
+                  pid: root
+                  depth: '1'
+                  type: filter
+                field_session_track_target_id:
+                  weight: '-8'
+                  id: field_session_track_target_id
+                  pid: root
+                  depth: '1'
+                  type: filter
+                submit:
+                  weight: '-8'
+                  id: submit
+                  pid: root
+                  depth: '1'
+                  type: buttons
+                container-0:
+                  container_type: details
+                  title: 'Container 0'
+                  description: ''
+                  weight: '-7'
+                  open: 0
+                  id: container-0
+                  pid: root
+                  depth: '1'
+                  type: container
+                container-1:
+                  container_type: details
+                  title: 'Container 1'
+                  description: ''
+                  weight: '-6'
+                  open: 0
+                  id: container-1
+                  pid: root
+                  depth: '1'
+                  type: container
+                container-2:
+                  container_type: details
+                  title: 'Container 2'
+                  description: ''
+                  weight: '-5'
+                  open: 0
+                  id: container-2
+                  pid: root
+                  depth: '1'
+                  type: container
+                container-3:
+                  container_type: details
+                  title: 'Container 3'
+                  description: ''
+                  weight: '-4'
+                  open: 0
+                  id: container-3
+                  pid: root
+                  depth: '1'
+                  type: container
       path: schedule
+      empty:
+        area_text_custom:
+          id: area_text_custom
+          table: views
+          field: area_text_custom
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: true
+          tokenize: false
+          content: "<div class=\"callout warning small-12\">\n<p class=\"text-center\">No items. Refine your search.</p>\n</div>"
+          plugin_id: text_custom
+      defaults:
+        empty: false
     cache_metadata:
       max-age: -1
       contexts:
@@ -538,7 +679,86 @@ display:
     display_title: 'My Schedule'
     position: 2
     display_options:
-      display_extenders: {  }
+      display_extenders:
+        views_ef_fieldset:
+          views_ef_fieldset:
+            enabled: 1
+            options:
+              sort:
+                root:
+                  container_type: details
+                  title: Seach
+                  description: ''
+                  weight: '0'
+                  open: 0
+                  id: root
+                  pid: ''
+                  depth: '0'
+                  type: container
+                container-0:
+                  container_type: container
+                  title: ''
+                  description: ''
+                  weight: '-9'
+                  open: 0
+                  id: container-0
+                  pid: root
+                  depth: '1'
+                  type: container
+                tid:
+                  weight: '-8'
+                  id: tid
+                  pid: root
+                  depth: '1'
+                  type: filter
+                container-1:
+                  container_type: container
+                  title: ''
+                  description: ''
+                  weight: '-7'
+                  open: 0
+                  id: container-1
+                  pid: root
+                  depth: '1'
+                  type: container
+                type:
+                  weight: '-6'
+                  id: type
+                  pid: root
+                  depth: '1'
+                  type: filter
+                container-2:
+                  container_type: container
+                  title: ''
+                  description: ''
+                  weight: '-5'
+                  open: 0
+                  id: container-2
+                  pid: root
+                  depth: '1'
+                  type: container
+                field_session_track_target_id:
+                  weight: '-4'
+                  id: field_session_track_target_id
+                  pid: root
+                  depth: '1'
+                  type: filter
+                container-3:
+                  container_type: container
+                  title: ''
+                  description: ''
+                  weight: '-3'
+                  open: 0
+                  id: container-3
+                  pid: root
+                  depth: '1'
+                  type: container
+                submit:
+                  weight: '-2'
+                  id: submit
+                  pid: root
+                  depth: '1'
+                  type: buttons
       path: user/%user/schedule
       menu:
         type: tab
@@ -584,6 +804,7 @@ display:
       defaults:
         relationships: false
         arguments: false
+        title: false
       arguments:
         uid:
           id: uid
@@ -622,6 +843,8 @@ display:
           entity_type: flagging
           entity_field: uid
           plugin_id: numeric
+      enabled: true
+      title: 'My Schedule'
     cache_metadata:
       max-age: -1
       contexts:

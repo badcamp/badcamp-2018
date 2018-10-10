@@ -73,6 +73,8 @@
  */
 #}
 <article{{ attributes.addClass('schedule-item', 'summit') }}>
+    <span class="badge primary">Summit</span>
+
     {{ title_prefix }}
     <h3{{ title_attributes.addClass('title') }}>
         <a href="{{ url }}" rel="bookmark">{{ label }}</a>
@@ -80,8 +82,10 @@
     {{ title_suffix }}
 
     <div class="info">
-        {{ content.field_summit_leaders }}
-        {{ content.field_venue }}
+        <div class="grid-x margin-bottom-1">
+            <div class="small-12 medium-6">{{ content.field_venue }}</div>
+            <div class="small-12 medium-6">{{ content.field_summit_leaders }}</div>
+        </div>
     </div>
 
     <div class="content">

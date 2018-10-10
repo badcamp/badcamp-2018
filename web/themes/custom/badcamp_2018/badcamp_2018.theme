@@ -20,6 +20,22 @@ function badcamp_2018_preprocess_html(array &$variables) {
   /*if (isset($variables['head_title_array']['title']) && isset($variables['head_title_array']['name']) && ($variables['head_title_array']['title'] == $variables['head_title_array']['name'])) {
     $variables['head_title'] = $variables['head_title_array']['name'];
   }*/
+
+	$user = \Drupal::request()->attributes->get('user');
+	$current_user = \Drupal::currentUser();
+	$route_match = \Drupal::routeMatch();
+	if (!is_null($user) && $route_match->getRouteName() == 'view.schedule.page_2') {
+		if (is_string($user)) {
+			$full_user = \Drupal::entityTypeManager()->getStorage('user')->load($user);
+		}
+		else {
+			$full_user = $user;
+		}
+
+		if ($full_user->id() != $current_user->id()) {
+			$variables['head_title']['title'] = t('@user Schedule | @site', ['@user' => $full_user->label(), '@site' => 'BADCAMP 2018']);
+		}
+	}
 }
 
 /**
@@ -240,6 +256,21 @@ function badcamp_2018_preprocess_page_title(&$vars){
 			if ($node->getEntityTypeId() == 'node' && $node->bundle() == 'training') {
 				$vars['title'] = t('Training');
 			}
+		}
+	}
+
+	$user = \Drupal::request()->attributes->get('user');
+	$current_user = \Drupal::currentUser();
+	$route_match = \Drupal::routeMatch();
+	if (!is_null($user) && $route_match->getRouteName() == 'view.schedule.page_2') {
+		if (is_string($user)) {
+			$full_user = \Drupal::entityTypeManager()->getStorage('user')->load($user);
+		}
+		else {
+			$full_user = $user;
+		}
+		if ($full_user->id() != $current_user->id()) {
+			$vars['title'] = t('@user Schedule', ['@user' => $full_user->label()]);
 		}
 	}
 }
@@ -467,5 +498,26 @@ function badcamp_2018_preprocess_stripe_checkout(&$vars) {
 	$vars['user_register_link'] = Url::fromUserInput('/user/login',['query' => ['destination' => '/donate']])->toString();
 	if ($vars['payment_type'] == 'organization_sponsorship') {
 		$vars['user_register_link'] = Url::fromUserInput('/user/login',['query' => ['destination' => '/supporting-sponsor']])->toString();
+	}
+}
+
+/**
+ * Implements hook_preprocess_views_view__view_name__display().
+ */
+function badcamp_2018_preprocess_views_view__schedule__page_2(&$vars) {
+	$user = \Drupal::request()->attributes->get('user');
+	$current_user = \Drupal::currentUser();
+	$route_match = \Drupal::routeMatch();
+	if (!is_null($user) && $route_match->getRouteName() == 'view.schedule.page_2') {
+		if (is_string($user)) {
+			$full_user = \Drupal::entityTypeManager()->getStorage('user')->load($user);
+		}
+		else {
+			$full_user = $user;
+		}
+		$vars['own_schedule'] = FALSE;
+		if ($full_user->id() == $current_user->id()) {
+			$vars['own_schedule'] = TRUE;
+		}
 	}
 }

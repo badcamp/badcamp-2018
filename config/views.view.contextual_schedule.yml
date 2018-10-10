@@ -614,6 +614,7 @@ display:
     display_options:
       display_extenders: {  }
       path: my-schedule
+      enabled: false
     cache_metadata:
       max-age: -1
       contexts:
@@ -729,6 +730,7 @@ display:
             value: "<div class=\"callout warning\">\n<p class=\"text-center\">No Items Added. Go to <a href=\"/schedule\">schedule</a> and add items to show here.</p>\n</div>"
             format: full_html
           plugin_id: text
+      enabled: false
     cache_metadata:
       max-age: -1
       contexts:

@@ -1,0 +1,16 @@
+protect_all_forms: false
+log: false
+element_name: robot
+time_limit: 3
+form_settings:
+  user_register_form: true
+  user_pass: true
+  node_blog_form: false
+  node_event_form: false
+  node_job_posting_form: false
+  node_page_form: false
+  node_session_form: false
+  node_sponsor_form: false
+  node_summit_form: false
+  node_training_form: false
+  node_webform_form: false

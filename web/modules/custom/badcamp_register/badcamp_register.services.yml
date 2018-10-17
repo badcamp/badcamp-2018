@@ -3,3 +3,7 @@ services:
     class: Drupal\badcamp_register\Routing\RouteSubscriber
     tags:
       - { name: event_subscriber }
+  badcamp_register.breadcrumb:
+      class: Drupal\badcamp_register\BreadcrumbBuilder
+      tags:
+        - { name: breadcrumb_builder, priority: 1005 }

@@ -7,6 +7,7 @@ dependencies:
     - field.field.user.user.field_i_am_interested_in_drupal_
     - field.field.user.user.field_i_am_interested_in_hearing
     - field.field.user.user.field_i_m_interested_in_voluntee
+    - field.field.user.user.field_list_my_account_on_attende
     - field.field.user.user.field_subscribe_to_badcamp_newsl
     - field.field.user.user.field_user_bio
     - field.field.user.user.field_user_first_name
@@ -138,6 +139,16 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  sessions:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  sponsors:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
 hidden:
   field_i_am_interested_in_drupal_: true
   field_i_am_interested_in_hearing: true

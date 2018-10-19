@@ -73,11 +73,15 @@ content:
       image_link: content
     third_party_settings: {  }
   sessions:
-    weight: null
+    weight: 6
     region: content
+    settings: {  }
+    third_party_settings: {  }
   sponsors:
-    weight: null
+    weight: 5
     region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   field_i_am_interested_in_drupal_: true
   field_i_am_interested_in_hearing: true

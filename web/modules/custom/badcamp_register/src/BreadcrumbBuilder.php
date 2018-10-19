@@ -3,36 +3,20 @@
 namespace Drupal\badcamp_register;
 
 use Drupal\Core\Breadcrumb\Breadcrumb;
-use Drupal\Core\Breadcrumb\BreadcrumbBuilderInterface;
 use Drupal\Core\Link;
 use Drupal\Core\Routing\RouteMatchInterface;
 use Drupal\Core\StringTranslation\StringTranslationTrait;
-use Drupal\Core\Url;
+use Drupal\system\PathBasedBreadcrumbBuilder;
 
-class BreadcrumbBuilder implements BreadcrumbBuilderInterface {
+class BreadcrumbBuilder extends PathBasedBreadcrumbBuilder {
 	use StringTranslationTrait;
-
-	/**
-	 * BreadcrumbBuilder constructor.
-	 */
-	public function __construct() {
-
-	}
-
-	/**
-	 * {@inheritdoc}
-	 */
-	public function applies(RouteMatchInterface $route_match) {
-		return TRUE;
-	}
 
 	/**
 	 * {@inheritdoc}
 	 */
 	public function build(RouteMatchInterface $route_match) {
-		$breadcrumb = new Breadcrumb();
-
-		$links = [];
+		/** @var Breadcrumb $breadcrumbs */
+		$breadcrumbs = parent::build($route_match);
 
 		$hide = [
 			'entity.user.canonical',
@@ -42,22 +26,14 @@ class BreadcrumbBuilder implements BreadcrumbBuilderInterface {
 			'badcamp_register.page_3',
 		];
 
-		if (in_array($route_match->getRouteName(), $hide)) {
-			return $breadcrumb->setLinks($links);
+		if (!in_array($route_match->getRouteName(), $hide) && $route_match->getRouteName() == 'view.schedule.page_2' && \Drupal::currentUser()->isAuthenticated()) {
+			$breadcrumbs = new Breadcrumb();
+			$breadcrumbs->addLink(Link::createFromRoute(t('Home'), '<front>'));
+			$breadcrumbs->addLink(Link::createFromRoute(t('Full Schedule'), 'view.schedule.page_1'));
+			$breadcrumbs->addLink(Link::createFromRoute(t('Account'), 'entity.user.canonical', ['user' => $route_match->getRawParameter('user')]));
+			$breadcrumbs->addLink(Link::createFromRoute(t('User Schedule'), '<none>'));
 		}
 
-		if ($route_match->getRouteName() == 'view.schedule.page_2' && \Drupal::currentUser()->isAuthenticated()) {
-			$links[] = Link::fromTextAndUrl('Home', Url::fromUserInput('/'));
-			$links[] = Link::fromTextAndUrl('Full Schedule', Url::fromUserInput('/schedule'));
-			$links[] = Link::fromTextAndUrl('Account', Url::fromRoute('entity.user.canonical', ['user' => $route_match->getRawParameter('user')]));
-			$links[] = Link::fromTextAndUrl('User Schedule', Url::fromRouteMatch($route_match));
-		}
-		elseif ($route_match->getRouteName() == 'view.schedule.page_2') {
-			return $breadcrumb->setLinks($links);
-		}
-
-		if(count($links) > 0) {
-			return $breadcrumb->setLinks($links);
-		}
+		return $breadcrumbs;
 	}
 }

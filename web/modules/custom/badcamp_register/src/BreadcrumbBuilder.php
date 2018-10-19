@@ -26,7 +26,11 @@ class BreadcrumbBuilder extends PathBasedBreadcrumbBuilder {
 			'badcamp_register.page_3',
 		];
 
-		if (!in_array($route_match->getRouteName(), $hide) && $route_match->getRouteName() == 'view.schedule.page_2' && \Drupal::currentUser()->isAuthenticated()) {
+		if (in_array($route_match->getRouteName(), $hide)) {
+			$breadcrumbs = new Breadcrumb();
+		}
+
+		if ($route_match->getRouteName() == 'view.schedule.page_2' && \Drupal::currentUser()->isAuthenticated()) {
 			$breadcrumbs = new Breadcrumb();
 			$breadcrumbs->addLink(Link::createFromRoute(t('Home'), '<front>'));
 			$breadcrumbs->addLink(Link::createFromRoute(t('Full Schedule'), 'view.schedule.page_1'));

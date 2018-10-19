@@ -1,6 +1,6 @@
 uuid: 25eae44e-1dd5-41c1-b405-6172cf46b5b0
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - core.entity_view_mode.node.schedule

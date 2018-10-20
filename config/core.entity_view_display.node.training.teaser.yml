@@ -5,11 +5,13 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.training.field_date
+    - field.field.node.training.field_display_title
     - field.field.node.training.field_payment
     - field.field.node.training.field_skill_level
     - field.field.node.training.field_sponsors
     - field.field.node.training.field_stick_to_top_of_date
     - field.field.node.training.field_stick_to_top_of_schedule
+    - field.field.node.training.field_timeslot
     - field.field.node.training.field_trainers
     - field.field.node.training.field_training_description
     - field.field.node.training.field_training_files
@@ -50,10 +52,12 @@ content:
     third_party_settings: {  }
 hidden:
   field_date: true
+  field_display_title: true
   field_payment: true
   field_sponsors: true
   field_stick_to_top_of_date: true
   field_stick_to_top_of_schedule: true
+  field_timeslot: true
   field_trainers: true
   field_training_files: true
   field_training_links: true

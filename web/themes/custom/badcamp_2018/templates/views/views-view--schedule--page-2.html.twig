@@ -48,27 +48,36 @@
 
     {% if logged_in %}
     <div class="text-align-center margin-vertical-1">
-        <a href="/user/{{ user.id }}/schedule" class="action-button">{{ "My Schedule" | t }}</a>
+        <a href="/schedule" class="action-button">{{ "Full Schedule" | t }}</a>
     </div>
     {% endif %}
 
     <div class="grid-x">
-        <div class="">{{ exposed }}</div>
-
+        {% if empty != '' %}
         <div class="small-12">
             {{ empty }}
+            {% if logged_in and own_schedule %}
+            <div class="callout warning small-12">
+                <p class="text-center">No Items Added. Go to <a href="/schedule">schedule</a> and add items to show here.</p>
+            </div>
+            {% else %}
+            <div class="callout warning small-12">
+                <p class="text-center">The user's schedule is empty.</p>
+            </div>
+            {% endif %}
         </div>
-
+        {% else %}
+        <div class="small-12">{{ exposed }}</div>
         {% if header %}
             <div class="callout primary small-12">
                 {{ header }}
             </div>
         {% endif %}
-
-        <div class="">
+        <div class="small-12">
             {{ rows }}
             {{ pager }}
         </div>
+        {% endif %}
     </div>
 
     {{ attachment_after }}

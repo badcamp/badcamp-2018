@@ -24,7 +24,7 @@ bundle: sponsor
 mode: default
 content:
   events:
-    weight: null
+    weight: 14
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -68,11 +68,15 @@ content:
     settings: {  }
     third_party_settings: {  }
   job_postings:
-    weight: null
+    weight: 12
     region: content
+    settings: {  }
+    third_party_settings: {  }
   members:
-    weight: null
+    weight: 13
     region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   field_display_title: true
   field_sponsor_level: true

@@ -249,3 +249,27 @@ function badcamp_stripe_payment_form_node_form_alter(&$form, \Drupal\Core\Form\F
 		':action' => $node->isNew() ? 'Creating' : 'Editing',
 		':type' => str_ireplace('_',' ', $node->bundle())]);
 }
+
+/**
+ * Implements hook_views_data_alter().
+ */
+function badcamp_stripe_payment_views_data_alter(array &$data) {
+	$data['users_field_data']['reverse__stripe_payment'] = [
+		'title' => t('Sponsorship for User'),
+		'label' => t('individual_sponsorship'),
+		'group' => t('BADCamp'),
+		'help' => t('Related each user with a sponsorship'),
+		'relationship' => [
+			'id' => 'stripe_payment_entity_reverse',
+			'base' => 'stripe_payment',
+			'base field' => 'id',
+			'field_name' => 'individual_sponsorship_stripe_payment',
+			'field table' => 'stripe_payment',
+			'field field' => 'user_id',
+			'join_extra' => [
+				['field' => 'type', 'value' => 'individual_sponsorship', 'numeric' => false],
+				['field' => 'refunded', 'value' => '0', 'numeric' => true],
+			]
+		]
+	];
+}

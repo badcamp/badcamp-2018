@@ -15,11 +15,9 @@ dependencies:
     - field.field.node.event.field_stick_to_top_of_schedule
     - field.field.node.event.field_timeslot
     - field.field.node.event.field_venue
-    - image.style.thumbnail
     - node.type.event
   module:
     - field_group
-    - image
     - link
     - path
     - text
@@ -29,7 +27,6 @@ third_party_settings:
       children:
         - title
         - field_event_type
-        - field_image
         - field_event_description
         - field_event_more_info
         - field_event_url_more_info
@@ -104,14 +101,6 @@ content:
     third_party_settings: {  }
     type: link_default
     region: content
-  field_image:
-    weight: 3
-    settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
-    third_party_settings: {  }
-    type: image_image
-    region: content
   field_sponsors:
     weight: 7
     settings: {  }
@@ -182,5 +171,6 @@ content:
 hidden:
   field_date: true
   field_display_title: true
+  field_image: true
   promote: true
   sticky: true

@@ -71,7 +71,6 @@
  */
 #}
 <article{{ attributes.addClass('schedule-item', 'training') }}>
-
     {{ title_prefix }}
     <h3{{ title_attributes.addClass('title') }}>
         <a href="{{ url }}" rel="bookmark">{{ label }}</a>
@@ -79,13 +78,16 @@
     {{ title_suffix }}
 
     <div class="info">
-        {{ content.field_trainers }}
-        {{ content.field_skill_level }}
-        {{ content.field_venue }}
+        <div class="grid-x margin-bottom-1">
+            <div class="small-12 medium-6">{{ content.field_skill_level }}</div>
+            <div class="small-12 medium-6">{{ content.field_venue }}</div>
+        </div>
+        <div class="grid-x margin-bottom-1">
+            <div class="small-12 medium-12">{{ content.field_trainers }}</div>
+        </div>
     </div>
 
     <div class="content">
         {{ content|without('field_date','flag_add_to_schedule','field_trainers','field_venue','field_skill_level','register_button','field_payment')}}
     </div>
-
 </article>

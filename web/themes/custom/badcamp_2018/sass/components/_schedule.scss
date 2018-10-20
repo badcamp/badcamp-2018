@@ -1,43 +1,43 @@
 .schedule {
-  div[data-drupal-selector="edit-session-track"] {
-    margin: 1rem 0;
-    text-align: center;
-    input[type="checkbox"] {
-      -webkit-appearance: none;
-      -moz-appearance: none;
-      -ms-progress-appearance: none;
-      display: none;
-    }
-
-    label {
-      @extend .category-icon;
-      > i {
-        background-color: lightgrey;
-      }
-    }
-
-    input[type="checkbox"]:checked + label {
-      > i {
-        background-color: orange;
-      }
-    }
-
-    .form-item {
-      margin-bottom: .5rem;
-    }
-  }
+  //div[data-drupal-selector="edit-session-track"] {
+  //  margin: 1rem 0;
+  //  text-align: center;
+  //  input[type="checkbox"] {
+  //    -webkit-appearance: none;
+  //    -moz-appearance: none;
+  //    -ms-progress-appearance: none;
+  //    display: none;
+  //  }
+  //
+  //  label {
+  //    @extend .category-icon;
+  //    > i {
+  //      background-color: lightgrey;
+  //    }
+  //  }
+  //
+  //  input[type="checkbox"]:checked + label {
+  //    > i {
+  //      background-color: orange;
+  //    }
+  //  }
+  //
+  //  .form-item {
+  //    margin-bottom: .5rem;
+  //  }
+  //}
 
   div[data-drupal-selector="edit-day"],
   div[id^="edit-day"],
   div#edit-day,
-  fieldset[data-drupal-selector="edit-date"],
-  fieldset[id^="edit-date"],
   div#edit-date,
   div[data-drupal-selector="edit-type"],
   div[id^="edit-type"],
-  div#edit-type{
-    margin: 1rem;
-    text-align: center;
+  div#edit-type,
+  div[data-drupal-selector="edit-session-track"],
+  div#edit-session-track,
+  div[id^="edit-session-track"]{
+
     > .fieldset-wrapper {
       text-align: center;
     }
@@ -59,11 +59,12 @@
     }
 
     div.form-item,
-    div.form-checkboxes{
+    div.form-checkboxes,
+    div.form-radios{
       display: inline-block;
-      text-align: center;
 
-      label {
+      input[type="radio"] + label,
+      input[type="checkbox"] + label{
         background-color: $navy-two;
         color: white;
         font-weight: 700;
@@ -72,6 +73,7 @@
         margin: 0px;
         padding: .5rem 1rem;
         min-width: 100px;
+        margin-bottom: 1rem;
       }
 
       input[type="radio"]:checked + label,
@@ -125,5 +127,9 @@
   }
   .info > div {
     margin-bottom: 1rem;
+  }
+
+  .badge{
+    float: right;
   }
 }

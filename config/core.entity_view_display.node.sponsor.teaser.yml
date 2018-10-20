@@ -4,6 +4,8 @@ status: false
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.sponsor.field_additional_job_postings
+    - field.field.node.sponsor.field_display_title
     - field.field.node.sponsor.field_sponsor_description
     - field.field.node.sponsor.field_sponsor_level
     - field.field.node.sponsor.field_sponsor_logo
@@ -20,15 +22,31 @@ bundle: sponsor
 mode: teaser
 content:
   events:
-    weight: null
+    weight: 101
     region: content
+    settings: {  }
+    third_party_settings: {  }
   flag_add_to_schedule:
     weight: 10
+    region: content
+  job_postings:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
     region: content
   links:
     weight: 100
     region: content
+    settings: {  }
+    third_party_settings: {  }
+  members:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
 hidden:
+  field_additional_job_postings: true
+  field_display_title: true
   field_sponsor_description: true
   field_sponsor_level: true
   field_sponsor_logo: true

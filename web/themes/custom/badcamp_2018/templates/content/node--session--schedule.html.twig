@@ -73,7 +73,6 @@
  */
 #}
 <article{{ attributes.addClass('schedule-item', 'session') }}>
-
     <div class="">
         {{ title_prefix }}
         <h3{{ title_attributes.addClass('title') }}>
@@ -82,10 +81,14 @@
         {{ title_suffix }}
 
         <div class="info">
-            {{ content.field_session_track }}
-            {{ content.field_skill_level }}
-            {{ content.field_speakers }}
-            {{ content.field_venue }}
+            <div class="grid-x margin-bottom-1">
+                <div class="small-12 medium-6">{{ content.field_session_track }}</div>
+                <div class="small-12 medium-6">{{ content.field_skill_level }}</div>
+            </div>
+            <div class="grid-x margin-bottom-1">
+                <div class="small-12 medium-6">{{ content.field_speakers }}</div>
+                <div class="small-12 medium-6">{{ content.field_venue }}</div>
+            </div>
         </div>
 
         <div class="content">

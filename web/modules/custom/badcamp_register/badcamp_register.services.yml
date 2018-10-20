@@ -1,5 +1,10 @@
 services:
-  badcam_register.route_subscriber:
+  badcamp_register.route_subscriber:
     class: Drupal\badcamp_register\Routing\RouteSubscriber
     tags:
       - { name: event_subscriber }
+  badcamp_register.breadcrumb:
+      class: Drupal\badcamp_register\BreadcrumbBuilder
+      parent: system.breadcrumb.default
+      tags:
+        - { name: breadcrumb_builder, priority: 1 }

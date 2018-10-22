@@ -53,30 +53,30 @@
     {% endif %}
 
     <div class="grid-x">
-        {% if empty != '' %}
-        <div class="small-12">
-            {{ empty }}
-            {% if logged_in and own_schedule %}
-            <div class="callout warning small-12">
-                <p class="text-center">No Items Added. Go to <a href="/schedule">schedule</a> and add items to show here.</p>
+        {% if rows == '' %}
+            <div class="small-12">
+                {{ empty }}
+                {% if logged_in and own_schedule %}
+                <div class="callout warning small-12">
+                    <p class="text-center">No Items Added. Go to <a href="/schedule">schedule</a> and add items to show here.</p>
+                </div>
+                {% else %}
+                <div class="callout warning small-12">
+                    <p class="text-center">The user's schedule is empty.</p>
+                </div>
+                {% endif %}
             </div>
-            {% else %}
-            <div class="callout warning small-12">
-                <p class="text-center">The user's schedule is empty.</p>
-            </div>
-            {% endif %}
-        </div>
         {% else %}
-        <div class="small-12">{{ exposed }}</div>
-        {% if header %}
-            <div class="callout primary small-12">
-                {{ header }}
+            <div class="small-12">{{ exposed }}</div>
+            {% if header %}
+                <div class="callout primary small-12">
+                    {{ header }}
+                </div>
+            {% endif %}
+            <div class="small-12">
+                {{ rows }}
+                {{ pager }}
             </div>
-        {% endif %}
-        <div class="small-12">
-            {{ rows }}
-            {{ pager }}
-        </div>
         {% endif %}
     </div>
 

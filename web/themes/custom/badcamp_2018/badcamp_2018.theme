@@ -528,3 +528,39 @@ function badcamp_2018_preprocess_views_view__schedule__page_2(&$vars) {
 function badcamp_2018_preprocess_breadcrumb(&$variables) {
 	$variables['#cache']['contexts'][] = 'url';
 }
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function badcamp_2018_preprocess_field__node__field_event_description__event__schedule(&$vars) {
+	foreach ($vars['items'] as &$item) {
+		$item['content']['#format'] = 'basic_html';
+	}
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function badcamp_2018_preprocess_field__node__field_summit_description__summit__schedule(&$vars) {
+	foreach ($vars['items'] as &$item) {
+		$item['content']['#format'] = 'basic_html';
+	}
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function badcamp_2018_preprocess_field__node__field_session_description__session__schedule(&$vars) {
+	foreach ($vars['items'] as &$item) {
+		$item['content']['#format'] = 'basic_html';
+	}
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function badcamp_2018_preprocess_field__node__field_training_description__training__schedule(&$vars) {
+	foreach ($vars['items'] as &$item) {
+		$item['content']['#format'] = 'basic_html';
+	}
+}

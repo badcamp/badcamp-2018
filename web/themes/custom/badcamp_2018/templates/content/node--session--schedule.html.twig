@@ -94,6 +94,10 @@
         <div class="content">
             {{ content|without('field_date','field_session_track','field_skill_level','field_speakers', 'flag_add_to_schedule', 'register_button','field_venue')}}
         </div>
+
+        <div>
+            {{ content.flag_add_to_schedule }}
+        </div>
     </div>
 
 </article>

@@ -87,6 +87,10 @@
     </div>
 
     <div class="content">
-        {{ content|without('field_date','flag_add_to_schedule','field_venue','register_button','field_event_type','field_timeslot')}}
+        {{ content|without('field_date','flag_add_to_schedule','field_venue','register_button','field_event_type','field_timeslot','links')}}
+    </div>
+
+    <div>
+        {{ content.flag_add_to_schedule }}
     </div>
 </article>

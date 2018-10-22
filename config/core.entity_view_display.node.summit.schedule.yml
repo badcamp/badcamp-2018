@@ -55,6 +55,11 @@ content:
         delimiter: ''
       field_formatter_class:
         class: ''
+  flag_add_to_schedule:
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   field_date: true
   field_display_title: true
@@ -63,5 +68,4 @@ hidden:
   field_stick_to_top_of_date: true
   field_stick_to_top_of_schedule: true
   field_timeslot: true
-  flag_add_to_schedule: true
   links: true

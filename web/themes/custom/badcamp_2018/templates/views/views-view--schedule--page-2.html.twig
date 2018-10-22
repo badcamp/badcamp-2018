@@ -53,7 +53,7 @@
     {% endif %}
 
     <div class="grid-x">
-        {% if rows == '' %}
+        {% if rows == '' or rows|length == 0  %}
             <div class="small-12">
                 {{ empty }}
                 {% if logged_in and own_schedule %}

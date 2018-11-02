@@ -147,18 +147,6 @@ display:
             operator: ''
           group: 1
       sorts:
-        count:
-          id: count
-          table: file_usage
-          field: count
-          relationship: none
-          group_type: group
-          admin_label: ''
-          order: DESC
-          exposed: false
-          expose:
-            label: ''
-          plugin_id: standard
         random:
           id: random
           table: views

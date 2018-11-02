@@ -1,4 +1,4 @@
-uuid: edd5d82e-4dd6-4f42-854b-5be4954dfe78
+uuid: acda6cfa-6c30-4a62-9934-14a47e332143
 langcode: en
 status: true
 dependencies:
@@ -19,15 +19,14 @@ dependencies:
     - user.role.volunteer_manager
   module:
     - badcamp_stripe_payment
-    - better_exposed_filters
     - flag
     - image
     - options
     - user
 _core:
   default_config_hash: P8BodC8n5W9E_sfLtfydhZ6mpfeYxX0rEF_yuHeZd88
-id: check_in
-label: 'Check In'
+id: counts
+label: Counts
 module: views
 description: 'Report of users and the ability to check them in.'
 tag: ''
@@ -64,7 +63,7 @@ display:
           query_comment: ''
           query_tags: {  }
       exposed_form:
-        type: bef
+        type: basic
         options:
           submit_button: Apply
           reset_button: false
@@ -73,39 +72,6 @@ display:
           expose_sort_order: true
           sort_asc_label: Asc
           sort_desc_label: Desc
-          input_required: false
-          text_input_required: 'Select any filter and click on Apply to see results'
-          bef:
-            general:
-              allow_secondary: false
-              secondary_label: 'Advanced options'
-              autosubmit: false
-              autosubmit_exclude_textfield: false
-              autosubmit_hide: false
-            field_user_first_name_value:
-              bef_format: default
-              more_options:
-                is_secondary: false
-                placeholder_text: ''
-            field_user_last_name_value:
-              bef_format: default
-              more_options:
-                is_secondary: false
-                placeholder_text: ''
-            uid:
-              bef_format: default
-              more_options:
-                bef_select_all_none: false
-                bef_collapsible: false
-                is_secondary: false
-                rewrite:
-                  filter_rewrite_values: ''
-            mail:
-              bef_format: default
-              more_options:
-                is_secondary: false
-                placeholder_text: ''
-          text_input_required_format: basic_html
       pager:
         type: mini
         options:
@@ -525,7 +491,7 @@ display:
           label: 'Amount Paid'
           exclude: false
           alter:
-            alter_text: true
+            alter_text: false
             text: '${{amount__value/100}}'
             make_link: false
             path: ''
@@ -767,24 +733,74 @@ display:
           expose:
             operator: ''
           group: 1
-        field_user_first_name_value:
-          id: field_user_first_name_value
-          table: user__field_user_first_name
-          field: field_user_first_name_value
-          relationship: none
+        flagged:
+          id: flagged
+          table: flagging
+          field: flagged
+          relationship: flag_relationship
           group_type: group
           admin_label: ''
-          operator: contains
-          value: ''
+          operator: '='
+          value: '1'
           group: 1
           exposed: true
           expose:
-            operator_id: field_user_first_name_value_op
-            label: 'First Name'
+            operator_id: ''
+            label: 'Checked In'
             description: ''
             use_operator: false
-            operator: field_user_first_name_value_op
-            identifier: field_user_first_name_value
+            operator: flagged_op
+            identifier: flagged
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              sponsor: '0'
+              sponsor_manager: '0'
+              event_manager: '0'
+              session_manager: '0'
+              summit_manager: '0'
+              training_manager: '0'
+              volunteer: '0'
+              volunteer_manager: '0'
+              administrator: '0'
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: flagging
+          plugin_id: flag_filter
+        amount:
+          id: amount
+          table: stripe_payment
+          field: amount
+          relationship: reverse__stripe_payment
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value:
+            min: ''
+            max: ''
+            value: '{{amount__value/100}}'
+          group: 1
+          exposed: true
+          expose:
+            operator_id: amount_op
+            label: 'Amount Paid'
+            description: ''
+            use_operator: false
+            operator: amount_op
+            identifier: amount
             required: false
             remember: false
             multiple: false
@@ -801,6 +817,8 @@ display:
               volunteer_manager: '0'
               administrator: '0'
             placeholder: ''
+            min_placeholder: ''
+            max_placeholder: ''
           is_grouped: false
           group_info:
             label: ''
@@ -813,153 +831,37 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          plugin_id: string
-        field_user_last_name_value:
-          id: field_user_last_name_value
-          table: user__field_user_last_name
-          field: field_user_last_name_value
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: contains
-          value: ''
-          group: 1
-          exposed: true
-          expose:
-            operator_id: field_user_last_name_value_op
-            label: 'Last Name'
-            description: ''
-            use_operator: false
-            operator: field_user_last_name_value_op
-            identifier: field_user_last_name_value
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-              anonymous: '0'
-              sponsor: '0'
-              sponsor_manager: '0'
-              event_manager: '0'
-              session_manager: '0'
-              summit_manager: '0'
-              training_manager: '0'
-              volunteer: '0'
-              volunteer_manager: '0'
-              administrator: '0'
-            placeholder: ''
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          plugin_id: string
-        uid:
-          id: uid
-          table: users_field_data
-          field: uid
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: in
-          value: {  }
-          group: 1
-          exposed: true
-          expose:
-            operator_id: uid_op
-            label: 'User Name'
-            description: ' '
-            use_operator: false
-            operator: uid_op
-            identifier: uid
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-              anonymous: '0'
-              sponsor: '0'
-              sponsor_manager: '0'
-              event_manager: '0'
-              session_manager: '0'
-              summit_manager: '0'
-              training_manager: '0'
-              volunteer: '0'
-              volunteer_manager: '0'
-              administrator: '0'
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          entity_type: user
-          entity_field: uid
-          plugin_id: user_name
-        mail:
-          id: mail
-          table: users_field_data
-          field: mail
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: contains
-          value: ''
-          group: 1
-          exposed: true
-          expose:
-            operator_id: mail_op
-            label: Email
-            description: ''
-            use_operator: false
-            operator: mail_op
-            identifier: mail
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-              anonymous: '0'
-              sponsor: '0'
-              sponsor_manager: '0'
-              event_manager: '0'
-              session_manager: '0'
-              summit_manager: '0'
-              training_manager: '0'
-              volunteer: '0'
-              volunteer_manager: '0'
-              administrator: '0'
-            placeholder: ''
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          entity_type: user
-          entity_field: mail
-          plugin_id: string
+          entity_type: stripe_payment
+          entity_field: amount
+          plugin_id: numeric
       sorts:
+        flagged:
+          id: flagged
+          table: flagging
+          field: flagged
+          relationship: flag_relationship
+          group_type: group
+          admin_label: ''
+          order: ASC
+          exposed: true
+          expose:
+            label: 'Checked In'
+          entity_type: flagging
+          plugin_id: flag_sort
+        amount:
+          id: amount
+          table: stripe_payment
+          field: amount
+          relationship: reverse__stripe_payment
+          group_type: group
+          admin_label: ''
+          order: DESC
+          exposed: true
+          expose:
+            label: 'Amount Paid'
+          entity_type: stripe_payment
+          entity_field: amount
+          plugin_id: standard
         field_user_last_name_value:
           id: field_user_last_name_value
           table: user__field_user_last_name
@@ -984,7 +886,30 @@ display:
           expose:
             label: ''
           plugin_id: standard
-      header: {  }
+      header:
+        result:
+          id: result
+          table: views
+          field: result
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          content: 'Displaying @start - @end of @total'
+          plugin_id: result
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          tokenize: false
+          content:
+            value: 'Ugh -- the stripe payment amount is stored in pennies. We can change the way the amount is displayed (by rewriting our field results with ${{amount__value/100}}) but then when we search, the amount we enter into the filter doesn''t match what''s displayed. I decided to go ahead and remove the rewrite so at least the numbers match. Just mentally scoot the decimal 2 places: $100 is displayed as 10000 and that''s what you need to search for to filter the results.'
+            format: basic_html
+          plugin_id: text
       footer: {  }
       empty: {  }
       relationships:
@@ -1012,9 +937,13 @@ display:
           plugin_id: flag_relationship
       arguments: {  }
       display_extenders: {  }
-      title: 'Check In Report'
+      title: 'Counts and Totals'
       group_by: false
       use_ajax: false
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
     cache_metadata:
       max-age: -1
       contexts:
@@ -1022,6 +951,8 @@ display:
         - 'languages:language_interface'
         - url
         - url.query_args
+        - 'url.query_args:sort_by'
+        - 'url.query_args:sort_order'
         - user.roles
       tags:
         - 'config:field.storage.stripe_payment.field_hoodie_size'
@@ -1052,36 +983,36 @@ display:
                   pid: ''
                   depth: '0'
                   type: container
-                field_user_first_name_value:
+                flagged:
                   weight: '-10'
-                  id: field_user_first_name_value
+                  id: flagged
                   pid: root
                   depth: '1'
                   type: filter
-                field_user_last_name_value:
+                amount:
                   weight: '-10'
-                  id: field_user_last_name_value
+                  id: amount
                   pid: root
                   depth: '1'
                   type: filter
-                uid:
+                sort_by:
                   weight: '-10'
-                  id: uid
+                  id: sort_by
                   pid: root
                   depth: '1'
-                  type: filter
-                mail:
-                  weight: '-10'
-                  id: mail
-                  pid: root
-                  depth: '1'
-                  type: filter
+                  type: sort
                 submit:
                   weight: '-10'
                   id: submit
                   pid: root
                   depth: '1'
                   type: buttons
+                sort_order:
+                  weight: '-9'
+                  id: sort_order
+                  pid: root
+                  depth: '1'
+                  type: sort
                 container-0:
                   container_type: details
                   title: 'Container 0'
@@ -1132,10 +1063,10 @@ display:
                   pid: root
                   depth: '1'
                   type: container
-      path: admin/people/check-in
+      path: admin/people/counts
       menu:
         type: tab
-        title: 'Check In'
+        title: Counts
         description: ''
         expanded: false
         parent: entity.user.collection
@@ -1149,6 +1080,8 @@ display:
         - 'languages:language_interface'
         - url
         - url.query_args
+        - 'url.query_args:sort_by'
+        - 'url.query_args:sort_order'
         - user.roles
       tags:
         - 'config:field.storage.stripe_payment.field_hoodie_size'

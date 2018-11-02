@@ -79,7 +79,7 @@ display:
                 bef_collapsible: false
                 is_secondary: false
                 rewrite:
-                  filter_rewrite_values: "October 24|Wed\nOctober 25|Thur\nOctober 26|Fri\nOctober 27|Sat"
+                  filter_rewrite_values: "October 24|Wed\r\nOctober 25|Thur\r\nOctober 26|Fri\r\nOctober 27|Sat"
             type:
               bef_format: bef
               more_options:
@@ -687,7 +687,7 @@ display:
               sort:
                 root:
                   container_type: details
-                  title: Seach
+                  title: Filter
                   description: ''
                   weight: '0'
                   open: 0

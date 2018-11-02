@@ -4,7 +4,7 @@ badcamp_register.page_1:
     _controller: '\Drupal\badcamp_register\Controller\RegistrationPage1Controller::page'
     _title: 'Registration'
   requirements:
-    _permission: 'access content'
+    _access_user_register: 'TRUE'
 
 badcamp_register.page_2:
   path: '/registration/sponsor'
